@@ -1,0 +1,5139 @@
+/* body的基本設置 */
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #000;
+}
+
+/* main的css設置*/
+.main{
+    width: 100%;
+    margin: 0 auto;
+    background-color: #000;
+}
+
+/* header的css樣式設置 開始*/
+.main header{
+    /* border: 1px solid red; */
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 1px;
+    position: sticky;
+    top: 0px;
+    z-index: 1000;
+    background-color: #000000;
+    border-bottom: .5px solid #b8b8b8;
+}
+
+.main header .header_inner{
+    /* border: 1px solid red; */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main header .header_inner .header_logo{
+     /* border: 1px solid red; */
+     width: 100%;
+     max-width: 200px;
+     text-align: center;
+     background-color: #fff;
+     border-radius: 0px 0px 5px 5px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     margin-right: 1px;
+     height: 85px;
+}
+
+.main header .header_inner .header_logo .logo_img{
+    max-width: 100px;
+}
+
+.main header .header_inner .header_logo .logo_img img{
+    width: 100%;
+}
+
+.main header .header_inner .header_contact{
+     width: 100%;
+     text-align: center;
+     background-color: #fff;
+     border-radius: 0px 0px 5px 5px;
+     display: flex;
+     justify-content: right;
+     align-items: center;
+     height: 85px;
+}
+
+.main header .header_inner .header_contact .header_innerblock{
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-right: 50px;
+}
+
+.main header .header_inner .header_contact .header_innerblock .contact_buttton{
+    max-width: 140px;
+}
+
+.main header .header_inner .header_contact .header_innerblock .contact_buttton a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.main header .header_inner .header_contact .header_innerblock .contact_buttton a img{
+    width: 100%;
+}
+
+/* RWD樣式 */
+@media (max-width:576px){
+    .main header{
+    /* border: 1px solid red; */
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 1px;
+    position: sticky;
+    top: 0px;
+    z-index: 1000;
+    background-color: #000000;
+    border-bottom: .5px solid #b8b8b8;
+}
+
+.main header .header_inner{
+    /* border: 1px solid red; */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: #ffffff;
+}
+
+.main header .header_inner .header_logo{
+     /* border: 1px solid red; */
+     width: 100%;
+     max-width: 150px;
+     text-align: center;
+     background-color: #fff;
+     border-radius: 0px 0px 0px 5px;
+     display: flex;
+     margin-right: 0px;
+     justify-content: center;
+     align-items: center;
+     height: 85px;
+}
+
+.main header .header_inner .header_logo .logo_img{
+    max-width: 100px;
+}
+
+.main header .header_inner .header_logo .logo_img img{
+    width: 100%;
+}
+
+.main header .header_inner .header_contact{
+     width: 100%;
+     text-align: center;
+     background-color: #fff;
+     border-radius: 0px 0px 5px 0px;
+     display: flex;
+     justify-content: right;
+     align-items: center;
+     height: 85px;
+}
+
+.main header .header_inner .header_contact .header_innerblock{
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.main header .header_inner .header_contact .header_innerblock .contact_buttton{
+    max-width: 140px;
+}
+
+.main header .header_inner .header_contact .header_innerblock .contact_buttton a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.main header .header_inner .header_contact .header_innerblock .contact_buttton a img{
+    width: 100%;
+}
+   .main header .header_inner .header_contact .header_innerblock .mobile_style{
+    display: none;
+}
+
+}
+
+
+/* header的css樣式設置 結束*/
+
+
+/* Banner的css樣式設置 開始*/
+.main .big_banner{
+    width: 100%;
+    height: 100vh;
+    /* border: 1px solid red; */
+}
+
+.main .big_banner .bigbanner_outer{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background-color: #fff;
+}
+
+.main .big_banner .bigbanner_outer .bigbanner_inner{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    /* clip-path: polygon(0 0, 75% 0, 100% 100%, 0% 100%); */
+}
+
+.main .big_banner .bigbanner_outer .bigbanner_inner .banner_region{
+    width: 70%;
+    max-width: 504px;
+}
+
+.main .big_banner .bigbanner_outer .bigbanner_inner .banner_region .text_title{
+    margin: 20px 0px 20px 0px;
+    width: 100%;
+}
+
+.main .big_banner .bigbanner_outer .bigbanner_inner .banner_region .text_title h2{
+    font-size: 50px;
+    font-weight: 600;
+    line-height: 60px;
+}
+
+.main .big_banner .bigbanner_outer .bigbanner_inner .banner_region .banner_desc{
+    font-size: 18px;
+    line-height: 20px;
+    color: #666666;
+    margin: 20px 0px 20px 0px;
+}
+
+.main .big_banner .bigbanner_outer .bigbanner_inner .banner_region .banner_desc span{
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.main .big_banner .bigbanner_outer .bigbanner_inner .banner_region .banner_pushbtn{
+    margin: 20px 0px 20px 0px;
+    display: flex;
+    align-self: center;
+}
+
+.main .big_banner .bigbanner_outer .bigbanner_inner .banner_region .banner_pushbtn .pushbtn_inner_1{
+    width: 60%;
+}
+
+.main .big_banner .bigbanner_outer .bigbanner_inner .banner_region .banner_pushbtn .pushbtn_inner_1 a img{
+    width: 100%;
+}
+
+.main .big_banner .bigbanner_outer .bigbanner_inner .banner_region .banner_pushbtn .pushbtn_inner_2{
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+.main .big_banner .bigbanner_outer .bigbanner_inner .banner_region .banner_pushbtn .pushbtn_inner_2 a {
+    display: flex;
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+    justify-content: center;
+}
+
+.main .big_banner .bigbanner_outer .bigbanner_inner .banner_region .banner_pushbtn .pushbtn_inner_2 a .know_more{
+    display: flex;
+    align-items: center;
+}
+
+.main .big_banner .bigbanner_outer .bigbanner_inner .banner_region .banner_pushbtn .pushbtn_inner_2 a .know_more_image{
+    width: 100%;
+    max-width: 36px;
+}
+
+.main .big_banner .bigbanner_outer .bigbanner_inner .banner_region .banner_pushbtn .pushbtn_inner_2 a .know_more_image img{
+    width: 100%;
+}
+
+.main .big_banner .bigbanner_outer .bg_region{
+    width: 60%;
+    height: 100%;
+    background-image: url(../image/banner_3.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:  60%;
+}
+/* RWD 樣式 */
+@media(max-width:576px){
+    .main .big_banner{
+    width: 100%;
+    height: 100vh;
+    /* border: 1px solid red; */
+}
+
+.main .big_banner .bigbanner_outer{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction:column-reverse;
+    background-color: #fff;
+}
+
+.main .big_banner .bigbanner_outer .bigbanner_inner{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    /* clip-path: polygon(0 0, 75% 0, 100% 100%, 0% 100%); */
+}
+
+.main .big_banner .bigbanner_outer .bigbanner_inner .banner_region{
+    width: 80%;
+    max-width: 504px;
+}
+
+.main .big_banner .bigbanner_outer .bigbanner_inner .banner_region .text_title{
+    margin: 20px 0px 20px 0px;
+    width: 100%;
+}
+
+.main .big_banner .bigbanner_outer .bigbanner_inner .banner_region .text_title h2{
+    font-size: 50px;
+    font-weight: 600;
+    line-height: 60px;
+}
+
+.main .big_banner .bigbanner_outer .bigbanner_inner .banner_region .banner_desc{
+    font-size: 18px;
+    line-height: 20px;
+    color: #666666;
+    margin: 20px 0px 20px 0px;
+}
+
+.main .big_banner .bigbanner_outer .bigbanner_inner .banner_region .banner_desc span{
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.main .big_banner .bigbanner_outer .bigbanner_inner .banner_region .banner_pushbtn{
+    margin: 20px 0px 20px 0px;
+    display: flex;
+    align-self: center;
+}
+
+.main .big_banner .bigbanner_outer .bigbanner_inner .banner_region .banner_pushbtn .pushbtn_inner_1{
+    width: 100%;
+}
+
+.main .big_banner .bigbanner_outer .bigbanner_inner .banner_region .banner_pushbtn .pushbtn_inner_1 a img{
+    width: 100%;
+}
+
+.main .big_banner .bigbanner_outer .bigbanner_inner .banner_region .banner_pushbtn .pushbtn_inner_2{
+    width: 40%;
+    display: none;
+    align-items: center;
+    justify-content: right;
+}
+
+.main .big_banner .bigbanner_outer .bigbanner_inner .banner_region .banner_pushbtn .pushbtn_inner_2 a {
+    display: flex;
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+    justify-content: center;
+}
+
+.main .big_banner .bigbanner_outer .bigbanner_inner .banner_region .banner_pushbtn .pushbtn_inner_2 a .know_more{
+    display: flex;
+    align-items: center;
+}
+
+.main .big_banner .bigbanner_outer .bigbanner_inner .banner_region .banner_pushbtn .pushbtn_inner_2 a .know_more_image{
+    width: 100%;
+    max-width: 36px;
+}
+
+.main .big_banner .bigbanner_outer .bigbanner_inner .banner_region .banner_pushbtn .pushbtn_inner_2 a .know_more_image img{
+    width: 100%;
+}
+
+.main .big_banner .bigbanner_outer .bg_region{
+    width: 100%;
+    height: 100%;
+    background-image: url(../image/banner_4.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:  top;
+    box-shadow: inset 0px -100px 70px -5px rgb(255 255 255 / 100%);
+}
+}
+
+/* Banner的css樣式設置 結束*/
+
+
+
+/* info_board的css樣式設置 開始 */
+.main .info_board{
+    width: 100%;
+}
+
+.main .info_board .info_board_outer{
+    width: 100%;
+    height: 100%;
+}
+
+.main .info_board .info_board_outer .info_board_inner{
+    width: 100%;
+    height: 250px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    margin-top: 2px;
+}
+
+.main .info_board .info_board_outer .info_board_inner .board_1{
+    height: 100%;
+    align-content: center;
+    width: 25%;
+    text-align: center;
+    border-radius: 0px 0px 0px 50px ;
+    display: grid;
+    justify-content: center;
+    background-color: #fff;
+}
+
+.main .info_board .info_board_outer .info_board_inner .board_1 .text_inner{
+    width: auto;
+    text-align: right;
+}
+
+.main .info_board .info_board_outer .info_board_inner .board_1 .text_inner .text_title{
+    font-size: 48px;
+    color: #000;
+}
+
+.main .info_board .info_board_outer .info_board_inner .board_1 .text_inner .text_desc{
+    font-size: 20px;
+    color: #7A7A7A;
+}
+
+
+.main .info_board .info_board_outer .info_board_inner .board_2{
+    height: 100%;
+    align-content: center;
+    width: 25%;
+    text-align: center;
+    display: grid;
+    justify-content: center;
+    background-color: #fff;
+}
+
+.main .info_board .info_board_outer .info_board_inner .board_2 .text_inner{
+    width: auto;
+    text-align: right;
+}
+
+.main .info_board .info_board_outer .info_board_inner .board_2 .text_inner .text_title{
+    font-size: 48px;
+    color: #000;
+}
+
+.main .info_board .info_board_outer .info_board_inner .board_2 .text_inner .text_desc{
+    font-size: 20px;
+    color: #7A7A7A;
+}
+
+.main .info_board .info_board_outer .info_board_inner .board_3{
+    height: 100%;
+    align-content: center;
+    width: 25%;
+    text-align: center;
+    display: grid;
+    justify-content: center;
+    background-color: #fff;
+}
+
+.main .info_board .info_board_outer .info_board_inner .board_3 .text_inner{
+    width: auto;
+    text-align: right;
+}
+
+.main .info_board .info_board_outer .info_board_inner .board_3 .text_inner .text_title{
+    font-size: 48px;
+    color: #000;
+}
+
+.main .info_board .info_board_outer .info_board_inner .board_3 .text_inner .text_desc{
+    font-size: 20px;
+    color: #7A7A7A;
+}
+
+
+.main .info_board .info_board_outer .info_board_inner .board_4{
+    height: 100%;
+    align-content: center;
+    width: 25%;
+    text-align: center;
+    display: grid;
+    justify-content: center;
+    background-color: #fff;
+}
+
+.main .info_board .info_board_outer .info_board_inner .board_4 .text_inner{
+    width: auto;
+    text-align: right;
+}
+
+.main .info_board .info_board_outer .info_board_inner .board_4 .text_inner .text_title{
+    font-size: 48px;
+    color: #000;
+}
+
+.main .info_board .info_board_outer .info_board_inner .board_4 .text_inner .text_desc{
+    font-size: 20px;
+    color: #7A7A7A;
+}
+
+/* RWD 樣式設定 */
+@media(max-width:576px){
+ .main .info_board{
+    width: 100%;
+}
+
+.main .info_board .info_board_outer{
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    border-radius: 0px 0px 0px 50px;
+    margin-top: 2px;
+}
+
+.main .info_board .info_board_outer .info_board_inner{
+    width: 50%;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    margin-top: 2px;
+}
+
+.main .info_board .info_board_outer .info_board_inner .board_1{
+    height: 100%;
+    align-content: center;
+    width: 100%;
+    text-align: center;
+    border-radius: 0px 0px 0px 0px ;
+    display: grid;
+    justify-content: right;
+    background-color: #fff;
+}
+
+.main .info_board .info_board_outer .info_board_inner .board_1 .text_inner{
+    width: auto;
+    text-align: right;
+}
+
+.main .info_board .info_board_outer .info_board_inner .board_1 .text_inner .text_title{
+    font-size: 48px;
+    color: #000;
+}
+
+.main .info_board .info_board_outer .info_board_inner .board_1 .text_inner .text_desc{
+    font-size: 20px;
+    color: #7A7A7A;
+}
+
+
+.main .info_board .info_board_outer .info_board_inner .board_2{
+    height: 100%;
+    align-content: center;
+    width: 100%;
+    text-align: center;
+    display: grid;
+    justify-content: right;
+    background-color: #fff;
+}
+
+.main .info_board .info_board_outer .info_board_inner .board_2 .text_inner{
+    width: auto;
+    text-align: right;
+}
+
+.main .info_board .info_board_outer .info_board_inner .board_2 .text_inner .text_title{
+    font-size: 48px;
+    color: #000;
+}
+
+.main .info_board .info_board_outer .info_board_inner .board_2 .text_inner .text_desc{
+    font-size: 20px;
+    color: #7A7A7A;
+}
+
+.main .info_board .info_board_outer .info_board_inner .board_3{
+    height: 100%;
+    align-content: center;
+    width: 100%;
+    text-align: center;
+    display: grid;
+    justify-content: right;
+    background-color: #fff;
+}
+
+.main .info_board .info_board_outer .info_board_inner .board_3 .text_inner{
+    width: auto;
+    text-align: right;
+}
+
+.main .info_board .info_board_outer .info_board_inner .board_3 .text_inner .text_title{
+    font-size: 48px;
+    color: #000;
+}
+
+.main .info_board .info_board_outer .info_board_inner .board_3 .text_inner .text_desc{
+    font-size: 20px;
+    color: #7A7A7A;
+}
+
+
+.main .info_board .info_board_outer .info_board_inner .board_4{
+    height: 100%;
+    align-content: center;
+    width: 100%;
+    text-align: center;
+    display: grid;
+    justify-content: right;
+    background-color: #fff;
+}
+
+.main .info_board .info_board_outer .info_board_inner .board_4 .text_inner{
+    width: auto;
+    text-align: right;
+}
+
+.main .info_board .info_board_outer .info_board_inner .board_4 .text_inner .text_title{
+    font-size: 48px;
+    color: #000;
+}
+
+.main .info_board .info_board_outer .info_board_inner .board_4 .text_inner .text_desc{
+    font-size: 20px;
+    color: #7A7A7A;
+}
+}
+
+/* info_board的css樣式設置 結束 */
+
+
+
+
+/* market_info的css樣式設置 開始 */
+.main .market_info{
+    width: 100%;
+}
+
+.main .market_info .market_info_outer{
+    width: 100%;
+    height: 100%;
+}
+
+.main .market_info .market_info_outer .market_info_inner{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+.main .market_info .market_info_outer .market_info_inner .market_desc{
+    /* border: 1px solid red; */
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 60px;
+    padding: 125px 50px;
+}
+
+.main .market_info .market_info_outer .market_info_inner .market_desc .market_icon{
+    /* border: 1px solid red; */
+    width: auto;
+    height: 300px;
+    margin-right: 10px;
+}
+
+.main .market_info .market_info_outer .market_info_inner .market_desc .market_icon .icon_img{
+    width: auto;
+}
+
+.main .market_info .market_info_outer .market_info_inner .market_desc .market_icon .icon_img img{
+    width: 70px;
+}
+
+.main .market_info .market_info_outer .market_info_inner .market_desc .market_text{
+    /* border: 1px solid red; */
+    width: 70%;
+    height: 100%;
+    align-content: center;
+}
+
+.main .market_info .market_info_outer .market_info_inner .market_desc .market_text .text_title{
+    font-size: 64px;
+    color: #000;
+    font-weight: 600;
+    margin-bottom: 20px;
+    line-height: 70px;
+}
+
+.main .market_info .market_info_outer .market_info_inner .market_desc .market_text .text_info_1{
+    font-size: 24px;
+    color: #7a7a7a;
+    font-weight: 500;
+    /* margin-bottom: 64px; */
+    line-height: 24px;
+}
+
+.main .market_info .market_info_outer .market_info_inner .market_desc .market_text .text_devide{
+    height: 1px;
+    border-bottom: 1px solid #d9d9d9;
+    margin: 30px 0px;
+}
+
+.main .market_info .market_info_outer .market_info_inner .market_desc .market_text .text_info_2{
+    font-size: 18px;
+    color: #666666;
+    font-weight: 500;
+    /* margin-bottom: 64px; */
+    line-height: 24px;
+}
+
+.main .market_info .market_info_outer .market_info_inner .market_desc .market_text .text_sum .sum_number{
+    font-size: 70px;
+    font-weight: 600;
+    text-align: right;
+}
+
+.main .market_info .market_info_outer .market_info_inner .market_desc .market_text .text_sum .sum_number .num{
+    font-size: 200px;
+    font-weight: 600;
+}
+
+.main .market_info .market_info_outer .market_info_inner .market_desc .market_text .text_sum .market_share{
+    font-size: 28px;
+    color:#7A7A7A;
+    text-align: right;
+}
+
+.main .market_info .market_info_outer .market_info_inner .market_earth{
+    /* border: 1px solid red; */
+    width: 55%;
+}
+
+.main .market_info .market_info_outer .market_info_inner .market_earth .earth_image{
+    width: 100%;
+    overflow: hidden;
+}
+
+.main .market_info .market_info_outer .market_info_inner .market_earth .earth_image img{
+    width:105%;
+}
+
+
+/* RWD樣式 */
+@media(max-width:576px){
+.main .market_info{
+    width: 100%;
+}
+
+.main .market_info .market_info_outer{
+    width: 100%;
+    height: 100%;
+}
+
+.main .market_info .market_info_outer .market_info_inner{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+.main .market_info .market_info_outer .market_info_inner .market_desc{
+    /* border: 1px solid red; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 40px;
+    padding: 60px 0px;
+}
+
+.main .market_info .market_info_outer .market_info_inner .market_desc .market_icon{
+    /* border: 1px solid red; */
+    width: auto;
+    height: auto;
+    align-self: start;
+    margin-right: 10px;
+}
+
+.main .market_info .market_info_outer .market_info_inner .market_desc .market_icon .icon_img{
+    width: auto;
+}
+
+.main .market_info .market_info_outer .market_info_inner .market_desc .market_icon .icon_img img{
+    width: 48px;
+}
+
+.main .market_info .market_info_outer .market_info_inner .market_desc .market_text{
+    /* border: 1px solid red; */
+    width: 70%;
+    height: 100%;
+    align-content: center;
+}
+
+.main .market_info .market_info_outer .market_info_inner .market_desc .market_text .text_title{
+    font-size: 38px;
+    color: #000;
+    font-weight: 600;
+    margin-bottom: 20px;
+    line-height: 38px;
+}
+
+.main .market_info .market_info_outer .market_info_inner .market_desc .market_text .text_info_1{
+    font-size: 24px;
+    color: #7a7a7a;
+    font-weight: 500;
+    /* margin-bottom: 64px; */
+    line-height: 24px;
+}
+
+.main .market_info .market_info_outer .market_info_inner .market_desc .market_text .text_devide{
+    height: 1px;
+    border-bottom: 1px solid #d9d9d9;
+    margin: 30px 0px;
+}
+
+.main .market_info .market_info_outer .market_info_inner .market_desc .market_text .text_info_2{
+    font-size: 18px;
+    color: #666666;
+    font-weight: 400;
+    /* margin-bottom: 64px; */
+    line-height: 24px;
+}
+
+.main .market_info .market_info_outer .market_info_inner .market_desc .market_text .text_sum .sum_number{
+    font-size: 70px;
+    font-weight: 600;
+    text-align: right;
+}
+
+.main .market_info .market_info_outer .market_info_inner .market_desc .market_text .text_sum .sum_number .num{
+    font-size: 200px;
+    font-weight: 600;
+}
+
+.main .market_info .market_info_outer .market_info_inner .market_desc .market_text .text_sum .market_share{
+    font-size: 28px;
+    color:#7A7A7A;
+    text-align: right;
+}
+
+.main .market_info .market_info_outer .market_info_inner .market_earth{
+    /* border: 1px solid red; */
+    width: 100%;
+}
+
+.main .market_info .market_info_outer .market_info_inner .market_earth .earth_image{
+    width: 100%;
+    overflow: hidden;
+}
+
+.main .market_info .market_info_outer .market_info_inner .market_earth .earth_image img{
+    width:100%;
+}
+}
+
+/* market_info的css樣式設置 結束 */
+
+
+/* payment_methods的css樣式設置 開始*/
+.main .payment_methods{
+    width: 100%;
+}
+
+.main .payment_methods .payment_methods_outer{
+    width: 100%;
+    background-color: #fff;
+    border-radius: 20px;
+    margin-bottom: 2px;
+}
+
+.main .payment_methods .payment_methods_outer .payment_methods_inner{
+    /* border: 1px solid red; */
+    width: 100%;
+    padding: 6% 0% 6% 0%;
+    background-color: #fff;
+    border-radius: 20px;
+}
+
+.main .payment_methods .payment_methods_outer .payment_methods_inner .payment_headline{
+    text-align: right;
+    margin: 0% 5% 0% 5%;
+}
+
+.main .payment_methods .payment_methods_outer .payment_methods_inner .payment_headline .payment_headline_inner{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.main .payment_methods .payment_methods_outer .payment_methods_inner .payment_headline .payment_headline_inner .headline_icon{
+    max-width: 80px;
+    width: 100%;
+}
+
+.main .payment_methods .payment_methods_outer .payment_methods_inner .payment_headline .payment_headline_inner .headline_icon img{
+    width: 100%;
+}
+
+.main .payment_methods .payment_methods_outer .payment_methods_inner .payment_headline .payment_headline_inner .headline_title{
+    font-size: 64px;
+    font-weight: 600;
+    color: #000000;
+}
+
+.main .payment_methods .payment_methods_outer .payment_methods_inner .payment_headline .headline_subtitle{
+    font-size: 24px;
+    color: #7A7A7A;
+}
+
+/* 支付流程下方說明 */
+.main .payment_methods .payment_methods_outer .payment_methods_inner .under_headline{
+    text-align: left;
+    margin: 0% 5% 0% 5%;
+}
+
+.main .payment_methods .payment_methods_outer .payment_methods_inner .under_headline .under_headline_subtitle{
+    font-size: 20px;
+    color: #7A7A7A;
+}
+/* 支付流程下方說明 */
+
+.main .payment_methods .payment_methods_outer .payment_methods_inner .gap_line{
+    border: none;
+    height: 160px;
+    align-content: center;
+    margin: 0% 5% 0% 5%;
+}
+
+.main .payment_methods .payment_methods_outer .payment_methods_inner .payment_item{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.main .payment_methods .payment_methods_outer .payment_methods_inner .payment_item .all_item_card{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 0% 5% 5% 5%;
+    gap: 12px;
+}
+
+.main .payment_methods .payment_methods_outer .payment_methods_inner .payment_item .item_1{
+    border: 1px solid #D9D9D9;
+    border-radius: 12px;
+    display: flex;
+    width: 100%;
+    padding: 0px 20px;
+}
+
+.main .payment_methods .payment_methods_outer .payment_methods_inner .payment_item .item_1 .item_icon{
+    width: 60px;
+}
+
+.main .payment_methods .payment_methods_outer .payment_methods_inner .payment_item .item_1 .item_icon .icon_1{
+    width: 100%;
+    margin-top: 15px;
+}
+
+.main .payment_methods .payment_methods_outer .payment_methods_inner .payment_item .item_1 .item_icon .icon_1 img{
+    width: 100%;
+}
+
+.main .payment_methods .payment_methods_outer .payment_methods_inner .payment_item .item_1 .item_desc{
+    width: 100%;
+    padding: 30px 10px;
+}
+
+.main .payment_methods .payment_methods_outer .payment_methods_inner .payment_item .item_1 .item_desc .desc_title{
+    font-size: 28px;
+    font-weight: 500;
+    color:#000000;
+    margin-bottom: 12px;
+}
+
+.main .payment_methods .payment_methods_outer .payment_methods_inner .payment_item .item_1 .item_desc .desc_text{
+    font-size: 18px;
+    font-weight: 400;
+    color:#666666;
+    line-height: 20px;
+}
+
+.main .payment_methods .payment_methods_outer .payment_methods_inner .payment_item .item_2{
+    border: 1px solid #D9D9D9;
+    border-radius: 12px;
+    display: flex;
+    width: 100%;
+    padding: 0px 20px;
+}
+
+.main .payment_methods .payment_methods_outer .payment_methods_inner .payment_item .item_2 .item_icon{
+    width: 60px;
+}
+
+.main .payment_methods .payment_methods_outer .payment_methods_inner .payment_item .item_2 .item_icon .icon_1{
+    width: 100%;
+    margin-top: 15px;
+}
+
+.main .payment_methods .payment_methods_outer .payment_methods_inner .payment_item .item_2 .item_icon .icon_1 img{
+    width: 100%;
+}
+
+.main .payment_methods .payment_methods_outer .payment_methods_inner .payment_item .item_2 .item_desc{
+    width: 100%;
+    padding: 30px 10px;
+}
+
+.main .payment_methods .payment_methods_outer .payment_methods_inner .payment_item .item_2 .item_desc .desc_title{
+    font-size: 28px;
+    font-weight: 500;
+    color:#000000;
+    margin-bottom: 12px;
+}
+
+.main .payment_methods .payment_methods_outer .payment_methods_inner .payment_item .item_2 .item_desc .desc_text{
+    font-size: 18px;
+    font-weight: 400;
+    color:#666666;
+    line-height: 20px;
+}
+
+.main .payment_methods .payment_methods_outer .payment_methods_inner .payment_item .item_3{
+    border: 1px solid #D9D9D9;
+    border-radius: 12px;
+    display: flex;
+    width: 100%;
+    padding: 0px 20px;
+}
+
+.main .payment_methods .payment_methods_outer .payment_methods_inner .payment_item .item_3 .item_icon{
+    width: 60px;
+}
+
+.main .payment_methods .payment_methods_outer .payment_methods_inner .payment_item .item_3 .item_icon .icon_1{
+    width: 100%;
+    margin-top: 15px;
+}
+
+.main .payment_methods .payment_methods_outer .payment_methods_inner .payment_item .item_3 .item_icon .icon_1 img{
+    width: 100%;
+}
+
+.main .payment_methods .payment_methods_outer .payment_methods_inner .payment_item .item_3 .item_desc{
+    width: 100%;
+    padding: 30px 10px;
+}
+
+.main .payment_methods .payment_methods_outer .payment_methods_inner .payment_item .item_3 .item_desc .desc_title{
+    font-size: 28px;
+    font-weight: 500;
+    color:#000000;
+    margin-bottom: 12px;
+}
+
+.main .payment_methods .payment_methods_outer .payment_methods_inner .payment_item .item_3 .item_desc .desc_text{
+    font-size: 18px;
+    font-weight: 400;
+    color:#666666;
+    line-height: 20px;
+}
+
+/* RWD樣式 */
+@media(max-width:576px){
+    .main .payment_methods{
+    width: 100%;
+}
+
+.main .payment_methods .payment_methods_outer{
+    width: 100%;
+    background-color: #fff;
+    border-radius: 20px;
+}
+
+.main .payment_methods .payment_methods_outer .payment_methods_inner{
+    /* border: 1px solid red; */
+    width: 100%;
+    padding: 8% 0% 8% 0%;
+    background-color: #fff;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.main .payment_methods .payment_methods_outer .payment_methods_inner .payment_headline{
+    text-align: left;
+    margin: 0% 5% 0% 5%;
+}
+
+.main .payment_methods .payment_methods_outer .payment_methods_inner .payment_headline .payment_headline_inner{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.main .payment_methods .payment_methods_outer .payment_methods_inner .payment_headline .payment_headline_inner .headline_icon{
+    max-width: 60px;
+    width: 100%;
+}
+
+.main .payment_methods .payment_methods_outer .payment_methods_inner .payment_headline .payment_headline_inner .headline_icon img{
+    width: 100%;
+}
+
+.main .payment_methods .payment_methods_outer .payment_methods_inner .payment_headline .payment_headline_inner .headline_title{
+    font-size: 38px;
+    font-weight: 600;
+    color: #000000;
+}
+
+.main .payment_methods .payment_methods_outer .payment_methods_inner .payment_headline .headline_subtitle{
+    font-size: 24px;
+    color: #7A7A7A;
+    padding-left: 60px;
+}
+
+/* 支付流程下方說明 */
+.main .payment_methods .payment_methods_outer .payment_methods_inner .under_headline{
+    text-align: left;
+    margin: 0% 5% 0% 5%;
+}
+
+.main .payment_methods .payment_methods_outer .payment_methods_inner .under_headline .under_headline_subtitle{
+    font-size: 20px;
+    color: #7A7A7A;
+    padding: 0px 10px;
+    text-align: justify;
+}
+/* 支付流程下方說明 */
+
+.main .payment_methods .payment_methods_outer .payment_methods_inner .gap_line{
+    border: none;
+    height: 90px;
+    align-content: center;
+    margin: 0% 5% 0% 5%;
+}
+
+.main .payment_methods .payment_methods_outer .payment_methods_inner .payment_item{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.main .payment_methods .payment_methods_outer .payment_methods_inner .payment_item .all_item_card{
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0%;
+    gap: 12px;
+}
+
+.main .payment_methods .payment_methods_outer .payment_methods_inner .payment_item .item_1{
+    border: 1px solid #D9D9D9;
+    border-radius: 12px;
+    display: flex;
+    width: 100%;
+    padding: 0px 0px;
+}
+
+.main .payment_methods .payment_methods_outer .payment_methods_inner .payment_item .item_1 .item_icon{
+    width: 60px;
+}
+
+.main .payment_methods .payment_methods_outer .payment_methods_inner .payment_item .item_1 .item_icon .icon_1{
+    width: 100%;
+    margin-top: 15px;
+}
+
+.main .payment_methods .payment_methods_outer .payment_methods_inner .payment_item .item_1 .item_icon .icon_1 img{
+    width: 100%;
+}
+
+.main .payment_methods .payment_methods_outer .payment_methods_inner .payment_item .item_1 .item_desc{
+    width: 100%;
+    padding: 30px 10px;
+}
+
+.main .payment_methods .payment_methods_outer .payment_methods_inner .payment_item .item_1 .item_desc .desc_title{
+    font-size: 28px;
+    font-weight: 500;
+    color:#000000;
+    margin-bottom: 12px;
+}
+
+.main .payment_methods .payment_methods_outer .payment_methods_inner .payment_item .item_1 .item_desc .desc_text{
+    font-size: 18px;
+    font-weight: 400;
+    color:#666666;
+    line-height: 20px;
+    text-align: justify;
+}
+
+.main .payment_methods .payment_methods_outer .payment_methods_inner .payment_item .item_2{
+    border: 1px solid #D9D9D9;
+    border-radius: 12px;
+    display: flex;
+    width: 100%;
+    padding: 0px 0px;
+}
+
+.main .payment_methods .payment_methods_outer .payment_methods_inner .payment_item .item_2 .item_icon{
+    width: 60px;
+}
+
+.main .payment_methods .payment_methods_outer .payment_methods_inner .payment_item .item_2 .item_icon .icon_1{
+    width: 100%;
+    margin-top: 15px;
+}
+
+.main .payment_methods .payment_methods_outer .payment_methods_inner .payment_item .item_2 .item_icon .icon_1 img{
+    width: 100%;
+}
+
+.main .payment_methods .payment_methods_outer .payment_methods_inner .payment_item .item_2 .item_desc{
+    width: 100%;
+    padding: 30px 10px;
+}
+
+.main .payment_methods .payment_methods_outer .payment_methods_inner .payment_item .item_2 .item_desc .desc_title{
+    font-size: 28px;
+    font-weight: 500;
+    color:#000000;
+    margin-bottom: 12px;
+}
+
+.main .payment_methods .payment_methods_outer .payment_methods_inner .payment_item .item_2 .item_desc .desc_text{
+    font-size: 18px;
+    font-weight: 400;
+    color:#666666;
+    line-height: 20px;
+    text-align: justify;
+}
+
+.main .payment_methods .payment_methods_outer .payment_methods_inner .payment_item .item_3{
+    border: 1px solid #D9D9D9;
+    border-radius: 12px;
+    display: flex;
+    width: 100%;
+    padding: 0px 0px;
+}
+
+.main .payment_methods .payment_methods_outer .payment_methods_inner .payment_item .item_3 .item_icon{
+    width: 60px;
+}
+
+.main .payment_methods .payment_methods_outer .payment_methods_inner .payment_item .item_3 .item_icon .icon_1{
+    width: 100%;
+    margin-top: 15px;
+}
+
+.main .payment_methods .payment_methods_outer .payment_methods_inner .payment_item .item_3 .item_icon .icon_1 img{
+    width: 100%;
+}
+
+.main .payment_methods .payment_methods_outer .payment_methods_inner .payment_item .item_3 .item_desc{
+    width: 100%;
+    padding: 30px 10px;
+}
+
+.main .payment_methods .payment_methods_outer .payment_methods_inner .payment_item .item_3 .item_desc .desc_title{
+    font-size: 28px;
+    font-weight: 500;
+    color:#000000;
+    margin-bottom: 12px;
+}
+
+.main .payment_methods .payment_methods_outer .payment_methods_inner .payment_item .item_3 .item_desc .desc_text{
+    font-size: 18px;
+    font-weight: 400;
+    color:#666666;
+    line-height: 20px;
+    text-align: justify;
+}
+}
+
+/* payment_methods的css樣式設置 結束*/
+
+/* world_map的css樣式設置 開始 */
+.main .world_map{
+    width: 100%;
+}
+
+.main .world_map .world_map_outer{
+    width: 100%;
+    background-color: #000;
+    margin-bottom: 2px;
+}
+
+.main .world_map .world_map_outer .world_map_inner{
+    width: 100%;
+    height: 100%;
+}
+
+.main .world_map .world_map_outer .world_map_inner .map_region{
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main .world_map .world_map_outer .world_map_inner .map_region .top_block{
+    width: 95%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.main .world_map .world_map_outer .world_map_inner .map_region .top_block .desc_block {
+    width: 90%;
+    margin-bottom: 75px;
+    /* border: 1px solid red; */
+}
+
+.main .world_map .world_map_outer .world_map_inner .map_region .under_block .desc_block {
+    width: 90%;
+    margin-bottom: 15px;
+    margin-top: 4%;
+    margin-left: 6%;
+    /* border: 1px solid red; */
+}
+
+.main .world_map .world_map_outer .world_map_inner .map_region .top_block .desc_block .map_title{
+    font-size: 64px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.main .world_map .world_map_outer .world_map_inner .map_region .under_block .desc_block .map_title{
+    font-size: 28px;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+
+.main .world_map .world_map_outer .world_map_inner .map_region .top_block .desc_block .map_sub{
+    font-size: 24px;
+    font-weight: 500;
+    color: #b8b8b8;
+}
+
+.main .world_map .world_map_outer .world_map_inner .map_region .under_block .desc_block .map_sub{
+    font-size: 18px;
+    font-weight: 500;
+    color: #b8b8b8;
+}
+
+.main .world_map .world_map_outer .world_map_inner .map_region .top_block .game_img_list{
+    width: 100%;
+    /* border: 1px solid red; */
+}
+
+.main .world_map .world_map_outer .world_map_inner .map_region .top_block .game_img_list ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.main .world_map .world_map_outer .world_map_inner .map_region .top_block .game_img_list ul .game_icon{
+    margin: 5px 5px;
+}
+
+.main .world_map .world_map_outer .world_map_inner .map_region .top_block .game_img_list ul .game_icon_inner{
+    max-width: 104px;
+}
+
+.main .world_map .world_map_outer .world_map_inner .map_region .top_block .game_img_list ul .game_icon_inner img{
+    width: 100%;
+}
+
+
+/* 下半部分 */
+.main .world_map .world_map_outer .world_map_inner .map_region .under_block{
+    width: 100%;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0px 0px 20px 20px;
+}
+
+.main .world_map .world_map_outer .world_map_inner .map_region .under_block .country_flag{
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    margin-bottom: 4%;
+    justify-content: center;
+    gap: 10px;
+}
+
+.main .world_map .world_map_outer .world_map_inner .map_region .under_block .country_flag .logo_image {
+    width: 100%;
+    height: 70px;
+    max-width: 165px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #b8b8b8;
+    border-radius: 12px;
+    gap: 10px;
+    transition: all 0.6s ease;
+}
+
+@media (max-width:576px){
+    .main .world_map .world_map_outer .world_map_inner .map_region .under_block .country_flag .logo_image {
+    width: 100%;
+    height: 70px;
+    max-width: 135px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #b8b8b8;
+    border-radius: 12px;
+    gap: 10px;
+    transition: all 0.6s ease;
+}
+}
+
+.main .world_map .world_map_outer .world_map_inner .map_region .under_block .country_flag .logo_image:hover{
+    background-color: #2B4EB9;
+}
+
+.main .world_map .world_map_outer .world_map_inner .map_region .under_block .country_flag .logo_image a{
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.main .world_map .world_map_outer .world_map_inner .map_region .under_block .country_flag .logo_image .flag_text{
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.main .world_map .world_map_outer .world_map_inner .map_region .under_block .country_flag .logo_image a .flag_text{
+    font-size: 18px;
+    font-weight: 600;
+    color: #000;
+}
+
+.main .world_map .world_map_outer .world_map_inner .map_region .under_block .country_flag .logo_image img{
+    width: 100%;
+}
+
+@media(max-width:576px){
+    .main .world_map .world_map_outer .world_map_inner .map_region .under_block .country_flag .logo_image a{
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0px;
+}
+    .main .world_map .world_map_outer .world_map_inner .map_region .under_block .country_flag .logo_image img{
+    width: 70%;
+}
+}
+
+/* RWD樣式 */
+@media(max-width:576px){
+
+    .main .world_map{
+        width: 100%;
+    }
+    
+    .main .world_map .world_map_outer{
+        width: 100%;
+        background-color: #000;
+    }
+    
+    .main .world_map .world_map_outer .world_map_inner{
+        width: 100%;
+        height: 100%;
+    }
+    
+    .main .world_map .world_map_outer .world_map_inner .map_region{
+        /* border: 1px solid red; */
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .main .world_map .world_map_outer .world_map_inner .map_region .top_block{
+        width: 100%;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .main .world_map .world_map_outer .world_map_inner .map_region .top_block .desc_block {
+        width: 90%;
+        margin-bottom: 40px;
+        /* border: 1px solid red; */
+    }
+    
+    .main .world_map .world_map_outer .world_map_inner .map_region .top_block .desc_block .map_title{
+        font-size: 38px;
+        font-weight: 600;
+        color: #ffffff;
+        margin-bottom: 22px;
+    }
+    
+    .main .world_map .world_map_outer .world_map_inner .map_region .top_block .desc_block .map_sub{
+        font-size: 20px;
+        font-weight: 500;
+        color: #b8b8b8;
+    }
+    
+    .main .world_map .world_map_outer .world_map_inner .map_region .top_block .game_img_list{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        /* border: 1px solid red; */
+    }
+    
+    .main .world_map .world_map_outer .world_map_inner .map_region .top_block .game_img_list ul{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 90%;
+    }
+    
+    .main .world_map .world_map_outer .world_map_inner .map_region .top_block .game_img_list ul .game_icon{
+        margin: 5px 5px;
+    }
+    
+    .main .world_map .world_map_outer .world_map_inner .map_region .top_block .game_img_list ul .game_icon_inner{
+        max-width: 60px;
+    }
+    
+    .main .world_map .world_map_outer .world_map_inner .map_region .top_block .game_img_list ul .game_icon_inner img{
+        width: 100%;
+    }
+    
+    /* icon的hover效果 */
+    .tool_text_1{
+        position: relative;
+        transition: color 0.3s;
+    }
+    
+    .tool_text_1::after{
+        content: attr(data-tooltip);
+        position: absolute;
+        bottom: -55%;
+        left: 0%;
+        width: 100%;
+        height: 30px;
+        text-align: center;
+        align-content: center;
+        background-color: #7a7a7a;
+        color: #ffffff;
+        border-radius: 5px;
+        white-space: nowrap;
+        font-size: 14px;
+        z-index: 100;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s, visibility 0.3s, transform  0.3s;
+    }
+    
+    .tool_text_1:hover::after{
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .tool_text_1::before{
+        content: '';
+        position: absolute;
+        bottom: -8%;
+        left: 35%;
+        transform: translateX(0%);
+    
+        border-width: 10px;
+        border-style: solid;
+        border-color: transparent transparent #7a7a7a transparent;
+    
+        opacity: 1;
+        visibility: hidden;
+        transition: opacity 0.3s, visibility 0.1s, transform  0.3s;
+    }
+    
+    .tool_text_1:hover::before{
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    
+    /* 下半部分 */
+    .main .world_map .world_map_outer .world_map_inner .map_region .under_block{
+        width: 100%;
+        background-color: #ffffff;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .main .world_map .world_map_outer .world_map_inner .map_region .under_block .company_logo_list{
+        width: 90%;
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 60px;
+        margin-bottom: 60px;
+        justify-content: center;
+    }
+    
+    .main .world_map .world_map_outer .world_map_inner .map_region .under_block .company_logo_list .logo_image{
+        max-width: 330px;
+    }
+    
+    .main .world_map .world_map_outer .world_map_inner .map_region .under_block .company_logo_list .logo_image img{
+        width: 100%;
+    }
+
+}
+
+/* world_map的css樣式設置 結束 */
+
+
+
+/* market_plan的css樣式設置 開始 */
+.main .market_plan_outer{
+    width: 100%;
+}
+
+.main .market_plan_outer .market_plan_inner{
+    width: 100%;
+    background-color: #000;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region{
+    width: 100%;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service{
+    width: 100%;
+    display: flex;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro{
+    width: 100%;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px 0px 0px 0px;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item{
+    width: 100%;
+    display: flex;
+    z-index: 100;
+    /* border: 1px solid red; */
+    /* align-self: center; */
+    /* height: 900px; */
+    /* position: relative; */
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer{
+    display: flex;
+    /* position: absolute;
+    top: 60px;
+    left: 60px; */
+    width: 100%;
+    max-width: 810px;
+    margin-top: 6%;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .case_icon{
+    max-width: 110px;
+    margin-top: 40px;
+    margin-left: 40px;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .case_icon img{
+    width: 80px;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg{
+    /* border: 1px solid red; */
+    /* align-self: center; */
+    margin-top: 50px;
+    margin-bottom: 50px;
+    max-width: 700px;
+    width: 100%;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg .case_title{
+    /* border: 1px solid red; */
+    font-size: 64px;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 64px;
+}
+
+
+
+
+/* market_plan.html 的css 開始*/
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg .all_case_card_1{
+    width: 100%;
+    /* max-width: 650px; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    /* border: 1px solid red; */
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg .case_card{
+    display: flex;
+    border: 1px solid #B541F3;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 650px;
+    background-color: #ffffff;
+    padding: 20px 15px 20px 15px;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg .case_card .card_image{
+    max-width: 48px;
+    margin-right: 10px;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg .case_card .card_image img{
+    width: 48px;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg .case_card .card_info .info_title{
+    font-size: 28px;
+    font-weight: 600;
+    color: #000;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg .case_card .card_info .info_text{
+    line-height: 20px;
+    color: #666;
+    font-size: 18px;
+}
+
+/* market_plan.html 的css 結束*/
+
+/* market_plan_3.html的css開始*/
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg .all_case_card_3{
+    width: 100%;
+    /* max-width: 650px; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    /* border: 1px solid red; */
+}
+
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg .case_card{
+    display: flex;
+    border: 1px solid #B541F3;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 650px;
+    background-color: #ffffff;
+    padding: 20px 15px 20px 15px;
+    margin-bottom: 15px;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg .case_card .card_info{
+    width: 100%;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg .case_card .card_image{
+    max-width: 48px;
+    margin-right: 10px;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg .case_card .card_image img{
+    width: 48px;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg .case_card .card_info .info_title{
+    font-size: 28px;
+    font-weight: 600;
+    color: #000;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg .case_card .card_info .info_text{
+    line-height: 20px;
+    color: #666;
+    font-size: 18px;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg .case_card .card_info .card_button{
+    display: flex;
+    justify-content: right;
+    margin-top: 15px;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg .case_card .card_info .card_button .button_one{
+    width: 100%;
+    max-width: 96px;
+    height: 40px;
+    background-color: #000;
+    border-radius: 6px;
+    align-content: center;
+    text-align: center;
+    display: grid;
+    margin-right: 10px;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msgc .case_card .card_info .card_button .button_one a{
+    text-decoration: none;
+    color: #ffffff;
+    width: 100%;
+    height: 40px;
+    align-content: center;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg .case_card .card_info .card_button .button_two{
+    width: 100%;
+    max-width: 96px;
+    height: 40px;
+    background-color: #ffffff;
+    border-radius: 6px;
+    align-content: center;
+    text-align: center;
+    display: grid;
+    transition: all 0.6s ease;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg .case_card .card_info .card_button .button_two:hover{
+    background-color: #B541F3;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg .case_card .card_info .card_button .button_two a{
+    text-decoration: none;
+    color: #B541F3;
+    width: 100%;
+    height: 40px;
+    align-content: center;
+    transition: all 0.6s ease;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg .case_card .card_info .card_button .button_two a:hover{
+    text-decoration: none;
+    color: #ffffff;
+    width: 100%;
+    height: 40px;
+    align-content: center;
+}
+/* market_plan_3.html的css結束*/
+
+
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg .all_case_card_2 .card2_inner{
+    width: 100%;
+    /* max-width: 650px; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    /* border: 1px solid red; */
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg .all_case_card_2 .card2_inner .case_card{
+    display: flex;
+    border: 1px solid #B541F3;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 275px;
+    background-color: #ffffff;
+    padding: 20px 15px 20px 15px;
+    margin-bottom: 6px;
+    margin-right: 6px;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg .case_card .card_info{
+    width: 100%;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg .case_card .card_image{
+    max-width: 48px;
+    margin-right: 10px;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg .case_card .card_image img{
+    width: 48px;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg .case_card .card_info .info_title{
+    font-size: 24px;
+    font-weight: 600;
+    color: #000;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg .case_card .card_info .info_text{
+    line-height: 20px;
+    color: #666;
+    font-size: 18px;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg .case_card .card_info .card_button{
+    display: flex;
+    justify-content: right;
+    margin-top: 15px;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg .case_card .card_info .card_button .button_one{
+    /* width: 100%;
+    max-width: 96px;
+    height: 40px;
+    background-color: #000;
+    border-radius: 6px;
+    align-content: center;
+    text-align: center;
+    display: grid;
+    margin-right: 10px; */
+
+    width: 100%;
+    max-width: 96px;
+    height: 40px;
+    background-color: #000;
+    border-radius: 6px;
+    margin-right: 10px;
+    /* 改用 flexbox，這在 iOS 表現最穩定 */
+    display: flex; 
+    justify-content: center; /* 水平置中 */
+    align-items: center;     /* 垂直置中 */
+    transition: all 0.6s ease;
+    overflow: hidden;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg .case_card .card_info .card_button .button_one a{
+    /* text-decoration: none;
+    color: #ffffff;
+    width: 100%;
+    height: 40px;
+    align-content: center; */
+
+    text-decoration: none;
+    color: #ffffff;
+    width: 100%;
+    height: 100%;            /* 讓 a 標籤填滿父容器 40px 的高度 */
+    
+    /* 讓 a 標籤本身也具備置中能力 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* 核心修正：強制重置行高，防止 iOS 文字向上偏移 */
+    line-height: 1; 
+    transition: all 0.6s ease;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg .case_card .card_info .card_button .button_two{
+    /* width: 100%;
+    max-width: 96px;
+    height: 40px;
+    background-color: #ffffff;
+    border-radius: 6px;
+    align-content: center;
+    text-align: center;
+    display: grid;
+    transition: all 0.6s ease; */
+    width: 100%;
+    max-width: 96px;
+    height: 40px;
+    background-color: #ffffff;
+    border-radius: 6px;
+    /* 改用 flex */
+    display: flex; 
+    justify-content: center; /* 水平置中 */
+    align-items: center;     /* 垂直置中 */
+    transition: all 0.6s ease;
+    overflow: hidden;        /* 確保子元素不超出圓角 */
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg .case_card .card_info .card_button .button_two:hover{
+    background-color: #B541F3;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg .case_card .card_info .card_button .button_two a{
+    /* text-decoration: none;
+    color: #B541F3;
+    width: 100%;
+    height: 40px;
+    align-content: center;
+    transition: all 0.6s ease; */
+    text-decoration: none;
+    color: #B541F3;
+    width: 100%;
+    height: 100%;            /* 改為 100% 填滿父容器 */
+    display: flex;           /* 讓 a 也是 flex 容器 */
+    justify-content: center;
+    align-items: center;
+    /* 關鍵：修正 iOS 文字偏移 */
+    line-height: 1;          
+    transition: all 0.6s ease;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg .case_card .card_info .card_button .button_two a:hover{
+    text-decoration: none;
+    color: #ffffff;
+    width: 100%;
+    height: 40px;
+    align-content: center;
+}
+
+
+/* 服務資訊輪播區塊 CSS設定 開始*/
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg .slideshow_block{
+    width: 630px;
+    height: 570px;
+    overflow: hidden;
+    position: relative;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg .card_slideshow{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg .card_slideshow:first-child{display: block;}
+
+   /* 箭頭的樣式 */
+        .nav_arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 50px;
+            height: 50px;
+            background: rgba(0,0,0,0.2);
+            color: white;
+            font-size: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 100;
+            border-radius: 50%;
+            transition: 0.3s;
+            user-select: none;
+        }
+        .nav_arrow:hover { background: rgba(0,0,0,0.6); }
+        .prev_arrow { left: 10px; position: absolute; left: 0px;}
+        .next_arrow { right: 10px; position: absolute; left: 790px;}
+
+    /* 圖片對應切換 css */
+    .main .market_plan_outer .market_plan_inner .market_plan_region .full_service .Whole_case_image .image_inner_region img{
+        display: none;
+        transition: opacity 0.5s ease;
+     }
+
+     .main .market_plan_outer .market_plan_inner .market_plan_region .full_service  .Whole_case_image .image_inner_region img.active{
+        display: block;
+        width: 150%;
+        transition: transform 0.8s ease;
+        object-fit: cover;
+     }
+
+
+/* 服務資訊輪播區塊 CSS設定 結束*/
+
+
+
+/* 右側大圖片以及漸層遮罩 */
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .Whole_case_image{
+    width: 100%;
+    position: relative;
+    height: auto;
+    background-color: #ffffff;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service  .Whole_case_image .image_inner_region{
+    width: 100%;
+    height: auto;
+    position:sticky;
+    top: 0px;
+    display: block;
+    overflow: hidden;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .Whole_case_image .image_inner_region::before{
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 40%;
+    height: 100%;
+
+    background-image: linear-gradient(90deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .Whole_case_image .image_inner_region img{
+    display: block;
+    /* width: 100%; */
+    height: 100%;
+}
+
+
+/* 資訊卡指示器樣式 */
+.dots{
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    height: 50px;
+    background-color: #fff;
+    display: none;
+}
+
+@media (max-width:576px){
+    .dots{
+        display: flex;
+    }
+}
+
+.dot{
+    width: 10px;
+    height: 10px;
+    background-color: #ccc;
+    border-radius: 50%;
+}
+
+.dot .active{
+    background-color: #333;
+    transform: scale(1.2);
+}
+
+
+
+/* RWD樣式 */
+@media(max-width:576px){
+    .main .market_plan_outer{
+    width: 100%;
+}
+
+.main .market_plan_outer .market_plan_inner{
+    width: 100%;
+    background-color: #000;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region{
+    width: 100%;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro{
+    display: flex;
+    background-color: #fff;
+    flex-direction: row;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    align-items: flex-start;
+    white-space: normal;
+    width: 100%;
+    height: 560px;
+    -webkit-overflow-scrolling: touch;
+    transition: height 0.3s ease;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro::-webkit-scrollbar{
+    display: none;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item{
+    height: 560px;
+    overflow-y: auto;
+    flex: 0 0 90%;
+    margin-right: 15px;
+    white-space: normal;
+    word-break: break-all;
+    scroll-snap-align: center;
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    margin-bottom: 0;
+    -webkit-overflow-scrolling: touch;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer{
+    display: flex;
+    /* position: absolute;
+    top: 60px;
+    left: 60px; */
+    width: 520px;
+    max-width: 520px;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .case_icon{
+    max-width: 110px;
+    margin-top: 35px;
+    margin-left: 40px;
+    display: none;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .case_icon img{
+    width: 60px;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg{
+    /* border: 1px solid red; */
+    /* align-self: center; */
+    margin-top: 50px;
+    margin-bottom: 50px;
+    max-width: 520px;
+    width: 100%;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg .case_title{
+    /* border: 1px solid red; */
+    font-size: 38px;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 64px;
+    display: flex;
+    align-items: center;
+}
+
+.mobile_icon{
+    height: 100%;
+    width: 48px;
+    height: 48px;
+    background-image: url(../image/market_1.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+
+/* market_plan.html 的css 開始*/
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg .all_case_card_1{
+    width: 100%;
+    /* max-width: 650px; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    /* border: 1px solid red; */
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg .case_card{
+    display: flex;
+    border: 1px solid #B541F3;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 650px;
+    background-color: #ffffff;
+    padding: 20px 15px 20px 15px;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg .case_card .card_image{
+    max-width: 48px;
+    margin-right: 10px;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg .case_card .card_image img{
+    width: 48px;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg .case_card .card_info .info_title{
+    font-size: 28px;
+    font-weight: 600;
+    color: #000;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg .case_card .card_info .info_text{
+    line-height: 20px;
+    color: #666;
+    font-size: 18px;
+}
+
+/* market_plan.html 的css 結束*/
+
+/* market_plan_3.html的css開始*/
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg .all_case_card_3{
+    width: 100%;
+    /* max-width: 650px; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    /* border: 1px solid red; */
+}
+
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg .case_card{
+    display: flex;
+    border: 1px solid #B541F3;
+    border-radius: 12px;
+    width: 100%;
+    max-width: unset;
+    background-color: #ffffff;
+    padding: 20px 15px 20px 15px;
+    margin-bottom: 15px;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg .case_card .card_info{
+    width: 100%;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg .case_card .card_image{
+    max-width: 48px;
+    margin-right: 10px;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg .case_card .card_image img{
+    width: 48px;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg .case_card .card_info .info_title{
+    font-size: 28px;
+    font-weight: 600;
+    color: #000;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg .case_card .card_info .info_text{
+    line-height: 20px;
+    color: #666;
+    font-size: 18px;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg .case_card .card_info .card_button{
+    display: flex;
+    justify-content: right;
+    margin-top: 15px;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg .case_card .card_info .card_button .button_one{
+    width: 100%;
+    max-width: 96px;
+    height: 40px;
+    background-color: #000;
+    border-radius: 6px;
+    align-content: center;
+    text-align: center;
+    display: grid;
+    margin-right: 10px;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msgc .case_card .card_info .card_button .button_one a{
+    text-decoration: none;
+    color: #ffffff;
+    width: 100%;
+    height: 40px;
+    align-content: center;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg .case_card .card_info .card_button .button_two{
+    width: 100%;
+    max-width: 96px;
+    height: 40px;
+    background-color: #ffffff;
+    border-radius: 6px;
+    align-content: center;
+    text-align: center;
+    display: grid;
+    transition: all 0.6s ease;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg .case_card .card_info .card_button .button_two:hover{
+    background-color: #B541F3;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg .case_card .card_info .card_button .button_two a{
+    text-decoration: none;
+    color: #B541F3;
+    width: 100%;
+    height: 40px;
+    align-content: center;
+    transition: all 0.6s ease;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg .case_card .card_info .card_button .button_two a:hover{
+    text-decoration: none;
+    color: #ffffff;
+    width: 100%;
+    height: 40px;
+    align-content: center;
+}
+/* market_plan_3.html的css結束*/
+
+
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg .all_case_card_2 .card2_inner{
+    width: 100%;
+    /* max-width: 650px; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* border: 1px solid red; */
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg .all_case_card_2 .card2_inner .case_card{
+    display: flex;
+    border: 1px solid #B541F3;
+    border-radius: 12px;
+    width: 100%;
+    max-width: unset;
+    background-color: #ffffff;
+    padding: 20px 15px 20px 15px;
+    margin-bottom: 6px;
+    margin-right: 6px;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg .case_card .card_info{
+    width: 100%;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg .case_card .card_image{
+    max-width: 48px;
+    margin-right: 10px;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg .case_card .card_image img{
+    width: 48px;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg .case_card .card_info .info_title{
+    font-size: 24px;
+    font-weight: 600;
+    color: #000;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg .case_card .card_info .info_text{
+    line-height: 20px;
+    color: #666;
+    font-size: 18px;
+    white-space: normal;
+    word-break: break-all;
+    overflow-wrap: break-word;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg .case_card .card_info .card_button{
+    display: flex;
+    justify-content: right;
+    margin-top: 15px;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg .case_card .card_info .card_button .button_one{
+    width: 100%;
+    max-width: 96px;
+    height: 40px;
+    background-color: #000;
+    border-radius: 6px;
+    align-content: center;
+    text-align: center;
+    display: grid;
+    margin-right: 10px;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg .case_card .card_info .card_button .button_one a{
+    text-decoration: none;
+    color: #ffffff;
+    width: 100%;
+    height: 40px;
+    align-content: center;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg .case_card .card_info .card_button .button_two{
+    width: 100%;
+    max-width: 96px;
+    height: 40px;
+    background-color: #ffffff;
+    border-radius: 6px;
+    align-content: center;
+    text-align: center;
+    display: grid;
+    transition: all 0.6s ease;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg .case_card .card_info .card_button .button_two:hover{
+    background-color: #B541F3;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg .case_card .card_info .card_button .button_two a{
+    text-decoration: none;
+    color: #B541F3;
+    width: 100%;
+    height: 40px;
+    align-content: center;
+    transition: all 0.6s ease;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg .case_card .card_info .card_button .button_two a:hover{
+    text-decoration: none;
+    color: #ffffff;
+    width: 100%;
+    height: 40px;
+    align-content: center;
+}
+
+
+/* 服務資訊輪播區塊 CSS設定 開始*/
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg .slideshow_block{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg .card_slideshow{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg .card_slideshow:first-child{display: block;}
+
+   /* 箭頭的樣式 */
+        .nav_arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 50px;
+            height: 50px;
+            background: rgba(0,0,0,0.2);
+            color: white;
+            font-size: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 100;
+            border-radius: 50%;
+            transition: 0.3s;
+            user-select: none;
+        }
+        .nav_arrow:hover { background: rgba(0,0,0,0.6); }
+        .prev_arrow { left: 10px; position: absolute; left: 0px;}
+        .next_arrow { right: 10px; position: absolute; left: 790px;}
+
+    /* 圖片對應切換 css */
+    .main .market_plan_outer .market_plan_inner .market_plan_region .full_service .Whole_case_image .image_inner_region img{
+        display: none;
+        transition: opacity 0.5s ease;
+     }
+
+     .main .market_plan_outer .market_plan_inner .market_plan_region .full_service  .Whole_case_image .image_inner_region img.active{
+        display: block;
+        width: 150%;
+        transition: transform 0.8s ease;
+        object-fit: cover;
+     }
+
+
+/* 服務資訊輪播區塊 CSS設定 結束*/
+
+
+
+/* 右側大圖片以及漸層遮罩 */
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .Whole_case_image{
+    width: 100%;
+    position: relative;
+    height: auto;
+    background-color: #ffffff;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service  .Whole_case_image .image_inner_region{
+    width: 100%;
+    height: auto;
+    position:sticky;
+    top: 0px;
+    display: block;
+    overflow: hidden;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .Whole_case_image .image_inner_region::before{
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 40%;
+    height: 100%;
+
+    background-image: linear-gradient(90deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .Whole_case_image .image_inner_region img{
+    display: block;
+    /* width: 100%; */
+    height: 100%;
+}
+}
+
+
+
+
+
+
+
+
+/* 這裡的css是用在彈窗以及遮罩的部分，負責彈窗、遮罩的開啟與關閉 */
+        /* 遮罩 (Overlay) - 初始狀態為隱藏 */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7); 
+            z-index: 1000; 
+            
+            display: none; 
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease;
+        }
+
+        /* 模態框內容 (Content) */
+        .modal-content {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 530px;
+            position: relative; 
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+            
+            transform: scale(0.5);
+            transition: transform 0.7s ease;
+        }
+
+        .text_region h2{
+            margin: 0px 0px 20px 0px;
+            font-size: 24px;
+            font-weight: 600;
+            color: #1C1B1F;
+        }
+
+        .text_region p{
+            font-size: 16px;
+            font-weight: 400;
+            color: #666;
+            line-height: 23px;
+        } 
+        
+        /* 關閉按鈕 (Close Button) */
+        .close-button {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 28px;
+            font-weight: 300;
+            cursor: pointer;
+            color: #aaa;
+            line-height: 1;
+            transition: color 0.2s;
+        }
+
+        .close-button:hover {
+            color: #333;
+        }
+
+        /* JS 用來切換顯示的 class */
+        .modal-overlay.show {
+            /* 彈窗顯示時，才啟用 flex 居中和可見狀態 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        /* 彈窗顯示時，縮放回 1 */
+        .modal-overlay.show .modal-content {
+            transform: scale(1);
+        }
+        
+        /* 隱藏內容的模板，不顯示在頁面上 */
+        #modalContentTemplates {
+            display: none;
+        }
+
+/* 這裡的css是用在彈窗以及遮罩的部分，負責彈窗、遮罩的開啟與關閉 */
+        /* 遮罩 (Overlay) - 初始狀態為隱藏 */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7); 
+            z-index: 1000; 
+            
+            display: none; 
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease;
+        }
+
+        /* 模態框內容 (Content) */
+        .modal-content {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 530px;
+            position: relative; 
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+            
+            transform: scale(0.5);
+            transition: transform 0.7s ease;
+        }
+
+        .text_region h2{
+            margin: 0px 0px 20px 0px;
+            font-size: 24px;
+            font-weight: 600;
+            color: #1C1B1F;
+        }
+
+        .text_region p{
+            font-size: 16px;
+            font-weight: 400;
+            color: #666;
+            line-height: 23px;
+        } 
+        
+        /* 關閉按鈕 (Close Button) */
+        .close-button {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 28px;
+            font-weight: 300;
+            cursor: pointer;
+            color: #aaa;
+            line-height: 1;
+            transition: color 0.2s;
+        }
+
+        .close-button:hover {
+            color: #333;
+        }
+
+        /* JS 用來切換顯示的 class */
+        .modal-overlay.show {
+            /* 彈窗顯示時，才啟用 flex 居中和可見狀態 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        /* 彈窗顯示時，縮放回 1 */
+        .modal-overlay.show .modal-content {
+            transform: scale(1);
+        }
+        
+        /* 隱藏內容的模板，不顯示在頁面上 */
+        #modalContentTemplates {
+            display: none;
+        }
+/* market_plan的css樣式設置 結束 */
+
+
+/* security_solution的css樣式設置 開始 */
+.main .security_solution{
+    width: 100%;
+}
+
+.main .security_solution .security_solution_outer{
+    width: 100%;
+    height: 860px;
+    background-color: #000;
+}
+
+.main .security_solution .security_solution_outer .security_solution_inner{
+    width: 100%;
+    height: 100%;
+}
+
+.main .security_solution .security_solution_outer .security_solution_inner .solution_region{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+.main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc{
+    width: 85%;
+    margin-left: 3%;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+
+.main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .solution_title{
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .solution_title .solut_image{
+    width: 80px;
+}
+
+.main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .solution_title .solut_image img{
+    width: 100%;
+}
+
+.main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .solution_title .solut_title_text{
+    font-size: 64px;
+    font-weight: 600;
+    color: #ffffff;
+    text-shadow: 0 0 5px #f9f9f9, 0 0 15px #e4e4e4;
+}
+
+.main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .sloution_service{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .sloution_service .service_one{
+    width: 45%;
+    border: 1px solid transparent;
+    border-radius: 13px;
+    background-image: linear-gradient(#000, #000),linear-gradient(to right, #B541F3, #1AEFE4);
+    background-clip: padding-box,border-box;
+    background-origin: border-box;
+    padding: 20px 10px;
+    height: 180px;
+}
+
+.main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .sloution_service .service_one .title{
+    font-size: 28px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 12px;
+}
+
+.main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .sloution_service .service_one .desc{
+    font-size: 18px;
+    font-weight: 400;
+    color: #b8b8b8;
+    line-height: 22px;
+}
+
+.main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .sloution_service .service_two{
+    width: 45%;
+    border: 1px solid transparent;
+    border-radius: 13px;
+    background-image: linear-gradient(#000, #000),linear-gradient(to right, #B541F3, #1AEFE4);
+    background-clip: padding-box,border-box;
+    background-origin: border-box;
+    padding: 20px 10px;
+    height: 180px;
+    margin-bottom: 20px;
+}
+
+.main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .sloution_service .service_two .title{
+    font-size: 28px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 12px;
+}
+
+.main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .sloution_service .service_two .desc{
+    font-size: 18px;
+    font-weight: 400;
+    color: #b8b8b8;
+    line-height: 22px;
+}
+
+.main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .sloution_service .service_three{
+    width: 45%;
+    border: 1px solid transparent;
+    border-radius: 13px;
+    background-image: linear-gradient(#000, #000),linear-gradient(to right, #B541F3, #1AEFE4);
+    background-clip: padding-box,border-box;
+    background-origin: border-box;
+    padding: 20px 10px;
+    height: 180px;
+}
+
+.main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .sloution_service .service_three .title{
+    font-size: 28px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 12px;
+}
+
+.main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .sloution_service .service_three .desc{
+    font-size: 18px;
+    font-weight: 400;
+    color: #b8b8b8;
+    line-height: 22px;
+}
+
+.main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .sloution_service .service_four{
+    width: 45%;
+    border: 1px solid transparent;
+    border-radius: 13px;
+    background-image: linear-gradient(#000, #000),linear-gradient(to right, #B541F3, #1AEFE4);
+    background-clip: padding-box,border-box;
+    background-origin: border-box;
+    padding: 20px 10px;
+    height: 180px;
+}
+
+.main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .sloution_service .service_four .title{
+    font-size: 28px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 12px;
+}
+
+.main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .sloution_service .service_four .desc{
+    font-size: 18px;
+    font-weight: 400;
+    color: #b8b8b8;
+    line-height: 22px;
+}
+
+
+/* 左側圖片 */
+.main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_image{
+    width: 60%;
+}
+
+.main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_image .region_image_inner{
+    width: 100%;
+}
+
+.main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_image .region_image_inner img{
+    width: 100%;
+    height: 860px;
+}
+/* RWD 樣式 */
+@media(max-width:576px){
+    .main .security_solution{
+    width: 100%;
+}
+
+.main .security_solution .security_solution_outer{
+    width: 100%;
+    height: auto;
+    background-color: #000;
+}
+
+.main .security_solution .security_solution_outer .security_solution_inner{
+    width: 100%;
+    height: 100%;
+}
+
+.main .security_solution .security_solution_outer .security_solution_inner .solution_region{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+.main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc{
+    width: 100%;
+    margin-left: 0%;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .solution_title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 32px;
+    margin-top: 32px;
+}
+
+.main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .solution_title .solut_image{
+    width: 80px;
+}
+
+.main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .solution_title .solut_image img{
+    width: 100%;
+}
+
+.main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .solution_title .solut_title_text{
+    font-size: 38px;
+    font-weight: 600;
+    color: #ffffff;
+    text-shadow: 0 0 5px #f9f9f9, 0 0 15px #e4e4e4;
+    width: 70%;
+}
+
+.main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .sloution_service{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 90%;
+    justify-content: space-around;
+}
+
+.main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .sloution_service .service_one{
+    width: 100%;
+    border: 1px solid transparent;
+    border-radius: 13px;
+    background-image: linear-gradient(#000, #000),linear-gradient(to right, #B541F3, #1AEFE4);
+    background-clip: padding-box,border-box;
+    background-origin: border-box;
+    padding: 20px 10px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .sloution_service .service_one .title{
+    font-size: 28px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 12px;
+}
+
+.main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .sloution_service .service_one .desc{
+    font-size: 18px;
+    font-weight: 400;
+    color: #b8b8b8;
+    line-height: 22px;
+}
+
+.main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .sloution_service .service_two{
+    width: 100%;
+    border: 1px solid transparent;
+    border-radius: 13px;
+    background-image: linear-gradient(#000, #000),linear-gradient(to right, #B541F3, #1AEFE4);
+    background-clip: padding-box,border-box;
+    background-origin: border-box;
+    padding: 20px 10px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .sloution_service .service_two .title{
+    font-size: 28px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 12px;
+}
+
+.main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .sloution_service .service_two .desc{
+    font-size: 18px;
+    font-weight: 400;
+    color: #b8b8b8;
+    line-height: 22px;
+}
+
+.main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .sloution_service .service_three{
+    width: 100%;
+    border: 1px solid transparent;
+    border-radius: 13px;
+    background-image: linear-gradient(#000, #000),linear-gradient(to right, #B541F3, #1AEFE4);
+    background-clip: padding-box,border-box;
+    background-origin: border-box;
+    padding: 20px 10px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .sloution_service .service_three .title{
+    font-size: 28px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 12px;
+}
+
+.main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .sloution_service .service_three .desc{
+    font-size: 18px;
+    font-weight: 400;
+    color: #b8b8b8;
+    line-height: 22px;
+}
+
+.main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .sloution_service .service_four{
+    width: 100%;
+    border: 1px solid transparent;
+    border-radius: 13px;
+    background-image: linear-gradient(#000, #000),linear-gradient(to right, #B541F3, #1AEFE4);
+    background-clip: padding-box,border-box;
+    background-origin: border-box;
+    padding: 20px 10px;
+    height:auto;
+    margin-bottom: 10px;
+}
+
+.main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .sloution_service .service_four .title{
+    font-size: 28px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 12px;
+}
+
+.main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .sloution_service .service_four .desc{
+    font-size: 18px;
+    font-weight: 400;
+    color: #b8b8b8;
+    line-height: 22px;
+}
+
+
+/* 左側圖片 */
+.main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_image{
+    display: none;
+}
+
+/* .main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_image .region_image_inner{
+    width: 100%;
+}
+
+.main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_image .region_image_inner img{
+    width: 100%;
+    height: 860px;
+} */
+}
+
+
+/* security_solution的css樣式設置 結束 */
+
+
+/* customer_support的css樣式設置 開始*/
+.main .customer_support{
+    width: 100%;
+}
+
+.main .customer_support .customer_support_outer{
+    width: 100%;
+    background-color: #fff;
+    border-radius: 20px;
+    margin-bottom: 2px;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner{
+    /* border: 1px solid red; */
+    width: 100%;
+    padding: 7% 0% 7% 0%;
+    background-color: #fff;
+    border-radius: 20px;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner .customer_headline{
+    text-align: right;
+    margin: 0% 5% 0% 5%;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner .customer_headline .customer_headline_inner{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner .customer_headline .customer_headline_inner .customer_headline_icon{
+    max-width: 80px;
+    width: 100%;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner .customer_headline .customer_headline_inner .customer_headline_icon img{
+    width: 100%;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner .customer_headline .customer_headline_inner .customer_headline_title{
+    font-size: 64px;
+    font-weight: 600;
+    color: #000000;
+}
+
+/* .main .customer_support .customer_support_outer .customer_support_inner .customer_headline .customer_headline_subtitle{
+    font-size: 24px;
+    color: #7A7A7A;
+} */
+
+.main .customer_support .customer_support_outer .customer_support_inner .gap_line{
+    border: none;
+    height: 160px;
+    align-content: center;
+    margin: 0% 5% 0% 5%;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner .customer_item{
+    display: flex;
+    justify-content: center;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_msgcard{
+    display: flex;
+    justify-content: center;
+    margin: 0% 5% 5% 5%;
+    gap: 12px;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_1{
+    border: 1px solid #D9D9D9;
+    border-radius: 12px;
+    display: flex;
+    width: 100%;
+    padding: 0px 20px;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_1 .item_icon{
+    width: 60px;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_1 .item_icon .icon_1{
+    width: 100%;
+    margin-top: 15px;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_1 .item_icon .icon_1 img{
+    width: 100%;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_1 .item_desc{
+    width: 100%;
+    padding: 30px 10px;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_1 .item_desc .desc_title{
+    font-size: 28px;
+    font-weight: 500;
+    color:#000000;
+    margin-bottom: 12px;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_1 .item_desc .desc_text{
+    font-size: 18px;
+    font-weight: 400;
+    color:#666666;
+    line-height: 20px;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_2{
+    border: 1px solid #D9D9D9;
+    border-radius: 12px;
+    display: flex;
+    width: 100%;
+    padding: 0px 20px;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_2 .item_icon{
+    width: 60px;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_2 .item_icon .icon_1{
+    width: 100%;
+    margin-top: 15px;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_2 .item_icon .icon_1 img{
+    width: 100%;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_2 .item_desc{
+    width: 100%;
+    padding: 30px 10px;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_2 .item_desc .desc_title{
+    font-size: 28px;
+    font-weight: 500;
+    color:#000000;
+    margin-bottom: 12px;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_2 .item_desc .desc_text{
+    font-size: 18px;
+    font-weight: 400;
+    color:#666666;
+    line-height: 20px;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_3{
+    border: 1px solid #D9D9D9;
+    border-radius: 12px;
+    display: flex;
+    width: 100%;
+    padding: 0px 20px;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_3 .item_icon{
+    width: 60px;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_3 .item_icon .icon_1{
+    width: 100%;
+    margin-top: 15px;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_3 .item_icon .icon_1 img{
+    width: 100%;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_3 .item_desc{
+    width: 100%;
+    padding: 30px 10px;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_3 .item_desc .desc_title{
+    font-size: 28px;
+    font-weight: 500;
+    color:#000000;
+    margin-bottom: 12px;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_3 .item_desc .desc_text{
+    font-size: 18px;
+    font-weight: 400;
+    color:#666666;
+    line-height: 20px;
+}
+
+/* RWD 樣式 */
+@media(max-width:576px){
+    .main .customer_support{
+    width: 100%;
+}
+
+.main .customer_support .customer_support_outer{
+    width: 100%;
+    background-color: #fff;
+    border-radius: 20px;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner{
+    /* border: 1px solid red; */
+    width: 100%;
+    padding: 8% 0% 8% 0%;
+    background-color: #fff;
+    border-radius: 20px;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner .customer_headline{
+    text-align: right;
+    margin: 0% 5% 0% 5%;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner .customer_headline .customer_headline_inner{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-bottom: 0px;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner .customer_headline .customer_headline_inner .customer_headline_icon{
+    max-width: 60px;
+    width: 100%;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner .customer_headline .customer_headline_inner .customer_headline_icon img{
+    width: 100%;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner .customer_headline .customer_headline_inner .customer_headline_title{
+    font-size: 38px;
+    font-weight: 600;
+    color: #000000;
+}
+
+/* .main .customer_support .customer_support_outer .customer_support_inner .customer_headline .customer_headline_subtitle{
+    font-size: 24px;
+    color: #7A7A7A;
+} */
+
+.main .customer_support .customer_support_outer .customer_support_inner .gap_line{
+    border: none;
+    height: 90px;
+    align-content: center;
+    margin: 0% 5% 0% 5%;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner .customer_item{
+    display: flex;
+    justify-content: center;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_msgcard{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0%;
+    gap: 12px;
+    width: 90%;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_1{
+    border: 1px solid #D9D9D9;
+    border-radius: 12px;
+    display: flex;
+    width: 90%;
+    padding: 0px 20px;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_1 .item_icon{
+    width: 60px;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_1 .item_icon .icon_1{
+    width: 100%;
+    margin-top: 15px;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_1 .item_icon .icon_1 img{
+    width: 100%;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_1 .item_desc{
+    width: 100%;
+    padding: 30px 10px;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_1 .item_desc .desc_title{
+    font-size: 28px;
+    font-weight: 500;
+    color:#000000;
+    margin-bottom: 12px;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_1 .item_desc .desc_text{
+    font-size: 18px;
+    font-weight: 400;
+    color:#666666;
+    line-height: 20px;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_2{
+    border: 1px solid #D9D9D9;
+    border-radius: 12px;
+    display: flex;
+    width: 90%;
+    padding: 0px 20px;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_2 .item_icon{
+    width: 60px;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_2 .item_icon .icon_1{
+    width: 100%;
+    margin-top: 15px;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_2 .item_icon .icon_1 img{
+    width: 100%;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_2 .item_desc{
+    width: 100%;
+    padding: 30px 10px;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_2 .item_desc .desc_title{
+    font-size: 28px;
+    font-weight: 500;
+    color:#000000;
+    margin-bottom: 12px;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_2 .item_desc .desc_text{
+    font-size: 18px;
+    font-weight: 400;
+    color:#666666;
+    line-height: 20px;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_3{
+    border: 1px solid #D9D9D9;
+    border-radius: 12px;
+    display: flex;
+    width: 90%;
+    padding: 0px 20px;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_3 .item_icon{
+    width: 60px;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_3 .item_icon .icon_1{
+    width: 100%;
+    margin-top: 15px;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_3 .item_icon .icon_1 img{
+    width: 100%;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_3 .item_desc{
+    width: 100%;
+    padding: 30px 10px;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_3 .item_desc .desc_title{
+    font-size: 28px;
+    font-weight: 500;
+    color:#000000;
+    margin-bottom: 12px;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_3 .item_desc .desc_text{
+    font-size: 18px;
+    font-weight: 400;
+    color:#666666;
+    line-height: 20px;
+}
+
+}
+
+/* customer_support的css樣式設置 結束*/
+
+
+/* best_choice的css樣式設置 開始 */
+.main .best_choice{
+    width: 100%;
+}
+
+.main .best_choice .best_choice_outer{
+    width: 100%;
+    background-color: #000;
+}
+
+.main .best_choice .best_choice_outer .best_choice_inner{
+    width: 100%;
+    height: 100%;
+}
+
+.main .best_choice .best_choice_outer .best_choice_inner .choice_region{
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.main .best_choice .best_choice_outer .best_choice_inner .choice_region .top_block{
+    width: 100%;
+    margin-bottom: 100px;
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.main .best_choice .best_choice_outer .best_choice_inner .choice_region .top_block .desc_block {
+    width: 90%;
+    margin-bottom: 75px;
+    /* border: 1px solid red; */
+}
+
+.main .best_choice .best_choice_outer .best_choice_inner .choice_region .top_block .desc_block .choice_title{
+    font-size: 64px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.main .best_choice .best_choice_outer .best_choice_inner .choice_region .top_block .desc_block .choice_sub{
+    font-size: 24px;
+    font-weight: 500;
+    color: #b8b8b8;
+}
+
+.main .best_choice .best_choice_outer .best_choice_inner .choice_region .top_block .game_img_list{
+    width: 90%;
+    /* border: 1px solid red; */
+}
+
+.main .best_choice .best_choice_outer .best_choice_inner .choice_region .top_block .game_img_list ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.main .best_choice .best_choice_outer .best_choice_inner .choice_region .top_block .game_img_list ul .game_icon{
+    margin: 5px 5px;
+}
+
+.main .best_choice .best_choice_outer .best_choice_inner .choice_region .top_block .game_img_list ul .game_icon_inner{
+    max-width: 104px;
+}
+
+.main .best_choice .best_choice_outer .best_choice_inner .choice_region .top_block .game_img_list ul .game_icon_inner img{
+    width: 100%;
+}
+
+/* icon的hover效果 */
+.tool_text_1{
+    position: relative;
+    transition: color 0.3s;
+}
+
+.tool_text_1::after{
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: -35%;
+    left: 0%;
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    align-content: center;
+    background-color: #7a7a7a;
+    color: #ffffff;
+    border-radius: 5px;
+    white-space: nowrap;
+    font-size: 14px;
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s, transform  0.3s;
+}
+
+.tool_text_1:hover::after{
+    opacity: 1;
+    visibility: visible;
+}
+
+.tool_text_1::before{
+    content: '';
+    position: absolute;
+    bottom: -8%;
+    left: 40%;
+    transform: translateX(0%);
+
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #7a7a7a transparent;
+
+    opacity: 1;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.1s, transform  0.3s;
+}
+
+.tool_text_1:hover::before{
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* 下半部分 */
+.main .best_choice .best_choice_outer .best_choice_inner .choice_region .under_block{
+    width: 100%;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+}
+
+.main .best_choice .best_choice_outer .best_choice_inner .choice_region .under_block .company_logo_list{
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    justify-content: center;
+}
+
+.main .best_choice .best_choice_outer .best_choice_inner .choice_region .under_block .company_logo_list .logo_image{
+    max-width: 330px;
+}
+
+.main .best_choice .best_choice_outer .best_choice_inner .choice_region .under_block .company_logo_list .logo_image img{
+    width: 100%;
+}
+
+/* RWD樣式 */
+@media(max-width:576px){
+
+    .main .best_choice{
+        width: 100%;
+    }
+    
+    .main .best_choice .best_choice_outer{
+        width: 100%;
+        background-color: #000;
+    }
+    
+    .main .best_choice .best_choice_outer .best_choice_inner{
+        width: 100%;
+        height: 100%;
+    }
+    
+    .main .best_choice .best_choice_outer .best_choice_inner .choice_region{
+        /* border: 1px solid red; */
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .main .best_choice .best_choice_outer .best_choice_inner .choice_region .top_block{
+        width: 100%;
+        margin-bottom: 60px;
+        margin-top: 60px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .main .best_choice .best_choice_outer .best_choice_inner .choice_region .top_block .desc_block {
+        width: 90%;
+        margin-bottom: 40px;
+        /* border: 1px solid red; */
+    }
+    
+    .main .best_choice .best_choice_outer .best_choice_inner .choice_region .top_block .desc_block .choice_title{
+        font-size: 38px;
+        font-weight: 600;
+        color: #ffffff;
+        margin-bottom: 22px;
+    }
+    
+    .main .best_choice .best_choice_outer .best_choice_inner .choice_region .top_block .desc_block .choice_sub{
+        font-size: 20px;
+        font-weight: 500;
+        color: #b8b8b8;
+    }
+    
+    .main .best_choice .best_choice_outer .best_choice_inner .choice_region .top_block .game_img_list{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        /* border: 1px solid red; */
+    }
+    
+    .main .best_choice .best_choice_outer .best_choice_inner .choice_region .top_block .game_img_list ul{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 90%;
+    }
+    
+    .main .best_choice .best_choice_outer .best_choice_inner .choice_region .top_block .game_img_list ul .game_icon{
+        margin: 5px 5px;
+    }
+    
+    .main .best_choice .best_choice_outer .best_choice_inner .choice_region .top_block .game_img_list ul .game_icon_inner{
+        max-width: 60px;
+    }
+    
+    .main .best_choice .best_choice_outer .best_choice_inner .choice_region .top_block .game_img_list ul .game_icon_inner img{
+        width: 100%;
+    }
+    
+    /* icon的hover效果 */
+    .tool_text_1{
+        position: relative;
+        transition: color 0.3s;
+    }
+    
+    .tool_text_1::after{
+        content: attr(data-tooltip);
+        position: absolute;
+        bottom: -55%;
+        left: 0%;
+        width: 100%;
+        height: 30px;
+        text-align: center;
+        align-content: center;
+        background-color: #7a7a7a;
+        color: #ffffff;
+        border-radius: 5px;
+        white-space: nowrap;
+        font-size: 14px;
+        z-index: 100;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s, visibility 0.3s, transform  0.3s;
+    }
+    
+    .tool_text_1:hover::after{
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .tool_text_1::before{
+        content: '';
+        position: absolute;
+        bottom: -8%;
+        left: 35%;
+        transform: translateX(0%);
+    
+        border-width: 10px;
+        border-style: solid;
+        border-color: transparent transparent #7a7a7a transparent;
+    
+        opacity: 1;
+        visibility: hidden;
+        transition: opacity 0.3s, visibility 0.1s, transform  0.3s;
+    }
+    
+    .tool_text_1:hover::before{
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    
+    /* 下半部分 */
+    .main .best_choice .best_choice_outer .best_choice_inner .choice_region .under_block{
+        width: 100%;
+        background-color: #ffffff;
+        display: flex;
+        justify-content: center;
+        border-radius: 0px 0px 0px 55px;
+    }
+    
+    .main .best_choice .best_choice_outer .best_choice_inner .choice_region .under_block .company_logo_list{
+        width: 90%;
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 60px;
+        margin-bottom: 60px;
+        justify-content: center;
+    }
+    
+    .main .best_choice .best_choice_outer .best_choice_inner .choice_region .under_block .company_logo_list .logo_image{
+        max-width: 330px;
+    }
+    
+    .main .best_choice .best_choice_outer .best_choice_inner .choice_region .under_block .company_logo_list .logo_image img{
+        width: 100%;
+    }
+
+}
+
+/* best_choice的css樣式設置 結束 */
+
+
+/* partnership_process的css樣式設置 開始 */
+.main .partnership_process{
+    width: 100%;
+}
+
+.main .partnership_process .partnership_process_outer{
+    width: 100%;
+    height: 850px;
+    background-color: #D9D9D9;
+    border-radius: 20px;
+    margin-top: 2px;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner{
+    width: 100%;
+    height: 100%;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region{
+    display: flex;
+    justify-content: left;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region::after{
+    content: "";
+    background-image: url(../image/animation.png);
+    display: block;
+    width: 700px;
+    height: 750px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 100% 100%;
+    position: absolute;
+    left: 3%;
+    top: 190px;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_overview{
+    width: 50%;
+    background-color: #fff;
+    border-right: 1px solid #d9d9d9;
+    border-radius: 20px;
+    position: relative;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_overview::after{
+    content: '';
+    position: absolute;
+    top: 350px;
+    left: 100%;
+    transform: translate(-50%,50%);
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    border: 1px solid #d9d9d9;
+    border-bottom: none;
+    border-left: none;
+    z-index: 999;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_overview::after{
+    transform: translate(-50%, -840%) rotate(45deg);
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_overview .overview_desc{
+    display: flex;
+    justify-content: center;
+    height: 50%;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_overview .overview_desc .desc_icon{
+    width: 100%;
+    max-width: 60px;
+    align-self: center;
+    height: 113px;
+    margin-right: 10px;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_overview .overview_desc .desc_icon img{
+    width: 100%;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_overview .overview_desc .desc_text{
+    align-self: center;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_overview .overview_desc .desc_text .bold_title{
+    font-size: 64px;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 24px;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_overview .overview_desc .desc_text .normal_text{
+    font-size: 24PX;
+    font-weight: 500;
+    color: #b8b8b8;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_overview .overview_image{
+    width: 100%;
+    height: 50%;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_overview .overview_image .image_inner{
+    width: 100%;
+    max-width: 400px;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_overview .overview_image .image_inner img{
+    width: 100%;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list{
+    width: 50%;
+    background-color: #fff;
+    border-right: 1px solid #d9d9d9;
+    border-radius: 20px;
+    overflow: hidden;
+    /* position: relative; */
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_1{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+    border-bottom: 1px solid #d9d9d9;
+    padding-left: 20px;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_1::after{
+    content: '';
+    position: absolute;
+    top: 188px;
+    left: 56%;
+    transform: translate(-50%,50%);
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    border: 1px solid #d9d9d9;
+    border-bottom: none;
+    border-left: none;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_1::after{
+    transform: translate(-50%, 38%) rotate(135deg);
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_1 .list_card{
+    display: flex;
+    gap: 10px;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_1 .list_card .list_title{
+    display: flex;
+    align-items: center;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_1 .list_card .list_title .title_text{
+    font-size: 28px;
+    font-weight: 600;
+    color: #313131;
+    margin-right: 10px;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_1 .list_card .list_title .title_num{
+    font-size: 64px;
+    font-weight: 600;
+    color: #2B4EB9;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_1 .list_card .list_desc{
+    display: flex;
+    flex-direction: column;
+    max-width: 215px;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_1 .list_card .list_desc .desc_bold{
+    font-size: 28px;
+    font-weight: 500;
+    color: #313131;
+    margin-bottom: 12px;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_1 .list_card .list_desc .desc_subtitle{
+    font-size: 18px;
+    font-weight: 500;
+    color: #666666;
+
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_1 .list_icon{
+    width:100%;
+    max-width: 80px;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_1 .list_icon img{
+    width: 100%;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_1 .list_bgimg{
+    width: 100%;
+    max-width: 195px;
+    position: relative;
+    top: 20px;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_1 .list_bgimg img{
+    width: 100%;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_2{
+    border-bottom: 1px solid #d9d9d9;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+    padding-left: 20px;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_2::after{
+    content: '';
+    position: absolute;
+    top: 403px;
+    left: 56%;
+    transform: translate(-50%,50%);
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    border: 1px solid #d9d9d9;
+    border-bottom: none;
+    border-left: none;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_2::after{
+    transform: translate(-50%, 38%) rotate(135deg);
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_2 .list_card{
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    max-width: 323px;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_2 .list_card .list_title{
+    display: flex;
+    align-items: center;
+    width: 100px;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_2 .list_card .list_title .title_text{
+    font-size: 28px;
+    font-weight: 600;
+    color: #313131;
+    margin-right: 10px;
+    width: 100px;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_2 .list_card .list_title .title_num{
+    font-size: 64px;
+    font-weight: 600;
+    color: #2B4EB9;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_2 .list_card .list_desc{
+    display: flex;
+    flex-direction: column;
+    max-width: 215px;
+    width: 100%;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_2 .list_card .list_desc .desc_bold{
+    font-size: 28px;
+    font-weight: 500;
+    color: #313131;
+    margin-bottom: 12px;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_2 .list_card .list_desc .desc_subtitle{
+    font-size: 18px;
+    font-weight: 500;
+    color: #666666;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_2 .list_icon{
+    width:100%;
+    max-width: 80px;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_2 .list_icon img{
+    width: 100%;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_2 .list_bgimg{
+    width: 100%;
+    max-width: 195px;
+    position: relative;
+    top: 20px;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_2 .list_bgimg img{
+    width: 100%;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_3{
+    border-bottom: 1px solid #d9d9d9;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+    padding-left: 20px;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_3::after{
+    content: '';
+    position: absolute;
+    top: 618px;
+    left: 56%;
+    transform: translate(-50%,50%);
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    border: 1px solid #d9d9d9;
+    border-bottom: none;
+    border-left: none;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_3::after{
+    transform: translate(-50%, 38%) rotate(135deg);
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_3 .list_card{
+    display: flex;
+    gap: 10px;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_3 .list_card .list_title{
+    display: flex;
+    align-items: center;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_3 .list_card .list_title .title_text{
+    font-size: 28px;
+    font-weight: 600;
+    color: #313131;
+    margin-right: 10px;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_3 .list_card .list_title .title_num{
+    font-size: 64px;
+    font-weight: 600;
+    color: #2B4EB9;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_3 .list_card .list_desc{
+    display: flex;
+    flex-direction: column;
+    max-width: 215px;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_3 .list_card .list_desc .desc_bold{
+    font-size: 28px;
+    font-weight: 500;
+    color: #313131;
+    margin-bottom: 12px;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_3 .list_card .list_desc .desc_subtitle{
+    font-size: 18px;
+    font-weight: 500;
+    color: #666666;
+
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_3 .list_icon{
+    width:100%;
+    max-width: 80px;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_3 .list_icon img{
+    width: 100%;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_3 .list_bgimg{
+    width: 100%;
+    max-width: 195px;
+    position: relative;
+    top: 20px;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_3 .list_bgimg img{
+    width: 100%;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_4{
+    border-bottom: 1px solid #d9d9d9;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+    padding-left: 20px;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_4 .list_card{
+    display: flex;
+    gap: 10px;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_4 .list_title{
+    display: flex;
+    align-items: center;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_4 .list_title .title_text{
+    font-size: 28px;
+    font-weight: 600;
+    color: #313131;
+    margin-right: 10px;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_4 .list_title .title_num{
+    font-size: 64px;
+    font-weight: 600;
+    color: #2B4EB9;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_4 .list_desc{
+    display: flex;
+    flex-direction: column;
+    max-width: 215px;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_4 .list_desc .desc_bold{
+    font-size: 28px;
+    font-weight: 500;
+    color: #313131;
+    margin-bottom: 12px;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_4 .list_desc .desc_subtitle{
+    font-size: 18px;
+    font-weight: 500;
+    color: #666666;
+
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_4 .list_icon{
+    width:100%;
+    max-width: 80px;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_4 .list_icon img{
+    width: 100%;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_4 .list_bgimg{
+    width: 100%;
+    max-width: 195px;
+    position: relative;
+    top: 20px;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_4 .list_bgimg img{
+    width: 100%;
+}
+
+/* RWD 樣式 */
+@media(max-width:576px){
+    .main .partnership_process{
+    width: 100%;
+}
+
+.main .partnership_process .partnership_process_outer{
+    width: 100%;
+    height: auto;
+    background-color: #D9D9D9;
+    border-radius: 20px;
+    margin-top: 2px;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 35px;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    width: 99%;
+    height: 100%;
+    position: relative;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region::after{
+    content: "";
+    background-image: url(../image/animation.png);
+    display: block;
+    width: 700px;
+    height: 750px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 100% 100%;
+    position: absolute;
+    left: 3%;
+    top: 190px;
+    display: none;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_overview{
+    width: 100%;
+    background-color: #fff;
+    border-right: 1px solid #d9d9d9;
+    border-radius: 20px;
+    position: relative;
+    margin-bottom: 2px;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_overview::after{
+    content: '';
+    position: absolute;
+    top: 350px;
+    left: 100%;
+    transform: translate(-50%,50%);
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    border: 1px solid #d9d9d9;
+    border-bottom: none;
+    border-left: none;
+    z-index: 999;
+    display: none;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_overview::after{
+    transform: translate(-50%, -840%) rotate(45deg);
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_overview .overview_desc{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_overview .overview_desc .desc_icon{
+    width: 100%;
+    max-width: 60px;
+    align-self: center;
+    height: 125px;
+    margin-right: 10px;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_overview .overview_desc .desc_icon img{
+    width: 100%;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_overview .overview_desc .desc_text{
+    align-self: center;
+    margin-bottom: 35px;
+    margin-top: 35px;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_overview .overview_desc .desc_text .bold_title{
+    font-size: 38px;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_overview .overview_desc .desc_text .normal_text{
+    font-size: 20px;
+    font-weight: 500;
+    color: #b8b8b8;
+    line-height: 25px;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_overview .overview_image{
+    width: 100%;
+    height: 50%;
+    display: none;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_overview .overview_image .image_inner{
+    width: 100%;
+    max-width: 400px;
+
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_overview .overview_image .image_inner img{
+    width: 100%;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list{
+    width: 100%;
+    background-color: #fff;
+    border-right: 1px solid #d9d9d9;
+    border-radius: 0px 0px 20px 20px;
+    overflow: hidden;
+    /* position: relative; */
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_1{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+    border-bottom: 1px solid #d9d9d9;
+    padding-left: 20px;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_1::after{
+    content: '';
+    position: absolute;
+    top: 188px;
+    left: 56%;
+    transform: translate(-50%,50%);
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    border: 1px solid #d9d9d9;
+    border-bottom: none;
+    border-left: none;
+    display: none;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_1::after{
+    transform: translate(-50%, 38%) rotate(135deg);
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_1 .list_card{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_1 .list_card .list_title{
+    display: flex;
+    align-items: center;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_1 .list_card .list_title .title_text{
+    font-size: 16px;
+    font-weight: 600;
+    color: #313131;
+    margin-right: 10px;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_1 .list_card .list_title .title_num{
+    font-size: 16px;
+    font-weight: 600;
+    color: #2B4EB9;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_1 .list_card .list_desc{
+    display: flex;
+    flex-direction: column;
+    max-width: 215px;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_1 .list_card .list_desc .desc_bold{
+    font-size: 20px;
+    font-weight: 500;
+    color: #313131;
+    margin-bottom: 12px;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_1 .list_card  .list_desc .desc_subtitle{
+    font-size: 16px;
+    font-weight: 500;
+    color: #666666;
+
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_1 .list_icon{
+    width:100%;
+    max-width: 80px;
+    position: relative;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_1 .list_icon img{
+    width: 100%;
+    position: absolute;
+    bottom:-47px;
+    left: 0px;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_1 .list_bgimg{
+    width: 100%;
+    max-width: 150px;
+    position: relative;
+    top: 20px;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_1 .list_bgimg img{
+    width: 100%;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_2{
+    border-bottom: 1px solid #d9d9d9;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+    padding-left: 20px;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_2::after{
+    content: '';
+    position: absolute;
+    top: 403px;
+    left: 56%;
+    transform: translate(-50%,50%);
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    border: 1px solid #d9d9d9;
+    border-bottom: none;
+    border-left: none;
+    display: none;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_2::after{
+    transform: translate(-50%, 38%) rotate(135deg);
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_2 .list_card{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 215px;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_2 .list_card .list_title{
+    display: flex;
+    align-items: center;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_2 .list_card .list_title .title_text{
+    font-size: 16px;
+    font-weight: 600;
+    color: #313131;
+    margin-right: 10px;
+    width: 35px;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_2 .list_card .list_title .title_num{
+    font-size: 16px;
+    font-weight: 600;
+    color: #2B4EB9;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_2 .list_card .list_desc{
+    display: flex;
+    flex-direction: column;
+    max-width: 215px;
+    width: 100%;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_2 .list_card .list_desc .desc_bold{
+    font-size: 20px;
+    font-weight: 500;
+    color: #313131;
+    margin-bottom: 12px;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_2 .list_card .list_desc .desc_subtitle{
+    font-size: 16px;
+    font-weight: 500;
+    color: #666666;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_2 .list_icon{
+    width:100%;
+    max-width: 80px;
+    position: relative;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_2 .list_icon img{
+    width: 100%;
+    position: absolute;
+    bottom: -47px;
+    left: 0px;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_2 .list_bgimg{
+    width: 100%;
+    max-width: 150px;
+    position: relative;
+    top: 20px;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_2 .list_bgimg img{
+    width: 100%;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_3{
+    border-bottom: 1px solid #d9d9d9;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+    padding-left: 20px;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_3::after{
+    content: '';
+    position: absolute;
+    top: 618px;
+    left: 56%;
+    transform: translate(-50%,50%);
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    border: 1px solid #d9d9d9;
+    border-bottom: none;
+    border-left: none;
+    display: none;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_3::after{
+    transform: translate(-50%, 38%) rotate(135deg);
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_3 .list_card{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_3 .list_card .list_title{
+    display: flex;
+    align-items: center;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_3 .list_card .list_title .title_text{
+    font-size: 16px;
+    font-weight: 600;
+    color: #313131;
+    margin-right: 10px;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_3 .list_card .list_title .title_num{
+    font-size: 16px;
+    font-weight: 600;
+    color: #2B4EB9;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_3 .list_card .list_desc{
+    display: flex;
+    flex-direction: column;
+    max-width: 215px;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_3 .list_card .list_desc .desc_bold{
+    font-size: 20px;
+    font-weight: 500;
+    color: #313131;
+    margin-bottom: 12px;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_3 .list_card .list_desc .desc_subtitle{
+    font-size: 16px;
+    font-weight: 500;
+    color: #666666;
+
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_3 .list_icon{
+    width:100%;
+    max-width: 80px;
+    position: relative;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_3 .list_icon img{
+    width: 100%;
+    position:absolute;
+    bottom: -47px;
+    left: 0px;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_3 .list_bgimg{
+    width: 100%;
+    max-width: 150px;
+    position: relative;
+    top: 20px;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_3 .list_bgimg img{
+    width: 100%;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_4{
+    border-bottom: 1px solid #d9d9d9;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+    padding-left: 20px;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_4 .list_card{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_4 .list_card .list_title{
+    display: flex;
+    align-items: center;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_4 .list_card .list_title .title_text{
+    font-size: 16px;
+    font-weight: 600;
+    color: #313131;
+    margin-right: 10px;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_4 .list_card .list_title .title_num{
+    font-size: 16px;
+    font-weight: 600;
+    color: #2B4EB9;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_4 .list_card .list_desc{
+    display: flex;
+    flex-direction: column;
+    max-width: 215px;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_4 .list_card .list_desc .desc_bold{
+    font-size: 20px;
+    font-weight: 500;
+    color: #313131;
+    margin-bottom: 12px;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_4 .list_card .list_desc .desc_subtitle{
+    font-size: 16px;
+    font-weight: 500;
+    color: #666666;
+
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_4 .list_icon{
+    width:100%;
+    max-width: 80px;
+    position: relative;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_4 .list_icon img{
+    width: 100%;
+    position: absolute;
+    bottom: -47px;
+    left: 0px;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_4 .list_bgimg{
+    width: 100%;
+    max-width: 150px;
+    position: relative;
+    top: 20px;
+}
+
+.main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_4 .list_bgimg img{
+    width: 100%;
+}
+}
+
+/* partnership_process的css樣式設置 結束 */
+
+
+/* contact的css樣式設置 開始*/
+.main .contact{
+    width: 100%;
+    height: 900px;
+    margin-bottom: 40px;
+}
+
+.main .contact_outer{
+    width: 100%;
+    height: 100%;
+    background-color: #032B49;
+    /* background: linear-gradient(to bottom,rgba(0,0,0,1)100%,rgba(3,43,73,1)90%); */
+}
+
+.main .contact_outer .contact_inner{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+    box-shadow: inset 0px 35px 20px rgba(0, 0, 0, .3);
+}
+
+.main .contact_outer .contact_inner .contact_bgimg{
+    width: 50%;
+    background-image: url(../image/contact-bgimg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 900px;
+}
+
+.main .contact_outer .contact_inner .contact_form{
+    /* border: 1px solid red; */
+    width: 50%;
+    justify-items: center;
+    align-content: center;
+    background-color: #032B49;
+}
+
+.main .contact_outer .contact_inner .contact_form .form_title{
+    width: 100%;
+    max-width: 450px;
+    margin-bottom: 40px;
+}
+
+.main .contact_outer .contact_inner .contact_form .form_title h2{
+    font-size: 50px;
+    font-weight: 600;
+    color: #fff;
+}
+
+
+/* 目前不需要使用表單，客戶點擊按鈕後，直接導入官網的成為夥伴頁面 */
+/* .main .contact_outer .contact_inner .contact_form form{
+    width: 100%;
+    max-width: 450px;
+}
+
+.main .contact_outer .contact_inner .contact_form form .insert_info{
+    width: 100%;
+    border: 1px solid #fff;
+    margin-bottom: 40px;
+    border-radius: 5px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.main .contact_outer .contact_inner .contact_form form .insert_info input{
+    border: none;
+    width: 98%;
+    height: 40px;
+    font-size: 20px;
+    background-color: #032B49;
+    color: #fff;
+}
+
+.main .contact_outer .contact_inner .contact_form form .insert_text{
+    width: 100%;
+    border: 1px solid #fff;
+    margin-bottom: 40px;
+    border-radius: 5px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.main .contact_outer .contact_inner .contact_form form .insert_text textarea{
+    border: none;
+    width: 98%;
+    height: 100px;
+    font-size: 20px;
+    background-color: #032B49;
+    color: #fff;
+} */
+
+.main .contact_outer .contact_inner .contact_form .insert_btn{
+    max-width: 450px;
+}
+
+.main .contact_outer .contact_inner .contact_form .insert_btn img{
+    width: 100%;
+    max-width: 450px;
+}
+
+
+/* RWD 樣式設定 */
+@media(max-width:576px){
+    .main .contact{
+    width: 100%;
+    height: 100%;
+    margin-bottom: 40px;
+}
+
+.main .contact_outer{
+    width: 100%;
+    height: 100%;
+    background-color: #032B49;
+    /* background: linear-gradient(to bottom,rgba(0,0,0,1)100%,rgba(3,43,73,1)90%); */
+}
+
+.main .contact_outer .contact_inner{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    padding-top: 40px;
+    box-shadow: inset 0px 35px 20px rgba(0, 0, 0, 0);
+}
+
+.main .contact_outer .contact_inner .contact_bgimg{
+    width: 100%;
+    background-image: url(../image/contact-bgimg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 450px;
+    box-shadow: inset 0px 35px 20px rgba(0, 0, 0, .5);
+}
+
+.main .contact_outer .contact_inner .contact_form{
+    /* border: 1px solid red; */
+    width: 100%;
+    justify-items: center;
+    align-content: center;
+    background-color: #032B49;
+    margin-bottom: 40px;
+}
+
+.main .contact_outer .contact_inner .contact_form .form_title{
+    width: 100%;
+    max-width: 450px;
+    margin-bottom: 40px;
+    display: flex;
+        justify-content: center;
+}
+
+.main .contact_outer .contact_inner .contact_form .form_title h2{
+    font-size: 32px;
+    line-height: 35px;
+    font-weight: 600;
+    color: #fff;
+    width: 80%;
+    text-align: justify;
+}
+
+/* 目前不需要使用表單，客戶點擊按鈕後，直接導入官網的成為夥伴頁面，所以這段再rwd部分先刪除 */
+
+
+.main .contact_outer .contact_inner .contact_form .insert_btn{
+    max-width: 450px;
+}
+
+.main .contact_outer .contact_inner .contact_form .insert_btn img{
+    width: 100%;
+    max-width: 450px;
+}
+}
+
+
+/* contact的css樣式設置 結束*/
+
+
+/* footer的css樣式設置 開始*/
+.main footer{
+    width: 100%;
+    margin: 0 auto;
+}
+
+.main footer .footer_inner{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.main footer .footer_inner .footer_logo{
+     width: 100%;
+     max-width: 150px;
+     text-align: center;
+     background-color: #fff;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     margin-left: 100px;
+}
+
+.main footer .footer_inner .footer_logo a img{
+    width: 100%;
+    max-width: 120px;
+}
+
+.main footer .footer_inner .social_icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 100px;
+    gap: 5px;
+}
+
+
+/* RWD 樣式 */
+@media(max-width:576px){
+    .main footer{
+    width: 100%;
+    margin: 0 auto;
+}
+
+.main footer .footer_inner{
+    width: 100%;
+    display: block;
+    align-items: center;
+    /* height: 100px; */
+    background-color: #fff;
+    padding-bottom: 5px;
+}
+
+.main footer .footer_inner .footer_logo{
+     width: 100%;
+    max-width: 100%;
+    text-align: center;
+    background-color: #fff;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-left: 0px;
+    margin-bottom: 10px;
+}
+
+.main footer .footer_inner .footer_logo a img{
+    width: 100%;
+    max-width: 120px;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.main footer .footer_inner .social_icon{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-right: 0px;
+    margin-left: 10px;
+    gap: 5px;
+    margin-bottom: 25px;
+}
+}
+/* footer的css樣式設置 結束*/

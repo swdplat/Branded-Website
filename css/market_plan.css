@@ -1,0 +1,121 @@
+.main .market_plan_outer{
+    width: 100%;
+}
+
+.main .market_plan_outer .market_plan_inner{
+    width: 100%;
+    background-color: #000;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region{
+    width: 100%;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .planer{
+    width: 100%;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .planer .Whole_case{
+    width: 100%;
+    background-color: #ffffff;
+    display: flex;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .planer .Whole_case .Whole_case_text{
+    width: 25%;
+    display: flex;
+    z-index: 100;
+    /* border: 1px solid red; */
+    /* align-self: center; */
+    /* height: 900px; */
+    /* position: relative; */
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .planer .Whole_case .Whole_case_text .case_outer{
+    display: flex;
+    position: absolute;
+    top: 60px;
+    left: 60px;
+    width: 60%;
+    max-width: 650px;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .planer .Whole_case .Whole_case_text .case_outer .case_icon{
+    max-width: 110px;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .planer .Whole_case .Whole_case_text .case_outer .case_icon img{
+    width: 80px;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .planer .Whole_case .Whole_case_text .case_outer .case_desc{
+    /* border: 1px solid red; */
+    /* align-self: center; */
+    margin-top: 10px;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .planer .Whole_case .Whole_case_text .case_outer .case_desc .case_title{
+    /* border: 1px solid red; */
+    font-size: 64px;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 64px;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .planer .Whole_case .Whole_case_text .case_outer .case_desc .case_card{
+    display: flex;
+    border: 1px solid #B541F3;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 650px;
+    background-color: #ffffff;
+    padding: 20px 15px 20px 15px;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .planer .Whole_case .Whole_case_text .case_outer .case_desc .case_card .card_image{
+    max-width: 48px;
+    margin-right: 10px;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .planer .Whole_case .Whole_case_text .case_outer .case_desc .case_card .card_image img{
+    width: 48px;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .planer .Whole_case .Whole_case_text .case_outer .case_desc .case_card .card_info .info_title{
+    font-size: 28px;
+    font-weight: 600;
+    color: #000;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .planer .Whole_case .Whole_case_text .case_outer .case_desc .case_card .card_info .info_text{
+    line-height: 20px;
+    color: #666;
+    font-size: 18px;
+}
+
+/* 右側大圖片以及漸層遮罩 */
+.main .market_plan_outer .market_plan_inner .market_plan_region .planer .Whole_case .Whole_case_image{
+    width: 75%;
+    height: 900px;
+    position:relative;
+    display: block;
+    overflow: hidden;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .planer .Whole_case .Whole_case_image::before{
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+
+    background-image: linear-gradient(90deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .planer .Whole_case .Whole_case_image img{
+    display: block;
+    height: 100%;
+}

@@ -1,0 +1,1406 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyCard形象頁總覽</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- 滑動效果套件 -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+    <!-- 地圖套件css -->
+     <link rel="stylesheet" href="./map_style.css">
+
+    <!-- jquery引入檔 -->
+     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="main">
+        <header>
+            <div class="header_inner">
+                <div class="header_logo">
+                    <div class="logo_img">
+                        <a href="">
+                            <img src="./image/mycard-logo.png" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="header_contact">
+                    <div class="header_innerblock">
+                        <div class="contact_buttton mobile_style">
+                            <a href="" id="service_map">
+                                服務地區
+                            </a>
+                        </div>
+                        <div class="contact_buttton mobile_style">
+                            <a href="" id="promot">
+                                整合行銷
+                            </a>
+                        </div>
+                        <div class="contact_buttton mobile_style">
+                            <a href="" id="safe_pay">
+                                安全交易
+                            </a>
+                        </div>
+                        <div class="contact_buttton mobile_style">
+                            <a href="" id="customer_service">
+                                客服支援
+                            </a>
+                        </div>
+                        <div class="contact_buttton mobile_style">
+                            <a href="" id="firm">
+                                合作廠商
+                            </a>
+                        </div>
+                        <div class="contact_buttton mobile_style">
+                            <a href="" id="teamwork">
+                                合作流程
+                            </a>
+                        </div>
+                        <div class="contact_buttton">
+                            <a href="" id="contact_with">
+                                <img src="./image/contact-button.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section class="big_banner">
+            <div class="bigbanner_outer">
+                <div class="bigbanner_inner">
+                    <div class="banner_region">
+                        <div class="text_title">
+                            <h2>MyCard 支付行銷整合平台</h2>
+                        </div>
+                        <div class="banner_desc">
+                            MyCard是最全面的支付行銷整合平台，更是您在遊戲市場實現營收、行銷與成長的全方位戰略夥伴。
+                        </div>
+                        <div class="banner_pushbtn">
+                            <div class="pushbtn_inner_1">
+                                <a href="">
+                                    <img src="./image/banner-contactbtn.png" alt="">
+                                </a>
+                            </div>
+                            <div class="pushbtn_inner_2">
+                                <a href="">
+                                    <div class="know_more">
+                                        瞭解更多
+                                    </div>
+                                    <div class="know_more_image">
+                                        <img src="./image/arrows_ani.apng" alt="">
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg_region"></div>
+            </div>
+        </section>
+        <section class="info_board" data-aos="fade-down">
+            <div class="info_board_outer">
+                <div class="info_board_inner">
+                    <div class="board_1">
+                        <div class="text_inner">
+                            <div class="text_title">
+                                <span class="count_two" data-target="743">0</span>萬+
+                            </div>
+                            <div class="text_desc">
+                                MyCard用戶數
+                            </div>
+                        </div>
+                    </div>
+                    <div class="board_2">
+                        <div class="text_inner">
+                            <div class="text_title">
+                                <span class="count_two" data-target="1740">0</span> 萬+
+                            </div>
+                            <div class="text_desc">
+                                MyCard官網月流量
+                            </div>
+                        </div>
+                    </div>
+                    <div class="board_3">
+                        <div class="text_inner">
+                            <div class="text_title">
+                                <span class="count_three" data-target="48">0</span> 萬+
+                            </div>
+                            <div class="text_desc">
+                                MyCard社群人數
+                            </div>
+                        </div>
+                    </div>
+                    <div class="board_4">
+                        <div class="text_inner">
+                            <div class="text_title">
+                                <span class="count_four" data-target="200">0</span>+
+                            </div>
+                            <div class="text_desc">
+                                支付方式
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="market_info">
+            <div class="market_info_outer">
+                <div class="market_info_inner">
+                    <div class="market_desc" data-aos="fade-down">
+                        <div class="market_icon">
+                            <div class="icon_img">
+                                <img src="./image/icon.png" alt="">
+                            </div>
+                        </div>
+                        <div class="market_text">
+                            <div class="text_title">臺港澳點數市場領導品牌</div>
+                            <div class="text_info_1">市占率第一、通路佈點最廣</div>
+                            <div class="text_devide"></div>
+                            <div class="text_info_2">全面涵蓋台灣、中國、香港、澳門多元支付方式是您進入華語市場，觸及數億玩家的最強合作夥伴。</div>
+                        </div>
+                    </div>
+                    <div class="market_earth">
+                        <div class="earth_image">
+                            <img src="./image/number_one.png" alt="" data-aos="zoom-in">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="payment_methods" data-aos="fade-down">
+            <div class="payment_methods_outer">
+                <div class="payment_methods_inner">
+                    <div class="payment_headline">
+                        <div class="payment_headline_inner">
+                            <div class="headline_icon">
+                                <img src="./image/wallet.png" alt="">
+                            </div>
+                            <div class="headline_title">
+                                全球化的支付網路
+                            </div>
+                        </div>
+                        <div class="headline_subtitle">
+                            簡單快速的支付流程
+                        </div>
+                    </div>
+                    <div class="gap_line">
+                    <hr>
+                    </div>
+                    <div class="payment_item">
+                        <div class="all_item_card">
+                            <div class="item_1">
+                                <div class="item_icon">
+                                    <div class="icon_1">
+                                        <img src="./image/oversea-icon.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="item_desc">
+                                    <div class="desc_title">
+                                        國際佈局
+                                    </div>
+                                    <div class="desc_text">
+                                        MyCard於全球市場提供各地最受歡迎的金流支付方式。您只需透過MyCard，即可輕鬆開通全球金流，以最低開發成本快速完成全方位支付佈局。
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item_2">
+                                <div class="item_icon">
+                                    <div class="icon_1">
+                                        <img src="./image/mobile-icon.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="item_desc">
+                                    <div class="desc_title">
+                                        多元的支付方式
+                                    </div>
+                                    <div class="desc_text">
+                                        MyCard 提供最全面的多元支付，從線上支付到線下付款。包含信用卡、銀行轉帳、電信帳單、電子錢包、先買後付及商店繳費，MyCard全部都能支援。
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item_3">
+                                <div class="item_icon">
+                                    <div class="icon_1">
+                                        <img src="./image/shop-icon.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="item_desc">
+                                    <div class="desc_title">
+                                        實體通路
+                                    </div>
+                                    <div class="desc_text">
+                                        MyCard與台港各大便利商店、3C 賣場、連鎖賣場等實體通路夥伴，部署超過 2 萬個經銷點位，讓您的玩家隨時都能購買MyCard 點數。
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="under_headline">
+                        <div class="under_headline_subtitle">
+                            無論您的目標客戶身在何處，我們都能提供最符合當地習慣的支付服務，助您輕鬆實現全球化佈局。
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="world_map">
+            <div class="world_map_outer">
+                <div class="world_map_inner">
+                    <div class="map_region">
+                        <div class="top_block" data-aos="fade-up">
+                            <div class="game_img_list">
+                                   <!-- <header class="app-header">
+      <h1>MyCard Map v0.2</h1>
+    </header> -->
+
+    <main class="app-main">
+      <div id="mapFrame" class="map-frame">
+        <!-- 給 app.js 使用的 SVG + viewport -->
+        <svg id="mapSvg" xmlns="http://www.w3.org/2000/svg">
+          <g id="viewport"></g>
+        </svg>
+        <!-- 右上角工具列：放大 / 縮小 / 重置 -->
+        <div class="map-toolbar">
+          <button class="map-tool-btn" id="btnZoomIn" aria-label="放大">
+            <img src="./assest/icon/plus.svg" alt="">
+          </button>
+          <button class="map-tool-btn" id="btnZoomOut" aria-label="縮小">
+            <img src="./assest/icon/minus.svg" alt="">
+          </button>
+          <button class="map-tool-btn" id="btnResetView" aria-label="重置視圖">
+            <img src="./assest/icon/restart.svg" alt="">
+          </button>
+        </div>
+
+      <aside id="infoPanel" class="info-float">
+        <header class="info-header">
+          <div class="info-controls">
+            <button id="closeInfo" class="icon-btn" aria-label="關閉">✕</button>
+          </div>
+        </header>
+        <div class="info-body" id="infoBody"></div>
+      </aside>
+
+      <div class="map-hint" id="mapHint">滾輪縮放、拖曳平移；點擊地區查看資訊</div>
+      </div>
+    </main>
+
+    <!-- 金流 icon 模式浮動 tooltip -->
+    <div id="methodTooltip" class="method-tooltip" role="tooltip"></div>
+                            </div>
+                        </div>
+                        <div class="under_block" data-aos="fade-up">
+                            <div class="desc_block">
+                                <div class="map_title">
+                                    其他地區
+                                </div>
+                                <div class="map_sub">
+                                    深耕遊戲領域多年，從遊戲推廣、多元支付到玩家服務，提供一站式服務。
+                                </div>
+                            </div>
+                            <div class="country_flag">
+                                <div class="logo_image">
+                                    <a href="#">
+                                        <div class="flag_icon">
+                                            <img src="./image/country_flag_1.png" alt="">
+                                        </div>
+                                        <div class="flag_text">臺灣</div>
+                                    </a>
+                                </div>
+                                <div class="logo_image">
+                                    <a href="#">
+                                        <div class="flag_icon">
+                                            <img src="./image/country_flag_2.png" alt="">
+                                        </div>
+                                        <div class="flag_text">中國</div>
+                                    </a>
+                                </div>
+                                <div class="logo_image">
+                                    <a href="#">
+                                        <div class="flag_icon">
+                                            <img src="./image/country_flag_3.png" alt="">
+                                        </div>
+                                        <div class="flag_text">香港</div>
+                                    </a>
+                                </div>
+                                <div class="logo_image">
+                                    <a href="#">
+                                        <div class="flag_icon">
+                                            <img src="./image/country_flag_4.png" alt="">
+                                        </div>
+                                        <div class="flag_text">澳門</div>
+                                    </a>
+                                </div>
+                                <div class="logo_image">
+                                    <a href="#">
+                                        <div class="flag_icon">
+                                            <img src="./image/country_flag_5.png" alt="">
+                                        </div>
+                                        <div class="flag_text">日本</div>
+                                    </a>
+                                </div>
+                                <div class="logo_image">
+                                    <a href="#">
+                                        <div class="flag_icon">
+                                            <img src="./image/country_flag_6.png" alt="">
+                                        </div>
+                                        <div class="flag_text">韓國</div>
+                                    </a>
+                                </div>
+                                <div class="logo_image">
+                                    <a href="#">
+                                        <div class="flag_icon">
+                                            <img src="./image/country_flag_7.png" alt="">
+                                        </div>
+                                        <div class="flag_text">新加坡</div>
+                                    </a>
+                                </div>
+                                <div class="logo_image">
+                                    <a href="#">
+                                        <div class="flag_icon">
+                                            <img src="./image/country_flag_8.png" alt="">
+                                        </div>
+                                        <div class="flag_text">馬來西亞</div>
+                                    </a>
+                                </div>
+                                <div class="logo_image">
+                                    <a href="#">
+                                        <div class="flag_icon">
+                                            <img src="./image/country_flag_9.png" alt="">
+                                        </div>
+                                        <div class="flag_text">泰國</div>
+                                    </a>
+                                </div>
+                                <div class="logo_image">
+                                    <a href="#">
+                                        <div class="flag_icon">
+                                            <img src="./image/country_flag_10.png" alt="">
+                                        </div>
+                                        <div class="flag_text">菲律賓</div>
+                                    </a>
+                                </div>
+                                <div class="logo_image">
+                                    <a href="#">
+                                        <div class="flag_icon">
+                                            <img src="./image/country_flag_11.png" alt="">
+                                        </div>
+                                        <div class="flag_text">印尼</div>
+                                    </a>
+                                </div>
+                                <div class="logo_image">
+                                    <a href="#">
+                                        <div class="flag_icon">
+                                            <img src="./image/country_flag_12.png" alt="">
+                                        </div>
+                                        <div class="flag_text">越南</div>
+                                    </a>
+                                </div>
+                                <div class="logo_image">
+                                    <a href="#">
+                                        <div class="flag_icon">
+                                            <img src="./image/country_flag_13.png" alt="">
+                                        </div>
+                                        <div class="flag_text">美國</div>
+                                    </a>
+                                </div>
+                                <div class="logo_image">
+                                    <a href="#">
+                                        <div class="flag_icon">
+                                            <img src="./image/country_flag_14.png" alt="">
+                                        </div>
+                                        <div class="flag_text">哥斯大黎加</div>
+                                    </a>
+                                </div>
+                                <div class="logo_image">
+                                    <a href="#">
+                                        <div class="flag_icon">
+                                            <img src="./image/country_flag_15.png" alt="">
+                                        </div>
+                                        <div class="flag_text">薩爾瓦多</div>
+                                    </a>
+                                </div>
+                                <div class="logo_image">
+                                    <a href="#">
+                                        <div class="flag_icon">
+                                            <img src="./image/country_flag_16.png" alt="">
+                                        </div>
+                                        <div class="flag_text">瓜地馬拉</div>
+                                    </a>
+                                </div>
+                                <div class="logo_image">
+                                    <a href="#">
+                                        <div class="flag_icon">
+                                            <img src="./image/country_flag_17.png" alt="">
+                                        </div>
+                                        <div class="flag_text">巴拿馬</div>
+                                    </a>
+                                </div>
+                                <div class="logo_image">
+                                    <a href="#">
+                                        <div class="flag_icon">
+                                            <img src="./image/country_flag_18.png" alt="">
+                                        </div>
+                                        <div class="flag_text">阿根廷</div>
+                                    </a>
+                                </div>
+                                <div class="logo_image">
+                                    <a href="#">
+                                        <div class="flag_icon">
+                                            <img src="./image/country_flag_19.png" alt="">
+                                        </div>
+                                        <div class="flag_text">厄瓜多</div>
+                                    </a>
+                                </div>
+                                <div class="logo_image">
+                                    <a href="#">
+                                        <div class="flag_icon">
+                                            <img src="./image/country_flag_20.png" alt="">
+                                        </div>
+                                        <div class="flag_text">哥倫比亞</div>
+                                    </a>
+                                </div>
+                                <div class="logo_image">
+                                    <a href="#">
+                                        <div class="flag_icon">
+                                            <img src="./image/country_flag_21.png" alt="">
+                                        </div>
+                                        <div class="flag_text">墨西哥</div>
+                                    </a>
+                                </div>
+                                <div class="logo_image">
+                                    <a href="#">
+                                        <div class="flag_icon">
+                                            <img src="./image/country_flag_27.png" alt="">
+                                        </div>
+                                        <div class="flag_text">巴西</div>
+                                    </a>
+                                </div>
+                                <div class="logo_image">
+                                    <a href="#">
+                                        <div class="flag_icon">
+                                            <img src="./image/country_flag_22.png" alt="">
+                                        </div>
+                                        <div class="flag_text">烏拉圭</div>
+                                    </a>
+                                </div>
+                                <div class="logo_image">
+                                    <a href="#">
+                                        <div class="flag_icon">
+                                            <img src="./image/country_flag_23.png" alt="">
+                                        </div>
+                                        <div class="flag_text">祕魯</div>
+                                    </a>
+                                </div>
+                                <div class="logo_image">
+                                    <a href="#">
+                                        <div class="flag_icon">
+                                            <img src="./image/country_flag_24.png" alt="">
+                                        </div>
+                                        <div class="flag_text">智利</div>
+                                    </a>
+                                </div>
+                                <div class="logo_image">
+                                    <a href="#">
+                                        <div class="flag_icon">
+                                            <img src="./image/country_flag_25.png" alt="">
+                                        </div>
+                                        <div class="flag_text">歐盟</div>
+                                    </a>
+                                </div>
+                                <div class="logo_image">
+                                    <a href="#">
+                                        <div class="flag_icon">
+                                            <img src="./image/country_flag_26.png" alt="">
+                                        </div>
+                                        <div class="flag_text">印度</div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="market_plan_outer" data-aos="fade-down">
+            <div class="market_plan_inner">
+                <div class="market_plan_region">
+                    <div class="full_service">
+                        <div class="service_intro">
+                            <div class="all_service_item active" data-img="./image/market_newbg1.png">
+                                <div class="service_outer">
+                                    <div class="case_icon">
+                                        <img src="./image/market_1.png" alt="">
+                                    </div>
+                                    <div class="item_msg">
+                                        <div class="case_title"><div class="mobile_icon"></div>整合行銷方案</div>
+                                        <div class="slideshow_block">
+                                            <div class="all_case_card_1 ">
+                                                <div class="case_card">
+                                                    <div class="card_image">
+                                                        <img src="./image/market_2.png" alt="">
+                                                    </div>
+                                                    <div class="card_info">
+                                                        <div class="info_title">
+                                                            行銷策略全案規劃
+                                                        </div>
+                                                        <div class="info_text">
+                                                            打造遊戲的專屬敘事與視覺靈魂，依據遊戲特色擬定完整行銷主軸，整合故事線、核心賣點到風格視覺打造，建立一套能快速被記住的品牌資產，並延續市場佈局。
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="all_service_item" data-img="./image/market_newbg2.png">
+                                <div class="service_outer">
+                                    <div class="case_icon">
+                                        <img src="./image/market_1.png" alt="">
+                                    </div>
+                                    <div class="item_msg">
+                                        <div class="case_title"><div class="mobile_icon"></div>整合行銷方案</div>
+                                        
+                                        <div class="slideshow_block">
+                                            <div class="all_case_card_2 ">
+                                                <div class="card2_inner">
+                                                    <div class="case_card">
+                                                        <div class="card_image">
+                                                            <img src="./image/icon_tv.png" alt="">
+                                                        </div>
+                                                        <div class="card_info">
+                                                            <div class="info_title">
+                                                                異業聯名企劃
+                                                            </div>
+                                                            <div class="info_text">
+                                                                跨界合作創造新話題
+                                                            </div>
+                                                            <div class="card_button">
+                                                                <div class="button_two">
+                                                                    <a href="" class="openModalBtn" data-target="cross-industry">詳細說明</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="case_card">
+                                                        <div class="card_image">
+                                                            <img src="./image/icon_chat.png" alt="">
+                                                        </div>
+                                                        <div class="card_info">
+                                                            <div class="info_title">
+                                                                活動策展設計規劃
+                                                            </div>
+                                                            <div class="info_text">
+                                                                各類場域策展整合服務
+                                                            </div>
+                                                            <div class="card_button">
+                                                                <div class="button_two">
+                                                                    <a href="" class="openModalBtn" data-target="curate">詳細說明</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="case_card">
+                                                        <div class="card_image">
+                                                            <img src="./image/icon_tv.png" alt="">
+                                                        </div>
+                                                        <div class="card_info">
+                                                            <div class="info_title">
+                                                                打造品牌形象代言媒合
+                                                            </div>
+                                                            <div class="info_text">
+                                                                強化品牌形象渲染力
+                                                            </div>
+                                                            <div class="card_button">
+                                                                <div class="button_two">
+                                                                    <a href="" class="openModalBtn" data-target="brand_image">詳細說明</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="case_card">
+                                                        <div class="card_image">
+                                                            <img src="./image/icon_tv.png" alt="">
+                                                        </div>
+                                                        <div class="card_info">
+                                                            <div class="info_title">
+                                                                專業影音製作團隊
+                                                            </div>
+                                                            <div class="info_text">
+                                                                用聲音與影像放大世界觀
+                                                            </div>
+                                                            <div class="card_button">
+                                                                <div class="button_two">
+                                                                    <a href="" class="openModalBtn" data-target="audio-visual_team">詳細說明</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="case_card">
+                                                        <div class="card_image">
+                                                            <img src="./image/icon_tv.png" alt="">
+                                                        </div>
+                                                        <div class="card_info">
+                                                            <div class="info_title">
+                                                                音樂製作中心
+                                                            </div>
+                                                            <div class="info_text">
+                                                                專屬BGM、音樂一站式製作
+                                                            </div>
+                                                            <div class="card_button">
+                                                                <div class="button_one">
+                                                                    <a href="https://www.soft-world-music.tw/" target="_blank">智冠音樂</a>
+                                                                </div>
+                                                                <div class="button_two">
+                                                                    <a href="" class="openModalBtn" data-target="music_production_center">詳細說明</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="case_card">
+                                                        <div class="card_image">
+                                                            <img src="./image/icon_tv.png" alt="">
+                                                        </div>
+                                                        <div class="card_info">
+                                                            <div class="info_title">
+                                                                社群推廣&網站廣告
+                                                            </div>
+                                                            <div class="info_text">
+                                                                多平台精準觸達玩家群
+                                                            </div>
+                                                            <div class="card_button">
+                                                                <div class="button_two">
+                                                                    <a href="" class="openModalBtn" data-target="social_promotion">詳細說明</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="all_service_item" data-img="./image/market_newbg3.png">
+                                <div class="service_outer">
+                                    <div class="case_icon">
+                                        <img src="./image/market_1.png" alt="">
+                                    </div>
+                                    <div class="item_msg">
+                                        <div class="case_title"><div class="mobile_icon"></div>整合行銷方案</div>
+                                        
+                                        <div class="slideshow_block">
+                                            <div class="all_case_card_3 ">
+                                                <div class="case_card">
+                                                <div class="card_image">
+                                                    <img src="./image/icon_tv.png" alt="">
+                                                </div>
+                                                <div class="card_info">
+                                                    <div class="info_title">
+                                                        全通路虛實整合
+                                                    </div>
+                                                    <div class="info_text">
+                                                        線上+線下資源的全方位曝光。
+                                                    </div>
+                                                    <div class="card_button">
+                                                        <div class="button_two">
+                                                            <a href="" class="openModalBtn" data-target="path_description">詳細說明</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="case_card">
+                                                <div class="card_image">
+                                                    <img src="./image/icon_chat.png" alt="">
+                                                </div>
+                                                <div class="card_info">
+                                                    <div class="info_title">
+                                                        街頭玩家見面會
+                                                    </div>
+                                                    <div class="info_text">
+                                                        沉浸式線下互動創造真實熱度
+                                                    </div>
+                                                    <div class="card_button">
+                                                        <div class="button_one">
+                                                            <a href="https://jto.e-play.com.tw/" target="_blank">街頭影音</a>
+                                                        </div>
+                                                        <div class="button_two">
+                                                            <a href="" class="openModalBtn" data-target="street_video">詳細說明</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="case_card">
+                                                <div class="card_image">
+                                                    <img src="./image/icon_tv.png" alt="">
+                                                </div>
+                                                <div class="card_info">
+                                                    <div class="info_title">
+                                                        事前登錄導流服務
+                                                    </div>
+                                                    <div class="info_text">
+                                                        觸及高活躍度核心用戶
+                                                    </div>
+                                                    <div class="card_button">
+                                                        <div class="button_one">
+                                                            <a href="https://app.mycard520.com.tw/mmevent/?utm_content=modeB&utm_source=header1-zh-tw5&utm_medium=web&utm_campaign=header1&_gl=1*wn28z5*_ga*MTM0MTUzMDYzNi4xNzQ4MjIzOTY2*_ga_3NC7MLJ8DD*czE3NjU4NjcyNzckbzE3NSRnMCR0MTc2NTg2NzI3NyRqNjAkbDAkaDA." target="_blank">事前登錄</a>
+                                                        </div>
+                                                        <div class="button_two">
+                                                            <a href="" class="openModalBtn" data-target="pre-registrat">詳細說明</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dots">
+                            <div class="dot active"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                        </div>
+                        <div class="Whole_case_image">
+                            <div class="image_inner_region">
+                                <img id="market_photo" src="./image/market_newbg1.png" alt="Plan 1" class="active">
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <!-- 遮罩以及彈窗區塊 -->
+            <div id="myModal" class="modal-overlay">
+                <div class="modal-content">
+                    <span class="close-button">&times;</span>
+                    <div id="modalContentDisplay"></div>
+                </div>
+            </div>
+
+            <div id="modalContentTemplates">
+        
+            <div id="cross-industry" class="modal-template text_region">
+               <h2>異業聯名企劃</h2>
+               <p>媒合品牌、餐飲、影視、零售等跨領域資源，打造創新聯名內容，提高玩家參與度與市場聲量。</p>
+            </div>
+
+            <div id="curate" class="modal-template text_region">
+               <h2>活動策展設計規劃</h2>
+               <p>從各大國際展覽到在地化推廣等各類型活動，均可提供完整的展售方案、攤位設計、裝置物與活動規劃，將品牌核心概念帶入實體場域，延伸更多擴散機會。</p>
+            </div>
+
+            <div id="brand_image" class="modal-template text_region">
+               <h2>打造品牌形象代言媒合</h2>
+               <p>依據不同國家與地區的目標玩家輪廓與遊戲風格，嚴選最適合的品牌代言人與跨領域 KOL/實況主組合，串聯多平台口碑與聲量，放大品牌好感度與討論熱度</p>
+            </div>
+
+            <div id="audio-visual_team" class="modal-template text_region">
+               <h2>專業影音製作團隊</h2>
+               <p>提供MV製作以及影片腳本策畫，以音樂與影像強化遊戲情緒與品牌記憶度。</p>
+            </div>
+
+            <div id="music_production_center" class="modal-template text_region">
+               <h2>音樂製作中心</h2>
+               <p>由專業團隊精心打造專屬歌曲、音樂及音效等服務，建立高品質的音樂內容，提升整體遊戲水準。</p>
+            </div>
+
+            <div id="social_promotion" class="modal-template text_region">
+               <h2>社群推廣&網站廣告</h2>
+               <p>運用 MyCard 多平台社群與官網版位，搭配分群受眾精準行銷策略，有效溝通互動並提升轉換效率。</p>
+            </div>
+
+            <div id="path_description" class="modal-template text_region">
+               <h2>全通路虛實整合</h2>
+               <p>串聯實體通路超商、銀行、連鎖賣場等宣傳點位、線上通路廣告資源，依各市場漾態規劃安排，打造高頻、高覆蓋的立體推廣網，提升投放效益。</p>
+            </div>
+
+            <div id="street_video" class="modal-template text_region">
+               <h2>街頭玩家見面會</h2>
+               <p>透過各大人潮集中之熱門場域進行線上線下整合的互動活動，加強與觀眾、玩家的凝聚力並創造可擴散的活動內容。</p>
+            </div>
+
+            <div id="pre-registrat" class="modal-template text_region">
+               <h2>事前登錄導流服務</h2>
+               <p>運用MyCard通路資源與活動機制協助遊戲快速累積預註冊用戶，擴大上市前聲量與口碑基礎。</p>
+            </div>
+        
+          </div>
+        </section>
+        <section class="security_solution">
+            <div class="security_solution_outer">
+                <div class="security_solution_inner">
+                    <div class="solution_region">
+                        <div class="region_desc" data-aos="fade-up">
+                            <div class="solution_title">
+                                <div class="solut_image">
+                                    <img src="./image/anti_fraud_1.png" alt="">
+                                </div>
+                                <div class="solut_title_text">
+                                    全方位交易安全解決方案
+                                </div>
+                            </div>
+                            <div class="sloution_service">
+                                <div class="service_one">
+                                    <div class="title">全天候智慧監控</div>
+                                    <div class="desc">我們提供24小時不間斷的智慧監控，能快速偵測所有交易。一旦發現可疑的交易行為，像是詐欺、盜刷等，系統會立刻反應，全面保護您的客戶。</div>
+                                </div>
+                                <div class="service_two">
+                                    <div class="title">FIDO無密碼驗證</div>
+                                    <div class="desc">導入 FIDO 國際公認的新世代無密碼驗證標準。能大幅提升玩家帳號安全、杜絕密碼盜用風險，同時讓玩家登入更快速、更方便，是保障資安與體驗的未來趨勢。</div>
+                                </div>
+                                <div class="service_three">
+                                    <div class="title">專業退單仲裁</div>
+                                    <div class="desc">MyCard 團隊已建立標準化爭議處理流程，能作為您的後盾，協助處理銀行或支付機構的退單仲裁流程。我們將為您爭取最大的權益，降低爭議造成的損失。</div>
+                                </div>
+                                <div class="service_four">
+                                    <div class="title">彈性風控策略</div>
+                                    <div class="desc">MyCard 不只提供業界預設的頂級風險模型，更具備高度彈性，可針對活動、檔期或新品上線調整數值，讓您可以自訂風控規則、強化安全邏輯，讓防線更貼合您的遊戲營運需求。</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="region_image" >
+                            <div class="region_image_inner">
+                                <img src="./image/security_image_1.png" alt="" data-aos="zoom-in">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="customer_support" data-aos="fade-down">
+            <div class="customer_support_outer">
+                <div class="customer_support_inner">
+                    <div class="customer_headline">
+                        <div class="customer_headline_inner">
+                            <div class="customer_headline_icon">
+                                <img src="./image/customer_img_1.png" alt="">
+                            </div>
+                            <div class="customer_headline_title">
+                                客服支援
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gap_line">
+                        <hr>
+                    </div>
+                    <div class="customer_item">
+                        <div class="customer_msgcard">
+                            <div class="customer_item_1">
+                                <div class="item_icon">
+                                    <div class="icon_1">
+                                        <img src="./image/customer_img_3.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="item_desc">
+                                    <div class="desc_title">
+                                        將客訴轉化為「品牌好感度」
+                                    </div>
+                                    <div class="desc_text">
+                                        MyCard客服能快速解決問題，降低售後服務的客訴，轉化為玩家對您的遊戲品牌信任與持續消費。
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="customer_item_2">
+                                <div class="item_icon">
+                                    <div class="icon_1">
+                                        <img src="./image/customer_img_2.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="item_desc">
+                                    <div class="desc_title">
+                                        全天候即時客服
+                                    </div>
+                                    <div class="desc_text">
+                                        MyCard提供24小時不間斷售後服務。確保玩家隨時順利儲值，加速您的遊戲成長與市場連結。
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="customer_item_3">
+                                <div class="item_icon">
+                                    <div class="icon_1">
+                                        <img src="./image/customer_img_4.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="item_desc">
+                                    <div class="desc_title">
+                                        不僅限客服
+                                    </div>
+                                    <div class="desc_text">
+                                        資深的客服團隊平均年資有10年以上，在技術上亦可提供一定支援，遇到問題時不會求助無門。
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="best_choice" >
+            <div class="best_choice_outer">
+                <div class="best_choice_inner">
+                    <div class="choice_region">
+                        <div class="top_block">
+                            <div class="desc_block">
+                                <div class="choice_title">
+                                    超過上千家遊戲公司選擇MyCard
+                                </div>
+                                <div class="choice_sub">
+                                    Android和iOS數據顯示，排行榜上有 80% 的台日韓頂尖廠商信賴並採用 MyCard 金流服務，共創營收佳績。
+                                </div>
+                            </div>
+                            <div class="game_img_list" data-aos="fade-down">
+                                <ul>
+                                    <li class="game_icon">
+                                        <div class="game_icon_inner tool_text_1" data-tooltip="熱血江湖">
+                                            <img src="./image/best_choice_1.png" alt="">
+                                        </div>
+                                    </li>
+                                    <li class="game_icon tool_text_2">
+                                        <div class="game_icon_inner tool_text_1" data-tooltip="極地獵殺">
+                                            <img src="./image/best_choice_2.png" alt="">
+                                        </div>
+                                    </li>
+                                    <li class="game_icon">
+                                        <div class="game_icon_inner tool_text_1" data-tooltip="熱血江湖">
+                                            <img src="./image/best_choice_3.png" alt="">
+                                        </div>
+                                    </li>
+                                    <li class="game_icon">
+                                        <div class="game_icon_inner tool_text_1" data-tooltip="好玩遊戲">
+                                            <img src="./image/best_choice_4.png" alt="">
+                                        </div>
+                                    </li>
+                                    <li class="game_icon">
+                                        <div class="game_icon_inner tool_text_1" data-tooltip="熱血江湖">
+                                            <img src="./image/best_choice_5.png" alt="">
+                                        </div>
+                                    </li>
+                                    <li class="game_icon">
+                                        <div class="game_icon_inner tool_text_1" data-tooltip="好玩遊戲">
+                                            <img src="./image/best_choice_6.png" alt="">
+                                        </div>
+                                    </li>
+                                    <li class="game_icon">
+                                        <div class="game_icon_inner tool_text_1" data-tooltip="極地戰壕">
+                                            <img src="./image/best_choice_7.png" alt="">
+                                        </div>
+                                    </li>
+                                    <li class="game_icon">
+                                        <div class="game_icon_inner tool_text_1" data-tooltip="熱血江湖">
+                                            <img src="./image/best_choice_8.png" alt="">
+                                        </div>
+                                    </li>
+                                    <li class="game_icon">
+                                        <div class="game_icon_inner tool_text_1" data-tooltip="熱血江湖">
+                                            <img src="./image/best_choice_9.png" alt="">
+                                        </div>
+                                    </li>
+                                    <li class="game_icon">
+                                        <div class="game_icon_inner tool_text_1" data-tooltip="熱血江湖">
+                                            <img src="./image/best_choice_10.png" alt="">
+                                        </div>
+                                    </li>
+                                    <li class="game_icon">
+                                        <div class="game_icon_inner tool_text_1" data-tooltip="好玩遊戲">
+                                            <img src="./image/best_choice_11.png" alt="">
+                                        </div>
+                                    </li>
+                                    <li class="game_icon">
+                                        <div class="game_icon_inner tool_text_1" data-tooltip="好玩遊戲">
+                                            <img src="./image/best_choice_12.png" alt="">
+                                        </div>
+                                    </li>
+                                    <li class="game_icon">
+                                        <div class="game_icon_inner tool_text_1" data-tooltip="好玩遊戲">
+                                            <img src="./image/best_choice_13.png" alt="">
+                                        </div>
+                                    </li>
+                                    <li class="game_icon">
+                                        <div class="game_icon_inner tool_text_1"data-tooltip="好玩遊戲">
+                                            <img src="./image/best_choice_14.png" alt="">
+                                        </div>
+                                    </li>
+                                    <li class="game_icon">
+                                        <div class="game_icon_inner tool_text_1" data-tooltip="極地獵殺">
+                                            <img src="./image/best_choice_15.png" alt="">
+                                        </div>
+                                    </li>
+                                    <li class="game_icon">
+                                        <div class="game_icon_inner tool_text_1" data-tooltip="極地獵殺">
+                                            <img src="./image/best_choice_16.png" alt="">
+                                        </div>
+                                    </li>
+                                    <li class="game_icon">
+                                        <div class="game_icon_inner tool_text_1" data-tooltip="極地獵殺">
+                                            <img src="./image/best_choice_17.png" alt="">
+                                        </div>
+                                    </li>
+                                    <li class="game_icon">
+                                        <div class="game_icon_inner tool_text_1" data-tooltip="極地獵殺">
+                                            <img src="./image/best_choice_18.png" alt="">
+                                        </div>
+                                    </li>
+                                    <li class="game_icon">
+                                        <div class="game_icon_inner tool_text_1" data-tooltip="極地獵殺">
+                                            <img src="./image/best_choice_19.png" alt="">
+                                        </div>
+                                    </li>
+                                    <li class="game_icon">
+                                        <div class="game_icon_inner tool_text_1" data-tooltip="極地獵殺">
+                                            <img src="./image/best_choice_20.png" alt="">
+                                        </div>
+                                    </li>
+                                    <li class="game_icon">
+                                        <div class="game_icon_inner tool_text_1" data-tooltip="熱血江湖">
+                                            <img src="./image/best_choice_21.png" alt="">
+                                        </div>
+                                    </li>
+                                    <li class="game_icon">
+                                        <div class="game_icon_inner tool_text_1" data-tooltip="熱血江湖">
+                                            <img src="./image/best_choice_22.png" alt="">
+                                        </div>
+                                    </li>
+                                    <li class="game_icon">
+                                        <div class="game_icon_inner tool_text_1" data-tooltip="熱血江湖">
+                                            <img src="./image/best_choice_23.png" alt="">
+                                        </div>
+                                    </li>
+                                    <li class="game_icon">
+                                        <div class="game_icon_inner tool_text_1" data-tooltip="熱血江湖">
+                                            <img src="./image/best_choice_24.png" alt="">
+                                        </div>
+                                    </li>
+                                    <li class="game_icon">
+                                        <div class="game_icon_inner tool_text_1" data-tooltip="熱血江湖">
+                                            <img src="./image/best_choice_25.png" alt="">
+                                        </div>
+                                    </li>
+                                    <li class="game_icon">
+                                        <div class="game_icon_inner tool_text_1" data-tooltip="熱血江湖">
+                                            <img src="./image/best_choice_26.png" alt="">
+                                        </div>
+                                    </li>
+                                    <li class="game_icon">
+                                        <div class="game_icon_inner tool_text_1" data-tooltip="熱血江湖">
+                                            <img src="./image/best_choice_27.png" alt="">
+                                        </div>
+                                    </li>
+                                    <li class="game_icon">
+                                        <div class="game_icon_inner tool_text_1" data-tooltip="熱血江湖">
+                                            <img src="./image/best_choice_28.png" alt="">
+                                        </div>
+                                    </li>
+                                    <li class="game_icon">
+                                        <div class="game_icon_inner tool_text_1" data-tooltip="熱血江湖">
+                                            <img src="./image/best_choice_29.png" alt="">
+                                        </div>
+                                    </li>
+                                    <li class="game_icon">
+                                        <div class="game_icon_inner tool_text_1" data-tooltip="熱血江湖">
+                                            <img src="./image/best_choice_30.png" alt="">
+                                        </div>
+                                    </li>
+                                    <li class="game_icon">
+                                        <div class="game_icon_inner tool_text_1" data-tooltip="熱血江湖">
+                                            <img src="./image/best_choice_31.png" alt="">
+                                        </div>
+                                    </li>
+                                    <li class="game_icon">
+                                        <div class="game_icon_inner tool_text_1" data-tooltip="熱血江湖">
+                                            <img src="./image/best_choice_32.png" alt="">
+                                        </div>
+                                    </li>
+                                    <li class="game_icon">
+                                        <div class="game_icon_inner tool_text_1" data-tooltip="熱血江湖">
+                                            <img src="./image/best_choice_33.png" alt="">
+                                        </div>
+                                    </li>
+                                    <li class="game_icon">
+                                        <div class="game_icon_inner tool_text_1" data-tooltip="熱血江湖">
+                                            <img src="./image/best_choice_34.png" alt="">
+                                        </div>
+                                    </li>
+                                    <li class="game_icon">
+                                        <div class="game_icon_inner tool_text_1" data-tooltip="熱血江湖">
+                                            <img src="./image/best_choice_35.png" alt="">
+                                        </div>
+                                    </li>
+                                    <li class="game_icon">
+                                        <div class="game_icon_inner tool_text_1" data-tooltip="熱血江湖">
+                                            <img src="./image/best_choice_36.png" alt="">
+                                        </div>
+                                    </li>
+                                    <li class="game_icon">
+                                        <div class="game_icon_inner tool_text_1" data-tooltip="好玩遊戲">
+                                            <img src="./image/best_choice_37.png" alt="">
+                                        </div>
+                                    </li>
+                                    <li class="game_icon">
+                                        <div class="game_icon_inner tool_text_1" data-tooltip="好玩遊戲">
+                                            <img src="./image/best_choice_38.png" alt="">
+                                        </div>
+                                    </li>
+                                    <li class="game_icon">
+                                        <div class="game_icon_inner tool_text_1" data-tooltip="好玩遊戲">
+                                            <img src="./image/best_choice_39.png" alt="">
+                                        </div>
+                                    </li>
+                                    <li class="game_icon">
+                                        <div class="game_icon_inner tool_text_1" data-tooltip="好玩遊戲">
+                                            <img src="./image/best_choice_40.png" alt="">
+                                        </div>
+                                    </li>
+                                    <li class="game_icon">
+                                        <div class="game_icon_inner tool_text_1" data-tooltip="好玩遊戲">
+                                            <img src="./image/best_choice_41.png" alt="">
+                                        </div>
+                                    </li>
+                                    <li class="game_icon">
+                                        <div class="game_icon_inner tool_text_1" data-tooltip="好玩遊戲">
+                                            <img src="./image/best_choice_42.png" alt="">
+                                        </div>
+                                    </li>
+                                    <li class="game_icon">
+                                        <div class="game_icon_inner tool_text_1" data-tooltip="好玩遊戲">
+                                            <img src="./image/best_choice_43.png" alt="">
+                                        </div>
+                                    </li>
+                                    <li class="game_icon">
+                                        <div class="game_icon_inner tool_text_1" data-tooltip="好玩遊戲">
+                                            <img src="./image/best_choice_44.png" alt="">
+                                        </div>
+                                    </li>
+                                    <li class="game_icon">
+                                        <div class="game_icon_inner tool_text_1" data-tooltip="好玩遊戲">
+                                            <img src="./image/best_choice_45.png" alt="">
+                                        </div>
+                                    </li>
+                                    <li class="game_icon">
+                                        <div class="game_icon_inner tool_text_1" data-tooltip="好玩遊戲">
+                                            <img src="./image/best_choice_46.png" alt="">
+                                        </div>
+                                    </li>
+                                    <li class="game_icon">
+                                        <div class="game_icon_inner tool_text_1" data-tooltip="好玩遊戲">
+                                            <img src="./image/best_choice_47.png" alt="">
+                                        </div>
+                                    </li>
+                                    <li class="game_icon">
+                                        <div class="game_icon_inner tool_text_1" data-tooltip="好玩遊戲">
+                                            <img src="./image/best_choice_48.png" alt="">
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="under_block">
+                            <div class="company_logo_list">
+                                <div class="logo_image">
+                                    <img src="./image/nexon.png" alt="">
+                                </div>
+                                <div class="logo_image">
+                                    <img src="./image/steam.png" alt="">
+                                </div>
+                                <div class="logo_image">
+                                    <img src="./image/gravity.png" alt="">
+                                </div>
+                                <div class="logo_image">
+                                    <img src="./image/roit.png" alt="">
+                                </div>
+                                <div class="logo_image">
+                                    <img src="./image/happytiik.png" alt="">
+                                </div>
+                                <div class="logo_image">
+                                    <img src="./image/bandal.png" alt="">
+                                </div>
+                                <div class="logo_image">
+                                    <img src="./image/nc.png" alt="">
+                                </div>
+                                <div class="logo_image">
+                                    <img src="./image/garena.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="partnership_process">
+            <div class="partnership_process_outer">
+                <div class="partnership_process_inner">
+                    <div class="process_region">
+                        <div class="process_overview">
+                            <div class="overview_desc">
+                                <div class="desc_icon">
+                                    <img src="./image/process_icon_1.png" alt="">
+                                </div>
+                                <div class="desc_text">
+                                    <div class="bold_title">MyCard合作流程</div>
+                                    <div class="normal_text">我們建立簡單清楚的合作流程，讓客戶快速贏得優勢</div>
+                                </div>
+                            </div>
+                            <div class="overview_image">
+                                <div class="image_inner">
+                                    <img src="./image/process_icon_2.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="process_list">
+                            <div class="list_1">
+                                <div class="list_card">
+                                    <div class="list_title">
+                                        <span class="title_text">步驟</span>
+                                        <span class="title_num">1</span>
+                                    </div>
+                                    <div class="list_desc">
+                                        <div class="desc_bold">準備資料</div>
+                                        <div class="desc_subtitle">確保所有必要的文件都已準備好，以供評估。</div>
+                                    </div>
+                                </div>
+                                <div class="list_icon">
+                                    <img src="./image/prepare_icon.png" alt="">
+                                </div>
+                                <div class="list_bgimg">
+                                    <img src="./image/one_img.png" alt="">
+                                </div>
+                            </div>
+                            <div class="list_2">
+                                <div class="list_card">
+                                    <div class="list_title">
+                                        <span class="title_text">步驟</span>
+                                        <span class="title_num">2</span>
+                                    </div>
+                                    <div class="list_desc">
+                                        <div class="desc_bold">合作確認</div>
+                                        <div class="desc_subtitle">達成共識並簽訂合約。</div>
+                                    </div>
+                                </div>
+                                <div class="list_icon">
+                                    <img src="./image/cooperate_icon.png" alt="">
+                                </div>
+                                <div class="list_bgimg">
+                                    <img src="./image/two_img.png" alt="">
+                                </div>
+                            </div>
+                            <div class="list_3">
+                                <div class="list_card">
+                                    <div class="list_title">
+                                        <span class="title_text">步驟</span>
+                                        <span class="title_num">3</span>
+                                    </div>
+                                    <div class="list_desc">
+                                        <div class="desc_bold">技術串接</div>
+                                        <div class="desc_subtitle">整合MyCard的系統並進行測試。</div>
+                                    </div>
+                                </div>
+                                <div class="list_icon">
+                                    <img src="./image/tech_icon.png" alt="">
+                                </div>
+                                <div class="list_bgimg">
+                                    <img src="./image/three_img.png" alt="">
+                                </div>
+                            </div>
+                            <div class="list_4">
+                                <div class="list_card">
+                                    <div class="list_title">
+                                        <span class="title_text">步驟</span>
+                                        <span class="title_num">4</span>
+                                    </div>
+                                    <div class="list_desc">
+                                        <div class="desc_bold">行銷推廣</div>
+                                        <div class="desc_subtitle">實施行銷策略以提高知名度。</div>
+                                    </div>
+                                </div>
+                                <div class="list_icon">
+                                    <img src="./image/ad_icon.png" alt="">
+                                </div>
+                                <div class="list_bgimg">
+                                    <img src="./image/four_img.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="contact">
+            <div class="contact_outer">
+                <div class="contact_inner">
+                    <div class="contact_bgimg"></div>
+                    <div class="contact_form">
+                        <div class="form_title">
+                            <h2>馬上聯絡MyCard，為公司開拓市場並增加營收。</h2>
+                        </div>
+                        <div class="insert_btn">
+                            <a href="https://member.mycard520.com/zh-tw/Cooperate/Partner?utm_source=footer-zh-tw3-1&utm_medium=web&utm_campaign=footer&_gl=1*1610iyl*_ga*MTM0MTUzMDYzNi4xNzQ4MjIzOTY2*_ga_3NC7MLJ8DD*czE3NjU3ODk5MDckbzE3MyRnMCR0MTc2NTc4OTkwNyRqNjAkbDAkaDA." target="_blank">
+                                <img src="./image/contact_submit.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="footer_inner">
+                <div class="footer_logo">
+                    <a href="https://www.mycard520.com/zh-tw" target="_blank">
+                        <img src="./image/mycard-logo.png" alt="">
+                    </a>
+                </div>
+                <div class="social_icon">
+                    <div class="x_img">
+                        <a href="https://www.threads.com/@my_mycard" target="_blank">
+                            <img src="./image/threads.png" alt="">
+                        </a>
+                    </div>
+                    <div class="yt_img">
+                        <a href="https://www.youtube.com/@MyCard" target="_blank">
+                            <img src="./image/yt.png" alt="">
+                        </a>
+                    </div>
+                    <div class="ig_img">
+                        <a href="https://www.instagram.com/my_mycard/" target="_blank">
+                            <img src="./image/ig.png" alt="">
+                        </a>
+                    </div>
+                    <div class="fb_img">
+                        <a href="https://www.facebook.com/MyCard520/" target="_blank">
+                            <img src="./image/fb.png" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="./js/pop-up&mask.js"></script>
+    <script src="./js/slideshow.js"></script>
+    <script src="./js/count.js"></script>
+    <script src="./js/horizontal-scroll.js"></script>
+    <script src="./js/scroll-driven.js"></script>
+    <script src="./js/flag_scroll.js"></script>
+
+    <!-- aos滑動效果js -->
+     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+     AOS.init({
+     duration: 500, // 動畫持續時間（毫秒）
+     easing: 'ease-in-out', // 動畫加速度曲線
+     once: true, // 是否只執行一次（false = 重複觸發）
+     mirror: true // 捲動回上方時也重播動畫
+     });
+    </script>
+
+    <!-- 地圖套件js -->
+    <script src="./country-info.js"></script>
+    <script src="./payment-catalog.js"></script>
+    <script src="./country-payments.js"></script>
+    <script src="./app.js"></script>
+</body>
+</html>

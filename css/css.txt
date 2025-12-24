@@ -1,0 +1,418 @@
+.main .market_plan_outer{
+    width: 100%;
+}
+
+.main .market_plan_outer .market_plan_inner{
+    width: 100%;
+    background-color: #000;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region{
+    width: 100%;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service{
+    width: 100%;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro{
+    width: 100%;
+    background-color: #ffffff;
+    display: flex;
+    border-radius: 20px;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item{
+    width: 10%;
+    display: flex;
+    z-index: 100;
+    /* border: 1px solid red; */
+    /* align-self: center; */
+    /* height: 900px; */
+    /* position: relative; */
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer{
+    display: flex;
+    position: absolute;
+    width: 100%;
+    max-width: 810px;
+    margin-top: 6%;
+    margin-left: 60px;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .case_icon{
+    max-width: 110px;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .case_icon img{
+    width: 80px;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg{
+    /* border: 1px solid red; */
+    /* align-self: center; */
+    margin-top: 10px;
+    max-width: 700px;
+    width: 100%;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg .case_title{
+    /* border: 1px solid red; */
+    font-size: 64px;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 64px;
+}
+
+
+
+
+/* market_plan.html 的css 開始*/
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg .all_case_card_1{
+    width: 100%;
+    /* max-width: 650px; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    /* border: 1px solid red; */
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg .case_card{
+    display: flex;
+    border: 1px solid #B541F3;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 650px;
+    background-color: #ffffff;
+    padding: 20px 15px 20px 15px;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg .case_card .card_image{
+    max-width: 48px;
+    margin-right: 10px;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg .case_card .card_image img{
+    width: 48px;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg .case_card .card_info .info_title{
+    font-size: 28px;
+    font-weight: 600;
+    color: #000;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg .case_card .card_info .info_text{
+    line-height: 20px;
+    color: #666;
+    font-size: 18px;
+}
+
+/* market_plan.html 的css 結束*/
+
+/* market_plan_3.html的css開始*/
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg .all_case_card_3{
+    width: 100%;
+    /* max-width: 650px; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    /* border: 1px solid red; */
+}
+
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg .case_card{
+    display: flex;
+    border: 1px solid #B541F3;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 650px;
+    background-color: #ffffff;
+    padding: 20px 15px 20px 15px;
+    margin-bottom: 15px;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg .case_card .card_info{
+    width: 100%;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg .case_card .card_image{
+    max-width: 48px;
+    margin-right: 10px;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg .case_card .card_image img{
+    width: 48px;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg .case_card .card_info .info_title{
+    font-size: 28px;
+    font-weight: 600;
+    color: #000;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg .case_card .card_info .info_text{
+    line-height: 20px;
+    color: #666;
+    font-size: 18px;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg .case_card .card_info .card_button{
+    display: flex;
+    justify-content: right;
+    margin-top: 15px;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg .case_card .card_info .card_button .button_one{
+    width: 100%;
+    max-width: 96px;
+    height: 40px;
+    background-color: #000;
+    border-radius: 6px;
+    align-content: center;
+    text-align: center;
+    display: grid;
+    margin-right: 10px;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msgc .case_card .card_info .card_button .button_one a{
+    text-decoration: none;
+    color: #ffffff;
+    width: 100%;
+    height: 40px;
+    align-content: center;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg .case_card .card_info .card_button .button_two{
+    width: 100%;
+    max-width: 96px;
+    height: 40px;
+    background-color: #ffffff;
+    border-radius: 6px;
+    align-content: center;
+    text-align: center;
+    display: grid;
+    transition: all 0.6s ease;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg .case_card .card_info .card_button .button_two:hover{
+    background-color: #B541F3;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg .case_card .card_info .card_button .button_two a{
+    text-decoration: none;
+    color: #B541F3;
+    width: 100%;
+    height: 40px;
+    align-content: center;
+    transition: all 0.6s ease;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg .case_card .card_info .card_button .button_two a:hover{
+    text-decoration: none;
+    color: #ffffff;
+    width: 100%;
+    height: 40px;
+    align-content: center;
+}
+/* market_plan_3.html的css結束*/
+
+
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg .all_case_card_2 .card2_inner{
+    width: 100%;
+    /* max-width: 650px; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    /* border: 1px solid red; */
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg .all_case_card_2 .card2_inner .case_card{
+    display: flex;
+    border: 1px solid #B541F3;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 305px;
+    background-color: #ffffff;
+    padding: 20px 15px 20px 15px;
+    margin-bottom: 6px;
+    margin-right: 6px;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg .case_card .card_info{
+    width: 100%;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg .case_card .card_image{
+    max-width: 48px;
+    margin-right: 10px;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg .case_card .card_image img{
+    width: 48px;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg .case_card .card_info .info_title{
+    font-size: 24px;
+    font-weight: 600;
+    color: #000;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg .case_card .card_info .info_text{
+    line-height: 20px;
+    color: #666;
+    font-size: 18px;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg .case_card .card_info .card_button{
+    display: flex;
+    justify-content: right;
+    margin-top: 15px;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg .case_card .card_info .card_button .button_one{
+    width: 100%;
+    max-width: 96px;
+    height: 40px;
+    background-color: #000;
+    border-radius: 6px;
+    align-content: center;
+    text-align: center;
+    display: grid;
+    margin-right: 10px;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg .case_card .card_info .card_button .button_one a{
+    text-decoration: none;
+    color: #ffffff;
+    width: 100%;
+    height: 40px;
+    align-content: center;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg .case_card .card_info .card_button .button_two{
+    width: 100%;
+    max-width: 96px;
+    height: 40px;
+    background-color: #ffffff;
+    border-radius: 6px;
+    align-content: center;
+    text-align: center;
+    display: grid;
+    transition: all 0.6s ease;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg .case_card .card_info .card_button .button_two:hover{
+    background-color: #B541F3;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg .case_card .card_info .card_button .button_two a{
+    text-decoration: none;
+    color: #B541F3;
+    width: 100%;
+    height: 40px;
+    align-content: center;
+    transition: all 0.6s ease;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg .case_card .card_info .card_button .button_two a:hover{
+    text-decoration: none;
+    color: #ffffff;
+    width: 100%;
+    height: 40px;
+    align-content: center;
+}
+
+
+/* 服務資訊輪播區塊 CSS設定 開始*/
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg .slideshow_block{
+    width: 100%;
+    height: 570px;
+    overflow: hidden;
+    position: relative;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg .card_slideshow{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .all_service_item .service_outer .item_msg .card_slideshow:first-child{display: block;}
+
+   /* 箭頭的樣式 */
+        .nav_arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 50px;
+            height: 50px;
+            background: rgba(0,0,0,0.2);
+            color: white;
+            font-size: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 100;
+            border-radius: 50%;
+            transition: 0.3s;
+            user-select: none;
+        }
+        .nav_arrow:hover { background: rgba(0,0,0,0.6); }
+        .prev_arrow { left: 10px; position: absolute; left: 0px;}
+        .next_arrow { right: 10px; position: absolute; left: 790px;}
+
+    /* 圖片對應切換 css */
+    .main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .Whole_case_image img{
+        display: none;
+        transition: opacity 0.5s ease;
+     }
+
+     .main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .Whole_case_image img.active{
+        display: block;
+     }
+
+
+/* 服務資訊輪播區塊 CSS設定 結束*/
+
+
+
+/* 右側大圖片以及漸層遮罩 */
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .Whole_case_image{
+    width: 100%;
+    height: 900px;
+    position:relative;
+    display: block;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .Whole_case_image::before{
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 40%;
+    height: 100%;
+
+    background-image: linear-gradient(90deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+}
+
+.main .market_plan_outer .market_plan_inner .market_plan_region .full_service .service_intro .Whole_case_image img{
+    display: block;
+    /* width: 100%; */
+    height: 100%;
+}

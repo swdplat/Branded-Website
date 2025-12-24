@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 239.9 233.7">
+  <!-- Generator: Adobe Illustrator 29.8.3, SVG Export Plug-In . SVG Version: 2.1.1 Build 3)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: #c89e4e;
+      }
+
+      .st1 {
+        fill: #ddc39c;
+      }
+
+      .st2 {
+        fill: url(#_未命名漸層_6);
+      }
+
+      .st3 {
+        fill: url(#_未命名漸層);
+      }
+
+      .st4 {
+        fill: url(#_未命名漸層_2);
+      }
+
+      .st5 {
+        fill: none;
+      }
+
+      .st6 {
+        fill: #b3863b;
+      }
+
+      .st7 {
+        fill: url(#_未命名漸層_5);
+      }
+
+      .st8 {
+        fill: #804c2e;
+      }
+
+      .st9 {
+        fill: url(#_未命名漸層_3);
+      }
+
+      .st10 {
+        fill: url(#_未命名漸層_4);
+      }
+    </style>
+    <linearGradient id="_未命名漸層" data-name="未命名漸層" x1="24.4" y1="-179.2" x2="188.4" y2="-347" gradientTransform="translate(0 366.7)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#b3863b"/>
+      <stop offset=".1" stop-color="#b4883e"/>
+      <stop offset=".2" stop-color="#b98e48"/>
+      <stop offset=".3" stop-color="#c09959"/>
+      <stop offset=".4" stop-color="#caa871"/>
+      <stop offset=".5" stop-color="#d7bb8f"/>
+      <stop offset=".5" stop-color="#ddc39c"/>
+      <stop offset=".5" stop-color="#d7bb8f"/>
+      <stop offset=".6" stop-color="#caa871"/>
+      <stop offset=".7" stop-color="#c09959"/>
+      <stop offset=".8" stop-color="#b98e48"/>
+      <stop offset=".9" stop-color="#b4883e"/>
+      <stop offset="1" stop-color="#b3863b"/>
+    </linearGradient>
+    <linearGradient id="_未命名漸層_2" data-name="未命名漸層 2" x1="213.5" y1="-320.1" x2="53.3" y2="-152.7" gradientTransform="translate(0 366.7)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#00573d"/>
+      <stop offset=".1" stop-color="#03593f"/>
+      <stop offset=".2" stop-color="#0d6046"/>
+      <stop offset=".3" stop-color="#1e6c53"/>
+      <stop offset=".4" stop-color="#367c64"/>
+      <stop offset=".5" stop-color="#549279"/>
+      <stop offset=".5" stop-color="#69a088"/>
+      <stop offset=".5" stop-color="#549279"/>
+      <stop offset=".6" stop-color="#367c64"/>
+      <stop offset=".7" stop-color="#1e6c53"/>
+      <stop offset=".8" stop-color="#0d6046"/>
+      <stop offset=".9" stop-color="#03593f"/>
+      <stop offset="1" stop-color="#00573d"/>
+    </linearGradient>
+    <linearGradient id="_未命名漸層_3" data-name="未命名漸層 3" x1="122.6" y1="-349.2" x2="91.8" y2="-202.2" gradientTransform="translate(0 366.7)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#804c2e"/>
+      <stop offset=".3" stop-color="#b3863b"/>
+      <stop offset="1" stop-color="#804c2e"/>
+    </linearGradient>
+    <linearGradient id="_未命名漸層_4" data-name="未命名漸層 4" x1="120.7" y1="-346.7" x2="93.1" y2="-199.7" gradientTransform="translate(0 366.7)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#c89e4e"/>
+      <stop offset=".3" stop-color="#f4e8d0"/>
+      <stop offset="1" stop-color="#c89e4e"/>
+    </linearGradient>
+    <linearGradient id="_未命名漸層_5" data-name="未命名漸層 5" x1="148.3" y1="-297.1" x2="116.5" y2="-150.5" gradientTransform="translate(0 366.7)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#004730"/>
+      <stop offset=".7" stop-color="#00573d"/>
+      <stop offset="1" stop-color="#004730"/>
+    </linearGradient>
+    <linearGradient id="_未命名漸層_6" data-name="未命名漸層 6" x1="118.1" y1="-150.9" x2="147.8" y2="-297.4" gradientTransform="translate(0 366.7)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#007559"/>
+      <stop offset=".3" stop-color="#eaf5f5"/>
+      <stop offset="1" stop-color="#007559"/>
+    </linearGradient>
+  </defs>
+  <g>
+    <rect class="st6" x="92.8" y="89.7" width="54.2" height="54.2" transform="translate(-47.5 119) rotate(-45)"/>
+    <polygon class="st0" points="120 78.5 158.4 116.9 154.5 116.9 154.5 116.9 120 82.3 120 78.5"/>
+    <polygon class="st1" points="120 82.3 85.3 116.9 85.3 116.9 81.6 116.9 120 78.5 120 82.3"/>
+    <polygon class="st0" points="120 155.3 81.6 116.9 85.3 116.9 85.3 116.9 120 151.4 120 155.3"/>
+    <polygon class="st8" points="120 151.4 154.5 116.9 154.5 116.9 158.4 116.9 120 155.3 120 151.4"/>
+  </g>
+  <path class="st3" d="M22.9,114.8c0-58.6,48.1-106.1,107.5-106.1s51.1,9.6,69.8,25.4l.9-.9C179.8,12.7,150.5,0,118.4,0,53.1,0,0,52.3,0,116.9s43.6,94.8,97.6,94.8,55.3-11.1,73.1-31.1l-.6-.6c-15.7,13.3-36.2,20.6-58.7,20.6-48.7.3-88.5-37.4-88.5-85.8h0Z"/>
+  <path class="st4" d="M217,119c0,58.6-48.1,106.1-107.4,106.1s-51.1-9.6-69.8-25.4l-.9.9c21.4,20.6,50.5,33.2,82.7,33.2,65.5,0,118.4-52.3,118.4-116.9S196.2,22.1,142.3,22.1s-55.3,11.1-73.1,31.1l.6.6c15.5-13.6,36.2-20.9,58.6-20.9,49,0,88.6,37.7,88.6,86.1h0Z"/>
+  <path class="st9" d="M118.8,197c-44.1,0-81.4-35.7-81.4-79.8,0-64.3,46.9-101.3,102.8-101.3s42.6,7,59.2,19.1l.8-.6c-18.8-15.8-43.2-25.4-69.8-25.4-59.3,0-107.4,47.5-107.4,106.1s39.6,86.1,88.5,86.1,43-7.3,58.7-20.6l-1.1-1c-13.6,10.8-31.1,17.5-50.2,17.5h0Z"/>
+  <path class="st10" d="M130.5,8.7c-59.6,0-107.9,47.5-107.9,106.3s39.9,86.1,88.9,86.1,43.2-7.3,58.9-20.6l-.3-.3c-15.5,12.8-35.7,19.7-57.8,19.7-48.9,0-88.5-37.4-88.5-85.2.2-58,48.3-104.9,107.4-104.9s50.2,9.3,68.9,24.5h.1c-18.7-16-43.2-25.6-69.8-25.6h0Z"/>
+  <path class="st5" d="M142.3,22c-29.1,0-55.3,11.1-73.1,31.1l1.5,1.5c13.8-11.1,31.2-17.8,50.2-17.8,44.1,0,81.4,35.7,81.4,79.8,0,64.3-46.9,101.5-102.8,101.5s-42.6-7.2-59.2-19.1l-1.6,1.6c21.4,20.6,50.5,33.2,82.7,33.2,65.5,0,118.4-52.3,118.4-116.9.1-53.4-43.5-94.9-97.4-94.9h0Z"/>
+  <path class="st7" d="M121.1,36.8c44.1,0,81.5,35.7,81.5,79.8,0,64.3-46.9,101.5-102.8,101.5s-42.6-7.2-59.2-19.1l-.6.8c18.8,15.8,43.2,25.4,69.8,25.4,59.3,0,107.5-47.5,107.5-106.1s-39.6-86.1-88.6-86.1-43,7.3-58.7,20.6l1.1,1c13.6-11.1,31.1-17.8,50.2-17.8h0Z"/>
+  <path class="st2" d="M109.4,225.1c59.6,0,107.9-47.5,107.9-106.3s-39.9-86.1-88.9-86.1-43.2,7.3-59,20.6l.3.3c15.5-12.9,35.7-19.9,57.8-19.9,48.9,0,88.5,37.4,88.5,85.2s-48,105.1-107.3,105.1-50.2-9.3-68.9-24.5l-.2.2c18.8,15.8,43.2,25.4,69.8,25.4h0Z"/>
+</svg>

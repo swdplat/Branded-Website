@@ -1,0 +1,688 @@
+/* === 全域變數與重置 === */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body { line-height: 1; }
+ol, ul { list-style: none; }
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after,
+q:before, q:after { content: ''; content: none; }
+table { border-collapse: collapse; border-spacing: 0; }
+
+:root {
+  /* 淺色系 */
+  --bg: #f6f7fb;
+  --surface: #ffffff;
+  --surface-2: #f9fafb;
+  --text: #111827;
+  --muted: #6b7280;
+  --accent: #2563eb;
+  --accent-2: #60a5fa;
+  --border: #e5e7eb;
+  --shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+/* * { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  color: var(--text);
+  background: var(--bg);
+  font: 14px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans TC", Arial, sans-serif;
+} */
+
+/* Header */
+.app-header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 12px 16px; border-bottom: 1px solid var(--border);
+  background: var(--surface);
+}
+.app-header h1 { font-size: 16px; margin: 0; }
+.controls { display: flex; gap: 8px; align-items: center; }
+.btn { border: 1px solid var(--border); background: var(--surface-2); color: var(--text); padding: 6px 10px; border-radius: 8px; cursor: pointer; }
+.btn:hover { border-color: var(--accent-2); }
+.btn-ghost { background: transparent; }
+
+.app-main { padding: 12px; }
+
+/* 畫布外框：以容器寬度為主，維持 1920:800 比例 */
+.map-frame {
+  position: relative;
+  width: 100%;
+  max-width: 1920px;
+  aspect-ratio: 1920 / 800;   /* 高度依比例推算 */
+  overflow: hidden;
+
+  /* border: 1px solid var(--border); */
+  border-radius: 12px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+/* SVG 跟著框縮放 */
+#mapSvg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+#mapSvg * { vector-effect: non-scaling-stroke; }
+
+/* 讓 mapFrame 可以當 toolbar 的定位容器 */
+.map-frame {
+  position: relative;
+}
+
+/* 右上角工具列：預設貼右邊 */
+.map-toolbar {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 20;
+
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* 工具按鈕外觀 */
+.map-tool-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 6px;
+  border: none;
+  padding: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+
+.map-tool-btn img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+/* 底部提示：預設貼右下角（資訊卡預設在左邊） */
+.map-hint {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  left: auto;
+  z-index: 15;
+
+  padding: 6px 12px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.9);
+  font-size: 12px;
+  color: #444;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.12);
+}
+
+/* 資訊卡被 dock 到右邊（map-frame 有 .dock-right）時 → 提示改到左下角 */
+.map-frame.dock-right .map-hint {
+  left: 16px;
+  right: auto;
+}
+
+
+/* 當 mapFrame 掛上 .dock-right 時，把 toolbar／hint 都切到左邊 */
+.map-frame.dock-right .map-toolbar {
+  right: auto;
+  left: 16px;
+}
+
+.map-frame.dock-right .map-hint {
+  left: 16px;
+  right: auto;
+}
+
+/* 手機版：toolbar 縮小一點、往內收 */
+@media (max-width: 899px) {
+  .map-toolbar {
+    top: 12px;
+    right: 12px;
+  }
+
+  .map-tool-btn {
+    width: 30px;
+    height: 30px;
+  }
+
+  .map-tool-btn img {
+    width: 16px;
+    height: 16px;
+  }
+
+  .map-hint {
+    width: 243px;
+    height: 30px;
+    top: 12px;
+    left: 12px;
+  }
+
+  .map-frame.dock-right .map-hint {
+    left: 12px;
+    right: auto;
+  }
+}
+
+
+/* 提示 */
+.hint {
+  position: absolute; left: 16px; bottom: 16px; padding: 6px 10px; font-size: 12px; color: var(--muted);
+  background: rgba(255,255,255,0.6); border: 1px solid var(--border); backdrop-filter: blur(6px);
+  border-radius: 8px; pointer-events: none;
+}
+
+/* 浮動資訊窗 */
+.info-float{
+  position: absolute; left: 16px; top: 16px; bottom: 16px; width: 22%;
+  display: flex; flex-direction: column;
+  overflow: hidden;
+  visibility: hidden;
+  pointer-events: none;
+
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(12px) saturate(1.1);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+
+  /* 只保留左右停靠的過渡，避免點擊被動畫干擾 */
+  transition: left .22s ease, right .22s ease;
+}
+.info-float.open{
+  visibility: visible;
+  pointer-events: auto;
+}
+.info-header{
+  flex: 0 0 auto;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 10px 12px; border-bottom: 1px solid var(--border);
+}
+.icon-btn { background: transparent; color: var(--muted); border: none; font-size: 18px; cursor: pointer; line-height: 1; }
+.icon-btn:hover { color: var(--text); }
+/* 資訊窗停靠右側 */
+.info-float.right { left: auto; right: 16px; }
+
+.info-body{
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow: hidden;
+  padding: 12px;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 12px;  
+}
+/* 左 65% 名稱、右 35% 國旗+幣別 */
+.info-top {
+  display: grid;
+  grid-template-columns: 50% 48%;
+  gap: 10px;
+  align-items: center;
+}
+.card {
+  background: rgba(255,255,255,0.7);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 10px;
+  box-shadow: var(--shadow);
+}
+/* 國家、國旗、幣別 去邊框、去陰影、去底色 */
+.card--naked {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+.name-card .en { font-weight: 600; font-size: 16px; line-height: 1.2; }
+.name-card .zh { color: var(--muted); font-size: 13px; margin-top: 4px; }
+
+/* 國名：中文在上、英文在下；中文黑且放大 */
+.name-card .zh-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.2;
+}
+.name-card .en-sub {
+  margin-top: 4px;
+  font-size: 13px;       /* 與先前中文小字同級 */
+  color: var(--text);     /* 顏色與中文一致（黑） */
+}
+
+/* 右側把國旗與幣別合在一塊，並排 */
+.meta-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  align-items: center;
+}
+
+/* 國旗盒 */
+.flag-box {
+  height: 64px;
+  border-radius: 6px;
+  overflow: hidden;
+  background: #fff;       /* 旗幟常見有透明區，給白底 */
+}
+.flag-box img { width: 100%; height: 100%; object-fit: cover; }
+
+/* 幣別：中文名稱在上，英文(代碼)在下 */
+.currency-box .zh-cur {
+  font-weight: 600;
+  color: var(--text);
+}
+.currency-box .en-cur {
+  margin-top: 4px;
+  font-size: 13px;
+  color: var(--text);
+}
+
+.flag-card .flag-box {
+  height: 64px; border-radius: 10px; overflow: hidden;
+  display: flex; align-items: center; justify-content: center;
+  background: #fff;
+}
+.flag-card img { width: 100%; height: 100%; object-fit: cover; border-radius: 10px; }
+
+.kv { font-size: 12px; color: var(--muted); }
+.kv strong { display: block; font-size: 14px; color: var(--text); }
+
+.slots {
+  margin-top: 12px;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 2 欄 × 3 列 */
+  gap: 12px;
+}
+.slot-card { height: 90px; }
+
+/* 點擊高亮 */
+.active-region { filter: drop-shadow(0 0 0 rgb(185, 100, 255)); stroke: var(--accent); stroke-width: 1.2; fill: rgba(37,99,235,0.18) !important; }
+
+/* 區塊標題 */
+.sec-title { font-weight: 800; margin: 6px 5px 10px; }
+
+/* 金流區塊 */
+.payments-card .cat-row {
+  display: grid;
+  grid-template-columns: 40px 1fr;  /* 左側 icon 欄 + 右側標題＋清單 */
+  gap: 10px;
+  align-items: flex-start;
+  padding: 10px 0;
+  border-top: 1px solid var(--border);
+}
+.payments-card .cat-row:first-child { border-top: none; }
+
+.payments-card .cat-head {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  align-items: flex-start;
+}
+
+.payments-card .cat-title { font-weight: 600; }
+.payments-card .cat-sub { font-size: 12px; color: var(--muted); }
+
+.method-list {
+  display: flex; flex-wrap: wrap; gap: 8px;
+  margin-top: 10px;
+}
+.method-chip {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 6px 8px; border: 1px solid var(--border); border-radius: 10px;
+  background: rgba(255,255,255,0.7);
+}
+.method-chip img { width: 18px; height: 18px; display: block; }
+.method-chip .m-zh { font-size: 12px; font-weight: 600; color: var(--text); }
+.method-chip .m-en { font-size: 11px; color: var(--muted); }
+/* 左側大類 icon 欄位 */
+.cat-icon-col {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 4px;
+}
+
+/* 大類 icon */
+.cat-icon-col .cat-icon {
+  width: 100%;
+  max-width: 32px;
+  height: auto;
+  object-fit: contain;
+}
+
+
+/* 支付方式模式切換工具列 */
+.payments-toolbar {
+  display: flex; gap: 8px; align-items: center;
+  margin-bottom: 10px;
+}
+.payments-toolbar .btn {
+  padding: 4px 8px; border-radius: 8px;
+  background: var(--surface-2);
+}
+.payments-toolbar .btn.is-active {
+  border-color: var(--accent); color: var(--accent);
+  background: rgba(37,99,235,0.08);
+}
+
+.payments-card{
+  grid-row: 2;
+  min-height: 0;
+  overflow: auto;
+  margin: 0;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  box-sizing: border-box;
+}
+
+/* 讓 chip 與 icon 跟字高同步縮放（em） */
+.payments-card { --chip-font: 15px; --icon-em: 1.5em; }
+.method-chip { font-size: var(--chip-font); transition: padding .18s ease, border-color .18s ease, background .18s ease; }
+.method-chip img { width: var(--icon-em); height: var(--icon-em); transition: width .18s ease, height .18s ease; }
+
+
+/* icon 模式下：chip 改成上下排列，icon 上、文字下 */
+.payments-card.icon-only .method-chip {
+  padding: 6px 8px;
+  gap: 4px;
+  flex-direction: column;        /* 垂直排列 */
+  align-items: center;
+  text-align: center;
+}
+
+/* Icon 模式時隱藏 chip 內的文字 */
+.payments-card.icon-only .method-chip .m-zh,
+.payments-card.icon-only .method-chip .m-en {
+  display: none;
+}
+
+/* WebKit 系列（Chromium/Safari） */
+.payments-card::-webkit-scrollbar { width: 6px; height: 6px; }
+.payments-card::-webkit-scrollbar-track { background: transparent; }
+.payments-card::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.6);
+  border-radius: 6px;
+  border: 0;                       /* 不要外框 */
+}
+
+/* Firefox */
+.payments-card { 
+  scrollbar-width: thin; 
+  scrollbar-color: rgba(255,255,255,0.6) transparent;
+}
+
+
+/* 支付類別列（保留你原本的樣式，補上細節 transition） */
+.payments-card .cat-row { transition: background .18s ease; }
+.payments-card .cat-row:hover { background: rgba(0,0,0,0.03); }
+
+/* 放在 .info-header 右側的模式滑桿（方形導圓角） */
+.mode-toggle {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  width: 110px; height: 28px;
+  border: 1px solid var(--border);
+  background: var(--surface-2);
+  border-radius: 6px;                 /* 方形導圓角 */
+  overflow: hidden;
+  margin-right: 8px;                  /* 與關閉鈕留距 */
+}
+.mode-toggle .knob {
+  position: absolute; top: 2px; bottom: 2px;
+  width: calc(50% - 4px);
+  left: 2px;                          /* full 模式在左 */
+  border-radius: 6px;
+  background: rgba(255,255,255,0.9);
+  transition: left .22s ease, width .22s ease, background .22s ease;
+  box-shadow: var(--shadow);
+}
+.mode-toggle.is-icon .knob {
+  left: calc(50% + 2px);              /* icon 模式在右 */
+}
+.mode-toggle .opt {
+  flex: 1; text-align: center; font-size: 12px; line-height: 1;
+  color: var(--muted);
+  user-select: none;
+  position: relative; z-index: 1;
+}
+.mode-toggle .opt.active { color: var(--text); font-weight: 700; }
+
+/* Icon-only 模式：只顯示大 icon，不顯示 chip 內文字，文字改交給 tooltip 負責 */
+.payments-card.icon-only {
+  --icon-em: 2.5em;
+}
+
+/* icon 模式下：chip 垂直置中，只有圖示 */
+.payments-card.icon-only .method-chip {
+  padding: 6px;
+  gap: 0;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.info-body > :last-child { margin-bottom: 0 !important; }
+
+/* 浮動金流名稱 tooltip（只在 Icon 模式下用） */
+.method-tooltip {
+  position: fixed;
+  z-index: 9999;
+  pointer-events: none;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  color: var(--text);
+  background: rgba(255,255,255,0.95);
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transform: translate(-50%, -120%);
+  opacity: 0;
+  transition: opacity .12s ease;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.method-tooltip img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+.method-tooltip.visible {
+  opacity: 1;
+}
+
+/* === 手機／平板：金流體系改為橫向卡片滑動 ＋ 地圖 70% / 卡片 30% === */
+@media (max-width: 899px) {
+
+  .app-main {
+    padding: 8px;
+    width: 100%;
+    height: calc(100vh - 56px);
+  }
+
+  .map-frame {
+    height: 100%;
+    max-width: none;
+    aspect-ratio: auto;
+  }
+
+  /* 資訊卡：左右留一點空隙，稍微拉高一點 */
+  .info-float {
+    left: 8px;
+    right: 8px;
+    width: auto;
+    top: auto;
+    bottom: 8px;              /* 與地圖底部留 8px */
+    height: 36%;              /* 比原本 30% 再高一點 */
+    max-height: 36%;
+    border-radius: 12px 12px 0 0;
+  }
+
+  /* 內部 padding 縮小一點，減少左側空間，整體留 8px */
+  .info-body {
+    grid-template-rows: auto 1fr;
+    gap: 8px;
+    padding: 8px;
+  }
+
+  /* 國名＋幣別＋國旗同一行（原本就有，保留） */
+  .info-top {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .name-card {
+    flex: 1 1 auto;
+  }
+
+  .meta-card {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: flex-end;
+    flex: 0 0 auto;
+  }
+
+  .currency-box {
+    order: 1;
+    text-align: right;
+  }
+
+  .flag-box {
+    order: 2;
+    flex: 0 0 72px;
+    height: 40px;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .flag-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* 手機版：整個 header 隱藏，順便拿掉那條線 */
+  .info-header {
+    display: none;
+    border-bottom: none;
+    padding: 0;
+  }
+
+  /* 手機版：不需要模式切換＋關閉按鈕 */
+  .mode-toggle { display: none; }
+  #closeInfo { display: none; }
+
+  /* 支付卡片：橫向滑動，並跟外框之間多留空間 */
+  .payments-card {
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    padding: 8px 8px 16px;   /* 上下左右都留 8px，底部 16px */
+    margin-top: 0;
+  }
+
+  .payments-card > div {
+    display: flex;
+    gap: 12px;
+  }
+
+  .payments-card .cat-row {
+    flex: 0 0 100%;
+    scroll-snap-align: center;
+    border-top: none;
+    border-radius: 12px;
+    padding: 12px 10px;
+    background: rgba(255,255,255,0.85);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  }
+
+  .payments-card .cat-head {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  /* icon 欄窄 */
+  .cat-icon-col {
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .cat-icon-col .cat-icon {
+    max-width: 28px;
+  }
+
+
+  /* 底部圓點（原本就有） */
+  .pay-dots {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 4px;
+  }
+  .pay-dots button {
+    width: 6px;
+    height: 6px;
+    border-radius: 999px;
+    border: none;
+    padding: 0;
+    background: rgba(0,0,0,0.18);
+    cursor: pointer;
+    transition: width .18s ease, background .18s ease;
+  }
+  .pay-dots button.is-active {
+    width: 14px;
+    background: var(--accent);
+  }
+    .info-header {
+    display: none;
+    border-bottom: none;
+    padding: 0;
+  }
+}
+
+
+
+/* 桌機版不需要圓點 */
+@media (min-width: 900px) {
+  .pay-dots {
+    display: none;
+  }
+}

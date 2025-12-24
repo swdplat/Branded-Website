@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="coloredSvg47" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 56.2 38">
+  <!-- Generator: Adobe Illustrator 29.8.3, SVG Export Plug-In . SVG Version: 2.1.1 Build 3)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: #fff;
+      }
+
+      .st1 {
+        fill: #a8a8a8;
+      }
+
+      .st2 {
+        fill: none;
+        stroke: #3e4142;
+        stroke-miterlimit: 10;
+        stroke-width: 3.2px;
+      }
+    </style>
+  </defs>
+  <path class="st1" d="M54.2,8.9H2.1v6.7h52.2v-6.7Z"/>
+  <path class="st0" d="M2.1,29.6c0,3.7,2.9,6.6,6.6,6.6h39c3.6,0,6.6-3,6.6-6.6v-13.9H2.1v13.9Z"/>
+  <path class="st0" d="M54.2,8.6c0-3.6-3-6.6-6.6-6.6H8.7c-3.6,0-6.6,3-6.6,6.6v.3h52.2v-.3Z"/>
+  <path class="st2" d="M47.5,2H8.8c-3.7,0-6.7,3-6.7,6.7v20.7c0,3.7,3,6.7,6.7,6.7h38.7c3.7,0,6.7-3,6.7-6.7V8.7c0-3.7-3-6.7-6.7-6.7Z"/>
+  <path class="st1" d="M19.5,22.1h-11.3c-1.2,0-2.1,1-2.1,2.1v5.2c0,1.2,1,2.1,2.1,2.1h11.3c1.2,0,2.1-1,2.1-2.1v-5.2c0-1.2-1-2.1-2.1-2.1Z"/>
+</svg>
