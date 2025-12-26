@@ -3621,7 +3621,7 @@ body{
 .main .best_choice .best_choice_outer .best_choice_inner .choice_region .top_block .game_img_list ul{
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: left;
 }
 
 .main .best_choice .best_choice_outer .best_choice_inner .choice_region .top_block .game_img_list ul .game_icon{
@@ -3654,7 +3654,7 @@ body{
     background-color: #7a7a7a;
     color: #ffffff;
     border-radius: 5px;
-    white-space: nowrap;
+    white-space: break-spaces;
     font-size: 14px;
     z-index: 100;
     opacity: 0;
@@ -3778,7 +3778,7 @@ body{
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        width: 90%;
+        width: 100%;
     }
     
     .main .best_choice .best_choice_outer .best_choice_inner .choice_region .top_block .game_img_list ul .game_icon{
@@ -3811,7 +3811,7 @@ body{
         background-color: #7a7a7a;
         color: #ffffff;
         border-radius: 5px;
-        white-space: nowrap;
+        white-space: break-spaces;
         font-size: 14px;
         z-index: 100;
         opacity: 0;
@@ -3852,7 +3852,6 @@ body{
         background-color: #ffffff;
         display: flex;
         justify-content: center;
-        border-radius: 0px 0px 0px 55px;
     }
     
     .main .best_choice .best_choice_outer .best_choice_inner .choice_region .under_block .company_logo_list{
