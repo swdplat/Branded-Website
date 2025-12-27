@@ -3225,7 +3225,7 @@ body{
 .main .customer_support .customer_support_outer .customer_support_inner{
     /* border: 1px solid red; */
     width: 100%;
-    padding: 7% 0% 7% 0%;
+    padding: 5% 0% 5% 0%;
     background-color: #fff;
     border-radius: 20px;
 }
@@ -3239,7 +3239,7 @@ body{
     display: flex;
     justify-content: left;
     align-items: center;
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
 }
 
 .main .customer_support .customer_support_outer .customer_support_inner .customer_headline .customer_headline_inner .customer_headline_icon{
@@ -3277,7 +3277,7 @@ body{
 .main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_msgcard{
     display: flex;
     justify-content: center;
-    margin: 0% 5% 5% 5%;
+    margin: 0% 5% 0% 5%;
     gap: 12px;
 }
 
@@ -3295,7 +3295,7 @@ body{
 
 .main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_1 .item_icon .icon_1{
     width: 100%;
-    margin-top: 15px;
+    margin-top: 25px;
 }
 
 .main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_1 .item_icon .icon_1 img{
@@ -3312,13 +3312,14 @@ body{
     font-weight: 500;
     color:#000000;
     margin-bottom: 12px;
+    line-height: normal;
 }
 
 .main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_1 .item_desc .desc_text{
     font-size: 18px;
     font-weight: 400;
     color:#666666;
-    line-height: 20px;
+    line-height: normal;
 }
 
 .main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_2{
@@ -3335,7 +3336,7 @@ body{
 
 .main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_2 .item_icon .icon_1{
     width: 100%;
-    margin-top: 15px;
+    margin-top: 25px;
 }
 
 .main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_2 .item_icon .icon_1 img{
@@ -3352,13 +3353,14 @@ body{
     font-weight: 500;
     color:#000000;
     margin-bottom: 12px;
+    line-height: normal;
 }
 
 .main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_2 .item_desc .desc_text{
     font-size: 18px;
     font-weight: 400;
     color:#666666;
-    line-height: 20px;
+    line-height: normal;
 }
 
 .main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_3{
@@ -3375,7 +3377,7 @@ body{
 
 .main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_3 .item_icon .icon_1{
     width: 100%;
-    margin-top: 15px;
+    margin-top: 25px;
 }
 
 .main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_3 .item_icon .icon_1 img{
@@ -3392,13 +3394,14 @@ body{
     font-weight: 500;
     color:#000000;
     margin-bottom: 12px;
+    line-height: normal;
 }
 
 .main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_3 .item_desc .desc_text{
     font-size: 18px;
     font-weight: 400;
     color:#666666;
-    line-height: 20px;
+    line-height: normal;
 }
 
 /* RWD 樣式 */
@@ -3436,6 +3439,7 @@ body{
 .main .customer_support .customer_support_outer .customer_support_inner .customer_headline .customer_headline_inner .customer_headline_icon{
     max-width: 60px;
     width: 100%;
+    margin-right: 16px;
 }
 
 .main .customer_support .customer_support_outer .customer_support_inner .customer_headline .customer_headline_inner .customer_headline_icon img{
@@ -3455,7 +3459,7 @@ body{
 
 .main .customer_support .customer_support_outer .customer_support_inner .gap_line{
     border: none;
-    height: 90px;
+    height: 80px;
     align-content: center;
     margin: 0% 5% 0% 5%;
 }
@@ -3488,7 +3492,7 @@ body{
 
 .main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_1 .item_icon .icon_1{
     width: 100%;
-    margin-top: 15px;
+    margin-top: 25px;
 }
 
 .main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_1 .item_icon .icon_1 img{
@@ -3505,13 +3509,14 @@ body{
     font-weight: 500;
     color:#000000;
     margin-bottom: 12px;
+    line-height: normal;
 }
 
 .main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_1 .item_desc .desc_text{
     font-size: 18px;
     font-weight: 400;
     color:#666666;
-    line-height: 20px;
+    line-height: normal;
 }
 
 .main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_2{
@@ -3528,7 +3533,7 @@ body{
 
 .main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_2 .item_icon .icon_1{
     width: 100%;
-    margin-top: 15px;
+    margin-top: 25px;
 }
 
 .main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_2 .item_icon .icon_1 img{
@@ -3545,13 +3550,14 @@ body{
     font-weight: 500;
     color:#000000;
     margin-bottom: 12px;
+    line-height: normal;
 }
 
 .main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_2 .item_desc .desc_text{
     font-size: 18px;
     font-weight: 400;
     color:#666666;
-    line-height: 20px;
+    line-height: normal;
 }
 
 .main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_3{
@@ -3568,7 +3574,7 @@ body{
 
 .main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_3 .item_icon .icon_1{
     width: 100%;
-    margin-top: 15px;
+    margin-top: 25px;
 }
 
 .main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_3 .item_icon .icon_1 img{
@@ -3585,13 +3591,14 @@ body{
     font-weight: 500;
     color:#000000;
     margin-bottom: 12px;
+    line-height: normal;
 }
 
 .main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_3 .item_desc .desc_text{
     font-size: 18px;
     font-weight: 400;
     color:#666666;
-    line-height: 20px;
+    line-height: normal;
 }
 
 }
