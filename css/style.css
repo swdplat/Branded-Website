@@ -431,11 +431,13 @@ body{
 .main .info_board .info_board_outer .info_board_inner .board_1 .text_inner .text_title{
     font-size: 48px;
     color: #000;
+    line-height: normal;
 }
 
 .main .info_board .info_board_outer .info_board_inner .board_1 .text_inner .text_desc{
     font-size: 20px;
     color: #7A7A7A;
+    line-height: normal;
 }
 
 
@@ -457,11 +459,13 @@ body{
 .main .info_board .info_board_outer .info_board_inner .board_2 .text_inner .text_title{
     font-size: 48px;
     color: #000;
+    line-height: normal;
 }
 
 .main .info_board .info_board_outer .info_board_inner .board_2 .text_inner .text_desc{
     font-size: 20px;
     color: #7A7A7A;
+    line-height: normal;
 }
 
 .main .info_board .info_board_outer .info_board_inner .board_3{
@@ -482,11 +486,13 @@ body{
 .main .info_board .info_board_outer .info_board_inner .board_3 .text_inner .text_title{
     font-size: 48px;
     color: #000;
+    line-height: normal;
 }
 
 .main .info_board .info_board_outer .info_board_inner .board_3 .text_inner .text_desc{
     font-size: 20px;
     color: #7A7A7A;
+    line-height: normal;
 }
 
 
@@ -508,11 +514,13 @@ body{
 .main .info_board .info_board_outer .info_board_inner .board_4 .text_inner .text_title{
     font-size: 48px;
     color: #000;
+    line-height: normal;
 }
 
 .main .info_board .info_board_outer .info_board_inner .board_4 .text_inner .text_desc{
     font-size: 20px;
     color: #7A7A7A;
+    line-height: normal;
 }
 
 /* RWD 樣式設定 */
@@ -560,11 +568,13 @@ body{
 .main .info_board .info_board_outer .info_board_inner .board_1 .text_inner .text_title{
     font-size: 48px;
     color: #000;
+    line-height: normal;
 }
 
 .main .info_board .info_board_outer .info_board_inner .board_1 .text_inner .text_desc{
     font-size: 20px;
     color: #7A7A7A;
+    line-height: normal;
 }
 
 
@@ -586,11 +596,13 @@ body{
 .main .info_board .info_board_outer .info_board_inner .board_2 .text_inner .text_title{
     font-size: 48px;
     color: #000;
+    line-height: normal;
 }
 
 .main .info_board .info_board_outer .info_board_inner .board_2 .text_inner .text_desc{
     font-size: 20px;
     color: #7A7A7A;
+    line-height: normal;
 }
 
 .main .info_board .info_board_outer .info_board_inner .board_3{
@@ -611,6 +623,7 @@ body{
 .main .info_board .info_board_outer .info_board_inner .board_3 .text_inner .text_title{
     font-size: 48px;
     color: #000;
+    line-height: normal;
 }
 
 .main .info_board .info_board_outer .info_board_inner .board_3 .text_inner .text_desc{
@@ -637,11 +650,13 @@ body{
 .main .info_board .info_board_outer .info_board_inner .board_4 .text_inner .text_title{
     font-size: 48px;
     color: #000;
+    line-height: normal;
 }
 
 .main .info_board .info_board_outer .info_board_inner .board_4 .text_inner .text_desc{
     font-size: 20px;
     color: #7A7A7A;
+    line-height: normal;
 }
 }
 
