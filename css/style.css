@@ -1201,7 +1201,7 @@ body{
 .main .payment_methods .payment_methods_outer .payment_methods_inner .payment_headline .payment_headline_inner{
     display: flex;
     justify-content: left;
-    align-items: center;
+    align-items: flex-start;;
     margin-bottom: 12px;
 }
 
