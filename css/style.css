@@ -4015,15 +4015,17 @@ body{
 
 .main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_overview .overview_desc .desc_text .bold_title{
     font-size: 64px;
-    font-weight: 600;
+    font-weight: 700;
     color: #000;
     margin-bottom: 24px;
+    line-height: normal;
 }
 
 .main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_overview .overview_desc .desc_text .normal_text{
     font-size: 24PX;
-    font-weight: 500;
+    font-weight: 400;
     color: #b8b8b8;
+    line-height: normal;
 }
 
 .main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_overview .overview_image{
@@ -4111,13 +4113,14 @@ body{
     font-weight: 500;
     color: #313131;
     margin-bottom: 12px;
+    line-height: normal;
 }
 
 .main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_1 .list_card .list_desc .desc_subtitle{
     font-size: 18px;
     font-weight: 500;
     color: #666666;
-
+    line-height: normal;
 }
 
 .main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_1 .list_icon{
@@ -4207,12 +4210,14 @@ body{
     font-weight: 500;
     color: #313131;
     margin-bottom: 12px;
+    line-height: normal;
 }
 
 .main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_2 .list_card .list_desc .desc_subtitle{
     font-size: 18px;
     font-weight: 500;
     color: #666666;
+    line-height: normal;
 }
 
 .main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_2 .list_icon{
@@ -4297,13 +4302,14 @@ body{
     font-weight: 500;
     color: #313131;
     margin-bottom: 12px;
+    line-height: normal;
 }
 
 .main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_3 .list_card .list_desc .desc_subtitle{
     font-size: 18px;
     font-weight: 500;
     color: #666666;
-
+    line-height: normal;
 }
 
 .main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_3 .list_icon{
@@ -4370,13 +4376,14 @@ body{
     font-weight: 500;
     color: #313131;
     margin-bottom: 12px;
+    line-height: normal;
 }
 
 .main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_4 .list_desc .desc_subtitle{
     font-size: 18px;
     font-weight: 500;
     color: #666666;
-
+    line-height: normal;
 }
 
 .main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_4 .list_icon{
@@ -4503,13 +4510,14 @@ body{
     font-weight: 600;
     color: #000;
     margin-bottom: 20px;
+    line-height: normal;
 }
 
 .main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_overview .overview_desc .desc_text .normal_text{
     font-size: 20px;
-    font-weight: 500;
+    font-weight: 400;
     color: #b8b8b8;
-    line-height: 25px;
+    line-height: normal;
 }
 
 .main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_overview .overview_image{
@@ -4607,7 +4615,7 @@ body{
     font-size: 16px;
     font-weight: 500;
     color: #666666;
-
+    line-height: normal;
 }
 
 .main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_1 .list_icon{
@@ -4707,6 +4715,7 @@ body{
     font-size: 16px;
     font-weight: 500;
     color: #666666;
+    line-height: normal;
 }
 
 .main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_2 .list_icon{
@@ -4803,7 +4812,7 @@ body{
     font-size: 16px;
     font-weight: 500;
     color: #666666;
-
+    line-height: normal;
 }
 
 .main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_3 .list_icon{
@@ -4881,7 +4890,7 @@ body{
     font-size: 16px;
     font-weight: 500;
     color: #666666;
-
+    line-height: normal;
 }
 
 .main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_4 .list_icon{
