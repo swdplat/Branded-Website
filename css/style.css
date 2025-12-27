@@ -698,7 +698,7 @@ body{
 .main .market_info .market_info_outer .market_info_inner .market_desc .market_icon{
     /* border: 1px solid red; */
     width: auto;
-    height: 300px;
+    height: 315px;
     margin-right: 10px;
 }
 
@@ -720,31 +720,31 @@ body{
 .main .market_info .market_info_outer .market_info_inner .market_desc .market_text .text_title{
     font-size: 64px;
     color: #000;
-    font-weight: 600;
-    margin-bottom: 20px;
-    line-height: 70px;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 24px;
 }
 
 .main .market_info .market_info_outer .market_info_inner .market_desc .market_text .text_info_1{
     font-size: 24px;
     color: #7a7a7a;
-    font-weight: 500;
+    font-weight: 400;
     /* margin-bottom: 64px; */
-    line-height: 24px;
+    line-height: normal;
 }
 
 .main .market_info .market_info_outer .market_info_inner .market_desc .market_text .text_devide{
     height: 1px;
     border-bottom: 1px solid #d9d9d9;
-    margin: 30px 0px;
+    margin: 24px 0px;
 }
 
 .main .market_info .market_info_outer .market_info_inner .market_desc .market_text .text_info_2{
     font-size: 18px;
     color: #666666;
-    font-weight: 500;
+    font-weight: 400;
     /* margin-bottom: 64px; */
-    line-height: 24px;
+    line-height: normal;
 }
 
 .main .market_info .market_info_outer .market_info_inner .market_desc .market_text .text_sum .sum_number{
@@ -837,31 +837,29 @@ body{
 .main .market_info .market_info_outer .market_info_inner .market_desc .market_text .text_title{
     font-size: 38px;
     color: #000;
-    font-weight: 600;
+    font-weight: 700;
     margin-bottom: 20px;
-    line-height: 38px;
+    line-height: normal;
 }
 
 .main .market_info .market_info_outer .market_info_inner .market_desc .market_text .text_info_1{
     font-size: 24px;
     color: #7a7a7a;
-    font-weight: 500;
-    /* margin-bottom: 64px; */
-    line-height: 24px;
+    font-weight: 400;
+    line-height: normal;
 }
 
 .main .market_info .market_info_outer .market_info_inner .market_desc .market_text .text_devide{
     height: 1px;
     border-bottom: 1px solid #d9d9d9;
-    margin: 30px 0px;
+    margin: 24px 0px;
 }
 
 .main .market_info .market_info_outer .market_info_inner .market_desc .market_text .text_info_2{
-    font-size: 18px;
+    font-size: 20px;
     color: #666666;
     font-weight: 400;
-    /* margin-bottom: 64px; */
-    line-height: 24px;
+    line-height: normal;
 }
 
 .main .market_info .market_info_outer .market_info_inner .market_desc .market_text .text_sum .sum_number{
