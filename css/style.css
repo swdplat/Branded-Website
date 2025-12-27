@@ -4968,9 +4968,10 @@ body{
 }
 
 .main .contact_outer .contact_inner .contact_form .form_title h2{
-    font-size: 50px;
+    font-size: 48px;
     font-weight: 600;
     color: #fff;
+    line-height: normal;
 }
 
 
@@ -5087,6 +5088,7 @@ body{
     color: #fff;
     width: 80%;
     text-align: justify;
+    line-height: normal;
 }
 
 /* 目前不需要使用表單，客戶點擊按鈕後，直接導入官網的成為夥伴頁面，所以這段再rwd部分先刪除 */
@@ -5098,7 +5100,7 @@ body{
 
 .main .contact_outer .contact_inner .contact_form .insert_btn img{
     width: 100%;
-    max-width: 450px;
+    max-width: 350px;
 }
 }
 
