@@ -23,7 +23,7 @@ body{
     top: 0px;
     z-index: 1000;
     background-color: #000000;
-    border-bottom: .5px solid #b8b8b8;
+    /* border-bottom: .5px solid #b8b8b8; */
 }
 
 .main header .header_inner{
@@ -31,6 +31,7 @@ body{
     width: 100%;
     display: flex;
     justify-content: space-between;
+    transition: all 0.5s ease; 
 }
 
 .main header .header_inner .header_logo{
@@ -88,6 +89,74 @@ body{
 .main header .header_inner .header_contact .header_innerblock .contact_buttton a img{
     width: 100%;
 }
+
+/* header向下滾動樣式 */
+
+.main header .header_scroll{
+    /* border: 1px solid red; */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0px 5px 10px 0px rgb(0 0 0 / 0.3);
+}
+
+.main header .header_scroll .header_logo{
+     /* border: 1px solid red; */
+     width: 100%;
+     max-width: 200px;
+     text-align: center;
+     background-color: #fff;
+     border-radius: unset;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     height: 63px;
+     margin-right: 0px;
+}
+
+.main header .header_scroll .header_logo .logo_img{
+    max-width: 76px;
+}
+
+.main header .header_scroll .header_logo .logo_img img{
+    width: 100%;
+}
+
+.main header .header_scroll .header_contact{
+     width: 100%;
+     text-align: center;
+     background-color: #fff;
+     border-radius: unset;
+     display: flex;
+     justify-content: right;
+     align-items: center;
+     height: 63px;
+}
+
+.main header .header_scroll .header_contact .header_innerblock{
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-right: 50px;
+}
+
+.main header .header_scroll .header_contact .header_innerblock .contact_buttton{
+    max-width: 140px;
+}
+
+.main header .header_scroll .header_contact .header_innerblock .contact_buttton a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.main header .header_scroll .header_contact .header_innerblock .contact_buttton a img{
+    width: 100%;
+    height: 38px;
+}
+
 
 /* RWD樣式 */
 @media (max-width:576px){

@@ -18,7 +18,7 @@
 <body>
     <div class="main">
         <header>
-            <div class="header_inner">
+            <div id="header_down" class="header_inner">
                 <div class="header_logo">
                     <div class="logo_img">
                         <a href="">
@@ -1402,5 +1402,20 @@
     <script src="./payment-catalog.js"></script>
     <script src="./country-payments.js"></script>
     <script src="./app.js"></script>
+
+    <!-- header轉換程式碼 -->
+     <script>
+        $(document).ready(function() {
+            $(window).scroll(function() {
+                let scrollDistance = $(window).scrollTop();
+
+                if (scrollDistance > 50) {
+                    $('#header_down').addClass('header_scroll');
+                } else {
+                    $('#header_down').removeClass('header_scroll');
+                }
+            });
+        });
+     </script>
 </body>
 </html>
