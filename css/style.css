@@ -211,16 +211,17 @@ body{
 }
 
 .main .big_banner .bigbanner_outer .bigbanner_inner .banner_region .text_title h2{
-    font-size: 50px;
+    font-size: 64px;
     font-weight: 600;
-    line-height: 60px;
+    line-height: normal;
 }
 
 .main .big_banner .bigbanner_outer .bigbanner_inner .banner_region .banner_desc{
-    font-size: 18px;
-    line-height: 20px;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: normal;
     color: #666666;
-    margin: 20px 0px 20px 0px;
+    margin: 40px 0px 60px 0px;
 }
 
 .main .big_banner .bigbanner_outer .bigbanner_inner .banner_region .banner_desc span{
@@ -316,16 +317,17 @@ body{
 }
 
 .main .big_banner .bigbanner_outer .bigbanner_inner .banner_region .text_title h2{
-    font-size: 50px;
+    font-size: 38px;
     font-weight: 600;
-    line-height: 60px;
+    line-height: normal;
 }
 
 .main .big_banner .bigbanner_outer .bigbanner_inner .banner_region .banner_desc{
-    font-size: 18px;
-    line-height: 20px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: normal;
     color: #666666;
-    margin: 20px 0px 20px 0px;
+    margin: 40px 0px 40px 0px;
 }
 
 .main .big_banner .bigbanner_outer .bigbanner_inner .banner_region .banner_desc span{
