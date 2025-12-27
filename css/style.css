@@ -2873,9 +2873,10 @@ body{
 
 .main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .solution_title .solut_title_text{
     font-size: 64px;
+    line-height: normal;
     font-weight: 600;
     color: #ffffff;
-    text-shadow: 0 0 5px #f9f9f9, 0 0 15px #e4e4e4;
+    text-shadow: 0 0 5px #f9f9f9, 0 0 15px #1a69e1;
 }
 
 .main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .sloution_service{
@@ -2902,13 +2903,14 @@ body{
     font-weight: 600;
     color: #ffffff;
     margin-bottom: 12px;
+    line-height: normal;
 }
 
 .main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .sloution_service .service_one .desc{
     font-size: 18px;
     font-weight: 400;
     color: #b8b8b8;
-    line-height: 22px;
+    line-height: normal;
 }
 
 .main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .sloution_service .service_two{
@@ -2928,13 +2930,14 @@ body{
     font-weight: 600;
     color: #ffffff;
     margin-bottom: 12px;
+    line-height: normal;
 }
 
 .main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .sloution_service .service_two .desc{
     font-size: 18px;
     font-weight: 400;
     color: #b8b8b8;
-    line-height: 22px;
+    line-height: normal;
 }
 
 .main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .sloution_service .service_three{
@@ -2953,13 +2956,14 @@ body{
     font-weight: 600;
     color: #ffffff;
     margin-bottom: 12px;
+    line-height: normal;
 }
 
 .main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .sloution_service .service_three .desc{
     font-size: 18px;
     font-weight: 400;
     color: #b8b8b8;
-    line-height: 22px;
+    line-height: normal;
 }
 
 .main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .sloution_service .service_four{
@@ -2978,13 +2982,14 @@ body{
     font-weight: 600;
     color: #ffffff;
     margin-bottom: 12px;
+    line-height: normal;
 }
 
 .main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .sloution_service .service_four .desc{
     font-size: 18px;
     font-weight: 400;
     color: #b8b8b8;
-    line-height: 22px;
+    line-height: normal;
 }
 
 
@@ -3033,6 +3038,11 @@ body{
     align-self: center;
     align-items: center;
     margin-bottom: 20px;
+
+    background-image: url(../image/security_image_1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .solution_title{
@@ -3055,8 +3065,9 @@ body{
     font-size: 38px;
     font-weight: 600;
     color: #ffffff;
-    text-shadow: 0 0 5px #f9f9f9, 0 0 15px #e4e4e4;
+    text-shadow: 0 0 5px #f9f9f9, 0 0 15px #1a69e1;
     width: 70%;
+    line-height: normal;
 }
 
 .main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .sloution_service{
@@ -3084,13 +3095,15 @@ body{
     font-weight: 600;
     color: #ffffff;
     margin-bottom: 12px;
+    line-height: normal;
 }
 
 .main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .sloution_service .service_one .desc{
     font-size: 18px;
     font-weight: 400;
     color: #b8b8b8;
-    line-height: 22px;
+    line-height: normal;
+    text-align: justify;
 }
 
 .main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .sloution_service .service_two{
@@ -3110,13 +3123,15 @@ body{
     font-weight: 600;
     color: #ffffff;
     margin-bottom: 12px;
+    line-height: normal;
 }
 
 .main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .sloution_service .service_two .desc{
     font-size: 18px;
     font-weight: 400;
     color: #b8b8b8;
-    line-height: 22px;
+    line-height: normal;
+    text-align: justify;
 }
 
 .main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .sloution_service .service_three{
@@ -3136,13 +3151,15 @@ body{
     font-weight: 600;
     color: #ffffff;
     margin-bottom: 12px;
+    line-height: normal;
 }
 
 .main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .sloution_service .service_three .desc{
     font-size: 18px;
     font-weight: 400;
     color: #b8b8b8;
-    line-height: 22px;
+    line-height: normal;
+    text-align: justify;
 }
 
 .main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .sloution_service .service_four{
@@ -3162,13 +3179,15 @@ body{
     font-weight: 600;
     color: #ffffff;
     margin-bottom: 12px;
+    line-height: normal;
 }
 
 .main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .sloution_service .service_four .desc{
     font-size: 18px;
     font-weight: 400;
     color: #b8b8b8;
-    line-height: 22px;
+    line-height: normal;
+    text-align: justify;
 }
 
 
