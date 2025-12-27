@@ -912,7 +912,7 @@ body{
 .main .payment_methods .payment_methods_outer .payment_methods_inner{
     /* border: 1px solid red; */
     width: 100%;
-    padding: 6% 0% 6% 0%;
+    padding: 5% 0% 5% 0%;
     background-color: #fff;
     border-radius: 20px;
 }
@@ -942,11 +942,13 @@ body{
     font-size: 64px;
     font-weight: 600;
     color: #000000;
+    line-height: normal;
 }
 
 .main .payment_methods .payment_methods_outer .payment_methods_inner .payment_headline .headline_subtitle{
     font-size: 24px;
     color: #7A7A7A;
+    line-height: normal;
 }
 
 /* 支付流程下方說明 */
@@ -1019,7 +1021,7 @@ body{
     font-size: 18px;
     font-weight: 400;
     color:#666666;
-    line-height: 20px;
+    line-height: normal;
 }
 
 .main .payment_methods .payment_methods_outer .payment_methods_inner .payment_item .item_2{
@@ -1059,7 +1061,7 @@ body{
     font-size: 18px;
     font-weight: 400;
     color:#666666;
-    line-height: 20px;
+    line-height: normal;
 }
 
 .main .payment_methods .payment_methods_outer .payment_methods_inner .payment_item .item_3{
@@ -1099,7 +1101,7 @@ body{
     font-size: 18px;
     font-weight: 400;
     color:#666666;
-    line-height: 20px;
+    line-height: normal;
 }
 
 /* RWD樣式 */
@@ -1166,12 +1168,13 @@ body{
     color: #7A7A7A;
     padding: 0px 10px;
     text-align: justify;
+    line-height: normal;
 }
 /* 支付流程下方說明 */
 
 .main .payment_methods .payment_methods_outer .payment_methods_inner .gap_line{
     border: none;
-    height: 90px;
+    height: 80px;
     align-content: center;
     margin: 0% 5% 0% 5%;
 }
@@ -1226,10 +1229,10 @@ body{
 }
 
 .main .payment_methods .payment_methods_outer .payment_methods_inner .payment_item .item_1 .item_desc .desc_text{
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 400;
     color:#666666;
-    line-height: 20px;
+    line-height: normal;
     text-align: justify;
 }
 
@@ -1267,10 +1270,10 @@ body{
 }
 
 .main .payment_methods .payment_methods_outer .payment_methods_inner .payment_item .item_2 .item_desc .desc_text{
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 400;
     color:#666666;
-    line-height: 20px;
+    line-height: normal;
     text-align: justify;
 }
 
@@ -1308,10 +1311,10 @@ body{
 }
 
 .main .payment_methods .payment_methods_outer .payment_methods_inner .payment_item .item_3 .item_desc .desc_text{
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 400;
     color:#666666;
-    line-height: 20px;
+    line-height: normal;
     text-align: justify;
 }
 }
