@@ -3640,21 +3640,23 @@ body{
 
 .main .best_choice .best_choice_outer .best_choice_inner .choice_region .top_block .desc_block {
     width: 90%;
-    margin-bottom: 75px;
+    margin-bottom: 80px;
     /* border: 1px solid red; */
 }
 
 .main .best_choice .best_choice_outer .best_choice_inner .choice_region .top_block .desc_block .choice_title{
     font-size: 64px;
-    font-weight: 600;
+    font-weight: 700;
     color: #ffffff;
     margin-bottom: 20px;
+    line-height: normal;
 }
 
 .main .best_choice .best_choice_outer .best_choice_inner .choice_region .top_block .desc_block .choice_sub{
     font-size: 24px;
-    font-weight: 500;
+    font-weight: 400;
     color: #b8b8b8;
+    line-height: normal;
 }
 
 .main .best_choice .best_choice_outer .best_choice_inner .choice_region .top_block .game_img_list{
@@ -3802,13 +3804,15 @@ body{
         font-size: 38px;
         font-weight: 600;
         color: #ffffff;
-        margin-bottom: 22px;
+        margin-bottom: 24px;
+        line-height: normal;
     }
     
     .main .best_choice .best_choice_outer .best_choice_inner .choice_region .top_block .desc_block .choice_sub{
         font-size: 20px;
         font-weight: 500;
         color: #b8b8b8;
+        line-height: normal;
     }
     
     .main .best_choice .best_choice_outer .best_choice_inner .choice_region .top_block .game_img_list{
@@ -3821,8 +3825,8 @@ body{
     .main .best_choice .best_choice_outer .best_choice_inner .choice_region .top_block .game_img_list ul{
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
-        width: 100%;
+        justify-content: left;
+        width: 90%;
     }
     
     .main .best_choice .best_choice_outer .best_choice_inner .choice_region .top_block .game_img_list ul .game_icon{
