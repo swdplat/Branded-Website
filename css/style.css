@@ -4134,7 +4134,7 @@ body{
     content: '';
     position: absolute;
     top: 188px;
-    left: 56%;
+    left: 60%;
     transform: translate(-50%,50%);
     width: 30px;
     height: 30px;
@@ -4226,7 +4226,7 @@ body{
     content: '';
     position: absolute;
     top: 403px;
-    left: 56%;
+    left: 60%;
     transform: translate(-50%,50%);
     width: 30px;
     height: 30px;
@@ -4323,7 +4323,7 @@ body{
     content: '';
     position: absolute;
     top: 618px;
-    left: 56%;
+    left: 60%;
     transform: translate(-50%,50%);
     width: 30px;
     height: 30px;
