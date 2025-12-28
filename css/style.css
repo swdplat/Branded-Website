@@ -4623,6 +4623,8 @@ body{
     overflow: hidden;
     border-bottom: 1px solid #d9d9d9;
     padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_1::after{
