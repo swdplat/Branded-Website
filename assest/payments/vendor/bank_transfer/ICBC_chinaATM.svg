@@ -1,0 +1,21 @@
+<svg version="1.1" id="Layer_1" xmlns:x="ns_extend;" xmlns:i="ns_ai;" xmlns:graph="ns_graphs;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55.6 55.6" style="enable-background:new 0 0 55.6 55.6;" xml:space="preserve">
+ <style type="text/css">
+  .st0{fill-rule:evenodd;clip-rule:evenodd;fill:#D90000;}
+ </style>
+ <metadata>
+  <sfw xmlns="ns_sfw;">
+   <slices>
+   </slices>
+   <sliceSourceBounds bottomLeftOrigin="true" height="55.6" width="55.6" x="229.4" y="-228">
+   </sliceSourceBounds>
+  </sfw>
+ </metadata>
+ <g>
+  <path class="st0" d="M26.8,17.1v-4.3H12.9v4.3v4.3v4.3h4.3h4.2v4.3h-4.2h-4.3v4.3v4.3v3.7v0.6h13.9v-4.3h-9.6v-4.3h8.5v-0.6v-3.7
+		v-4.3v-4.3h-4.3h-4.2v-4.3H26.8z M0,27.8C0,12.5,12.4,0,27.8,0c15.4,0,27.8,12.5,27.8,27.8c0,15.4-12.5,27.8-27.8,27.8
+		C12.4,55.6,0,43.2,0,27.8 M4.3,27.8c0-13,10.5-23.5,23.5-23.5c13,0,23.5,10.5,23.5,23.5c0,13-10.5,23.5-23.5,23.5
+		C14.8,51.3,4.3,40.8,4.3,27.8 M29,38.5v4.3h13.9v-4.3v-4.3v-4.3h-4.3h-4.2v-4.3h4.2h4.3v-4.3v-4.3v-3.7v-0.6H29v4.3h9.6v4.3H30V22
+		v3.7v4.3v4.3h4.3h4.2v4.3H29z">
+  </path>
+ </g>
+</svg>

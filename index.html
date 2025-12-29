@@ -10,7 +10,7 @@
     <!-- 滑動效果套件 -->
      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
     <!-- 地圖套件css -->
-     <link rel="stylesheet" href="./map_style.css">
+     <link rel="stylesheet" href="./nation-map-style.css">
 
     <!-- jquery引入檔 -->
      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -246,19 +246,10 @@
                 </div>
             </div>
         </section>
-        <section class="world_map">
-            <div class="world_map_outer">
-                <div class="world_map_inner">
-                    <div class="map_region">
-                        <div class="top_block" data-aos="fade-up">
-                            <div class="game_img_list">
-                                   <!-- <header class="app-header">
-      <h1>MyCard Map v0.2</h1>
-    </header> -->
-
-    <main class="app-main">
+        <section class="world_map" data-aos="fade-up">
+        <main class="app-main">
       <div id="mapFrame" class="map-frame">
-        <!-- 給 app.js 使用的 SVG + viewport -->
+        <!-- nation-map-app.js 使用的 SVG + viewport -->
         <svg id="mapSvg" xmlns="http://www.w3.org/2000/svg">
           <g id="viewport"></g>
         </svg>
@@ -286,243 +277,20 @@
 
       <div class="map-hint" id="mapHint">滾輪縮放、拖曳平移；點擊地區查看資訊</div>
       </div>
+      <!-- 地圖下方「其他地區」 -->
+      <section class="region-section" id="regionSection" aria-label="其他地區">
+        <div class="region-wrap">
+          <h2 class="region-title">其他地區</h2>
+          <p class="region-desc">深耕遊戲領域多年，從遊戲推廣、多元支付到玩家服務，提供一站式服務。</p>
+
+          <!-- 國家按鈕由 JS 動態產生 -->
+          <div class="region-grid" id="regionGrid"></div>
+        </div>
+      </section>
     </main>
 
     <!-- 金流 icon 模式浮動 tooltip -->
     <div id="methodTooltip" class="method-tooltip" role="tooltip"></div>
-                            </div>
-                        </div>
-                        <div class="under_block" data-aos="fade-up">
-                            <div class="desc_block">
-                                <div class="map_title">
-                                    其他地區
-                                </div>
-                                <div class="map_sub">
-                                    深耕遊戲領域多年，從遊戲推廣、多元支付到玩家服務，提供一站式服務。
-                                </div>
-                            </div>
-                            <div class="country_flag">
-                                <div class="logo_image">
-                                    <a href="#">
-                                        <div class="flag_icon">
-                                            <img src="./image/country_flag_1.png" alt="">
-                                        </div>
-                                        <div class="flag_text">臺灣</div>
-                                    </a>
-                                </div>
-                                <div class="logo_image">
-                                    <a href="#">
-                                        <div class="flag_icon">
-                                            <img src="./image/country_flag_2.png" alt="">
-                                        </div>
-                                        <div class="flag_text">中國</div>
-                                    </a>
-                                </div>
-                                <div class="logo_image">
-                                    <a href="#">
-                                        <div class="flag_icon">
-                                            <img src="./image/country_flag_3.png" alt="">
-                                        </div>
-                                        <div class="flag_text">香港</div>
-                                    </a>
-                                </div>
-                                <div class="logo_image">
-                                    <a href="#">
-                                        <div class="flag_icon">
-                                            <img src="./image/country_flag_4.png" alt="">
-                                        </div>
-                                        <div class="flag_text">澳門</div>
-                                    </a>
-                                </div>
-                                <div class="logo_image">
-                                    <a href="#">
-                                        <div class="flag_icon">
-                                            <img src="./image/country_flag_5.png" alt="">
-                                        </div>
-                                        <div class="flag_text">日本</div>
-                                    </a>
-                                </div>
-                                <div class="logo_image">
-                                    <a href="#">
-                                        <div class="flag_icon">
-                                            <img src="./image/country_flag_6.png" alt="">
-                                        </div>
-                                        <div class="flag_text">韓國</div>
-                                    </a>
-                                </div>
-                                <div class="logo_image">
-                                    <a href="#">
-                                        <div class="flag_icon">
-                                            <img src="./image/country_flag_7.png" alt="">
-                                        </div>
-                                        <div class="flag_text">新加坡</div>
-                                    </a>
-                                </div>
-                                <div class="logo_image">
-                                    <a href="#">
-                                        <div class="flag_icon">
-                                            <img src="./image/country_flag_8.png" alt="">
-                                        </div>
-                                        <div class="flag_text">馬來西亞</div>
-                                    </a>
-                                </div>
-                                <div class="logo_image">
-                                    <a href="#">
-                                        <div class="flag_icon">
-                                            <img src="./image/country_flag_9.png" alt="">
-                                        </div>
-                                        <div class="flag_text">泰國</div>
-                                    </a>
-                                </div>
-                                <div class="logo_image">
-                                    <a href="#">
-                                        <div class="flag_icon">
-                                            <img src="./image/country_flag_10.png" alt="">
-                                        </div>
-                                        <div class="flag_text">菲律賓</div>
-                                    </a>
-                                </div>
-                                <div class="logo_image">
-                                    <a href="#">
-                                        <div class="flag_icon">
-                                            <img src="./image/country_flag_11.png" alt="">
-                                        </div>
-                                        <div class="flag_text">印尼</div>
-                                    </a>
-                                </div>
-                                <div class="logo_image">
-                                    <a href="#">
-                                        <div class="flag_icon">
-                                            <img src="./image/country_flag_12.png" alt="">
-                                        </div>
-                                        <div class="flag_text">越南</div>
-                                    </a>
-                                </div>
-                                <div class="logo_image">
-                                    <a href="#">
-                                        <div class="flag_icon">
-                                            <img src="./image/country_flag_13.png" alt="">
-                                        </div>
-                                        <div class="flag_text">美國</div>
-                                    </a>
-                                </div>
-                                <div class="logo_image">
-                                    <a href="#">
-                                        <div class="flag_icon">
-                                            <img src="./image/country_flag_14.png" alt="">
-                                        </div>
-                                        <div class="flag_text">哥斯大黎加</div>
-                                    </a>
-                                </div>
-                                <div class="logo_image">
-                                    <a href="#">
-                                        <div class="flag_icon">
-                                            <img src="./image/country_flag_15.png" alt="">
-                                        </div>
-                                        <div class="flag_text">薩爾瓦多</div>
-                                    </a>
-                                </div>
-                                <div class="logo_image">
-                                    <a href="#">
-                                        <div class="flag_icon">
-                                            <img src="./image/country_flag_16.png" alt="">
-                                        </div>
-                                        <div class="flag_text">瓜地馬拉</div>
-                                    </a>
-                                </div>
-                                <div class="logo_image">
-                                    <a href="#">
-                                        <div class="flag_icon">
-                                            <img src="./image/country_flag_17.png" alt="">
-                                        </div>
-                                        <div class="flag_text">巴拿馬</div>
-                                    </a>
-                                </div>
-                                <div class="logo_image">
-                                    <a href="#">
-                                        <div class="flag_icon">
-                                            <img src="./image/country_flag_18.png" alt="">
-                                        </div>
-                                        <div class="flag_text">阿根廷</div>
-                                    </a>
-                                </div>
-                                <div class="logo_image">
-                                    <a href="#">
-                                        <div class="flag_icon">
-                                            <img src="./image/country_flag_19.png" alt="">
-                                        </div>
-                                        <div class="flag_text">厄瓜多</div>
-                                    </a>
-                                </div>
-                                <div class="logo_image">
-                                    <a href="#">
-                                        <div class="flag_icon">
-                                            <img src="./image/country_flag_20.png" alt="">
-                                        </div>
-                                        <div class="flag_text">哥倫比亞</div>
-                                    </a>
-                                </div>
-                                <div class="logo_image">
-                                    <a href="#">
-                                        <div class="flag_icon">
-                                            <img src="./image/country_flag_21.png" alt="">
-                                        </div>
-                                        <div class="flag_text">墨西哥</div>
-                                    </a>
-                                </div>
-                                <div class="logo_image">
-                                    <a href="#">
-                                        <div class="flag_icon">
-                                            <img src="./image/country_flag_27.png" alt="">
-                                        </div>
-                                        <div class="flag_text">巴西</div>
-                                    </a>
-                                </div>
-                                <div class="logo_image">
-                                    <a href="#">
-                                        <div class="flag_icon">
-                                            <img src="./image/country_flag_22.png" alt="">
-                                        </div>
-                                        <div class="flag_text">烏拉圭</div>
-                                    </a>
-                                </div>
-                                <div class="logo_image">
-                                    <a href="#">
-                                        <div class="flag_icon">
-                                            <img src="./image/country_flag_23.png" alt="">
-                                        </div>
-                                        <div class="flag_text">祕魯</div>
-                                    </a>
-                                </div>
-                                <div class="logo_image">
-                                    <a href="#">
-                                        <div class="flag_icon">
-                                            <img src="./image/country_flag_24.png" alt="">
-                                        </div>
-                                        <div class="flag_text">智利</div>
-                                    </a>
-                                </div>
-                                <div class="logo_image">
-                                    <a href="#">
-                                        <div class="flag_icon">
-                                            <img src="./image/country_flag_25.png" alt="">
-                                        </div>
-                                        <div class="flag_text">歐盟</div>
-                                    </a>
-                                </div>
-                                <div class="logo_image">
-                                    <a href="#">
-                                        <div class="flag_icon">
-                                            <img src="./image/country_flag_26.png" alt="">
-                                        </div>
-                                        <div class="flag_text">印度</div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </section>
         <section class="market_plan_outer" data-aos="fade-down">
             <div class="market_plan_inner">
@@ -1401,7 +1169,7 @@
     <script src="./country-info.js"></script>
     <script src="./payment-catalog.js"></script>
     <script src="./country-payments.js"></script>
-    <script src="./app.js"></script>
+    <script src="./nation-map-app.js"></script>
 
     <!-- header轉換程式碼 -->
      <script>

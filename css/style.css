@@ -1400,6 +1400,19 @@ body{
 /* world_map的css樣式設置 開始 */
 .main .world_map{
     width: 100%;
+    overflow: hidden;
+    border-radius: 0px 0px 20px 20px;
+    margin-bottom: 2px;
+}
+
+@media(max-width:576px){
+    .main .world_map{
+    overflow: hidden;
+    border-radius: 0px 0px 20px 20px;
+    margin-bottom: 2px;
+    height: 1200px;
+    background-color: #ffffff;
+    }
 }
 
 .main .world_map .world_map_outer{
