@@ -1257,7 +1257,7 @@ body{
 }
 
 .main .payment_methods .payment_methods_outer .payment_methods_inner .payment_item .all_item_card{
-    width: 85%;
+    width: 90%;
     display: flex;
     flex-direction: column;
     justify-content: center;
