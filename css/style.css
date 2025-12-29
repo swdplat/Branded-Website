@@ -1188,7 +1188,7 @@ body{
 .main .payment_methods .payment_methods_outer .payment_methods_inner{
     /* border: 1px solid red; */
     width: 100%;
-    padding: 8% 0% 8% 0%;
+    padding: 8% 0% 32px 0%;
     background-color: #fff;
     border-radius: 20px 20px 0px 0px;
 }
@@ -1224,7 +1224,7 @@ body{
 .main .payment_methods .payment_methods_outer .payment_methods_inner .payment_headline .headline_subtitle{
     font-size: 24px;
     color: #7A7A7A;
-    padding-left: 60px;
+    padding-left: 50px;
 }
 
 /* 支付流程下方說明 */
@@ -1294,7 +1294,7 @@ body{
 }
 
 .main .payment_methods .payment_methods_outer .payment_methods_inner .payment_item .item_1 .item_desc .desc_title{
-    font-size: 28px;
+    font-size: 24px;
     font-weight: 500;
     color:#000000;
     margin-bottom: 12px;
@@ -1337,7 +1337,7 @@ body{
 }
 
 .main .payment_methods .payment_methods_outer .payment_methods_inner .payment_item .item_2 .item_desc .desc_title{
-    font-size: 28px;
+    font-size: 24px;
     font-weight: 500;
     color:#000000;
     margin-bottom: 12px;
@@ -1380,7 +1380,7 @@ body{
 }
 
 .main .payment_methods .payment_methods_outer .payment_methods_inner .payment_item .item_3 .item_desc .desc_title{
-    font-size: 28px;
+    font-size: 24px;
     font-weight: 500;
     color:#000000;
     margin-bottom: 12px;
@@ -2926,8 +2926,8 @@ body{
 }
 
 .main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc{
-    width: 85%;
-    margin-left: 3%;
+    width: 90%;
+    margin-left: 4.2%;
     display: flex;
     flex-direction: column;
     align-self: center;
@@ -3127,10 +3127,11 @@ body{
 
 .main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .solution_title{
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
     margin-bottom: 32px;
     margin-top: 32px;
+    margin-left: 20px;
 }
 
 .main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .solution_title .solut_image{
@@ -3172,15 +3173,15 @@ body{
 }
 
 .main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .sloution_service .service_one .title{
-    font-size: 28px;
-    font-weight: 600;
+    font-size: 24px;
+    font-weight: 500;
     color: #ffffff;
     margin-bottom: 12px;
     line-height: normal;
 }
 
 .main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .sloution_service .service_one .desc{
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 400;
     color: #b8b8b8;
     line-height: normal;
@@ -3200,15 +3201,15 @@ body{
 }
 
 .main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .sloution_service .service_two .title{
-    font-size: 28px;
-    font-weight: 600;
+    font-size: 24px;
+    font-weight: 500;
     color: #ffffff;
     margin-bottom: 12px;
     line-height: normal;
 }
 
 .main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .sloution_service .service_two .desc{
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 400;
     color: #b8b8b8;
     line-height: normal;
@@ -3228,15 +3229,15 @@ body{
 }
 
 .main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .sloution_service .service_three .title{
-    font-size: 28px;
-    font-weight: 600;
+    font-size: 24px;
+    font-weight: 500;
     color: #ffffff;
     margin-bottom: 12px;
     line-height: normal;
 }
 
 .main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .sloution_service .service_three .desc{
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 400;
     color: #b8b8b8;
     line-height: normal;
@@ -3256,15 +3257,15 @@ body{
 }
 
 .main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .sloution_service .service_four .title{
-    font-size: 28px;
-    font-weight: 600;
+    font-size: 24px;
+    font-weight: 500;
     color: #ffffff;
     margin-bottom: 12px;
     line-height: normal;
 }
 
 .main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .sloution_service .service_four .desc{
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 400;
     color: #b8b8b8;
     line-height: normal;
@@ -3587,7 +3588,7 @@ body{
 }
 
 .main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_1 .item_desc .desc_title{
-    font-size: 28px;
+    font-size: 24px;
     font-weight: 500;
     color:#000000;
     margin-bottom: 12px;
@@ -3599,6 +3600,7 @@ body{
     font-weight: 400;
     color:#666666;
     line-height: normal;
+    text-align: justify;
 }
 
 .main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_2{
@@ -3629,7 +3631,7 @@ body{
 }
 
 .main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_2 .item_desc .desc_title{
-    font-size: 28px;
+    font-size: 24px;
     font-weight: 500;
     color:#000000;
     margin-bottom: 12px;
@@ -3641,6 +3643,7 @@ body{
     font-weight: 400;
     color:#666666;
     line-height: normal;
+    text-align: justify;
 }
 
 .main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_3{
@@ -3671,7 +3674,7 @@ body{
 }
 
 .main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_3 .item_desc .desc_title{
-    font-size: 28px;
+    font-size: 24px;
     font-weight: 500;
     color:#000000;
     margin-bottom: 12px;
@@ -3683,6 +3686,7 @@ body{
     font-weight: 400;
     color:#666666;
     line-height: normal;
+    text-align: justify;
 }
 
 }
