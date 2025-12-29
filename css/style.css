@@ -1206,8 +1206,9 @@ body{
 }
 
 .main .payment_methods .payment_methods_outer .payment_methods_inner .payment_headline .payment_headline_inner .headline_icon{
-    max-width: 60px;
+    max-width: 48px;
     width: 100%;
+    margin-top: 5px;
 }
 
 .main .payment_methods .payment_methods_outer .payment_methods_inner .payment_headline .payment_headline_inner .headline_icon img{
@@ -1278,7 +1279,9 @@ body{
 
 .main .payment_methods .payment_methods_outer .payment_methods_inner .payment_item .item_1 .item_icon .icon_1{
     width: 100%;
-    margin-top: 15px;
+    margin-top: 26px;
+    margin-left: 15px;
+    max-width: 36px;
 }
 
 .main .payment_methods .payment_methods_outer .payment_methods_inner .payment_item .item_1 .item_icon .icon_1 img{
@@ -1319,7 +1322,9 @@ body{
 
 .main .payment_methods .payment_methods_outer .payment_methods_inner .payment_item .item_2 .item_icon .icon_1{
     width: 100%;
-    margin-top: 15px;
+    margin-top: 26px;
+    margin-left: 15px;
+    max-width: 36px;
 }
 
 .main .payment_methods .payment_methods_outer .payment_methods_inner .payment_item .item_2 .item_icon .icon_1 img{
@@ -1360,7 +1365,9 @@ body{
 
 .main .payment_methods .payment_methods_outer .payment_methods_inner .payment_item .item_3 .item_icon .icon_1{
     width: 100%;
-    margin-top: 15px;
+    margin-top: 26px;
+    margin-left: 15px;
+    max-width: 36px;
 }
 
 .main .payment_methods .payment_methods_outer .payment_methods_inner .payment_item .item_3 .item_icon .icon_1 img{
@@ -3123,7 +3130,8 @@ body{
 }
 
 .main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .solution_title .solut_image{
-    width: 80px;
+    max-width: 48px;
+    margin-bottom: 48px;
 }
 
 .main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .solution_title .solut_image img{
@@ -3506,7 +3514,7 @@ body{
 }
 
 .main .customer_support .customer_support_outer .customer_support_inner .customer_headline .customer_headline_inner .customer_headline_icon{
-    max-width: 60px;
+    max-width: 48px;
     width: 100%;
     margin-right: 16px;
 }
@@ -3561,7 +3569,8 @@ body{
 
 .main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_1 .item_icon .icon_1{
     width: 100%;
-    margin-top: 25px;
+    margin-top: 30px;
+    max-width: 36px;
 }
 
 .main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_1 .item_icon .icon_1 img{
@@ -3602,7 +3611,8 @@ body{
 
 .main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_2 .item_icon .icon_1{
     width: 100%;
-    margin-top: 25px;
+    margin-top: 30px;
+    max-width: 36px;
 }
 
 .main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_2 .item_icon .icon_1 img{
@@ -3643,7 +3653,8 @@ body{
 
 .main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_3 .item_icon .icon_1{
     width: 100%;
-    margin-top: 25px;
+    margin-top: 30px;
+    max-width: 36px;
 }
 
 .main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_3 .item_icon .icon_1 img{
@@ -4558,7 +4569,7 @@ body{
 
 .main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_overview .overview_desc .desc_icon{
     width: 100%;
-    max-width: 60px;
+    max-width: 48px;
     align-self: center;
     height: 125px;
     margin-right: 10px;
