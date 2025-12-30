@@ -250,49 +250,6 @@ class MapViewer {
     this.render();
   }
 
-  onPointerDown(e) {
-      // 只在地圖框內處理
-    if (e.target.closest('#infoPanel')) return;
-
-    this.pointerMap.set(e.pointerId, { x: e.clientX, y: e.clientY });
-
-    const isTouchMobile = this.isMobileTouch(e);
-    const allowSinglePan = !isTouchMobile;
-
-    if (isTouchMobile && this.pointerMap.size < 2) {
-      this.isPanning     = false;
-      this.lastPinchDist = null;
-      this.lastCenter    = null;
-      this.setTouchAction('pan-y pinch-zoom');
-      return;
-    }
-
-    if (isTouchMobile && this.pointerMap.size === 2) {
-      this.setTouchAction('none');
-    }
-
-    if (this.pointerMap.size === 1 && allowSinglePan) {
-        // 一指：啟動平移（僅桌機 / 非觸控）
-      this.isPanning     = true;
-      this.panStart      = { x: e.clientX, y: e.clientY };
-      this.startTxTy     = { tx: this.tx, ty: this.ty };
-      this.lastPinchDist = null;
-      this.lastCenter    = null;
-    } else if (this.pointerMap.size === 2) {
-        // 兩指：切換成 pinch 模式，不再平移
-            this.isPanning     = false;
-      const pts                = Array.from(this.pointerMap.values());
-            this.lastPinchDist = Math.hypot(
-        pts[0].x - pts[1].x,
-        pts[0].y - pts[1].y
-      );
-      this.lastCenter    = {
-        x: (pts[0].x + pts[1].x) / 2,
-        y: (pts[0].y + pts[1].y) / 2
-      };
-    }
-  }
-
   onPointerMove(e) {
     if (!this.pointerMap.has(e.pointerId)) return;
 
@@ -338,6 +295,51 @@ class MapViewer {
       this.render();
     }
   }
+
+  onPointerDown(e) {
+      // 只在地圖框內處理
+    if (e.target.closest('#infoPanel')) return;
+
+    this.pointerMap.set(e.pointerId, { x: e.clientX, y: e.clientY });
+
+    const isTouchMobile = this.isMobileTouch(e);
+    const allowSinglePan = !isTouchMobile;
+
+    if (isTouchMobile && this.pointerMap.size < 2) {
+      this.isPanning     = false;
+      this.lastPinchDist = null;
+      this.lastCenter    = null;
+      this.setTouchAction('pan-y pinch-zoom');
+      return;
+    }
+
+    if (isTouchMobile && this.pointerMap.size === 2) {
+      this.setTouchAction('none');
+    }
+
+    if (this.pointerMap.size === 1 && allowSinglePan) {
+        // 一指：啟動平移（僅桌機 / 非觸控）
+      this.isPanning     = true;
+      this.panStart      = { x: e.clientX, y: e.clientY };
+      this.startTxTy     = { tx: this.tx, ty: this.ty };
+      this.lastPinchDist = null;
+      this.lastCenter    = null;
+    } else if (this.pointerMap.size === 2) {
+        // 兩指：切換成 pinch 模式，不再平移
+            this.isPanning     = false;
+      const pts                = Array.from(this.pointerMap.values());
+            this.lastPinchDist = Math.hypot(
+        pts[0].x - pts[1].x,
+        pts[0].y - pts[1].y
+      );
+      this.lastCenter    = {
+        x: (pts[0].x + pts[1].x) / 2,
+        y: (pts[0].y + pts[1].y) / 2
+      };
+    }
+  }
+
+  
 
   onPointerUp(e) {
     this.pointerMap.delete(e.pointerId);

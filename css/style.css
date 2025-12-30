@@ -1401,7 +1401,7 @@ body{
 .main .world_map{
     width: 100%;
     overflow: hidden;
-    border-radius: 0px 0px 20px 20px;
+    border-radius: 20px 20px 20px 20px;
     margin-bottom: 2px;
 }
 
@@ -1410,7 +1410,7 @@ body{
     overflow: hidden;
     border-radius: 0px 0px 20px 20px;
     margin-bottom: 2px;
-    height: 1330px;
+    height: 2000px;
     background-color: #ffffff;
     }
 }
@@ -1760,6 +1760,94 @@ body{
     }
 
 }
+
+/* 地圖玻璃層 css 開始*/
+/* 強化玻璃層：攔截所有滑鼠與滾輪動作 */
+.map-blocker {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 50; /* 確保它高於 SVG 地圖 */
+    background: transparent; /* 平時透明，肉眼看不見 */
+    cursor: default;
+}
+
+/* 提示遮罩：層級要比 blocker 更高 */
+.map-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 60; 
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s;
+    pointer-events: none; /* 遮罩本身不要擋住滾輪偵測 */
+}
+
+.world_map.show-hint .map-overlay {
+    opacity: 1;
+    visibility: visible;
+}
+
+.map-overlay .msg {
+    color: white;
+    font-size: 1.2rem;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 15px 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+/* 當按下 Ctrl 後的狀態：移除玻璃層 */
+.world_map.active .map-blocker {
+    display: none; /* 完全消失，讓游標接觸到下方的 SVG */
+}
+
+@media(max-width:576px){
+    .map-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 60; 
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s;
+    pointer-events: none; /* 遮罩本身不要擋住滾輪偵測 */
+    display: none;
+}
+
+.world_map.show-hint .map-overlay {
+    opacity: 1;
+    visibility: visible;
+    display: none;
+}
+
+.map-overlay .msg {
+    color: white;
+    font-size: 1.2rem;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 15px 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    display: none;
+}
+}
+
+/* 地圖玻璃層 css 結束 */
 
 /* world_map的css樣式設置 結束 */
 
