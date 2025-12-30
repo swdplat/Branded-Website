@@ -4059,6 +4059,7 @@ body{
     
     .main .best_choice .best_choice_outer .best_choice_inner .choice_region .under_block .company_logo_list .logo_image{
         max-width: 330px;
+        width: 100%;
     }
     
     .main .best_choice .best_choice_outer .best_choice_inner .choice_region .under_block .company_logo_list .logo_image img{
