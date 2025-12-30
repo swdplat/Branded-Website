@@ -1410,7 +1410,7 @@ body{
     overflow: hidden;
     border-radius: 0px 0px 20px 20px;
     margin-bottom: 2px;
-    height: 1200px;
+    height: 1330px;
     background-color: #ffffff;
     }
 }
@@ -2555,7 +2555,7 @@ body{
     max-width: unset;
     background-color: #ffffff;
     padding: 20px 15px 20px 15px;
-    margin-bottom: 6px;
+    margin-bottom: 15px;
     margin-right: 6px;
 }
 
@@ -2743,12 +2743,6 @@ body{
 }
 
 
-
-
-
-
-
-
 /* 這裡的css是用在彈窗以及遮罩的部分，負責彈窗、遮罩的開啟與關閉 */
         /* 遮罩 (Overlay) - 初始狀態為隱藏 */
         .modal-overlay {
@@ -2831,6 +2825,57 @@ body{
             display: none;
         }
 
+/* 新增：當這三個區塊被觸發時，改變對齊方式 */
+/* 1. 確保遮罩永遠是全螢幕，不被 flex 對齊影響 */
+.modal-overlay.show {
+    display: block; /* 改回 block，不使用 flex 居中，這樣比較好手動控制位置 */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+}
+
+/* 2. 設定「預設」的彈窗位置 (居中) */
+.modal-overlay.show .modal-content {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1); /* 利用 translate 達成絕對居中 */
+}
+
+@media(max-width:576px){
+    .modal-overlay.show .modal-content {
+    position: absolute;
+    top: 35%;
+    transform: translate(-50%, -50%) scale(1); /* 利用 translate 達成絕對居中 */
+}    
+}
+
+/* 3. 【關鍵】針對這三個特定區塊的定位覆寫 */
+/* 當外層有 .special-layout 時，我們重新定義內容盒的位置 */
+.modal-overlay.show.special-layout .modal-content {
+    /* 這裡設定你想要的絕對位置 */
+    top: 2095px;       /* 距離頂部 */
+    left: auto;       /* 取消水平置中 */
+    transform: scale(1); /* 取消 translate 的位移，改用 top/right 定位 */
+    /* 視覺美化 */
+    max-width: 530px;
+}
+
+@media(max-width:576px){
+    .modal-overlay.show.special-layout .modal-content {
+    /* 這裡設定你想要的絕對位置 */
+    top: 37%;       /* 距離頂部 */
+    left: auto;       /* 取消水平置中 */
+    transform: scale(1); /* 取消 translate 的位移，改用 top/right 定位 */
+    /* 視覺美化 */
+    width: 80%;
+    max-width: none;
+}
+}
+
 /* 這裡的css是用在彈窗以及遮罩的部分，負責彈窗、遮罩的開啟與關閉 */
         /* 遮罩 (Overlay) - 初始狀態為隱藏 */
         .modal-overlay {
@@ -2853,7 +2898,7 @@ body{
             background-color: white;
             padding: 30px;
             border-radius: 10px;
-            width: 90%;
+            width: 80%;
             max-width: 530px;
             position: relative; 
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
@@ -3845,7 +3890,7 @@ body{
 }
 
 .main .best_choice .best_choice_outer .best_choice_inner .choice_region .under_block .company_logo_list{
-    width: 90%;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     margin-top: 60px;
@@ -3854,7 +3899,7 @@ body{
 }
 
 .main .best_choice .best_choice_outer .best_choice_inner .choice_region .under_block .company_logo_list .logo_image{
-    max-width: 330px;
+    width: 25%;
 }
 
 .main .best_choice .best_choice_outer .best_choice_inner .choice_region .under_block .company_logo_list .logo_image img{
@@ -4290,7 +4335,7 @@ body{
     font-weight: 600;
     color: #313131;
     margin-right: 10px;
-    width: 100px;
+    width: auto;
 }
 
 .main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_2 .list_card .list_title .title_num{

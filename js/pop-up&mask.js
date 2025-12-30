@@ -42,3 +42,19 @@
                 closeModal();
             }
         });
+
+
+        $('.openModalBtn').on('click', function() {
+    var targetId = $(this).attr('data-target'); 
+    
+    var specialIds = ['path_description', 'street_video', 'pre-registrat'];
+
+    if ($.inArray(targetId, specialIds) !== -1) {
+        $('.modal-overlay').addClass('special-layout');
+    } else {
+        $('.modal-overlay').removeClass('special-layout');
+    }
+
+    // 最後顯示彈窗
+    $('.modal-overlay').addClass('show');
+});
