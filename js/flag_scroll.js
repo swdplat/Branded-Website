@@ -92,3 +92,15 @@ $(document).ready(function() {
         }, 800); 
     });
 });
+
+// banner 了解更多icon，點擊移動至下方info_board
+$(document).ready(function() {
+    
+    $('#you_know').on('click', function(event) {
+        event.preventDefault();
+        var targetSection = $('.info_board').offset().top;
+        $('html, body').animate({
+            scrollTop: targetSection
+        }, 800); 
+    });
+});

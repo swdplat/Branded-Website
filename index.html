@@ -14,6 +14,12 @@
 
     <!-- jquery引入檔 -->
      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- google fonts 字型 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anta&family=Noto+Sans+TC:wght@100..900&family=Noto+Serif+SC:wght@200..900&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <div class="main">
@@ -84,7 +90,7 @@
                                 </a>
                             </div>
                             <div class="pushbtn_inner_2">
-                                <a href="">
+                                <a href="" id="you_know">
                                     <div class="know_more">
                                         瞭解更多
                                     </div>
@@ -108,7 +114,7 @@
                                 <span class="count_two" data-target="743">0</span>萬+
                             </div>
                             <div class="text_desc">
-                                MyCard用戶數
+                                MyCard會員數
                             </div>
                         </div>
                     </div>
@@ -1183,7 +1189,7 @@
             $(window).scroll(function() {
                 let scrollDistance = $(window).scrollTop();
 
-                if (scrollDistance > 50) {
+                if (scrollDistance > 0) {
                     $('#header_down').addClass('header_scroll');
                 } else {
                     $('#header_down').removeClass('header_scroll');

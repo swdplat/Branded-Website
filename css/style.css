@@ -283,6 +283,7 @@ body{
     font-size: 64px;
     font-weight: 600;
     line-height: normal;
+    font-family: "Noto Sans TC", sans-serif;
 }
 
 .main .big_banner .bigbanner_outer .bigbanner_inner .banner_region .banner_desc{
@@ -291,6 +292,8 @@ body{
     line-height: normal;
     color: #666666;
     margin: 40px 0px 60px 0px;
+    font-family: "Noto Sans TC", sans-serif;
+    text-align: justify;
 }
 
 .main .big_banner .bigbanner_outer .bigbanner_inner .banner_region .banner_desc span{
@@ -330,6 +333,7 @@ body{
 .main .big_banner .bigbanner_outer .bigbanner_inner .banner_region .banner_pushbtn .pushbtn_inner_2 a .know_more{
     display: flex;
     align-items: center;
+    font-family: "Noto Sans TC", sans-serif;
 }
 
 .main .big_banner .bigbanner_outer .bigbanner_inner .banner_region .banner_pushbtn .pushbtn_inner_2 a .know_more_image{
@@ -501,6 +505,7 @@ body{
     font-size: 48px;
     color: #000;
     line-height: normal;
+    font-family: "Noto Sans TC", sans-serif;
 }
 
 .main .info_board .info_board_outer .info_board_inner .board_1 .text_inner .text_desc{
@@ -529,6 +534,7 @@ body{
     font-size: 48px;
     color: #000;
     line-height: normal;
+    font-family: "Noto Sans TC", sans-serif;
 }
 
 .main .info_board .info_board_outer .info_board_inner .board_2 .text_inner .text_desc{
@@ -556,6 +562,7 @@ body{
     font-size: 48px;
     color: #000;
     line-height: normal;
+    font-family: "Noto Sans TC", sans-serif;
 }
 
 .main .info_board .info_board_outer .info_board_inner .board_3 .text_inner .text_desc{
@@ -584,6 +591,7 @@ body{
     font-size: 48px;
     color: #000;
     line-height: normal;
+    font-family: "Noto Sans TC", sans-serif;
 }
 
 .main .info_board .info_board_outer .info_board_inner .board_4 .text_inner .text_desc{
@@ -792,6 +800,7 @@ body{
     font-weight: 700;
     line-height: normal;
     margin-bottom: 24px;
+    font-family: "Noto Sans TC", sans-serif;
 }
 
 .main .market_info .market_info_outer .market_info_inner .market_desc .market_text .text_info_1{
@@ -800,6 +809,7 @@ body{
     font-weight: 400;
     /* margin-bottom: 64px; */
     line-height: normal;
+    font-family: "Noto Sans TC", sans-serif;
 }
 
 .main .market_info .market_info_outer .market_info_inner .market_desc .market_text .text_devide{
@@ -814,6 +824,7 @@ body{
     font-weight: 400;
     /* margin-bottom: 64px; */
     line-height: normal;
+    font-family: "Noto Sans TC", sans-serif;
 }
 
 .main .market_info .market_info_outer .market_info_inner .market_desc .market_text .text_sum .sum_number{
@@ -1012,6 +1023,7 @@ body{
     font-weight: 600;
     color: #000000;
     line-height: normal;
+    font-family: "Noto Sans TC", sans-serif;
 }
 
 .main .payment_methods .payment_methods_outer .payment_methods_inner .payment_headline .headline_subtitle{
@@ -1029,6 +1041,7 @@ body{
 .main .payment_methods .payment_methods_outer .payment_methods_inner .under_headline .under_headline_subtitle{
     font-size: 20px;
     color: #7A7A7A;
+    font-family: "Noto Sans TC", sans-serif;
 }
 /* 支付流程下方說明 */
 
@@ -1084,6 +1097,7 @@ body{
     font-weight: 500;
     color:#000000;
     margin-bottom: 12px;
+    font-family: "Noto Sans TC", sans-serif;
 }
 
 .main .payment_methods .payment_methods_outer .payment_methods_inner .payment_item .item_1 .item_desc .desc_text{
@@ -1091,6 +1105,7 @@ body{
     font-weight: 400;
     color:#666666;
     line-height: normal;
+    font-family: "Noto Sans TC", sans-serif;
 }
 
 .main .payment_methods .payment_methods_outer .payment_methods_inner .payment_item .item_2{
@@ -1124,6 +1139,7 @@ body{
     font-weight: 500;
     color:#000000;
     margin-bottom: 12px;
+    font-family: "Noto Sans TC", sans-serif;
 }
 
 .main .payment_methods .payment_methods_outer .payment_methods_inner .payment_item .item_2 .item_desc .desc_text{
@@ -1131,6 +1147,7 @@ body{
     font-weight: 400;
     color:#666666;
     line-height: normal;
+    font-family: "Noto Sans TC", sans-serif;
 }
 
 .main .payment_methods .payment_methods_outer .payment_methods_inner .payment_item .item_3{
@@ -1164,6 +1181,7 @@ body{
     font-weight: 500;
     color:#000000;
     margin-bottom: 12px;
+    font-family: "Noto Sans TC", sans-serif;
 }
 
 .main .payment_methods .payment_methods_outer .payment_methods_inner .payment_item .item_3 .item_desc .desc_text{
@@ -1171,6 +1189,7 @@ body{
     font-weight: 400;
     color:#666666;
     line-height: normal;
+    font-family: "Noto Sans TC", sans-serif;
 }
 
 /* RWD樣式 */
@@ -3055,7 +3074,7 @@ body{
 
 .main .security_solution .security_solution_outer{
     width: 100%;
-    height: 860px;
+    height: auto;
     background-color: #000;
 }
 
@@ -3086,6 +3105,9 @@ body{
 }
 
 .main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .solution_title .solut_image{
+    height: 100%;
+    align-self: flex-start;
+    padding-top: 15px;
     width: 80px;
 }
 
@@ -3099,6 +3121,7 @@ body{
     font-weight: 600;
     color: #ffffff;
     text-shadow: 0 0 5px #f9f9f9, 0 0 15px #1a69e1;
+    font-family: "Noto Sans TC", sans-serif;
 }
 
 .main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .sloution_service{
@@ -3106,7 +3129,7 @@ body{
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
 .main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .sloution_service .service_one{
@@ -3117,7 +3140,8 @@ body{
     background-clip: padding-box,border-box;
     background-origin: border-box;
     padding: 20px 10px;
-    height: 180px;
+    height: auto;
+    margin-bottom: 10px;
 }
 
 .main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .sloution_service .service_one .title{
@@ -3126,6 +3150,7 @@ body{
     color: #ffffff;
     margin-bottom: 12px;
     line-height: normal;
+    font-family: "Noto Sans TC", sans-serif;
 }
 
 .main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .sloution_service .service_one .desc{
@@ -3134,6 +3159,7 @@ body{
     color: #b8b8b8;
     line-height: normal;
     text-align: justify;
+    font-family: "Noto Sans TC", sans-serif;
 }
 
 .main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .sloution_service .service_two{
@@ -3144,8 +3170,8 @@ body{
     background-clip: padding-box,border-box;
     background-origin: border-box;
     padding: 20px 10px;
-    height: 180px;
-    margin-bottom: 20px;
+    height: auto;
+    margin-bottom: 10px;
 }
 
 .main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .sloution_service .service_two .title{
@@ -3154,6 +3180,7 @@ body{
     color: #ffffff;
     margin-bottom: 12px;
     line-height: normal;
+    font-family: "Noto Sans TC", sans-serif;
 }
 
 .main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .sloution_service .service_two .desc{
@@ -3162,6 +3189,7 @@ body{
     color: #b8b8b8;
     line-height: normal;
     text-align: justify;
+    font-family: "Noto Sans TC", sans-serif;
 }
 
 .main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .sloution_service .service_three{
@@ -3172,7 +3200,7 @@ body{
     background-clip: padding-box,border-box;
     background-origin: border-box;
     padding: 20px 10px;
-    height: 180px;
+    height: auto;
 }
 
 .main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .sloution_service .service_three .title{
@@ -3181,6 +3209,7 @@ body{
     color: #ffffff;
     margin-bottom: 12px;
     line-height: normal;
+    font-family: "Noto Sans TC", sans-serif;
 }
 
 .main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .sloution_service .service_three .desc{
@@ -3189,6 +3218,7 @@ body{
     color: #b8b8b8;
     line-height: normal;
     text-align: justify;
+    font-family: "Noto Sans TC", sans-serif;
 }
 
 .main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .sloution_service .service_four{
@@ -3199,7 +3229,7 @@ body{
     background-clip: padding-box,border-box;
     background-origin: border-box;
     padding: 20px 10px;
-    height: 180px;
+    height: auto;
 }
 
 .main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .sloution_service .service_four .title{
@@ -3208,6 +3238,7 @@ body{
     color: #ffffff;
     margin-bottom: 12px;
     line-height: normal;
+    font-family: "Noto Sans TC", sans-serif;
 }
 
 .main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .sloution_service .service_four .desc{
@@ -3216,6 +3247,7 @@ body{
     color: #b8b8b8;
     line-height: normal;
     text-align: justify;
+    font-family: "Noto Sans TC", sans-serif;
 }
 
 
@@ -3230,7 +3262,7 @@ body{
 
 .main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_image .region_image_inner img{
     width: 100%;
-    height: 860px;
+    height: 820px;
 }
 /* RWD 樣式 */
 @media(max-width:576px){
@@ -3483,6 +3515,7 @@ body{
     font-size: 64px;
     font-weight: 600;
     color: #000000;
+    font-family: "Noto Sans TC", sans-serif;
 }
 
 /* .main .customer_support .customer_support_outer .customer_support_inner .customer_headline .customer_headline_subtitle{
@@ -3541,6 +3574,8 @@ body{
     color:#000000;
     margin-bottom: 12px;
     line-height: normal;
+    font-family: "Noto Sans TC", sans-serif;
+    white-space: unset;
 }
 
 .main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_1 .item_desc .desc_text{
@@ -3548,6 +3583,8 @@ body{
     font-weight: 400;
     color:#666666;
     line-height: normal;
+    font-family: "Noto Sans TC", sans-serif;
+    text-align: justify;
 }
 
 .main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_2{
@@ -3582,6 +3619,7 @@ body{
     color:#000000;
     margin-bottom: 12px;
     line-height: normal;
+    font-family: "Noto Sans TC", sans-serif;
 }
 
 .main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_2 .item_desc .desc_text{
@@ -3589,6 +3627,8 @@ body{
     font-weight: 400;
     color:#666666;
     line-height: normal;
+    font-family: "Noto Sans TC", sans-serif;
+    text-align: justify;
 }
 
 .main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_3{
@@ -3623,6 +3663,7 @@ body{
     color:#000000;
     margin-bottom: 12px;
     line-height: normal;
+    font-family: "Noto Sans TC", sans-serif;
 }
 
 .main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_3 .item_desc .desc_text{
@@ -3630,6 +3671,8 @@ body{
     font-weight: 400;
     color:#666666;
     line-height: normal;
+    font-family: "Noto Sans TC", sans-serif;
+    text-align: justify;
 }
 
 /* RWD 樣式 */
@@ -3739,6 +3782,7 @@ body{
     color:#000000;
     margin-bottom: 12px;
     line-height: normal;
+    white-space: unset;
 }
 
 .main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_1 .item_desc .desc_text{
@@ -3884,6 +3928,7 @@ body{
     color: #ffffff;
     margin-bottom: 20px;
     line-height: normal;
+    font-family: "Noto Sans TC", sans-serif;
 }
 
 .main .best_choice .best_choice_outer .best_choice_inner .choice_region .top_block .desc_block .choice_sub{
@@ -3891,6 +3936,7 @@ body{
     font-weight: 400;
     color: #b8b8b8;
     line-height: normal;
+    font-family: "Noto Sans TC", sans-serif;
 }
 
 .main .best_choice .best_choice_outer .best_choice_inner .choice_region .top_block .game_img_list{
@@ -4254,6 +4300,7 @@ body{
     color: #000;
     margin-bottom: 24px;
     line-height: normal;
+    font-family: "Noto Sans TC", sans-serif;
 }
 
 .main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_overview .overview_desc .desc_text .normal_text{
@@ -4261,6 +4308,7 @@ body{
     font-weight: 400;
     color: #b8b8b8;
     line-height: normal;
+    font-family: "Noto Sans TC", sans-serif;
 }
 
 .main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_overview .overview_image{
@@ -4329,12 +4377,15 @@ body{
     font-weight: 600;
     color: #313131;
     margin-right: 10px;
+    font-family: "Noto Sans TC", sans-serif;
+    white-space: nowrap;
 }
 
 .main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_1 .list_card .list_title .title_num{
     font-size: 64px;
     font-weight: 600;
     color: #2B4EB9;
+    font-family: "Noto Sans TC", sans-serif;
 }
 
 .main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_1 .list_card .list_desc{
@@ -4349,6 +4400,7 @@ body{
     color: #313131;
     margin-bottom: 12px;
     line-height: normal;
+    font-family: "Noto Sans TC", sans-serif;
 }
 
 .main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_1 .list_card .list_desc .desc_subtitle{
@@ -4356,6 +4408,7 @@ body{
     font-weight: 500;
     color: #666666;
     line-height: normal;
+    font-family: "Noto Sans TC", sans-serif;
 }
 
 .main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_1 .list_icon{
@@ -4425,12 +4478,15 @@ body{
     color: #313131;
     margin-right: 10px;
     width: auto;
+    font-family: "Noto Sans TC", sans-serif;
+    white-space: nowrap;
 }
 
 .main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_2 .list_card .list_title .title_num{
     font-size: 64px;
     font-weight: 600;
     color: #2B4EB9;
+    font-family: "Noto Sans TC", sans-serif;
 }
 
 .main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_2 .list_card .list_desc{
@@ -4446,6 +4502,7 @@ body{
     color: #313131;
     margin-bottom: 12px;
     line-height: normal;
+    font-family: "Noto Sans TC", sans-serif;
 }
 
 .main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_2 .list_card .list_desc .desc_subtitle{
@@ -4453,6 +4510,7 @@ body{
     font-weight: 500;
     color: #666666;
     line-height: normal;
+    font-family: "Noto Sans TC", sans-serif;
 }
 
 .main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_2 .list_icon{
@@ -4518,12 +4576,15 @@ body{
     font-weight: 600;
     color: #313131;
     margin-right: 10px;
+    font-family: "Noto Sans TC", sans-serif;
+    white-space: nowrap;
 }
 
 .main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_3 .list_card .list_title .title_num{
     font-size: 64px;
     font-weight: 600;
     color: #2B4EB9;
+    font-family: "Noto Sans TC", sans-serif;
 }
 
 .main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_3 .list_card .list_desc{
@@ -4538,6 +4599,7 @@ body{
     color: #313131;
     margin-bottom: 12px;
     line-height: normal;
+    font-family: "Noto Sans TC", sans-serif;
 }
 
 .main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_3 .list_card .list_desc .desc_subtitle{
@@ -4545,6 +4607,7 @@ body{
     font-weight: 500;
     color: #666666;
     line-height: normal;
+    font-family: "Noto Sans TC", sans-serif;
 }
 
 .main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_3 .list_icon{
@@ -4592,12 +4655,15 @@ body{
     font-weight: 600;
     color: #313131;
     margin-right: 10px;
+    font-family: "Noto Sans TC", sans-serif;
+    white-space: nowrap;
 }
 
 .main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_4 .list_title .title_num{
     font-size: 64px;
     font-weight: 600;
     color: #2B4EB9;
+    font-family: "Noto Sans TC", sans-serif;
 }
 
 .main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_4 .list_desc{
@@ -4612,6 +4678,7 @@ body{
     color: #313131;
     margin-bottom: 12px;
     line-height: normal;
+    font-family: "Noto Sans TC", sans-serif;
 }
 
 .main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_4 .list_desc .desc_subtitle{
@@ -4619,6 +4686,7 @@ body{
     font-weight: 500;
     color: #666666;
     line-height: normal;
+    font-family: "Noto Sans TC", sans-serif;
 }
 
 .main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_4 .list_icon{
@@ -4725,10 +4793,12 @@ body{
 .main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_overview .overview_desc .desc_icon{
     width: 100%;
     max-width: 48px;
-    align-self: center;
+    align-self: flex-start;
     height: 125px;
     margin-right: 10px;
     margin-left: 20px;
+    height: 100%;
+    padding-top: 40px;
 }
 
 .main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_overview .overview_desc .desc_icon img{
