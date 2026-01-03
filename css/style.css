@@ -856,6 +856,8 @@ body{
 
 .main .market_info .market_info_outer .market_info_inner .market_earth .earth_image img{
     width:105%;
+    height: 100%;
+    max-height: 560px;
 }
 
 
