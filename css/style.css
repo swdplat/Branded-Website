@@ -4021,7 +4021,7 @@ body{
 .main .best_choice .best_choice_outer .best_choice_inner .choice_region .under_block{
     width: 100%;
     background-color: #ffffff;
-    display: flex;
+    display: none;
     justify-content: center;
 }
 
@@ -4040,6 +4040,81 @@ body{
 
 .main .best_choice .best_choice_outer .best_choice_inner .choice_region .under_block .company_logo_list .logo_image img{
     width: 100%;
+}
+
+
+/* css動畫輪播 */
+.main .best_choice .best_choice_outer .best_choice_inner .choice_region .under_block_slide{
+    width: 100%;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+}
+
+.main .best_choice .best_choice_outer .best_choice_inner .choice_region .under_block_slide .carousel_list{
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    /* justify-content: center; */
+}
+
+
+.main .best_choice .best_choice_outer .best_choice_inner .choice_region .under_block_slide .carousel_list .carousel_inner_1{
+    display: flex;
+    width: max-content;
+    gap: 40px;
+    padding-right: 40px;
+
+    animation: scroll 80s linear infinite;
+}
+
+.main .best_choice .best_choice_outer .best_choice_inner .choice_region .under_block_slide .carousel_list .carousel_inner_1:hover{
+    animation-play-state: paused;
+    cursor: unset;
+}
+
+.main .best_choice .best_choice_outer .best_choice_inner .choice_region .under_block_slide .carousel_list .carousel_inner_1 img{
+    /* height: 80px; */
+    width: auto;
+    flex-shrink: 0;
+}
+
+@keyframes scroll {
+    0% { transform: translateX(var(--start)); }
+    100% { transform: translateX(var(--end)); }
+}
+
+.to-left {
+    --start: 0;
+    --end: -50%;
+}
+
+.to-right{
+    --start:-50%;
+    --end:0;
+}
+
+.main .best_choice .best_choice_outer .best_choice_inner .choice_region .under_block_slide .carousel_list .carousel_inner_2{
+    display: flex;
+    width: max-content;
+    gap: 40px;
+    padding-right: 40px;
+
+    animation: scroll 80s linear infinite;
+}
+
+.main .best_choice .best_choice_outer .best_choice_inner .choice_region .under_block_slide .carousel_list .carousel_inner_2:hover{
+    animation-play-state: paused;
+    cursor: unset;
+}
+
+.main .best_choice .best_choice_outer .best_choice_inner .choice_region .under_block_slide .carousel_list .carousel_inner_2 img{
+    /* height: 80px; */
+    width: auto;
+    flex-shrink: 0;
 }
 
 /* RWD樣式 */
@@ -4202,6 +4277,13 @@ body{
         width: 100%;
     }
 
+    /* css動畫輪播 */
+   .main .best_choice .best_choice_outer .best_choice_inner .choice_region .under_block_slide{
+    width: 100%;
+    background-color: #ffffff;
+    display: none;
+    justify-content: center;
+   }
 }
 
 /* best_choice的css樣式設置 結束 */
