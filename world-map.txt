@@ -250,4 +250,36 @@
                 </div>
             </div>
         </section>
+
+
+
+商標logo輪播
+        <!-- <div class="under_block">
+                            <div class="company_logo_list">
+                                <div class="logo_image">
+                                    <img src="./image/nexon.png" alt="">
+                                </div>
+                                <div class="logo_image">
+                                    <img src="./image/steam.png" alt="">
+                                </div>
+                                <div class="logo_image">
+                                    <img src="./image/gravity.png" alt="">
+                                </div>
+                                <div class="logo_image">
+                                    <img src="./image/roit.png" alt="">
+                                </div>
+                                <div class="logo_image">
+                                    <img src="./image/happytiik.png" alt="">
+                                </div>
+                                <div class="logo_image">
+                                    <img src="./image/bandal.png" alt="">
+                                </div>
+                                <div class="logo_image">
+                                    <img src="./image/nc.png" alt="">
+                                </div>
+                                <div class="logo_image">
+                                    <img src="./image/garena.png" alt="">
+                                </div>
+                            </div>
+                        </div> -->
     </div>

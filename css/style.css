@@ -411,6 +411,7 @@ body{
 .main .big_banner .bigbanner_outer .bigbanner_inner .banner_region .banner_pushbtn{
     margin: 20px 0px 20px 0px;
     display: flex;
+    flex-direction: column;
     align-self: center;
 }
 
@@ -423,8 +424,8 @@ body{
 }
 
 .main .big_banner .bigbanner_outer .bigbanner_inner .banner_region .banner_pushbtn .pushbtn_inner_2{
-    width: 40%;
-    display: none;
+    width: 100%;
+    display: block;
     align-items: center;
     justify-content: right;
 }
@@ -435,6 +436,8 @@ body{
     color: #000;
     font-weight: 600;
     justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .main .big_banner .bigbanner_outer .bigbanner_inner .banner_region .banner_pushbtn .pushbtn_inner_2 a .know_more{
@@ -4018,31 +4021,6 @@ body{
 
 
 /* 下半部分 */
-.main .best_choice .best_choice_outer .best_choice_inner .choice_region .under_block{
-    width: 100%;
-    background-color: #ffffff;
-    display: none;
-    justify-content: center;
-}
-
-.main .best_choice .best_choice_outer .best_choice_inner .choice_region .under_block .company_logo_list{
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 60px;
-    margin-bottom: 60px;
-    justify-content: center;
-}
-
-.main .best_choice .best_choice_outer .best_choice_inner .choice_region .under_block .company_logo_list .logo_image{
-    width: 25%;
-}
-
-.main .best_choice .best_choice_outer .best_choice_inner .choice_region .under_block .company_logo_list .logo_image img{
-    width: 100%;
-}
-
-
 /* css動畫輪播 */
 .main .best_choice .best_choice_outer .best_choice_inner .choice_region .under_block_slide{
     width: 100%;
@@ -4078,7 +4056,7 @@ body{
 
 .main .best_choice .best_choice_outer .best_choice_inner .choice_region .under_block_slide .carousel_list .carousel_inner_1 img{
     /* height: 80px; */
-    width: auto;
+    width: 350px;
     flex-shrink: 0;
 }
 
@@ -4113,7 +4091,7 @@ body{
 
 .main .best_choice .best_choice_outer .best_choice_inner .choice_region .under_block_slide .carousel_list .carousel_inner_2 img{
     /* height: 80px; */
-    width: auto;
+    width: 350px;
     flex-shrink: 0;
 }
 
@@ -4252,38 +4230,79 @@ body{
     
     
     /* 下半部分 */
-    .main .best_choice .best_choice_outer .best_choice_inner .choice_region .under_block{
-        width: 100%;
-        background-color: #ffffff;
-        display: flex;
-        justify-content: center;
-    }
-    
-    .main .best_choice .best_choice_outer .best_choice_inner .choice_region .under_block .company_logo_list{
-        width: 90%;
-        display: flex;
-        flex-wrap: wrap;
-        margin-top: 60px;
-        margin-bottom: 60px;
-        justify-content: center;
-    }
-    
-    .main .best_choice .best_choice_outer .best_choice_inner .choice_region .under_block .company_logo_list .logo_image{
-        max-width: 330px;
-        width: 100%;
-    }
-    
-    .main .best_choice .best_choice_outer .best_choice_inner .choice_region .under_block .company_logo_list .logo_image img{
-        width: 100%;
-    }
-
-    /* css動畫輪播 */
-   .main .best_choice .best_choice_outer .best_choice_inner .choice_region .under_block_slide{
+   /* css動畫輪播 */
+.main .best_choice .best_choice_outer .best_choice_inner .choice_region .under_block_slide{
     width: 100%;
     background-color: #ffffff;
-    display: none;
+    display: flex;
     justify-content: center;
-   }
+}
+
+.main .best_choice .best_choice_outer .best_choice_inner .choice_region .under_block_slide .carousel_list{
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    /* justify-content: center; */
+}
+
+
+.main .best_choice .best_choice_outer .best_choice_inner .choice_region .under_block_slide .carousel_list .carousel_inner_1{
+    display: flex;
+    width: max-content;
+    gap: 10px;
+    padding-right: 40px;
+
+    animation: scroll 80s linear infinite;
+}
+
+.main .best_choice .best_choice_outer .best_choice_inner .choice_region .under_block_slide .carousel_list .carousel_inner_1:hover{
+    animation-play-state: paused;
+    cursor: unset;
+}
+
+.main .best_choice .best_choice_outer .best_choice_inner .choice_region .under_block_slide .carousel_list .carousel_inner_1 img{
+    /* height: 80px; */
+    width: 300px;
+    flex-shrink: 0;
+}
+
+@keyframes scroll {
+    0% { transform: translateX(var(--start)); }
+    100% { transform: translateX(var(--end)); }
+}
+
+.to-left {
+    --start: 0;
+    --end: -50%;
+}
+
+.to-right{
+    --start:-50%;
+    --end:0;
+}
+
+.main .best_choice .best_choice_outer .best_choice_inner .choice_region .under_block_slide .carousel_list .carousel_inner_2{
+    display: flex;
+    width: max-content;
+    gap: 10px;
+    padding-right: 40px;
+
+    animation: scroll 80s linear infinite;
+}
+
+.main .best_choice .best_choice_outer .best_choice_inner .choice_region .under_block_slide .carousel_list .carousel_inner_2:hover{
+    animation-play-state: paused;
+    cursor: unset;
+}
+
+.main .best_choice .best_choice_outer .best_choice_inner .choice_region .under_block_slide .carousel_list .carousel_inner_2 img{
+    /* height: 80px; */
+    width: 300px;
+    flex-shrink: 0;
+}
 }
 
 /* best_choice的css樣式設置 結束 */
