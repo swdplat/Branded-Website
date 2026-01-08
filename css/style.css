@@ -3121,7 +3121,7 @@ body{
     background-image: url(../image/train_bg.png);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: bottom;
     width: 100%;
     height: 650px;
 }
