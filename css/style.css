@@ -409,10 +409,12 @@ body{
 }
 
 .main .big_banner .bigbanner_outer .bigbanner_inner .banner_region .banner_pushbtn{
-    margin: 0px 0px 85px 0px;
+    margin: 0px 0px 15px 0px;
     display: flex;
     flex-direction: column;
     align-self: center;
+    position: relative;
+    z-index: 10000;
 }
 
 .main .big_banner .bigbanner_outer .bigbanner_inner .banner_region .banner_pushbtn .pushbtn_inner_1{
@@ -656,6 +658,7 @@ body{
     font-size: 20px;
     color: #7A7A7A;
     line-height: normal;
+    text-align: center;
 }
 
 
@@ -684,6 +687,7 @@ body{
     font-size: 20px;
     color: #7A7A7A;
     line-height: normal;
+    text-align: center;
 }
 
 .main .info_board .info_board_outer .info_board_inner .board_3{
@@ -710,6 +714,7 @@ body{
 .main .info_board .info_board_outer .info_board_inner .board_3 .text_inner .text_desc{
     font-size: 20px;
     color: #7A7A7A;
+    text-align: center;
 }
 
 
@@ -738,6 +743,7 @@ body{
     font-size: 20px;
     color: #7A7A7A;
     line-height: normal;
+    text-align: center;
 }
 }
 
