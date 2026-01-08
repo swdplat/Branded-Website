@@ -1434,6 +1434,7 @@ body{
     overflow: hidden;
     border-radius: 20px 20px 20px 20px;
     margin-bottom: 2px;
+    background-color: #ffffff;
 }
 
 @media(max-width:576px){
@@ -1942,6 +1943,8 @@ body{
     width: 100%;
     margin: 0% 0% 0% 0%;
     justify-content: center;
+    position: relative;
+    z-index: 10;
 }
 
 .main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_1{
@@ -3088,6 +3091,8 @@ body{
     background-position: bottom;
     width: 100%;
     height: 650px;
+    position: relative;
+    bottom: 100px;
 }
 
 @media(max-width:576px){

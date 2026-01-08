@@ -145,6 +145,21 @@ body.nation-map {
   background: var(--bg);
   font: 14px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans TC", Arial, sans-serif;
 }
+
+
+/* === 手勢期間鎖住頁面捲動（A 方案） ===
+   - 功能：雙指操作地圖時，避免 Android 下拉重整 / 頁面跟著捲動
+   - 刪除影響：雙指平移容易被系統手勢打斷、操作卡住
+*/
+body.nm-scroll-lock {
+  overflow: hidden;
+  overscroll-behavior: none;
+  touch-action: none;
+}
+
+html.nm-scroll-lock {
+  overscroll-behavior: none;
+}
 body.nation-map *,
 body.nation-map *::before,
 body.nation-map *::after {
@@ -169,7 +184,7 @@ body.nation-map *::after {
 .btn:hover { border-color: var(--accent-2); }
 .btn-ghost { background: transparent; }
 
-.app-main { padding: 12px; background-color: #fff;}
+.app-main { padding: 12px; }
 
 /* === [03] 地圖畫布（#mapFrame / #mapSvg） ===
    - 功能：建立固定比例的視窗，SVG 在其中縮放；overflow 用來裁切超出邊界的內容。
@@ -182,6 +197,7 @@ body.nation-map *::after {
   position: relative;
   width: 100%;
   max-width: 1920px;
+  margin: 0 auto;  /* 避免鎖捲動/手勢期間 viewport 寬度重算，導致外框視覺貼邊 */
   aspect-ratio: 1920 / 800;   /* 高度依比例推算 */
   overflow: hidden;
 
@@ -189,6 +205,13 @@ body.nation-map *::after {
   border-radius: 12px;
   background: var(--surface);
   box-shadow: var(--shadow);
+
+
+  /* iOS/Safari：提升合成層，減少 overlay/backdrop-filter 閃爍 */
+  transform: translateZ(0);
+  will-change: transform;
+  will-change: transform, opacity;
+  isolation: isolate;
 }
 
 /* SVG 跟著框縮放 */
@@ -196,9 +219,26 @@ body.nation-map *::after {
   display: block;
   width: 100%;
   height: 100%;
-  /* 預設保留垂直滾動與系統縮放，雙指手勢時再由 nation-map-app.js 動態鎖定 */
-  touch-action: pan-y pinch-zoom;
+  /* 預設只保留頁面垂直捲動；雙指縮放/平移由 nation-map-app.js 接管（雙指開始時鎖 touch-action:none） */
+  touch-action: pan-y;
+  /* 拖曳與點擊的基本體驗：避免文字選取/長按選單干擾 */
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: transparent;
 }
+
+/* SVG 子節點預設也套用 pan-y（避免點到 path 時 touch-action 回到 auto，導致手勢判斷不一致） */
+#mapSvg, #mapSvg * {
+  touch-action: pan-y;
+}
+
+/* 雙指手勢鎖定：強制由程式接管（避免頁面跟著捲動/縮放） */
+.map-frame.gesture-lock #mapSvg,
+.map-frame.gesture-lock #mapSvg * {
+  touch-action: none !important;
+}
+
 
 #mapSvg * { vector-effect: non-scaling-stroke; }
 
@@ -289,7 +329,7 @@ body.nation-map *::after {
 .hint {
   position: absolute; left: 16px; bottom: 16px; padding: 6px 10px; font-size: 12px; color: var(--muted);
   background: rgba(255,255,255,0.6); border: 1px solid var(--border); backdrop-filter: blur(6px);
-  border-radius: 8px; pointer-events: none;
+  -webkit-backdrop-filter: blur(6px);border-radius: 8px; pointer-events: none;
 }
 
 /* === [05] 資訊卡（#infoPanel.info-float） ===
@@ -308,16 +348,16 @@ body.nation-map *::after {
 
   background: rgba(255,255,255,0.7);
   backdrop-filter: blur(12px) saturate(1.1);
-  border: 1px solid transparent;
+  -webkit-backdrop-filter: blur(12px) saturate(1.1);border: 1px solid transparent;
   border-radius: 12px;
   box-shadow: var(--shadow);
 
   opacity: 0;
-  transform: translateX(-100%);  /* 初始從容器左側移出螢幕 */
+  transform: translateX(-100%) translateZ(0);  /* 初始從容器左側移出螢幕 */
   transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 .info-float.right {
-  transform: translateX(100%);   /* 若停靠右側，初始從右側移出 */
+  transform: translateX(100%) translateZ(0);   /* 若停靠右側，初始從右側移出 */
   left: auto; 
   right: 16px; 
 }
@@ -325,7 +365,7 @@ body.nation-map *::after {
   visibility: visible;
   pointer-events: auto;
   opacity: 1;
-  transform: translateX(0);
+  transform: translateX(0) translateZ(0);
   border-color: var(--border); 
   transition: border-color 0.3s ease 0.1s; 
 }
@@ -343,17 +383,23 @@ body.nation-map *::after {
   min-height: 0;
   overflow: hidden;
   padding: 12px;
-  display: grid;
-  grid-template-rows: auto 1fr;
-  gap: 12px;  
-}
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  }
 /* 左 65% 名稱、右 35% 國旗+幣別 */
 .info-top {
-  display: grid;
-  grid-template-columns: 50% 48%;
+  display: flex;
   gap: 10px;
   align-items: center;
 }
+
+/* iOS Safari：grid 在某些合成層/overflow 組合下會出現 reflow/不顯示（旗幟/幣別消失）
+   這裡改用 flex，並保留原本左右比例。
+*/
+.info-top .name-card { flex: 1 1 0; min-width: 0; }
+.info-top .meta-card { flex: 0 0 48%; max-width: 48%; min-width: 0; }
+.meta-card > * { flex: 1 1 0; min-width: 0; }
 .card {
   background: rgba(255,255,255,0.7);
   border: 1px solid var(--border);
@@ -386,8 +432,7 @@ body.nation-map *::after {
 
 /* 右側把國旗與幣別合在一塊，並排 */
 .meta-card {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
   gap: 10px;
   align-items: center;
 }
@@ -399,7 +444,9 @@ body.nation-map *::after {
   overflow: hidden;
   background: #fff;       /* 旗幟常見有透明區，給白底 */
 }
-.flag-box img { width: 100%; height: 100%; object-fit: cover; }
+.flag-box img { width: 100%; height: 100%; object-fit: cover; display: block; transform: translateZ(0); -webkit-transform: translateZ(0); }
+
+.currency-box { transform: translateZ(0); -webkit-transform: translateZ(0); }
 
 /* 幣別：中文名稱在上，英文(代碼)在下 */
 .currency-box .zh-cur {
@@ -513,7 +560,8 @@ body.nation-map *::after {
 }
 
 .payments-card{
-  grid-row: 2;
+  /* info-body 改為 flex 後不需要 grid-row；保留區塊順序由 DOM 決定 */
+  flex: 1 1 auto;
   min-height: 0;
   overflow: auto;
   margin: 0;
@@ -674,10 +722,17 @@ body.nation-map *::after {
   }
 
   .map-hint {
-    width: 243px;
-    height: 30px;
+    /* 手機提示：改成自適應寬高，避免文字被裁切 */
+    width: auto;
+    height: auto;
+    max-width: max-content;
+    /* iOS Safari：max-content 在 left/right 同時存在時容易算錯，改用可控的 max-width */
     top: 12px;
+    bottom: auto;
     left: 12px;
+    right: 12px;
+    line-height: 1.3;
+    word-break: break-word;
   }
 
   .map-frame.dock-right .map-hint {
@@ -933,7 +988,7 @@ body.nation-map *::after {
 }
 
 .region-wrap{
-  width: min(calc(100% - 48px));
+  width: min(980px, calc(100% - 48px));
   margin: 0 auto;
 }
 
@@ -1027,4 +1082,16 @@ body.nation-map *::after {
   .payments-card.icon-only .method-list{
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
+}
+
+/* === [99] 操作模式補強（PC/手機行為分離） ===
+   - 功能：配合 nation-map-app.js 的 PC/手機分流操作邏輯，讓預設手勢更符合 UX：
+     1) PC：左鍵按住拖曳，滾輪不縮放（Ctrl/⌘ + 滾輪才縮放）
+     2) Mobile：單指僅點擊，雙指縮放與平移
+   - 刪除影響：仍可運作，但手機可能被系統手勢干擾，PC 游標提示較不直覺。
+*/
+@media (pointer: fine) {
+  /* 桌機：提示可拖曳（不改 layout，只改游標） */
+  #mapSvg { cursor: grab; }
+  #mapSvg:active { cursor: grabbing; }
 }

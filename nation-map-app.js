@@ -121,9 +121,34 @@ class MapViewer {
 
     this.activeEl = null;  // 目前高亮的元素
 
+    // 桌機拖曳防誤觸：拖曳超過門檻才視為 drag，並短暫屏蔽 click
+    // - 功能：避免拖曳後放開滑鼠時誤觸國家點擊
+    // - 刪除影響：拖曳操作容易誤點國家、造成資訊卡跳出
+    this.dragThreshold = 4;          // px（可依 UX 調整）
+    this.didDrag = false;            // 本次 pointerdown 是否發生拖曳
+    this.suppressClickUntil = 0;     // 拖曳結束後，在此時間點前忽略 click
+    this.panningPointerId = null;    // 桌機拖曳用的 pointerId
+    this.hasPointerCapture  = false;   // 只有真的開始拖曳才 capture（避免 click 事件目標被重定向）
+
     this.defaultTouchAction = window.getComputedStyle(this.svg).touchAction || 'auto';
 
-    this.bindEvents();
+    
+
+// 觸控手勢：手機端優先使用 touch events（iOS/Safari 對 pointer 手勢較不穩定）
+// - 功能：確保雙指縮放/雙指平移一致可用，並避免 Android 下拉重整。
+// - 刪除影響：手機端可能恢復成「只能縮放、不能雙指拖曳」或被系統手勢吃掉。
+this.useTouchEvents = this.isMobileLike() && ('ontouchstart' in window || navigator.maxTouchPoints > 0);
+
+// 雙指手勢期間的捲動鎖定（A 方案）
+// - 功能：雙指開始時固定 body，避免 Android/部分瀏覽器觸發下拉重整或頁面跟著捲動。
+// - 刪除影響：雙指移動時容易被系統手勢打斷、地圖操作卡住。
+this.bodyScrollLocked = false;
+this.lockedScrollY    = 0;
+this.prevBodyInline   = null;
+
+// 手勢進行中：用來暫停 resize / 避免高度變動造成框格跳動
+this.isGestureActive  = false;
+this.bindEvents();
   }
 
   isMobileLike() {
@@ -139,13 +164,203 @@ class MapViewer {
   }
 
   setTouchAction(action) {
-    if (this.svg && this.svg.style.touchAction !== action) {
-      this.svg.style.touchAction = action;
+    // touch-action 會影響瀏覽器是否接管觸控手勢
+    // - 'pan-y'：允許頁面垂直捲動（單指滑動時不會被地圖卡住）
+    // - 'none' ：完全由程式接管（雙指縮放/雙指平移時避免頁面跟著捲動）
+    // 刪除影響：手機端可能出現「雙指拖曳無效 / 只能縮放或只會捲頁」等問題。
+    if (!this.svg) return;
+
+    if (this.svg.style.touchAction !== action) this.svg.style.touchAction = action;
+    if (this.viewport && this.viewport.style.touchAction !== action) this.viewport.style.touchAction = action;
+
+    // iOS/Safari 對 SVG descendant 的 touch-action 行為較不一致：
+    // 用 class 強制讓子節點同步，確保「雙指拖曳」不會被瀏覽器當成頁面手勢吃掉。
+    if (this.frameEl) {
+      if (action === 'none') this.frameEl.classList.add('gesture-lock');
+      else this.frameEl.classList.remove('gesture-lock');
     }
   }
 
+
+// ===========================================================
+// 手勢期間捲動鎖定（A 方案）
+// ===========================================================
+lockBodyScroll() {
+  if (this.bodyScrollLocked) return;
+
+  const html = document.documentElement;
+  const body = document.body;
+
+  this.bodyScrollLocked = true;
+  this.lockedScrollY = window.scrollY || window.pageYOffset || 0;
+
+  // 記錄原本 inline（避免整合到其他頁面時誤傷既有樣式）
+  // 注意：此處刻意不再用 position:fixed 鎖 body，因為 iOS/Safari 會觸發版面寬度重算，
+  //       造成地圖外框「貼邊/跳動」、資訊卡中的旗幟/幣別偶發不顯示。
+  this.prevBodyInline = {
+    overflow: body.style.overflow,
+    overscrollBehavior: body.style.overscrollBehavior,
+    touchAction: body.style.touchAction,
+  };
+  this.prevHtmlInline = {
+    overscrollBehavior: html.style.overscrollBehavior,
+  };
+
+  html.classList.add('nm-scroll-lock');
+  body.classList.add('nm-scroll-lock');
+}
+
+unlockBodyScroll() {
+  if (!this.bodyScrollLocked) return;
+
+  const html = document.documentElement;
+  const body = document.body;
+
+  html.classList.remove('nm-scroll-lock');
+  body.classList.remove('nm-scroll-lock');
+
+  // 還原 inline
+  if (this.prevBodyInline) {
+    body.style.overflow          = this.prevBodyInline.overflow;
+    body.style.overscrollBehavior = this.prevBodyInline.overscrollBehavior;
+    body.style.touchAction       = this.prevBodyInline.touchAction;
+  } else {
+    body.style.overflow          = '';
+    body.style.overscrollBehavior = '';
+    body.style.touchAction       = '';
+  }
+
+  if (this.prevHtmlInline) {
+    html.style.overscrollBehavior = this.prevHtmlInline.overscrollBehavior;
+  } else {
+    html.style.overscrollBehavior = '';
+  }
+
+  // 理論上手勢期間已阻止捲動，這裡仍保險回到手勢開始時的位置
+  window.scrollTo(0, this.lockedScrollY);
+
+  this.bodyScrollLocked = false;
+  this.prevBodyInline   = null;
+  this.prevHtmlInline   = null;
+}
+
+startGestureLock() {
+  if (this.isGestureActive) return;
+  this.isGestureActive = true;
+
+  // 手勢期間，強制交由程式接管（避免 iOS/Safari/Android 把雙指當系統手勢）
+  this.setTouchAction('none');
+  this.lockBodyScroll();
+}
+
+endGestureLock() {
+  if (!this.isGestureActive) return;
+  this.isGestureActive = false;
+
+  // 手勢結束後，恢復允許頁面垂直捲動（單指滑動不會卡住）
+  this.setTouchAction('pan-y');
+  this.unlockBodyScroll();
+}
+
+// ===========================================================
+// 手機端 touch events（雙指縮放＋雙指平移、單指只點擊）
+// ===========================================================
+bindTouchEvents() {
+  if (!this.frameEl) return;
+
+  // 注意：touchmove 需要 passive:false 才能 preventDefault（否則擋不住下拉重整/頁面縮放）
+  // 刪除影響：Android 可能被「下拉重整」打斷、iOS 可能把雙指當頁面手勢。
+  this.frameEl.addEventListener('touchstart', (e) => this.onTouchStart(e), { passive: false });
+  this.frameEl.addEventListener('touchmove',  (e) => this.onTouchMove(e),  { passive: false });
+  this.frameEl.addEventListener('touchend',   (e) => this.onTouchEnd(e),   { passive: true  });
+  this.frameEl.addEventListener('touchcancel',(e) => this.onTouchEnd(e),   { passive: true  });
+}
+
+getTouchDistance(t1, t2) {
+  const dx = t2.clientX - t1.clientX;
+  const dy = t2.clientY - t1.clientY;
+  return Math.hypot(dx, dy);
+}
+
+getTouchCenter(t1, t2) {
+  return {
+    x: (t1.clientX + t2.clientX) / 2,
+    y: (t1.clientY + t2.clientY) / 2,
+  };
+}
+
+onTouchStart(e) {
+  // 只在地圖框內處理（避免在資訊卡上按壓造成地圖誤動作）
+  if (e.target.closest('#infoPanel')) return;
+
+  // 單指：不接管（保留點擊、保留頁面自然滑動）
+  if (e.touches.length < 2) return;
+
+  // 雙指：開始接管
+  this.startGestureLock();
+
+  const t1 = e.touches[0];
+  const t2 = e.touches[1];
+  this.lastPinchDist = this.getTouchDistance(t1, t2);
+  this.lastCenter    = this.getTouchCenter(t1, t2);
+
+  // 進入雙指狀態時清掉 pointerMap（避免 touch/pointer 雙狀態互相覆蓋）
+  this.pointerMap.clear();
+
+  if (e.cancelable) e.preventDefault();
+}
+
+onTouchMove(e) {
+  if (!this.isGestureActive) return;
+
+  // 雙指狀態中若少於兩指，交給 touchend 收尾
+  if (e.touches.length < 2) return;
+
+  const t1 = e.touches[0];
+  const t2 = e.touches[1];
+
+  const dist   = this.getTouchDistance(t1, t2);
+  const center = this.getTouchCenter(t1, t2);
+
+  // 先做雙指平移（中心點移動）
+  if (this.lastCenter) {
+    const dx = center.x - this.lastCenter.x;
+    const dy = center.y - this.lastCenter.y;
+    this.tx += dx;
+    this.ty += dy;
+  }
+
+  // 再做縮放（以中心點為基準）
+  if (this.lastPinchDist && dist > 0) {
+    const factor = dist / this.lastPinchDist;
+    const local  = this.toLocal({ clientX: center.x, clientY: center.y });
+    this.zoomBy(factor, local.x, local.y);
+  } else {
+    this.clampTranslation();
+    this.render();
+  }
+
+  this.lastCenter    = center;
+  this.lastPinchDist = dist;
+
+  if (e.cancelable) e.preventDefault();
+}
+
+onTouchEnd(e) {
+  // 雙指結束（或被系統中斷）：解除鎖定
+  if (this.isGestureActive && e.touches.length < 2) {
+    this.endGestureLock();
+    this.lastPinchDist = null;
+    this.lastCenter    = null;
+  }
+}
+
+
   updateFrameSize() {
     if (!this.frameEl) return;
+    // 手勢期間鎖住尺寸更新，避免 iOS/Android 地址列高度變動造成「框格跳動」
+    // 刪除影響：移動/縮放時可能出現容器高度抖動、邊框跳動。
+    if (this.isGestureActive) return;
     const rect = this.frameEl.getBoundingClientRect();
     this.frameW = rect.width  || FRAME_W;
     this.frameH = rect.height || FRAME_H;
@@ -155,14 +370,26 @@ class MapViewer {
   }
 
   bindEvents() {
-    this.svg.addEventListener('wheel', (e) => { e.preventDefault(); this.onWheel(e); }, { passive: false });
+    // 滾輪：預設不攔截，讓頁面可自然上下滾動；
+    //       僅在按住 Ctrl(Win/Linux) 或 ⌘(Mac) 時才接管縮放。
+    // 刪除影響：若改回全攔截，使用者滑頁面會被地圖卡住。
+    this.svg.addEventListener('wheel', (e) => this.onWheel(e), { passive: false });
+
     this.svg.addEventListener('pointerdown', (e) => this.onPointerDown(e));
     window.addEventListener('pointermove', (e) => this.onPointerMove(e));
     window.addEventListener('pointerup',   (e) => this.onPointerUp(e));
 
-      // 事件委派在 viewport 上；另外也在 svg 上做一次保險
-    this.viewport.addEventListener('click', (e) => this.onRegionClick(e));
-    //this.svg.addEventListener('click', (e) => this.onRegionClick(e));
+    // 點擊事件掛在 svg（避免 setPointerCapture 後 click 目標被 re-target 成 svg，導致 viewport 收不到事件）
+    // 刪除影響：拖曳後點擊國家可能會失效（點不到）。
+    this.svg.addEventListener('click', (e) => this.onRegionClick(e));
+
+    // 手機端：用 touch events 接管雙指手勢（避免 pointer 手勢在 iOS/Safari 不穩）
+    // 刪除影響：手機端可能出現「雙指拖曳無效 / 被系統下拉重整打斷」等問題。
+    if (this.useTouchEvents) this.bindTouchEvents();
+
+    // pointercancel：iOS/Android 在手勢中斷時可能觸發，若不清理會造成雙指狀態卡死
+    // 刪除影響：手機端可能出現「縮放後無法再拖曳 / 無法再點擊」等殘留狀態。
+    window.addEventListener('pointercancel', (e) => this.onPointerUp(e));
   }
 
   async load(fileName) {
@@ -222,7 +449,11 @@ class MapViewer {
   }
 
   onWheel(e) {
-    e.preventDefault();
+    // 桌機滾輪縮放（可選模式）：僅在按住 Ctrl/⌘ 時啟用，避免滑頁面時被地圖卡住
+    // - 功能：讓使用者「刻意」才縮放；一般滾動維持頁面行為
+    // - 刪除影響：若改回全時啟用，滑頁面容易誤觸縮放造成卡住
+    if (!(e.ctrlKey || e.metaKey)) return;
+    if (e.cancelable) e.preventDefault();
 
     const delta  = Math.sign(e.deltaY) * -1;
     const factor = 1 + delta * ZOOM_STEP;
@@ -251,127 +482,182 @@ class MapViewer {
   }
 
   onPointerMove(e) {
+    // 手機端若已使用 touch events 接管，這裡忽略 touch pointer
+    if (this.useTouchEvents && e.pointerType === 'touch') return;
     if (!this.pointerMap.has(e.pointerId)) return;
-
-    this.pointerMap.set(e.pointerId, { x: e.clientX, y: e.clientY });
-
-    if (this.isMobileTouch(e) && this.pointerMap.size < 2) {
-      return; // 手機觸控需要雙指才啟動手勢
-    }
-
-      // 兩指 pinch：距離變化當縮放
-    if (this.pointerMap.size === 2 && this.lastPinchDist != null) {
-      const pts  = Array.from(this.pointerMap.values());
-      const dist = Math.hypot(
-        pts[0].x - pts[1].x,
-        pts[0].y - pts[1].y
-      );
-      if (dist <= 0) return;
-
-      const factor             = dist / this.lastPinchDist;
-            this.lastPinchDist = dist;
-
-      const cx = (pts[0].x + pts[1].x) / 2;
-      const cy = (pts[0].y + pts[1].y) / 2;
-      if (this.lastCenter) {
-        const dx = cx - this.lastCenter.x;
-        const dy = cy - this.lastCenter.y;
-        this.tx += dx;
-        this.ty += dy;
-      }
-      this.lastCenter = { x: cx, y: cy };
-      const { x: lx, y: ly } = this.toLocal({ clientX: cx, clientY: cy });
-      this.zoomBy(factor, lx, ly);
-      return;
-    }
-
-      // 一指平移
-    if (this.isPanning) {
-      const dx      = e.clientX - this.panStart.x;
-      const dy      = e.clientY - this.panStart.y;
-            this.tx = this.startTxTy.tx + dx;
-            this.ty = this.startTxTy.ty + dy;
-      this.clampTranslation();
-      this.render();
-    }
-  }
-
-  onPointerDown(e) {
-      // 只在地圖框內處理
-    if (e.target.closest('#infoPanel')) return;
-
     this.pointerMap.set(e.pointerId, { x: e.clientX, y: e.clientY });
 
     const isTouchMobile = this.isMobileTouch(e);
-    const allowSinglePan = !isTouchMobile;
 
-    if (isTouchMobile && this.pointerMap.size < 2) {
-      this.isPanning     = false;
-      this.lastPinchDist = null;
-      this.lastCenter    = null;
-      this.setTouchAction('pan-y pinch-zoom');
+    // === 手機端：單指不接管；雙指才接管（pinch + 雙指平移） ===
+    if (isTouchMobile) {
+      if (this.pointerMap.size < 2) return;
+
+      // 雙指手勢期間避免頁面跟著捲動
+      if (e.cancelable) e.preventDefault();
+
+      // 兩指 pinch：距離變化當縮放；中心點移動同步做平移
+      if (this.pointerMap.size === 2 && this.lastPinchDist != null) {
+        const pts  = Array.from(this.pointerMap.values());
+        const dist = Math.hypot(pts[0].x - pts[1].x, pts[0].y - pts[1].y);
+        if (dist <= 0) return;
+
+        const factor = dist / this.lastPinchDist;
+        this.lastPinchDist = dist;
+
+        const cx = (pts[0].x + pts[1].x) / 2;
+        const cy = (pts[0].y + pts[1].y) / 2;
+
+        // 雙指中心點移動 => 平移（必須雙指才允許）
+        if (this.lastCenter) {
+          const dx = cx - this.lastCenter.x;
+          const dy = cy - this.lastCenter.y;
+          this.tx += dx;
+          this.ty += dy;
+        }
+        this.lastCenter = { x: cx, y: cy };
+
+        // zoomBy 的中心點要用 SVG local 座標，避免縮放抵銷平移（會變成只會縮放不能移動）
+        const { x: lx, y: ly } = this.toLocal({ clientX: cx, clientY: cy });
+        this.zoomBy(factor, lx, ly);
+      }
       return;
     }
 
-    if (isTouchMobile && this.pointerMap.size === 2) {
-      this.setTouchAction('none');
+    // === 桌機端：左鍵拖曳平移 ===
+    if (!this.isPanning || this.panningPointerId !== e.pointerId) return;
+
+    const dx = e.clientX - this.panStart.x;
+    const dy = e.clientY - this.panStart.y;
+
+    // 超過門檻才視為拖曳，避免點擊也被當成 drag
+    if (!this.didDrag && (Math.abs(dx) + Math.abs(dy) >= this.dragThreshold)) {
+      this.didDrag = true;
     }
 
-    if (this.pointerMap.size === 1 && allowSinglePan) {
-        // 一指：啟動平移（僅桌機 / 非觸控）
-      this.isPanning     = true;
-      this.panStart      = { x: e.clientX, y: e.clientY };
-      this.startTxTy     = { tx: this.tx, ty: this.ty };
-      this.lastPinchDist = null;
-      this.lastCenter    = null;
-    } else if (this.pointerMap.size === 2) {
-        // 兩指：切換成 pinch 模式，不再平移
-            this.isPanning     = false;
-      const pts                = Array.from(this.pointerMap.values());
-            this.lastPinchDist = Math.hypot(
-        pts[0].x - pts[1].x,
-        pts[0].y - pts[1].y
-      );
-      this.lastCenter    = {
-        x: (pts[0].x + pts[1].x) / 2,
-        y: (pts[0].y + pts[1].y) / 2
-      };
+    this.tx = this.startTxTy.tx + dx;
+    this.ty = this.startTxTy.ty + dy;
+    this.clampTranslation();
+    this.render();
+  }
+
+  onPointerDown(e) {
+    // 只在地圖框內處理（避免在資訊卡上按壓造成地圖誤動作）
+    if (e.target.closest('#infoPanel')) return;
+
+    // 手機端若已使用 touch events 接管，這裡忽略 touch pointer（避免雙系統狀態互相覆蓋）
+    // 刪除影響：iOS/Android 可能出現「縮放/平移卡住、點擊失效、狀態亂跳」。
+    if (this.useTouchEvents && e.pointerType === 'touch') return;
+
+    const isTouchMobile = this.isMobileTouch(e);
+
+    // === 手機端：單指點擊、雙指手勢（縮放/平移） ===
+    if (isTouchMobile) {
+      this.pointerMap.set(e.pointerId, { x: e.clientX, y: e.clientY });
+
+      // 單指：只允許點擊；不接管拖曳/縮放，保持頁面可以自然上下滑動
+      if (this.pointerMap.size < 2) {
+        this.isPanning     = false;
+        this.didDrag       = false;
+        this.panningPointerId = null;
+        this.lastPinchDist = null;
+        this.lastCenter    = null;
+        this.setTouchAction('pan-y');
+        return;
+      }
+
+      // 雙指：接管手勢（pinch + 雙指平移），避免頁面在手勢期間跟著捲動
+      this.setTouchAction('none');
+
+      // 手機：雙指模式下把兩根手指都 capture（避免其中一指移出 SVG 後事件丟失）
+      // 刪除影響：雙指拖曳/縮放可能時靈時不靈（尤其是 iOS）。
+      for (const pid of this.pointerMap.keys()) {
+        try { this.svg.setPointerCapture(pid); } catch (_) {}
+      }
+
+      // 第二指落下：建立 pinch 初始距離/中心點
+      if (this.pointerMap.size === 2) {
+        const pts = Array.from(this.pointerMap.values());
+        this.lastPinchDist = Math.hypot(pts[0].x - pts[1].x, pts[0].y - pts[1].y);
+        this.lastCenter = { x: (pts[0].x + pts[1].x) / 2, y: (pts[0].y + pts[1].y) / 2 };
+      }
+      return;
     }
+
+    // === 桌機端：滑鼠左鍵按住才拖曳平移 ===
+    if (typeof e.button === 'number' && e.button !== 0) return;
+
+    // 桌機：開始拖曳（若沒有真的移動，後續 click 仍可正常點選國家）
+    this.pointerMap.set(e.pointerId, { x: e.clientX, y: e.clientY });
+    this.isPanning     = true;
+    this.didDrag       = false;
+    this.panningPointerId = e.pointerId;
+
+    this.panStart  = { x: e.clientX, y: e.clientY };
+    this.startTxTy = { tx: this.tx, ty: this.ty };
+
+    this.lastPinchDist = null;
+    this.lastCenter    = null;
+
+    // 桌機：先不做 pointer capture（避免 click 事件被 re-target 成 svg，導致點不到國家）
+    // 真的開始拖曳（超過門檻）後才 capture，確保離開 svg 還能持續拖曳。
+    this.hasPointerCapture = false;
   }
 
   
 
   onPointerUp(e) {
+    // 手機端若已使用 touch events 接管，這裡忽略 touch pointer
+    if (this.useTouchEvents && e.pointerType === 'touch') return;
+    // 移除本指資料
     this.pointerMap.delete(e.pointerId);
 
-    if (this.pointerMap.size < 2) {
-      this.lastPinchDist = null;
-      this.lastCenter    = null;
-    }
-    if (this.pointerMap.size === 0) {
-      this.isPanning = false;
-      if (this.isMobileTouch(e)) {
-        this.setTouchAction(this.defaultTouchAction);
-      } 
+    const isTouchMobile = this.isMobileTouch(e);
+
+    // === 手機端：雙指結束後恢復頁面可捲動 ===
+    if (isTouchMobile) {
+      if (this.pointerMap.size < 2) {
+        this.lastPinchDist = null;
+        this.lastCenter    = null;
+        this.setTouchAction('pan-y');
+      }
       return;
     }
 
-      // 兩指回一指：重新啟動平移
-    if (this.pointerMap.size === 1 && !this.isMobileTouch(e)) {
-      const pt             = Array.from(this.pointerMap.values())[0];
-            this.isPanning = true;
-            this.panStart  = { x: pt.x, y: pt.y };
-            this.startTxTy = { tx: this.tx, ty: this.ty };
+    // === 桌機端：結束拖曳並防誤觸 click ===
+    if (e.pointerId === this.panningPointerId) {
+      this.isPanning = false;
+      this.panningPointerId = null;
+
+      // 拖曳結束後短暫屏蔽 click，避免放開滑鼠時誤點國家
+      if (this.didDrag) {
+        const now = Date.now();
+        this.suppressClickUntil = Math.max(this.suppressClickUntil, now + 260);
+      }
     }
 
-    if (this.isMobileTouch(e) && this.pointerMap.size < 2) {
-      this.setTouchAction(this.defaultTouchAction);
+    if (this.pointerMap.size === 0) {
+      this.lastPinchDist = null;
+      this.lastCenter    = null;
     }
   }
 
 
   onRegionClick(e) {
-    const target = (e.target && e.target.closest) ? e.target.closest('path, polygon, polyline, rect, circle') : null;
+    // 拖曳結束後的短時間內忽略 click，避免誤點國家
+    if (Date.now() < this.suppressClickUntil) return;
+
+    let target = (e.target && e.target.closest)
+      ? e.target.closest('path, polygon, polyline, rect, circle')
+      : null;
+
+    // 若 click 因為 pointer capture 被 re-target 成 svg，e.target 可能不是實際的 path
+    // 這時用座標反查實際命中的 element，確保國家可點選。
+    if (!target && typeof e.clientX === 'number' && typeof e.clientY === 'number') {
+      const hit = document.elementFromPoint(e.clientX, e.clientY);
+      if (hit && hit.closest) target = hit.closest('path, polygon, polyline, rect, circle');
+    }
+
     if (!target || !this.viewport.contains(target)) {
       // 空白區域點擊：清除選取
       if (this.activeEl) {
@@ -384,7 +670,6 @@ class MapViewer {
       this.infoPanel.classList.remove('open');
       return;
     }
-    if (!target || !this.viewport.contains(target)) return;
 
     if (this.activeEl && this.activeEl !== target) this.activeEl.classList.remove('active-region');
     this.activeEl = target;
@@ -507,12 +792,16 @@ class MapViewer {
     this.render();
   }
 
-  render() {
-    this.viewport.setAttribute(
-      'transform',
-      `translate(${this.tx},${this.ty}) scale(${this.scale})`
-    );
-  }
+  
+render() {
+  // SVG transform 盡量做數值收斂，減少手機端移動時的像素抖動（框格跳動）
+  // 刪除影響：在 iOS/Android 上平移/縮放時更容易出現線條閃爍、邊框抖動。
+  const tx = Math.round(this.tx * 100) / 100;
+  const ty = Math.round(this.ty * 100) / 100;
+  const sc = Math.round(this.scale * 10000) / 10000;
+
+  this.viewport.setAttribute('transform', `translate(${tx},${ty}) scale(${sc})`);
+}
 
   clampTranslation() {
     const r       = this.clampTxTy({});
@@ -662,7 +951,7 @@ function renderRegionGrid(viewer){
     const isMobile = viewer.isMobileLike();
     mapHint.textContent = isMobile
       ? '雙指拖曳或縮放地圖；點擊地區查看資訊'
-      : '滾輪縮放、拖曳平移；點擊地區查看資訊';
+      : '按住 ctrl + 滾輪進行縮放、拖曳平移；點擊地區查看資訊';
   };
   updateHintText();
 
