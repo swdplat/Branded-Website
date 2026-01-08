@@ -952,6 +952,7 @@ body{
     color: #666666;
     font-weight: 400;
     line-height: normal;
+    text-align: justify;
 }
 
 .main .market_info .market_info_outer .market_info_inner .market_desc .market_text .text_sum .sum_number{
