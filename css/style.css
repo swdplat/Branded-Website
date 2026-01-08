@@ -2012,10 +2012,6 @@ body{
 .main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_1 .item_all_list .list_item1 .detail_context{
     text-align: right;
     padding-right: 24px;
-}
-
-.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_1 .item_all_list .list_item1 .detail_context .desc_link{
-    text-decoration: none;
     color: #B541F3;
 }
 
@@ -2070,7 +2066,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
+    text-align: justify;
     padding: 100% 30px 30px 30px;
     box-sizing: border-box;
     /* height: 450px; */
@@ -2126,10 +2122,6 @@ body{
 .main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_1 .item_all_list .list_item2 .detail_context{
     text-align: right;
     padding-right: 24px;
-}
-
-.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_1 .item_all_list .list_item2 .detail_context .desc_link{
-    text-decoration: none;
     color: #B541F3;
 }
 
@@ -2269,10 +2261,6 @@ body{
 .main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_2 .item_all_list .list_item3 .detail_context{
     text-align: right;
     padding-right: 24px;
-}
-
-.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_2 .item_all_list .list_item3 .detail_context .desc_link{
-    text-decoration: none;
     color: #B541F3;
 }
 
@@ -2383,10 +2371,6 @@ body{
 .main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_2 .item_all_list .list_item4 .detail_context{
     text-align: right;
     padding-right: 24px;
-}
-
-.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_2 .item_all_list .list_item4 .detail_context .desc_link{
-    text-decoration: none;
     color: #B541F3;
 }
 
@@ -2525,10 +2509,6 @@ body{
 .main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_3 .item_all_list .list_item5 .detail_context{
     text-align: right;
     padding-right: 24px;
-}
-
-.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_3 .item_all_list .list_item5 .detail_context .desc_link{
-    text-decoration: none;
     color: #B541F3;
 }
 
@@ -2639,10 +2619,6 @@ body{
 .main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_3 .item_all_list .list_item6 .detail_context{
     text-align: right;
     padding-right: 24px;
-}
-
-.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_3 .item_all_list .list_item6 .detail_context .desc_link{
-    text-decoration: none;
     color: #B541F3;
 }
 
@@ -2784,10 +2760,6 @@ body{
 .main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_4 .item_all_list .list_item7 .detail_context{
     text-align: right;
     padding-right: 24px;
-}
-
-.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_4 .item_all_list .list_item7 .detail_context .desc_link{
-    text-decoration: none;
     color: #B541F3;
 }
 
@@ -2899,10 +2871,6 @@ body{
 .main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_4 .item_all_list .list_item8 .detail_context{
     text-align: right;
     padding-right: 24px;
-}
-
-.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_4 .item_all_list .list_item8 .detail_context .desc_link{
-    text-decoration: none;
     color: #B541F3;
 }
 
@@ -3042,10 +3010,6 @@ body{
 .main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_5 .item_all_list .list_item9 .detail_context{
     text-align: right;
     padding-right: 24px;
-}
-
-.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_5 .item_all_list .list_item9 .detail_context .desc_link{
-    text-decoration: none;
     color: #B541F3;
 }
 
