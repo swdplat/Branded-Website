@@ -1905,7 +1905,7 @@ body{
 .main .market_plan .market_plan_outer .market_plan_inner .plan_text{
     width:90%;
     display: flex;
-    margin: 0% 2% 64px 1%;
+    margin: 0% 2% 64px 5%;
 }
 
 .main .market_plan .market_plan_outer .market_plan_inner .plan_text .plan_image{
