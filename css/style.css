@@ -2042,7 +2042,7 @@ body{
     background-color: #B541F3;
     background-image: url(../image/plan_card_image_1.png);
     background-repeat: no-repeat;
-    background-size: 100% 60%, 100% 50%;
+    background-size: 90%;
     background-position: top center, bottom center;
     /* height: 500px; */
 
@@ -2152,7 +2152,7 @@ body{
     background-color: #B541F3;
     background-image: url(../image/plan_card_image_2.png);
     background-repeat: no-repeat;
-    background-size: 100% 60%, 100% 50%;
+    background-size: 90%;
     background-position: top center, bottom center;
     /* height: 500px; */
 
@@ -2291,7 +2291,7 @@ body{
     background-color: #B541F3;
     background-image: url(../image/plan_card_image_3.png);
     background-repeat: no-repeat;
-    background-size: 100% 60%, 100% 50%;
+    background-size: 90%;
     background-position: top center, bottom center;
     /* height: 500px; */
 
@@ -2401,7 +2401,7 @@ body{
     background-color: #B541F3;
     background-image: url(../image/plan_card_image_4.png);
     background-repeat: no-repeat;
-    background-size: 100% 60%, 100% 50%;
+    background-size: 90%;
     background-position: top center, bottom center;
     /* height: 500px; */
 
@@ -2539,7 +2539,7 @@ body{
     background-color: #B541F3;
     background-image: url(../image/plan_card_image_5.png);
     background-repeat: no-repeat;
-    background-size: 100% 60%, 100% 50%;
+    background-size: 90%;
     background-position: top center, bottom center;
     /* height: 500px; */
 
@@ -2649,7 +2649,7 @@ body{
     background-color: #B541F3;
     background-image: url(../image/plan_card_image_6.png);
     background-repeat: no-repeat;
-    background-size: 100% 60%, 100% 50%;
+    background-size: 90%;
     background-position: top center, bottom center;
     /* height: 500px; */
 
@@ -2790,7 +2790,7 @@ body{
     background-color: #B541F3;
     background-image: url(../image/plan_card_image_7.png);
     background-repeat: no-repeat;
-    background-size: 100% 60%, 100% 50%;
+    background-size: 90%;
     background-position: top center, bottom center;
     /* height: 500px; */
 
@@ -2901,7 +2901,7 @@ body{
     background-color: #B541F3;
     background-image: url(../image/plan_card_image_8.png);
     background-repeat: no-repeat;
-    background-size: 100% 60%, 100% 50%;
+    background-size: 90%;
     background-position: top center, bottom center;
     /* height: 500px; */
 
@@ -2978,6 +2978,7 @@ body{
     border-radius: 12px;
     margin-top: 24px;
     position: relative;
+    height: 89%;
 }
 
 .main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_5 .item_all_list .list_item9{
@@ -3040,7 +3041,7 @@ body{
     background-color: #B541F3;
     background-image: url(../image/plan_card_image_9.png);
     background-repeat: no-repeat;
-    background-size: 100% 60%, 100% 50%;
+    background-size: 90%;
     background-position: top center, bottom center;
     height: 500px;
 
@@ -3154,7 +3155,7 @@ body{
     display: flex;
     flex-direction: column;
     width: 100%;
-    margin: 0% 0% 150px 0%;
+    margin: 0% 0% 0% 0%;
     justify-content: unset;
     align-items: center;
     background-image: url(../image/train_mobile_bg.png);
@@ -3264,7 +3265,7 @@ body{
     background-color: #B541F3;
     background-image: url(../image/plan_card_image_1.png);
     background-repeat: no-repeat;
-    background-size: 100% 60%, 100% 50%;
+    background-size: 75%;
     background-position: top center, bottom center;
     /* height: 500px; */
 
@@ -3379,7 +3380,7 @@ body{
     background-color: #B541F3;
     background-image: url(../image/plan_card_image_2.png);
     background-repeat: no-repeat;
-    background-size: 100% 60%, 100% 50%;
+    background-size: 75%;
     background-position: top center, bottom center;
     /* height: 500px; */
 
@@ -3524,7 +3525,7 @@ body{
     background-color: #B541F3;
     background-image: url(../image/plan_card_image_3.png);
     background-repeat: no-repeat;
-    background-size: 100% 60%, 100% 50%;
+    background-size: 75%;
     background-position: top center, bottom center;
     /* height: 500px; */
 
@@ -3639,7 +3640,7 @@ body{
     background-color: #B541F3;
     background-image: url(../image/plan_card_image_4.png);
     background-repeat: no-repeat;
-    background-size: 100% 60%, 100% 50%;
+    background-size: 75%;
     background-position: top center, bottom center;
     /* height: 500px; */
 
@@ -3783,7 +3784,7 @@ body{
     background-color: #B541F3;
     background-image: url(../image/plan_card_image_5.png);
     background-repeat: no-repeat;
-    background-size: 100% 60%, 100% 50%;
+    background-size: 75%;
     background-position: top center, bottom center;
     /* height: 500px; */
 
@@ -3898,7 +3899,7 @@ body{
     background-color: #B541F3;
     background-image: url(../image/plan_card_image_6.png);
     background-repeat: no-repeat;
-    background-size: 100% 60%, 100% 50%;
+    background-size: 75%;
     background-position: top center, bottom center;
     /* height: 500px; */
 
@@ -4045,7 +4046,7 @@ body{
     background-color: #B541F3;
     background-image: url(../image/plan_card_image_7.png);
     background-repeat: no-repeat;
-    background-size: 100% 60%, 100% 50%;
+    background-size: 75%;
     background-position: top center, bottom center;
     /* height: 500px; */
 
@@ -4161,7 +4162,7 @@ body{
     background-color: #B541F3;
     background-image: url(../image/plan_card_image_8.png);
     background-repeat: no-repeat;
-    background-size: 100% 60%, 100% 50%;
+    background-size: 75%;
     background-position: top center, bottom center;
     /* height: 500px; */
 
@@ -4239,6 +4240,7 @@ body{
     border-radius: 12px;
     margin-top: 24px;
     position: relative;
+    height: 498px;
 }
 
 .main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_5 .item_all_list .list_item9{
@@ -4306,7 +4308,7 @@ body{
     background-color: #B541F3;
     background-image: url(../image/plan_card_image_9.png);
     background-repeat: no-repeat;
-    background-size: 100% 60%, 100% 50%;
+    background-size: 75%;
     background-position: top center, bottom center;
     height: 500px;
 
@@ -6222,6 +6224,7 @@ body{
     font-weight: 400;
     color: #b8b8b8;
     line-height: normal;
+    width: 90%;
 }
 
 .main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_overview .overview_image{
@@ -6802,7 +6805,9 @@ body{
 
 
 .main .contact_outer .contact_inner .contact_form .insert_btn{
-    max-width: 450px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .main .contact_outer .contact_inner .contact_form .insert_btn img{
