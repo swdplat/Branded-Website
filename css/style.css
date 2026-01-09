@@ -5445,6 +5445,7 @@ body{
         font-weight: 400;
         color: #b8b8b8;
         line-height: normal;
+        text-align: justify;
     }
     
     .main .best_choice .best_choice_outer .best_choice_inner .choice_region .top_block .game_img_list{
