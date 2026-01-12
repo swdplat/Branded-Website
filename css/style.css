@@ -1981,6 +1981,7 @@ body{
     border-radius: 12px;
     margin-top: 24px;
     position: relative;
+    overflow: hidden;
 }
 
 .main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_1 .item_all_list .list_item1{
@@ -2230,6 +2231,7 @@ body{
     border-radius: 12px;
     margin-top: 24px;
     position: relative;
+    overflow: hidden;
 }
 
 .main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_2 .item_all_list .list_item3{
@@ -2478,6 +2480,7 @@ body{
     border-radius: 12px;
     margin-top: 24px;
     position: relative;
+    overflow: hidden;
 }
 
 .main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_3 .item_all_list .list_item5{
@@ -2728,6 +2731,7 @@ body{
     border-radius: 12px;
     margin-top: 24px;
     position: relative;
+    overflow: hidden;
 }
 
 .main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_4 .item_all_list .list_item7{
@@ -2979,6 +2983,7 @@ body{
     margin-top: 24px;
     position: relative;
     height: 89%;
+    overflow: hidden;
 }
 
 .main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_5 .item_all_list .list_item9{
