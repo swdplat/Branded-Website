@@ -1996,6 +1996,7 @@ body{
     display: flex;
     align-items: center;
     padding-left: 24px;
+    padding-right: 24px;
 }
 
 .main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_1 .item_all_list .list_item1 .item_details .details_img{
@@ -2020,71 +2021,59 @@ body{
     color: #B541F3;
 }
 
-/* list_item1偽元素 */
-.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_1 .item_all_list .list_item1::before{
-    content: "行銷策略規劃";
-
+/* list_item1元素 */
+.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_1 .item_all_list .list_item1 .hidden_text{
     position: absolute;
-    inset: 0;
-    z-index: 2;
-
-    display: flex;
-    align-items: center;
-    justify-content: left;
-    padding: 120px 30px 30px 30px;
+    top: 0px;
+    /* inset: 0; */
+    background-color: #B541F3;
+    z-index: 10;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(15px);
     box-sizing: border-box;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    height: 498px;
+    padding: 0px 30px 0px 30px;
+}
 
+.hidden_text .hidden_image{
+    width: 100%;
+}
+
+.hidden_text .hidden_image img{
+    width: 100%;
+}
+
+.hidden_text .hidden_desc{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: unset;
+}
+
+.hidden_text .hidden_desc .title{
     color: #ffffff;
     line-height: normal;
     text-align: left;
     font-size: 18px;
     font-weight: bold;
-
     background-color: #B541F3;
-    background-image: url(../image/plan_card_image_1.png);
-    background-repeat: no-repeat;
-    background-size: 90%;
-    background-position: top center, bottom center;
-    /* height: 500px; */
-
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.5s ease;
-    pointer-events: none;
 }
 
-.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_1 .item_all_list .list_item1:hover::before{
-    opacity: 1;
-    visibility: visible;
-}
-
-.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_1 .item_all_list .list_item1::after{
-    content: "依據遊戲特色擬定完整行銷主軸，整合故事線、核心賣點到風格視覺打造，建立一套能快速被記住的品牌資產，並延續市場佈局。";
-    position: absolute;
-    inset: 0;
-    z-index: 3;
-
+.hidden_text .hidden_desc .desc_context{
     color: #ffffff;
     font-size: 16px;
     font-weight: normal;
     line-height: normal;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     text-align: justify;
-    padding: 100% 30px 30px 30px;
-    box-sizing: border-box;
-    /* height: 450px; */
-
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.4s ease;
-    pointer-events: none;
 }
 
-.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_1 .item_all_list .list_item1:hover::after{
+.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_1 .item_all_list .list_item1:hover .hidden_text{
     opacity: 1;
     visibility: visible;
+    transform: translateY(0);
 }
 
 
@@ -2106,6 +2095,7 @@ body{
     display: flex;
     align-items: center;
     padding-left: 24px;
+    padding-right: 24px;
 }
 
 .main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_1 .item_all_list .list_item2 .item_details .details_img{
@@ -2130,72 +2120,60 @@ body{
     color: #B541F3;
 }
 
-/* list_item2偽元素 */
-.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_1 .item_all_list .list_item2::before{
-    content: "品牌代言媒合";
-
+/* list_item2元素 */
+.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_1 .item_all_list .list_item2 .hidden_text{
     position: absolute;
-    inset: 0;
-    z-index: 2;
-
-    display: flex;
-    align-items: center;
-    justify-content: left;
-    padding: 120px 30px 30px 30px;
+    bottom: 0px;
+    background-color: #B541F3;
+    z-index: 10;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(15px);
     box-sizing: border-box;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    height: 498px;
+    padding: 0px 30px 0px 30px;
+}
 
+.hidden_text .hidden_image{
+    width: 100%;
+}
+
+.hidden_text .hidden_image img{
+    width: 100%;
+}
+
+.hidden_text .hidden_desc{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: unset;
+}
+
+.hidden_text .hidden_desc .title{
     color: #ffffff;
     line-height: normal;
     text-align: left;
     font-size: 18px;
     font-weight: bold;
-
     background-color: #B541F3;
-    background-image: url(../image/plan_card_image_2.png);
-    background-repeat: no-repeat;
-    background-size: 90%;
-    background-position: top center, bottom center;
-    /* height: 500px; */
-
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.5s ease;
-    pointer-events: none;
 }
 
-.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_1 .item_all_list .list_item2:hover::before{
-    opacity: 1;
-    visibility: visible;
-}
-
-.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_1 .item_all_list .list_item2::after{
-    content: "依據不同國家與地區的目標玩家輪廓與遊戲風格，嚴選最適合的品牌代言人與跨領域 KOL/實況主組合，串聯多平台口碑與聲量，放大品牌好感度與討論熱度";
-    position: absolute;
-    inset: 0;
-    z-index: 3;
-
+.hidden_text .hidden_desc .desc_context{
     color: #ffffff;
     font-size: 16px;
     font-weight: normal;
     line-height: normal;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     text-align: justify;
-    padding: 110% 30px 30px 30px;
-    box-sizing: border-box;
-    /* height: 450px; */
-
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.4s ease;
-    pointer-events: none;
 }
 
-.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_1 .item_all_list .list_item2:hover::after{
+.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_1 .item_all_list .list_item2:hover .hidden_text{
     opacity: 1;
     visibility: visible;
+    transform: translateY(0);
 }
+
 
 
 .main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_2 {
@@ -2246,6 +2224,7 @@ body{
     display: flex;
     align-items: center;
     padding-left: 24px;
+    padding-right: 24px;
 }
 
 .main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_2 .item_all_list .list_item3 .item_details .details_img{
@@ -2271,70 +2250,57 @@ body{
 }
 
 /* list_item3偽元素 */
-.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_2 .item_all_list .list_item3::before{
-    content: "事前登錄導流服務";
-
+.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_2 .item_all_list .list_item3 .hidden_text{
     position: absolute;
-    inset: 0;
-    z-index: 2;
-
-    display: flex;
-    align-items: center;
-    justify-content: left;
-    padding: 120px 30px 30px 30px;
+    bottom: 0px;
+    background-color: #B541F3;
+    z-index: 10;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(15px);
     box-sizing: border-box;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    height: 498px;
+    padding: 0px 30px 0px 30px;
+}
 
+.hidden_text .hidden_image{
+    width: 100%;
+}
+
+.hidden_text .hidden_image img{
+    width: 100%;
+}
+
+.hidden_text .hidden_desc{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: unset;
+}
+
+.hidden_text .hidden_desc .title{
     color: #ffffff;
     line-height: normal;
     text-align: left;
     font-size: 18px;
     font-weight: bold;
-
     background-color: #B541F3;
-    background-image: url(../image/plan_card_image_3.png);
-    background-repeat: no-repeat;
-    background-size: 90%;
-    background-position: top center, bottom center;
-    /* height: 500px; */
-
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.5s ease;
-    pointer-events: none;
 }
 
-.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_2 .item_all_list .list_item3:hover::before{
-    opacity: 1;
-    visibility: visible;
-}
-
-.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_2 .item_all_list .list_item3::after{
-    content: "運用 MyCard通路資源與活動機制協助遊戲快速累積預註冊用戶，擴大上市前聲量與口碑基礎。";
-    position: absolute;
-    inset: 0;
-    z-index: 3;
-
+.hidden_text .hidden_desc .desc_context{
     color: #ffffff;
     font-size: 16px;
     font-weight: normal;
     line-height: normal;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     text-align: justify;
-    padding: 95% 30px 30px 30px;
-    box-sizing: border-box;
-    /* height: 450px; */
-
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.4s ease;
-    pointer-events: none;
 }
 
-.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_2 .item_all_list .list_item3:hover::after{
+.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_2 .item_all_list .list_item3:hover .hidden_text{
     opacity: 1;
     visibility: visible;
+    transform: translateY(0);
 }
 
 
@@ -2356,6 +2322,7 @@ body{
     display: flex;
     align-items: center;
     padding-left: 24px;
+    padding-right: 24px;
 }
 
 .main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_2 .item_all_list .list_item4 .item_details .details_img{
@@ -2380,72 +2347,60 @@ body{
     color: #B541F3;
 }
 
-/* list_item4偽元素 */
-.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_2 .item_all_list .list_item4::before{
-    content: "街頭玩家見面會";
-
+/* list_item4元素 */
+.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_2 .item_all_list .list_item4 .hidden_text{
     position: absolute;
-    inset: 0;
-    z-index: 2;
-
-    display: flex;
-    align-items: center;
-    justify-content: left;
-    padding: 120px 30px 30px 30px;
+    bottom: 0px;
+    background-color: #B541F3;
+    z-index: 10;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(15px);
     box-sizing: border-box;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    height: 498px;
+    padding: 0px 30px 0px 30px;
+}
 
+.hidden_text .hidden_image{
+    width: 100%;
+}
+
+.hidden_text .hidden_image img{
+    width: 100%;
+}
+
+.hidden_text .hidden_desc{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: unset;
+}
+
+.hidden_text .hidden_desc .title{
     color: #ffffff;
     line-height: normal;
     text-align: left;
     font-size: 18px;
     font-weight: bold;
-
     background-color: #B541F3;
-    background-image: url(../image/plan_card_image_4.png);
-    background-repeat: no-repeat;
-    background-size: 90%;
-    background-position: top center, bottom center;
-    /* height: 500px; */
-
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.5s ease;
-    pointer-events: none;
 }
 
-.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_2 .item_all_list .list_item4:hover::before{
-    opacity: 1;
-    visibility: visible;
-}
-
-.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_2 .item_all_list .list_item4::after{
-    content: "透過各大人潮集中之熱門場域進行線上線下整合的互動活動，加強與觀眾、玩家的凝聚力並創造可擴散的活動內容。";
-    position: absolute;
-    inset: 0;
-    z-index: 3;
-
+.hidden_text .hidden_desc .desc_context{
     color: #ffffff;
     font-size: 16px;
     font-weight: normal;
     line-height: normal;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     text-align: justify;
-    padding: 95% 30px 30px 30px;
-    box-sizing: border-box;
-    /* height: 450px; */
-
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.4s ease;
-    pointer-events: none;
 }
 
-.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_2 .item_all_list .list_item4:hover::after{
+.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_2 .item_all_list .list_item4:hover .hidden_text{
     opacity: 1;
     visibility: visible;
+    transform: translateY(0);
 }
+
 
 .main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_3 {
     width: 100%;
@@ -2495,6 +2450,7 @@ body{
     display: flex;
     align-items: center;
     padding-left: 24px;
+    padding-right: 24px;
 }
 
 .main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_3 .item_all_list .list_item5 .item_details .details_img{
@@ -2519,71 +2475,58 @@ body{
     color: #B541F3;
 }
 
-/* list_item5偽元素 */
-.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_3 .item_all_list .list_item5::before{
-    content: "專業影音創作";
-
+/* list_item5元素 */
+.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_3 .item_all_list .list_item5 .hidden_text{
     position: absolute;
-    inset: 0;
-    z-index: 2;
-
-    display: flex;
-    align-items: center;
-    justify-content: left;
-    padding: 120px 30px 30px 30px;
+    bottom: 0px;
+    background-color: #B541F3;
+    z-index: 10;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(15px);
     box-sizing: border-box;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    height: 498px;
+    padding: 0px 30px 0px 30px;
+}
 
+.hidden_text .hidden_image{
+    width: 100%;
+}
+
+.hidden_text .hidden_image img{
+    width: 100%;
+}
+
+.hidden_text .hidden_desc{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: unset;
+}
+
+.hidden_text .hidden_desc .title{
     color: #ffffff;
     line-height: normal;
     text-align: left;
     font-size: 18px;
     font-weight: bold;
-
     background-color: #B541F3;
-    background-image: url(../image/plan_card_image_5.png);
-    background-repeat: no-repeat;
-    background-size: 90%;
-    background-position: top center, bottom center;
-    /* height: 500px; */
-
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.5s ease;
-    pointer-events: none;
 }
 
-.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_3 .item_all_list .list_item5:hover::before{
-    opacity: 1;
-    visibility: visible;
-}
-
-.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_3 .item_all_list .list_item5::after{
-    content: "提供音樂製作以及影片腳本策畫，以影音媒體強化遊戲情緒與品牌記憶度。";
-    position: absolute;
-    inset: 0;
-    z-index: 3;
-
+.hidden_text .hidden_desc .desc_context{
     color: #ffffff;
     font-size: 16px;
     font-weight: normal;
     line-height: normal;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     text-align: justify;
-    padding: 85% 30px 30px 30px;
-    box-sizing: border-box;
-    /* height: 450px; */
-
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.4s ease;
-    pointer-events: none;
 }
 
-.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_3 .item_all_list .list_item5:hover::after{
+.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_3 .item_all_list .list_item5:hover .hidden_text{
     opacity: 1;
     visibility: visible;
+    transform: translateY(0);
 }
 
 
@@ -2605,6 +2548,7 @@ body{
     display: flex;
     align-items: center;
     padding-left: 24px;
+    padding-right: 24px;
 }
 
 .main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_3 .item_all_list .list_item6 .item_details .details_img{
@@ -2629,72 +2573,60 @@ body{
     color: #B541F3;
 }
 
-/* list_item6偽元素 */
-.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_3 .item_all_list .list_item6::before{
-    content: "活動策展設計規畫";
-
+/* list_item6元素 */
+.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_3 .item_all_list .list_item6 .hidden_text{
     position: absolute;
-    inset: 0;
-    z-index: 2;
-
-    display: flex;
-    align-items: center;
-    justify-content: left;
-    padding: 120px 30px 30px 30px;
+    bottom: 0px;
+    background-color: #B541F3;
+    z-index: 10;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(15px);
     box-sizing: border-box;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    height: 498px;
+    padding: 0px 30px 0px 30px;
+}
 
+.hidden_text .hidden_image{
+    width: 100%;
+}
+
+.hidden_text .hidden_image img{
+    width: 100%;
+}
+
+.hidden_text .hidden_desc{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: unset;
+}
+
+.hidden_text .hidden_desc .title{
     color: #ffffff;
     line-height: normal;
     text-align: left;
     font-size: 18px;
     font-weight: bold;
-
     background-color: #B541F3;
-    background-image: url(../image/plan_card_image_6.png);
-    background-repeat: no-repeat;
-    background-size: 90%;
-    background-position: top center, bottom center;
-    /* height: 500px; */
-
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.5s ease;
-    pointer-events: none;
 }
 
-.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_3 .item_all_list .list_item6:hover::before{
-    opacity: 1;
-    visibility: visible;
-}
-
-.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_3 .item_all_list .list_item6::after{
-    content: "從各大國際展覽到在地化推廣等各類型活動，均可提供完整的展售方案、攤位設計、裝置物與活動規劃，將品牌核心概念帶入實體場域，延伸更多擴散機會。";
-    position: absolute;
-    inset: 0;
-    z-index: 3;
-
+.hidden_text .hidden_desc .desc_context{
     color: #ffffff;
     font-size: 16px;
     font-weight: normal;
     line-height: normal;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     text-align: justify;
-    padding: 110% 30px 30px 30px;
-    box-sizing: border-box;
-    /* height: 450px; */
-
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.4s ease;
-    pointer-events: none;
 }
 
-.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_3 .item_all_list .list_item6:hover::after{
+.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_3 .item_all_list .list_item6:hover .hidden_text{
     opacity: 1;
     visibility: visible;
+    transform: translateY(0);
 }
+
 
 .main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_4 {
     width: 100%;
@@ -2771,71 +2703,58 @@ body{
     color: #B541F3;
 }
 
-/* list_item7偽元素 */
-.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_4 .item_all_list .list_item7::before{
-    content: "線上+線下資源的全方位曝光";
-
+/* list_item7元素 */
+.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_4 .item_all_list .list_item7 .hidden_text{
     position: absolute;
-    inset: 0;
-    z-index: 2;
-
-    display: flex;
-    align-items: center;
-    justify-content: left;
-    padding: 120px 30px 30px 30px;
+    bottom: 0px;
+    background-color: #B541F3;
+    z-index: 10;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(15px);
     box-sizing: border-box;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    height: 498px;
+    padding: 0px 30px 0px 30px;
+}
 
+.hidden_text .hidden_image{
+    width: 100%;
+}
+
+.hidden_text .hidden_image img{
+    width: 100%;
+}
+
+.hidden_text .hidden_desc{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: unset;
+}
+
+.hidden_text .hidden_desc .title{
     color: #ffffff;
     line-height: normal;
     text-align: left;
     font-size: 18px;
     font-weight: bold;
-
     background-color: #B541F3;
-    background-image: url(../image/plan_card_image_7.png);
-    background-repeat: no-repeat;
-    background-size: 90%;
-    background-position: top center, bottom center;
-    /* height: 500px; */
-
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.5s ease;
-    pointer-events: none;
 }
 
-.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_4 .item_all_list .list_item7:hover::before{
-    opacity: 1;
-    visibility: visible;
-}
-
-.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_4 .item_all_list .list_item7::after{
-    content: "串聯實體通路超商、銀行、連鎖賣場等宣傳點位、線上通路廣告資源，依各市場漾態規劃安排，打造高頻、高覆蓋的立體推廣網，提升投放效益。";
-    position: absolute;
-    inset: 0;
-    z-index: 3;
-
+.hidden_text .hidden_desc .desc_context{
     color: #ffffff;
     font-size: 16px;
     font-weight: normal;
     line-height: normal;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     text-align: justify;
-    padding: 110% 30px 30px 30px;
-    box-sizing: border-box;
-    /* height: 450px; */
-
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.4s ease;
-    pointer-events: none;
 }
 
-.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_4 .item_all_list .list_item7:hover::after{
+.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_4 .item_all_list .list_item7:hover .hidden_text{
     opacity: 1;
     visibility: visible;
+    transform: translateY(0);
 }
 
 
@@ -2882,73 +2801,59 @@ body{
     color: #B541F3;
 }
 
-/* list_item6偽元素 */
-.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_4 .item_all_list .list_item8::before{
-    content: "社群推廣&網站廣告";
-
+/* list_item8元素 */
+.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_4 .item_all_list .list_item8 .hidden_text{
     position: absolute;
-    inset: 0;
-    z-index: 2;
-
-    display: flex;
-    align-items: center;
-    justify-content: left;
-    padding: 120px 30px 30px 30px;
+    bottom: 0px;
+    background-color: #B541F3;
+    z-index: 10;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(15px);
     box-sizing: border-box;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    height: 498px;
+    padding: 0px 30px 0px 30px;
+}
 
+.hidden_text .hidden_image{
+    width: 100%;
+}
+
+.hidden_text .hidden_image img{
+    width: 100%;
+}
+
+.hidden_text .hidden_desc{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: unset;
+}
+
+.hidden_text .hidden_desc .title{
     color: #ffffff;
     line-height: normal;
     text-align: left;
     font-size: 18px;
     font-weight: bold;
-
     background-color: #B541F3;
-    background-image: url(../image/plan_card_image_8.png);
-    background-repeat: no-repeat;
-    background-size: 90%;
-    background-position: top center, bottom center;
-    /* height: 500px; */
-
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.5s ease;
-    pointer-events: none;
 }
 
-.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_4 .item_all_list .list_item8:hover::before{
-    opacity: 1;
-    visibility: visible;
-}
-
-.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_4 .item_all_list .list_item8::after{
-    content: "運用 MyCard 多平台社群與官網版位，搭配分群受眾精準行銷策略，有效溝通互動並提升轉換效率。";
-    position: absolute;
-    inset: 0;
-    z-index: 3;
-
+.hidden_text .hidden_desc .desc_context{
     color: #ffffff;
     font-size: 16px;
     font-weight: normal;
     line-height: normal;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     text-align: justify;
-    padding: 95% 30px 30px 30px;
-    box-sizing: border-box;
-    /* height: 450px; */
-
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.4s ease;
-    pointer-events: none;
 }
 
-.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_4 .item_all_list .list_item8:hover::after{
+.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_4 .item_all_list .list_item8:hover .hidden_text{
     opacity: 1;
     visibility: visible;
+    transform: translateY(0);
 }
-
 
 .main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_5 {
     width: 100%;
@@ -3023,71 +2928,58 @@ body{
     color: #B541F3;
 }
 
-/* list_item7偽元素 */
-.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_5 .item_all_list .list_item9::before{
-    content: "異業聯名企劃";
-
+/* list_item9偽元素 */
+.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_5 .item_all_list .list_item9 .hidden_text{
     position: absolute;
-    inset: 0;
-    z-index: 2;
-
-    display: flex;
-    align-items: center;
-    justify-content: left;
-    padding: 120px 30px 30px 30px;
+    bottom: 0px;
+    background-color: #B541F3;
+    z-index: 10;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(15px);
     box-sizing: border-box;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    height: 498px;
+    padding: 0px 30px 0px 30px;
+}
 
+.hidden_text .hidden_image{
+    width: 100%;
+}
+
+.hidden_text .hidden_image img{
+    width: 100%;
+}
+
+.hidden_text .hidden_desc{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: unset;
+}
+
+.hidden_text .hidden_desc .title{
     color: #ffffff;
     line-height: normal;
     text-align: left;
     font-size: 18px;
     font-weight: bold;
-
     background-color: #B541F3;
-    background-image: url(../image/plan_card_image_9.png);
-    background-repeat: no-repeat;
-    background-size: 90%;
-    background-position: top center, bottom center;
-    height: 500px;
-
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.5s ease;
-    pointer-events: none;
 }
 
-.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_5 .item_all_list .list_item9:hover::before{
-    opacity: 1;
-    visibility: visible;
-}
-
-.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_5 .item_all_list .list_item9::after{
-    content: "媒合品牌、餐飲、影視、零售等跨領域資源，打造創新聯名內容，提高玩家參與度與市場聲量。";
-    position: absolute;
-    inset: 0;
-    z-index: 3;
-
+.hidden_text .hidden_desc .desc_context{
     color: #ffffff;
     font-size: 16px;
     font-weight: normal;
     line-height: normal;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     text-align: justify;
-    padding: 95% 30px 30px 30px;
-    box-sizing: border-box;
-    height: 500px;
-
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.4s ease;
-    pointer-events: none;
 }
 
-.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_5 .item_all_list .list_item9:hover::after{
+.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_5 .item_all_list .list_item9:hover .hidden_text{
     opacity: 1;
     visibility: visible;
+    transform: translateY(0);
 }
 
 
@@ -3247,73 +3139,60 @@ body{
     font-size: 16px;
 }
 
-/* list_item1偽元素 */
-.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_1 .item_all_list .list_item1::before{
-    content: "行銷策略規劃";
-
+/* list_item1元素 */
+.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_1 .item_all_list .list_item1 .hidden_text{
     position: absolute;
-    inset: 0;
-    z-index: 2;
-
-    display: flex;
-    align-items: center;
-    justify-content: left;
-    padding: 120px 30px 30px 30px;
+    top: 0px;
+    /* inset: 0; */
+    background-color: #B541F3;
+    z-index: 10;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(15px);
     box-sizing: border-box;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    height: 498px;
+    padding: 0px 30px 0px 30px;
+}
 
+.hidden_text .hidden_image{
+    width: 100%;
+}
+
+.hidden_text .hidden_image img{
+    width: 100%;
+}
+
+.hidden_text .hidden_desc{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 230px;
+}
+
+.hidden_text .hidden_desc .title{
     color: #ffffff;
     line-height: normal;
     text-align: left;
     font-size: 18px;
     font-weight: bold;
-
     background-color: #B541F3;
-    background-image: url(../image/plan_card_image_1.png);
-    background-repeat: no-repeat;
-    background-size: 75%;
-    background-position: top center, bottom center;
-    /* height: 500px; */
-
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.5s ease;
-    pointer-events: none;
 }
 
-.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_1 .item_all_list .list_item1:hover::before{
-    opacity: 1;
-    visibility: visible;
-}
-
-.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_1 .item_all_list .list_item1::after{
-    content: "依據遊戲特色擬定完整行銷主軸，整合故事線、核心賣點到風格視覺打造，建立一套能快速被記住的品牌資產，並延續市場佈局。";
-    position: absolute;
-    inset: 0;
-    z-index: 3;
-
+.hidden_text .hidden_desc .desc_context{
     color: #ffffff;
     font-size: 16px;
     font-weight: normal;
     line-height: normal;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     text-align: justify;
-    padding: 270px 30px 30px 30px;
-    box-sizing: border-box;
-    /* height: 450px; */
-
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.4s ease;
-    pointer-events: none;
 }
 
-.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_1 .item_all_list .list_item1:hover::after{
+.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_1 .item_all_list .list_item1:hover .hidden_text{
     opacity: 1;
     visibility: visible;
+    transform: translateY(0);
 }
-
 
 .main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_1 .item_all_list hr{
     width: 80%;
@@ -3362,72 +3241,60 @@ body{
     font-size: 16px;
 }
 
-/* list_item2偽元素 */
-.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_1 .item_all_list .list_item2::before{
-    content: "品牌代言媒合";
-
+/* list_item2元素 */
+.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_1 .item_all_list .list_item2 .hidden_text{
     position: absolute;
-    inset: 0;
-    z-index: 2;
-
-    display: flex;
-    align-items: center;
-    justify-content: left;
-    padding: 120px 30px 30px 30px;
+    bottom: 0px;
+    background-color: #B541F3;
+    z-index: 10;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(15px);
     box-sizing: border-box;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    height: 498px;
+    padding: 0px 30px 0px 30px;
+}
 
+.hidden_text .hidden_image{
+    width: 100%;
+}
+
+.hidden_text .hidden_image img{
+    width: 100%;
+}
+
+.hidden_text .hidden_desc{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 230px;
+}
+
+.hidden_text .hidden_desc .title{
     color: #ffffff;
     line-height: normal;
     text-align: left;
     font-size: 18px;
     font-weight: bold;
-
     background-color: #B541F3;
-    background-image: url(../image/plan_card_image_2.png);
-    background-repeat: no-repeat;
-    background-size: 75%;
-    background-position: top center, bottom center;
-    /* height: 500px; */
-
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.5s ease;
-    pointer-events: none;
 }
 
-.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_1 .item_all_list .list_item2:hover::before{
-    opacity: 1;
-    visibility: visible;
-}
-
-.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_1 .item_all_list .list_item2::after{
-    content: "依據不同國家與地區的目標玩家輪廓與遊戲風格，嚴選最適合的品牌代言人與跨領域 KOL/實況主組合，串聯多平台口碑與聲量，放大品牌好感度與討論熱度";
-    position: absolute;
-    inset: 0;
-    z-index: 3;
-
+.hidden_text .hidden_desc .desc_context{
     color: #ffffff;
     font-size: 16px;
     font-weight: normal;
     line-height: normal;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     text-align: justify;
-    padding: 270px 30px 30px 30px;
-    box-sizing: border-box;
-    /* height: 450px; */
-
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.4s ease;
-    pointer-events: none;
 }
 
-.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_1 .item_all_list .list_item2:hover::after{
+.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_1 .item_all_list .list_item2:hover .hidden_text{
     opacity: 1;
     visibility: visible;
+    transform: translateY(0);
 }
+
 
 
 .main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_2 {
@@ -3507,73 +3374,59 @@ body{
     font-size: 16px;
 }
 
-/* list_item3偽元素 */
-.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_2 .item_all_list .list_item3::before{
-    content: "事前登錄導流服務";
-
+/* list_item3元素 */
+.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_2 .item_all_list .list_item3 .hidden_text{
     position: absolute;
-    inset: 0;
-    z-index: 2;
-
-    display: flex;
-    align-items: center;
-    justify-content: left;
-    padding: 120px 30px 30px 30px;
+    bottom: 0px;
+    background-color: #B541F3;
+    z-index: 10;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(15px);
     box-sizing: border-box;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    height: 498px;
+    padding: 0px 30px 0px 30px;
+}
 
+.hidden_text .hidden_image{
+    width: 100%;
+}
+
+.hidden_text .hidden_image img{
+    width: 100%;
+}
+
+.hidden_text .hidden_desc{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 230px;
+}
+
+.hidden_text .hidden_desc .title{
     color: #ffffff;
     line-height: normal;
     text-align: left;
     font-size: 18px;
     font-weight: bold;
-
     background-color: #B541F3;
-    background-image: url(../image/plan_card_image_3.png);
-    background-repeat: no-repeat;
-    background-size: 75%;
-    background-position: top center, bottom center;
-    /* height: 500px; */
-
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.5s ease;
-    pointer-events: none;
 }
 
-.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_2 .item_all_list .list_item3:hover::before{
-    opacity: 1;
-    visibility: visible;
-}
-
-.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_2 .item_all_list .list_item3::after{
-    content: "運用 MyCard通路資源與活動機制協助遊戲快速累積預註冊用戶，擴大上市前聲量與口碑基礎。";
-    position: absolute;
-    inset: 0;
-    z-index: 3;
-
+.hidden_text .hidden_desc .desc_context{
     color: #ffffff;
     font-size: 16px;
     font-weight: normal;
     line-height: normal;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     text-align: justify;
-    padding: 250px 30px 30px 30px;
-    box-sizing: border-box;
-    /* height: 450px; */
-
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.4s ease;
-    pointer-events: none;
 }
 
-.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_2 .item_all_list .list_item3:hover::after{
+.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_2 .item_all_list .list_item3:hover .hidden_text{
     opacity: 1;
     visibility: visible;
+    transform: translateY(0);
 }
-
 
 .main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_2 .item_all_list hr{
     width: 80%;
@@ -3622,72 +3475,60 @@ body{
     font-size: 16px;
 }
 
-/* list_item4偽元素 */
-.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_2 .item_all_list .list_item4::before{
-    content: "街頭玩家見面會";
-
+/* list_item4元素 */
+.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_2 .item_all_list .list_item4 .hidden_text{
     position: absolute;
-    inset: 0;
-    z-index: 2;
-
-    display: flex;
-    align-items: center;
-    justify-content: left;
-    padding: 120px 30px 30px 30px;
+    bottom: 0px;
+    background-color: #B541F3;
+    z-index: 10;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(15px);
     box-sizing: border-box;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    height: 498px;
+    padding: 0px 30px 0px 30px;
+}
 
+.hidden_text .hidden_image{
+    width: 100%;
+}
+
+.hidden_text .hidden_image img{
+    width: 100%;
+}
+
+.hidden_text .hidden_desc{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 230px;
+}
+
+.hidden_text .hidden_desc .title{
     color: #ffffff;
     line-height: normal;
     text-align: left;
     font-size: 18px;
     font-weight: bold;
-
     background-color: #B541F3;
-    background-image: url(../image/plan_card_image_4.png);
-    background-repeat: no-repeat;
-    background-size: 75%;
-    background-position: top center, bottom center;
-    /* height: 500px; */
-
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.5s ease;
-    pointer-events: none;
 }
 
-.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_2 .item_all_list .list_item4:hover::before{
-    opacity: 1;
-    visibility: visible;
-}
-
-.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_2 .item_all_list .list_item4::after{
-    content: "透過各大人潮集中之熱門場域進行線上線下整合的互動活動，加強與觀眾、玩家的凝聚力並創造可擴散的活動內容。";
-    position: absolute;
-    inset: 0;
-    z-index: 3;
-
+.hidden_text .hidden_desc .desc_context{
     color: #ffffff;
     font-size: 16px;
     font-weight: normal;
     line-height: normal;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     text-align: justify;
-    padding: 270px 30px 30px 30px;
-    box-sizing: border-box;
-    /* height: 450px; */
-
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.4s ease;
-    pointer-events: none;
 }
 
-.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_2 .item_all_list .list_item4:hover::after{
+.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_2 .item_all_list .list_item4:hover .hidden_text{
     opacity: 1;
     visibility: visible;
+    transform: translateY(0);
 }
+
 
 .main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_3 {
     width: 100%;
@@ -3767,71 +3608,59 @@ body{
 }
 
 /* list_item5偽元素 */
-.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_3 .item_all_list .list_item5::before{
-    content: "專業影音創作";
-
+.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_3 .item_all_list .list_item5 .hidden_text{
     position: absolute;
-    inset: 0;
-    z-index: 2;
-
-    display: flex;
-    align-items: center;
-    justify-content: left;
-    padding: 120px 30px 30px 30px;
+    bottom: 0px;
+    background-color: #B541F3;
+    z-index: 10;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(15px);
     box-sizing: border-box;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    height: 498px;
+    padding: 0px 30px 0px 30px;
+}
 
+.hidden_text .hidden_image{
+    width: 100%;
+}
+
+.hidden_text .hidden_image img{
+    width: 100%;
+}
+
+.hidden_text .hidden_desc{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 230px;
+}
+
+.hidden_text .hidden_desc .title{
     color: #ffffff;
     line-height: normal;
     text-align: left;
     font-size: 18px;
     font-weight: bold;
-
     background-color: #B541F3;
-    background-image: url(../image/plan_card_image_5.png);
-    background-repeat: no-repeat;
-    background-size: 75%;
-    background-position: top center, bottom center;
-    /* height: 500px; */
-
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.5s ease;
-    pointer-events: none;
 }
 
-.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_3 .item_all_list .list_item5:hover::before{
-    opacity: 1;
-    visibility: visible;
-}
-
-.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_3 .item_all_list .list_item5::after{
-    content: "提供音樂製作以及影片腳本策畫，以影音媒體強化遊戲情緒與品牌記憶度。";
-    position: absolute;
-    inset: 0;
-    z-index: 3;
-
+.hidden_text .hidden_desc .desc_context{
     color: #ffffff;
     font-size: 16px;
     font-weight: normal;
     line-height: normal;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     text-align: justify;
-    padding: 250px 30px 30px 30px;
-    box-sizing: border-box;
-    /* height: 450px; */
-
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.4s ease;
-    pointer-events: none;
 }
 
-.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_3 .item_all_list .list_item5:hover::after{
+.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_3 .item_all_list .list_item5:hover .hidden_text{
     opacity: 1;
     visibility: visible;
+    transform: translateY(0);
 }
+
 
 
 .main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_3 .item_all_list hr{
@@ -3881,72 +3710,60 @@ body{
     font-size: 16px;
 }
 
-/* list_item6偽元素 */
-.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_3 .item_all_list .list_item6::before{
-    content: "活動策展設計規畫";
-
+/* list_item6元素 */
+.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_3 .item_all_list .list_item6 .hidden_text{
     position: absolute;
-    inset: 0;
-    z-index: 2;
-
-    display: flex;
-    align-items: center;
-    justify-content: left;
-    padding: 120px 30px 30px 30px;
+    bottom: 0px;
+    background-color: #B541F3;
+    z-index: 10;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(15px);
     box-sizing: border-box;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    height: 498px;
+    padding: 0px 30px 0px 30px;
+}
 
+.hidden_text .hidden_image{
+    width: 100%;
+}
+
+.hidden_text .hidden_image img{
+    width: 100%;
+}
+
+.hidden_text .hidden_desc{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 230px;
+}
+
+.hidden_text .hidden_desc .title{
     color: #ffffff;
     line-height: normal;
     text-align: left;
     font-size: 18px;
     font-weight: bold;
-
     background-color: #B541F3;
-    background-image: url(../image/plan_card_image_6.png);
-    background-repeat: no-repeat;
-    background-size: 75%;
-    background-position: top center, bottom center;
-    /* height: 500px; */
-
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.5s ease;
-    pointer-events: none;
 }
 
-.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_3 .item_all_list .list_item6:hover::before{
-    opacity: 1;
-    visibility: visible;
-}
-
-.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_3 .item_all_list .list_item6::after{
-    content: "從各大國際展覽到在地化推廣等各類型活動，均可提供完整的展售方案、攤位設計、裝置物與活動規劃，將品牌核心概念帶入實體場域，延伸更多擴散機會。";
-    position: absolute;
-    inset: 0;
-    z-index: 3;
-
+.hidden_text .hidden_desc .desc_context{
     color: #ffffff;
     font-size: 16px;
     font-weight: normal;
     line-height: normal;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     text-align: justify;
-    padding: 290px 30px 30px 30px;
-    box-sizing: border-box;
-    /* height: 450px; */
-
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.4s ease;
-    pointer-events: none;
 }
 
-.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_3 .item_all_list .list_item6:hover::after{
+.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_3 .item_all_list .list_item6:hover .hidden_text{
     opacity: 1;
     visibility: visible;
+    transform: translateY(0);
 }
+
 
 .main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_4 {
     width: 100%;
@@ -4029,70 +3846,57 @@ body{
 }
 
 /* list_item7偽元素 */
-.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_4 .item_all_list .list_item7::before{
-    content: "線上+線下資源的全方位曝光";
-
+.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_4 .item_all_list .list_item7 .hidden_text{
     position: absolute;
-    inset: 0;
-    z-index: 2;
-
-    display: flex;
-    align-items: center;
-    justify-content: left;
-    padding: 120px 30px 30px 30px;
+    bottom: 0px;
+    background-color: #B541F3;
+    z-index: 10;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(15px);
     box-sizing: border-box;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    height: 498px;
+    padding: 0px 30px 0px 30px;
+}
 
+.hidden_text .hidden_image{
+    width: 100%;
+}
+
+.hidden_text .hidden_image img{
+    width: 100%;
+}
+
+.hidden_text .hidden_desc{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 230px;
+}
+
+.hidden_text .hidden_desc .title{
     color: #ffffff;
     line-height: normal;
     text-align: left;
     font-size: 18px;
     font-weight: bold;
-
     background-color: #B541F3;
-    background-image: url(../image/plan_card_image_7.png);
-    background-repeat: no-repeat;
-    background-size: 75%;
-    background-position: top center, bottom center;
-    /* height: 500px; */
-
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.5s ease;
-    pointer-events: none;
 }
 
-.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_4 .item_all_list .list_item7:hover::before{
-    opacity: 1;
-    visibility: visible;
-}
-
-.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_4 .item_all_list .list_item7::after{
-    content: "串聯實體通路超商、銀行、連鎖賣場等宣傳點位、線上通路廣告資源，依各市場漾態規劃安排，打造高頻、高覆蓋的立體推廣網，提升投放效益。";
-    position: absolute;
-    inset: 0;
-    z-index: 3;
-
+.hidden_text .hidden_desc .desc_context{
     color: #ffffff;
     font-size: 16px;
     font-weight: normal;
     line-height: normal;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     text-align: justify;
-    padding: 270px 30px 30px 30px;
-    box-sizing: border-box;
-    /* height: 450px; */
-
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.4s ease;
-    pointer-events: none;
 }
 
-.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_4 .item_all_list .list_item7:hover::after{
+.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_4 .item_all_list .list_item7:hover .hidden_text{
     opacity: 1;
     visibility: visible;
+    transform: translateY(0);
 }
 
 
@@ -4144,73 +3948,59 @@ body{
     font-size: 16px;
 }
 
-/* list_item6偽元素 */
-.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_4 .item_all_list .list_item8::before{
-    content: "社群推廣&網站廣告";
-
+/* list_item8元素 */
+.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_4 .item_all_list .list_item8 .hidden_text{
     position: absolute;
-    inset: 0;
-    z-index: 2;
-
-    display: flex;
-    align-items: center;
-    justify-content: left;
-    padding: 120px 30px 30px 30px;
+    bottom: 0px;
+    background-color: #B541F3;
+    z-index: 10;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(15px);
     box-sizing: border-box;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    height: 498px;
+    padding: 0px 30px 0px 30px;
+}
 
+.hidden_text .hidden_image{
+    width: 100%;
+}
+
+.hidden_text .hidden_image img{
+    width: 100%;
+}
+
+.hidden_text .hidden_desc{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 230px;
+}
+
+.hidden_text .hidden_desc .title{
     color: #ffffff;
     line-height: normal;
     text-align: left;
     font-size: 18px;
     font-weight: bold;
-
     background-color: #B541F3;
-    background-image: url(../image/plan_card_image_8.png);
-    background-repeat: no-repeat;
-    background-size: 75%;
-    background-position: top center, bottom center;
-    /* height: 500px; */
-
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.5s ease;
-    pointer-events: none;
 }
 
-.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_4 .item_all_list .list_item8:hover::before{
-    opacity: 1;
-    visibility: visible;
-}
-
-.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_4 .item_all_list .list_item8::after{
-    content: "運用 MyCard 多平台社群與官網版位，搭配分群受眾精準行銷策略，有效溝通互動並提升轉換效率。";
-    position: absolute;
-    inset: 0;
-    z-index: 3;
-
+.hidden_text .hidden_desc .desc_context{
     color: #ffffff;
     font-size: 16px;
     font-weight: normal;
     line-height: normal;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     text-align: justify;
-    padding: 260px 30px 30px 30px;
-    box-sizing: border-box;
-    /* height: 450px; */
-
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.4s ease;
-    pointer-events: none;
 }
 
-.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_4 .item_all_list .list_item8:hover::after{
+.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_4 .item_all_list .list_item8:hover .hidden_text{
     opacity: 1;
     visibility: visible;
+    transform: translateY(0);
 }
-
 
 .main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_5 {
     width: 100%;
@@ -4290,73 +4080,59 @@ body{
     font-size: 16px;
 }
 
-/* list_item7偽元素 */
-.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_5 .item_all_list .list_item9::before{
-    content: "異業聯名企劃";
-
+/* list_item9元素 */
+.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_5 .item_all_list .list_item9 .hidden_text{
     position: absolute;
-    inset: 0;
-    z-index: 2;
-
-    display: flex;
-    align-items: center;
-    justify-content: left;
-    padding: 120px 30px 30px 30px;
+    bottom: 0px;
+    background-color: #B541F3;
+    z-index: 10;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(15px);
     box-sizing: border-box;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    height: 498px;
+    padding: 0px 30px 0px 30px;
+}
 
+.hidden_text .hidden_image{
+    width: 100%;
+}
+
+.hidden_text .hidden_image img{
+    width: 100%;
+}
+
+.hidden_text .hidden_desc{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 230px;
+}
+
+.hidden_text .hidden_desc .title{
     color: #ffffff;
     line-height: normal;
     text-align: left;
     font-size: 18px;
     font-weight: bold;
-
     background-color: #B541F3;
-    background-image: url(../image/plan_card_image_9.png);
-    background-repeat: no-repeat;
-    background-size: 75%;
-    background-position: top center, bottom center;
-    height: 500px;
-
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.5s ease;
-    pointer-events: none;
 }
 
-.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_5 .item_all_list .list_item9:hover::before{
-    opacity: 1;
-    visibility: visible;
-}
-
-.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_5 .item_all_list .list_item9::after{
-    content: "媒合品牌、餐飲、影視、零售等跨領域資源，打造創新聯名內容，提高玩家參與度與市場聲量。";
-    position: absolute;
-    inset: 0;
-    z-index: 3;
-
+.hidden_text .hidden_desc .desc_context{
     color: #ffffff;
     font-size: 16px;
     font-weight: normal;
     line-height: normal;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     text-align: justify;
-    padding: 260px 30px 30px 30px;
-    box-sizing: border-box;
-    height: 500px;
-
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.4s ease;
-    pointer-events: none;
 }
 
-.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_5 .item_all_list .list_item9:hover::after{
+.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_5 .item_all_list .list_item9:hover .hidden_text{
     opacity: 1;
     visibility: visible;
+    transform: translateY(0);
 }
-
 
 .main .market_plan .market_plan_outer .market_plan_inner .market_bg{
     background-image: url(../image/train_bg.png);
