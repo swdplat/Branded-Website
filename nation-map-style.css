@@ -439,7 +439,7 @@ body.nation-map *::after {
 
 /* 國旗盒 */
 .flag-box {
-  height: 64px;
+  height: auto;
   border-radius: 6px;
   overflow: hidden;
   background: #fff;       /* 旗幟常見有透明區，給白底 */
@@ -801,7 +801,7 @@ body.nation-map *::after {
   .flag-box {
     order: 2;
     flex: 0 0 72px;
-    height: 40px;
+    height: auto;
     border-radius: 8px;
     overflow: hidden;
   }
