@@ -801,7 +801,7 @@ body{
     width: auto;
 }
 
-@media(max-width:2020px){
+@media(min-width:2020px){
     .main .market_info .market_info_outer .market_info_inner .market_desc .market_icon .icon_img{
     width: auto;
     margin-top: 45px;
