@@ -5359,9 +5359,17 @@ body{
     cursor: unset;
 }
 
-.main .best_choice .best_choice_outer .best_choice_inner .choice_region .under_block_slide .carousel_list .carousel_inner_1 img{
-    /* height: 80px; */
-    width: 350px;
+.main .best_choice .best_choice_outer .best_choice_inner .choice_region .under_block_slide .carousel_list .carousel_inner_1 .image_outer{
+    width: 300px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-self: center;
+    max-width: 300px;
+}
+
+.main .best_choice .best_choice_outer .best_choice_inner .choice_region .under_block_slide .carousel_list .carousel_inner_1 .image_outer img{
+    width:100%;
     flex-shrink: 0;
 }
 
@@ -5394,9 +5402,17 @@ body{
     cursor: unset;
 }
 
-.main .best_choice .best_choice_outer .best_choice_inner .choice_region .under_block_slide .carousel_list .carousel_inner_2 img{
-    /* height: 80px; */
-    width: 350px;
+.main .best_choice .best_choice_outer .best_choice_inner .choice_region .under_block_slide .carousel_list .carousel_inner_2 .image_outer{
+    width: 300px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-self: center;
+    max-width: 300px;
+}
+
+.main .best_choice .best_choice_outer .best_choice_inner .choice_region .under_block_slide .carousel_list .carousel_inner_2 .image_outer img{
+    width:100%;
     flex-shrink: 0;
 }
 
@@ -5560,7 +5576,6 @@ body{
     width: max-content;
     gap: 10px;
     padding-right: 40px;
-
     animation: scroll 80s linear infinite;
 }
 
@@ -5569,9 +5584,17 @@ body{
     cursor: unset;
 }
 
-.main .best_choice .best_choice_outer .best_choice_inner .choice_region .under_block_slide .carousel_list .carousel_inner_1 img{
-    /* height: 80px; */
-    width: 300px;
+.main .best_choice .best_choice_outer .best_choice_inner .choice_region .under_block_slide .carousel_list .carousel_inner_1 .image_outer{
+    width: 250px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-self: center;
+    max-width: 250px;
+}
+
+.main .best_choice .best_choice_outer .best_choice_inner .choice_region .under_block_slide .carousel_list .carousel_inner_1 .image_outer img{
+    width:100%;
     flex-shrink: 0;
 }
 
@@ -5604,11 +5627,20 @@ body{
     cursor: unset;
 }
 
-.main .best_choice .best_choice_outer .best_choice_inner .choice_region .under_block_slide .carousel_list .carousel_inner_2 img{
-    /* height: 80px; */
-    width: 300px;
+.main .best_choice .best_choice_outer .best_choice_inner .choice_region .under_block_slide .carousel_list .carousel_inner_2 .image_outer{
+    width: 250px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-self: center;
+    max-width: 250px;
+}
+
+.main .best_choice .best_choice_outer .best_choice_inner .choice_region .under_block_slide .carousel_list .carousel_inner_2 .image_outer img{
+    width:100%;
     flex-shrink: 0;
 }
+
 }
 
 /* best_choice的css樣式設置 結束 */
