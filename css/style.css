@@ -178,6 +178,7 @@ body{
     display: flex;
     justify-content: space-between;
     background-color: #ffffff;
+    border-radius: 0px 0px 5px 5px;
 }
 
 .main .header_outer .header_inner .header_logo{
