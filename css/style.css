@@ -106,7 +106,7 @@ body{
      max-width: 200px;
      text-align: center;
      background-color: #fff;
-     border-radius: unset;
+     border-radius: 0px 0px 0px 5px;
      display: flex;
      justify-content: center;
      align-items: center;
@@ -126,7 +126,7 @@ body{
      width: 100%;
      text-align: center;
      background-color: #fff;
-     border-radius: unset;
+     border-radius: 0px 0px 5px 0px;
      display: flex;
      justify-content: right;
      align-items: center;
