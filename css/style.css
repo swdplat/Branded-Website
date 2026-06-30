@@ -258,7 +258,7 @@ body{
     height: 100%;
     display: flex;
     background-color: unset;
-    background-image: url(../image/banner_3.png);
+    background-image: url(../image/banner_3.webp);
     background-repeat: no-repeat;
     background-size: cover;
     background-position:70% 100%;
