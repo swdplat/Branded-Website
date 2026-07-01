@@ -6697,7 +6697,7 @@ body{
 
 .main .contact_outer .contact_inner .contact_bgimg{
     width: 50%;
-    background-image: linear-gradient(to left, rgba(3,43,73, 1), transparent), url(../image/contact-bgimg.png);
+    background-image: linear-gradient(to left, rgba(3,43,73, 1), transparent), url(../image/contact-bgimg.webp);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -6808,7 +6808,7 @@ body{
 
 .main .contact_outer .contact_inner .contact_bgimg{
     width: 100%;
-    background-image: url(../image/contact-bgimg.png);
+    background-image: url(../image/contact-bgimg.webp);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
