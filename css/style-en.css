@@ -2160,7 +2160,7 @@ body{
     box-sizing: border-box;
     transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
     height: 498px;
-    padding: 0px 30px 0px 30px;
+    padding: 0px 30px 30px 30px;
     font-family: "Noto Sans TC", sans-serif;
 }
 
@@ -2389,7 +2389,7 @@ body{
     box-sizing: border-box;
     transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
     height: 498px;
-    padding: 0px 30px 0px 30px;
+    padding: 0px 30px 30px 30px;
     font-family: "Noto Sans TC", sans-serif;
 }
 
@@ -2494,7 +2494,7 @@ body{
 }
 
 .main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_3 .item_all_list .list_item5 .item_details .details_title{
-    font-size: 24px;
+    font-size: 16px;
     color: #ffffff;
     line-height: normal;
     font-family: "Noto Sans TC", sans-serif;
@@ -2593,7 +2593,7 @@ body{
 }
 
 .main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_3 .item_all_list .list_item6 .item_details .details_title{
-    font-size: 24px;
+    font-size: 16px;
     color: #ffffff;
     line-height: normal;
     font-family: "Noto Sans TC", sans-serif;
@@ -2617,7 +2617,7 @@ body{
     box-sizing: border-box;
     transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
     height: 498px;
-    padding: 0px 30px 0px 30px;
+    padding: 0px 30px 30px 30px;
     font-family: "Noto Sans TC", sans-serif;
 }
 
@@ -2724,7 +2724,7 @@ body{
 }
 
 .main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_4 .item_all_list .list_item7 .item_details .details_title{
-    font-size: 24px;
+    font-size: 16px;
     color: #ffffff;
     line-height: normal;
     font-family: "Noto Sans TC", sans-serif;
@@ -2748,9 +2748,19 @@ body{
     box-sizing: border-box;
     transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
     height: 498px;
-    padding: 0px 30px 0px 30px;
+    padding: 0px 30px 30px 30px;
     font-family: "Noto Sans TC", sans-serif;
+    overflow-y: auto;
+    scrollbar-width:none;   
 }
+
+.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_4 .item_all_list .list_item7 .hidden_text::-webkit-scrollbar-button {
+    display: none;        /* 直接不顯示整個捲軸 */
+    width: 0 !important;  /* 保險起見，將寬度設為 0 */
+    height: 0 !important; /* 保險起見，將高度設為 0 */
+}
+
+
 
 .hidden_text .hidden_image{
     width: 100%;
@@ -2823,7 +2833,7 @@ body{
 }
 
 .main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_4 .item_all_list .list_item8 .item_details .details_title{
-    font-size: 24px;
+    font-size: 16px;
     color: #ffffff;
     line-height: normal;
     font-family: "Noto Sans TC", sans-serif;
@@ -2951,7 +2961,7 @@ body{
 }
 
 .main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_5 .item_all_list .list_item9 .item_details .details_title{
-    font-size: 24px;
+    font-size: 16px;
     color: #ffffff;
     line-height: normal;
     font-family: "Noto Sans TC", sans-serif;
@@ -3386,7 +3396,7 @@ body{
     box-sizing: border-box;
     transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
     height: 498px;
-    padding: 0px 30px 0px 30px;
+    padding: 0px 30px 30px 30px;
 }
 
 .hidden_text .hidden_image{
@@ -3426,6 +3436,9 @@ body{
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_1 .item_all_list hr{
@@ -3527,8 +3540,10 @@ body{
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-
 
 
 .main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_2 {
@@ -3620,7 +3635,7 @@ body{
     box-sizing: border-box;
     transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
     height: 498px;
-    padding: 0px 30px 0px 30px;
+    padding: 0px 30px 30px 30px;
 }
 
 .hidden_text .hidden_image{
@@ -3660,6 +3675,9 @@ body{
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_2 .item_all_list hr{
@@ -3761,6 +3779,9 @@ body{
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 
@@ -3853,7 +3874,7 @@ body{
     box-sizing: border-box;
     transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
     height: 498px;
-    padding: 0px 30px 0px 30px;
+    padding: 0px 30px 30px 30px;
 }
 
 .hidden_text .hidden_image{
@@ -3893,6 +3914,9 @@ body{
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 
@@ -3996,6 +4020,9 @@ body{
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 
@@ -4091,8 +4118,17 @@ body{
     box-sizing: border-box;
     transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
     height: 498px;
-    padding: 0px 30px 0px 30px;
+    padding: 0px 30px 30px 30px;
+    overflow-y: auto;
+    scrollbar-width:none;   
 }
+
+.main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_4 .item_all_list .list_item7 .hidden_text::-webkit-scrollbar-button {
+    display: none;        /* 直接不顯示整個捲軸 */
+    width: 0 !important;  /* 保險起見，將寬度設為 0 */
+    height: 0 !important; /* 保險起見，將高度設為 0 */
+}
+
 
 .hidden_text .hidden_image{
     width: 100%;
@@ -4131,6 +4167,9 @@ body{
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 
@@ -4234,6 +4273,9 @@ body{
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_5 {
@@ -4331,6 +4373,7 @@ body{
 
 .hidden_text .hidden_image{
     width: 100%;
+    max-width: 250px;
 }
 
 .hidden_text .hidden_image img{
@@ -4343,6 +4386,7 @@ body{
     flex-direction: column;
     justify-content: flex-start;
     height: 230px;
+    margin-bottom: 30px;
 }
 
 .hidden_text .hidden_desc .title{
@@ -4359,13 +4403,16 @@ body{
     font-size: 16px;
     font-weight: normal;
     line-height: normal;
-    text-align: justify;
+    text-align: left;
 }
 
 .main .market_plan .market_plan_outer .market_plan_inner .plan_detail .detail_item_5 .item_all_list .list_item9:hover .hidden_text{
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .main .market_plan .market_plan_outer .market_plan_inner .market_bg{
@@ -4433,7 +4480,7 @@ body{
 }
 
 .main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .solution_title .solut_title_text{
-    font-size: 64px;
+    font-size: 40px;
     line-height: normal;
     font-weight: 600;
     color: #ffffff;
@@ -4462,7 +4509,7 @@ body{
 }
 
 .main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .sloution_service .service_one .title{
-    font-size: 28px;
+    font-size: 24px;
     font-weight: 600;
     color: #ffffff;
     margin-bottom: 12px;
@@ -4471,11 +4518,11 @@ body{
 }
 
 .main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .sloution_service .service_one .desc{
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 400;
     color: #b8b8b8;
     line-height: normal;
-    text-align: justify;
+    text-align: left;
     font-family: "Noto Sans TC", sans-serif;
 }
 
@@ -4492,7 +4539,7 @@ body{
 }
 
 .main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .sloution_service .service_two .title{
-    font-size: 28px;
+    font-size: 24px;
     font-weight: 600;
     color: #ffffff;
     margin-bottom: 12px;
@@ -4501,11 +4548,11 @@ body{
 }
 
 .main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .sloution_service .service_two .desc{
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 400;
     color: #b8b8b8;
     line-height: normal;
-    text-align: justify;
+    text-align: left;
     font-family: "Noto Sans TC", sans-serif;
 }
 
@@ -4521,7 +4568,7 @@ body{
 }
 
 .main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .sloution_service .service_three .title{
-    font-size: 28px;
+    font-size: 24px;
     font-weight: 600;
     color: #ffffff;
     margin-bottom: 12px;
@@ -4530,11 +4577,11 @@ body{
 }
 
 .main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .sloution_service .service_three .desc{
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 400;
     color: #b8b8b8;
     line-height: normal;
-    text-align: justify;
+    text-align: left;
     font-family: "Noto Sans TC", sans-serif;
 }
 
@@ -4550,7 +4597,7 @@ body{
 }
 
 .main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .sloution_service .service_four .title{
-    font-size: 28px;
+    font-size: 24px;
     font-weight: 600;
     color: #ffffff;
     margin-bottom: 12px;
@@ -4559,11 +4606,11 @@ body{
 }
 
 .main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .sloution_service .service_four .desc{
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 400;
     color: #b8b8b8;
     line-height: normal;
-    text-align: justify;
+    text-align: left;
     font-family: "Noto Sans TC", sans-serif;
 }
 
@@ -4680,7 +4727,7 @@ body{
     font-weight: 400;
     color: #b8b8b8;
     line-height: normal;
-    text-align: justify;
+    text-align: left;
 }
 
 .main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .sloution_service .service_two{
@@ -4708,7 +4755,7 @@ body{
     font-weight: 400;
     color: #b8b8b8;
     line-height: normal;
-    text-align: justify;
+    text-align: left;
 }
 
 .main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .sloution_service .service_three{
@@ -4736,7 +4783,7 @@ body{
     font-weight: 400;
     color: #b8b8b8;
     line-height: normal;
-    text-align: justify;
+    text-align: left;
 }
 
 .main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .sloution_service .service_four{
@@ -4764,7 +4811,7 @@ body{
     font-weight: 400;
     color: #b8b8b8;
     line-height: normal;
-    text-align: justify;
+    text-align: left;
 }
 
 
@@ -4829,7 +4876,7 @@ body{
 }
 
 .main .customer_support .customer_support_outer .customer_support_inner .customer_headline .customer_headline_inner .customer_headline_title{
-    font-size: 64px;
+    font-size: 40px;
     font-weight: 600;
     color: #000000;
     font-family: "Noto Sans TC", sans-serif;
@@ -4886,7 +4933,7 @@ body{
 }
 
 .main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_1 .item_desc .desc_title{
-    font-size: 28px;
+    font-size: 24px;
     font-weight: 500;
     color:#000000;
     margin-bottom: 12px;
@@ -4896,12 +4943,12 @@ body{
 }
 
 .main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_1 .item_desc .desc_text{
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 400;
     color:#666666;
     line-height: normal;
     font-family: "Noto Sans TC", sans-serif;
-    text-align: justify;
+    text-align: left;
 }
 
 .main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_2{
@@ -4931,7 +4978,7 @@ body{
 }
 
 .main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_2 .item_desc .desc_title{
-    font-size: 28px;
+    font-size: 24px;
     font-weight: 500;
     color:#000000;
     margin-bottom: 12px;
@@ -4940,12 +4987,12 @@ body{
 }
 
 .main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_2 .item_desc .desc_text{
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 400;
     color:#666666;
     line-height: normal;
     font-family: "Noto Sans TC", sans-serif;
-    text-align: justify;
+    text-align: left;
 }
 
 .main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_3{
@@ -4975,7 +5022,7 @@ body{
 }
 
 .main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_3 .item_desc .desc_title{
-    font-size: 28px;
+    font-size: 24px;
     font-weight: 500;
     color:#000000;
     margin-bottom: 12px;
@@ -4984,12 +5031,12 @@ body{
 }
 
 .main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_3 .item_desc .desc_text{
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 400;
     color:#666666;
     line-height: normal;
     font-family: "Noto Sans TC", sans-serif;
-    text-align: justify;
+    text-align: left;
 }
 
 /* RWD 樣式 */
@@ -5038,6 +5085,7 @@ body{
     font-size: 38px;
     font-weight: 600;
     color: #000000;
+    text-align: left;
 }
 
 /* .main .customer_support .customer_support_outer .customer_support_inner .customer_headline .customer_headline_subtitle{
@@ -5103,11 +5151,11 @@ body{
 }
 
 .main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_1 .item_desc .desc_text{
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 400;
     color:#666666;
     line-height: normal;
-    text-align: justify;
+    text-align: left;
 }
 
 .main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_2{
@@ -5146,11 +5194,11 @@ body{
 }
 
 .main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_2 .item_desc .desc_text{
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 400;
     color:#666666;
     line-height: normal;
-    text-align: justify;
+    text-align: left;
 }
 
 .main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_3{
@@ -5189,11 +5237,11 @@ body{
 }
 
 .main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_3 .item_desc .desc_text{
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 400;
     color:#666666;
     line-height: normal;
-    text-align: justify;
+    text-align: left;
 }
 
 }
@@ -5240,7 +5288,7 @@ body{
 }
 
 .main .best_choice .best_choice_outer .best_choice_inner .choice_region .top_block .desc_block .choice_title{
-    font-size: 64px;
+    font-size: 40px;
     font-weight: 700;
     color: #ffffff;
     margin-bottom: 20px;
@@ -5476,7 +5524,7 @@ body{
         font-weight: 400;
         color: #b8b8b8;
         line-height: normal;
-        text-align: justify;
+        text-align: left;
     }
     
     .main .best_choice .best_choice_outer .best_choice_inner .choice_region .top_block .game_img_list{
@@ -5724,6 +5772,7 @@ body{
     display: flex;
     justify-content: center;
     height: 50%;
+    padding: 0px 20px;
 }
 
 .main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_overview .overview_desc .desc_icon{
@@ -5843,7 +5892,7 @@ body{
 }
 
 .main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_1 .list_card .list_desc .desc_bold{
-    font-size: 28px;
+    font-size: 24px;
     font-weight: 500;
     color: #313131;
     margin-bottom: 12px;
@@ -5910,14 +5959,11 @@ body{
 .main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_2 .list_card{
     display: flex;
     gap: 10px;
-    width: 100%;
-    max-width: 323px;
 }
 
 .main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_2 .list_card .list_title{
     display: flex;
     align-items: center;
-    width: 100px;
 }
 
 .main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_2 .list_card .list_title .title_text{
@@ -5945,7 +5991,7 @@ body{
 }
 
 .main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_2 .list_card .list_desc .desc_bold{
-    font-size: 28px;
+    font-size: 24px;
     font-weight: 500;
     color: #313131;
     margin-bottom: 12px;
@@ -6042,7 +6088,7 @@ body{
 }
 
 .main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_3 .list_card .list_desc .desc_bold{
-    font-size: 28px;
+    font-size: 24px;
     font-weight: 500;
     color: #313131;
     margin-bottom: 12px;
@@ -6121,7 +6167,7 @@ body{
 }
 
 .main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_4 .list_desc .desc_bold{
-    font-size: 28px;
+    font-size: 24px;
     font-weight: 500;
     color: #313131;
     margin-bottom: 12px;
@@ -6236,6 +6282,7 @@ body{
     display: flex;
     justify-content: center;
     height: 100%;
+    padding: 0px 0px;
 }
 
 .main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_overview .overview_desc .desc_icon{
@@ -6308,8 +6355,7 @@ body{
     overflow: hidden;
     border-bottom: 1px solid #d9d9d9;
     padding-left: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 20px 20px;
 }
 
 .main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_1::after{
@@ -6406,7 +6452,7 @@ body{
     justify-content: space-around;
     align-items: center;
     overflow: hidden;
-    padding-left: 20px;
+   padding: 20px 20px;
 }
 
 .main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_2::after{
@@ -6445,7 +6491,6 @@ body{
     font-weight: 600;
     color: #313131;
     margin-right: 10px;
-    width: 35px;
 }
 
 .main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_2 .list_card .list_title .title_num{
@@ -6506,7 +6551,7 @@ body{
     justify-content: space-around;
     align-items: center;
     overflow: hidden;
-    padding-left: 20px;
+    padding: 20px 20px;
 }
 
 .main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_3::after{
@@ -6603,7 +6648,7 @@ body{
     justify-content: space-around;
     align-items: center;
     overflow: hidden;
-    padding-left: 20px;
+    padding: 20px 20px;
 }
 
 .main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_list .list_4 .list_card{
@@ -6725,7 +6770,7 @@ body{
 }
 
 .main .contact_outer .contact_inner .contact_form .form_title h2{
-    font-size: 48px;
+    font-size: 40px;
     font-weight: 600;
     color: #fff;
     line-height: normal;
@@ -6845,7 +6890,7 @@ body{
     font-weight: 600;
     color: #fff;
     width: 80%;
-    text-align: justify;
+    text-align: left;
     line-height: normal;
 }
 
