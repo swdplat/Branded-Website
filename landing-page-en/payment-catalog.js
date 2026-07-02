@@ -1,11 +1,11 @@
   // 8 大體系（後兩個保留）
 window.PAYMENT_CATEGORIES = [
-  { id: "credit_card",        name_zh: "信用卡",         name_en: "Credit Card",        icon: "./assest/payments/icons/credit_card.svg" },
-  { id: "ewallet",            name_zh: "電子/行動支付",  name_en: "E-Wallet / Mobile",  icon: "./assest/payments/icons/ewallet.svg" },
-  { id: "bank_transfer",      name_zh: "銀行轉帳",       name_en: "Bank Transfer",      icon: "./assest/payments/icons/bank_transfer.svg" },
-  { id: "carrier_billing",    name_zh: "電信帳單繳費",   name_en: "Carrier Billing",    icon: "./assest/payments/icons/mobile_phone.svg" },
-  { id: "cash_store",         name_zh: "實體商店繳費",   name_en: "Pay in Store",       icon: "./assest/payments/icons/over_the_counter.svg" },
-  { id: "bnpl",               name_zh: "先買後付",       name_en: "BNPL",               icon: "./assest/payments/icons/BNPL03.svg" },
+  { id: "credit_card",        name_zh: "Credit Card",         name_en: "Credit Card",        icon: "./assest/payments/icons/credit_card.svg" },
+  { id: "ewallet",            name_zh: "E-Wallet / Mobile",  name_en: "E-Wallet / Mobile",  icon: "./assest/payments/icons/ewallet.svg" },
+  { id: "bank_transfer",      name_zh: "Bank Transfer",       name_en: "Bank Transfer",      icon: "./assest/payments/icons/bank_transfer.svg" },
+  { id: "carrier_billing",    name_zh: "Carrier Billing",   name_en: "Carrier Billing",    icon: "./assest/payments/icons/mobile_phone.svg" },
+  { id: "cash_store",         name_zh: "Pay in Store",   name_en: "Pay in Store",       icon: "./assest/payments/icons/over_the_counter.svg" },
+  { id: "bnpl",               name_zh: "BNPL",       name_en: "BNPL",               icon: "./assest/payments/icons/BNPL03.svg" },
   { id: "reserved_1",         name_zh: "（保留）",       name_en: "Reserved 1",         icon: "./assest/payments/icons/reserved.svg" },
   { id: "reserved_2",         name_zh: "（保留）",       name_en: "Reserved 2",         icon: "./assest/payments/icons/reserved.svg" }
 ];

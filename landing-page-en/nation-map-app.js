@@ -1208,8 +1208,8 @@ MapViewer.prototype.showInfo = function ({ name, iso2, bbox }) {
           toggle.className = 'mode-toggle';
           toggle.innerHTML = `
       <div class = "knob"></div>
-      <div class = "opt opt-full">清單</div>
-      <div class = "opt opt-icon">圖標</div>
+      <div class = "opt opt-full">Checklist</div>
+      <div class = "opt opt-icon">ICON</div>
     `;
 
       // 正確插在 controls 區塊前面，而不是 closeInfo 本身
@@ -1424,7 +1424,7 @@ function renderPayments(iso2, mountEl){
 
   const title = document.createElement('h3');
   title.className = 'sec-title';
-  title.textContent = '支援付款方式';
+  title.textContent = 'Payment Methods';
 
   cats.forEach(cat => {
     const ids = data[cat.id] || [];
