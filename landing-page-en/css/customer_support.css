@@ -1,0 +1,387 @@
+/* customer_support的css樣式設置 開始*/
+.main .customer_support{
+    width: 100%;
+}
+
+.main .customer_support .customer_support_outer{
+    width: 100%;
+    background-color: #fff;
+    border-radius: 20px;
+    margin-bottom: 2px;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner{
+    /* border: 1px solid red; */
+    width: 100%;
+    padding: 7% 0% 7% 0%;
+    background-color: #fff;
+    border-radius: 20px;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner .customer_headline{
+    text-align: right;
+    margin: 0% 5% 0% 5%;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner .customer_headline .customer_headline_inner{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner .customer_headline .customer_headline_inner .customer_headline_icon{
+    max-width: 80px;
+    width: 100%;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner .customer_headline .customer_headline_inner .customer_headline_icon img{
+    width: 100%;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner .customer_headline .customer_headline_inner .customer_headline_title{
+    font-size: 64px;
+    font-weight: 600;
+    color: #000000;
+}
+
+/* .main .customer_support .customer_support_outer .customer_support_inner .customer_headline .customer_headline_subtitle{
+    font-size: 24px;
+    color: #7A7A7A;
+} */
+
+.main .customer_support .customer_support_outer .customer_support_inner .gap_line{
+    border: none;
+    height: 160px;
+    align-content: center;
+    margin: 0% 5% 0% 5%;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner .customer_item{
+    display: flex;
+    justify-content: center;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_msgcard{
+    display: flex;
+    justify-content: center;
+    margin: 0% 5% 5% 5%;
+    gap: 12px;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_1{
+    border: 1px solid #D9D9D9;
+    border-radius: 12px;
+    display: flex;
+    width: 100%;
+    padding: 0px 20px;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_1 .item_icon{
+    width: 60px;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_1 .item_icon .icon_1{
+    width: 100%;
+    margin-top: 15px;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_1 .item_icon .icon_1 img{
+    width: 100%;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_1 .item_desc{
+    width: 100%;
+    padding: 30px 10px;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_1 .item_desc .desc_title{
+    font-size: 28px;
+    font-weight: 500;
+    color:#000000;
+    margin-bottom: 12px;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_1 .item_desc .desc_text{
+    font-size: 18px;
+    font-weight: 400;
+    color:#666666;
+    line-height: 20px;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_2{
+    border: 1px solid #D9D9D9;
+    border-radius: 12px;
+    display: flex;
+    width: 100%;
+    padding: 0px 20px;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_2 .item_icon{
+    width: 60px;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_2 .item_icon .icon_1{
+    width: 100%;
+    margin-top: 15px;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_2 .item_icon .icon_1 img{
+    width: 100%;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_2 .item_desc{
+    width: 100%;
+    padding: 30px 10px;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_2 .item_desc .desc_title{
+    font-size: 28px;
+    font-weight: 500;
+    color:#000000;
+    margin-bottom: 12px;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_2 .item_desc .desc_text{
+    font-size: 18px;
+    font-weight: 400;
+    color:#666666;
+    line-height: 20px;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_3{
+    border: 1px solid #D9D9D9;
+    border-radius: 12px;
+    display: flex;
+    width: 100%;
+    padding: 0px 20px;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_3 .item_icon{
+    width: 60px;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_3 .item_icon .icon_1{
+    width: 100%;
+    margin-top: 15px;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_3 .item_icon .icon_1 img{
+    width: 100%;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_3 .item_desc{
+    width: 100%;
+    padding: 30px 10px;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_3 .item_desc .desc_title{
+    font-size: 28px;
+    font-weight: 500;
+    color:#000000;
+    margin-bottom: 12px;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_3 .item_desc .desc_text{
+    font-size: 18px;
+    font-weight: 400;
+    color:#666666;
+    line-height: 20px;
+}
+
+/* RWD 樣式 */
+@media(max-width:576px){
+    .main .customer_support{
+    width: 100%;
+}
+
+.main .customer_support .customer_support_outer{
+    width: 100%;
+    background-color: #fff;
+    border-radius: 20px;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner{
+    /* border: 1px solid red; */
+    width: 100%;
+    padding: 8% 0% 8% 0%;
+    background-color: #fff;
+    border-radius: 20px;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner .customer_headline{
+    text-align: right;
+    margin: 0% 5% 0% 5%;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner .customer_headline .customer_headline_inner{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-bottom: 0px;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner .customer_headline .customer_headline_inner .customer_headline_icon{
+    max-width: 60px;
+    width: 100%;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner .customer_headline .customer_headline_inner .customer_headline_icon img{
+    width: 100%;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner .customer_headline .customer_headline_inner .customer_headline_title{
+    font-size: 38px;
+    font-weight: 600;
+    color: #000000;
+}
+
+/* .main .customer_support .customer_support_outer .customer_support_inner .customer_headline .customer_headline_subtitle{
+    font-size: 24px;
+    color: #7A7A7A;
+} */
+
+.main .customer_support .customer_support_outer .customer_support_inner .gap_line{
+    border: none;
+    height: 90px;
+    align-content: center;
+    margin: 0% 5% 0% 5%;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner .customer_item{
+    display: flex;
+    justify-content: center;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_msgcard{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0%;
+    gap: 12px;
+    width: 90%;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_1{
+    border: 1px solid #D9D9D9;
+    border-radius: 12px;
+    display: flex;
+    width: 90%;
+    padding: 0px 20px;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_1 .item_icon{
+    width: 60px;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_1 .item_icon .icon_1{
+    width: 100%;
+    margin-top: 15px;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_1 .item_icon .icon_1 img{
+    width: 100%;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_1 .item_desc{
+    width: 100%;
+    padding: 30px 10px;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_1 .item_desc .desc_title{
+    font-size: 28px;
+    font-weight: 500;
+    color:#000000;
+    margin-bottom: 12px;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_1 .item_desc .desc_text{
+    font-size: 18px;
+    font-weight: 400;
+    color:#666666;
+    line-height: 20px;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_2{
+    border: 1px solid #D9D9D9;
+    border-radius: 12px;
+    display: flex;
+    width: 90%;
+    padding: 0px 20px;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_2 .item_icon{
+    width: 60px;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_2 .item_icon .icon_1{
+    width: 100%;
+    margin-top: 15px;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_2 .item_icon .icon_1 img{
+    width: 100%;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_2 .item_desc{
+    width: 100%;
+    padding: 30px 10px;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_2 .item_desc .desc_title{
+    font-size: 28px;
+    font-weight: 500;
+    color:#000000;
+    margin-bottom: 12px;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_2 .item_desc .desc_text{
+    font-size: 18px;
+    font-weight: 400;
+    color:#666666;
+    line-height: 20px;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_3{
+    border: 1px solid #D9D9D9;
+    border-radius: 12px;
+    display: flex;
+    width: 90%;
+    padding: 0px 20px;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_3 .item_icon{
+    width: 60px;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_3 .item_icon .icon_1{
+    width: 100%;
+    margin-top: 15px;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_3 .item_icon .icon_1 img{
+    width: 100%;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_3 .item_desc{
+    width: 100%;
+    padding: 30px 10px;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_3 .item_desc .desc_title{
+    font-size: 28px;
+    font-weight: 500;
+    color:#000000;
+    margin-bottom: 12px;
+}
+
+.main .customer_support .customer_support_outer .customer_support_inner .customer_item .customer_item_3 .item_desc .desc_text{
+    font-size: 18px;
+    font-weight: 400;
+    color:#666666;
+    line-height: 20px;
+}
+
+}
+
+/* customer_support的css樣式設置 結束*/

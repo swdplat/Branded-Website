@@ -1,0 +1,312 @@
+/* best_choice的css樣式設置 開始 */
+.main .best_choice{
+    width: 100%;
+}
+
+.main .best_choice .best_choice_outer{
+    width: 100%;
+    background-color: #000;
+}
+
+.main .best_choice .best_choice_outer .best_choice_inner{
+    width: 100%;
+    height: 100%;
+}
+
+.main .best_choice .best_choice_outer .best_choice_inner .choice_region{
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.main .best_choice .best_choice_outer .best_choice_inner .choice_region .top_block{
+    width: 100%;
+    margin-bottom: 100px;
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.main .best_choice .best_choice_outer .best_choice_inner .choice_region .top_block .desc_block {
+    width: 90%;
+    margin-bottom: 75px;
+    /* border: 1px solid red; */
+}
+
+.main .best_choice .best_choice_outer .best_choice_inner .choice_region .top_block .desc_block .choice_title{
+    font-size: 64px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.main .best_choice .best_choice_outer .best_choice_inner .choice_region .top_block .desc_block .choice_sub{
+    font-size: 24px;
+    font-weight: 500;
+    color: #b8b8b8;
+}
+
+.main .best_choice .best_choice_outer .best_choice_inner .choice_region .top_block .game_img_list{
+    width: 90%;
+    /* border: 1px solid red; */
+}
+
+.main .best_choice .best_choice_outer .best_choice_inner .choice_region .top_block .game_img_list ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.main .best_choice .best_choice_outer .best_choice_inner .choice_region .top_block .game_img_list ul .game_icon{
+    margin: 5px 5px;
+}
+
+.main .best_choice .best_choice_outer .best_choice_inner .choice_region .top_block .game_img_list ul .game_icon_inner{
+    max-width: 104px;
+}
+
+.main .best_choice .best_choice_outer .best_choice_inner .choice_region .top_block .game_img_list ul .game_icon_inner img{
+    width: 100%;
+}
+
+/* icon的hover效果 */
+.tool_text_1{
+    position: relative;
+    transition: color 0.3s;
+}
+
+.tool_text_1::after{
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: -35%;
+    left: 0%;
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    align-content: center;
+    background-color: #7a7a7a;
+    color: #ffffff;
+    border-radius: 5px;
+    white-space: nowrap;
+    font-size: 14px;
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s, transform  0.3s;
+}
+
+.tool_text_1:hover::after{
+    opacity: 1;
+    visibility: visible;
+}
+
+.tool_text_1::before{
+    content: '';
+    position: absolute;
+    bottom: -8%;
+    left: 40%;
+    transform: translateX(0%);
+
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #7a7a7a transparent;
+
+    opacity: 1;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.1s, transform  0.3s;
+}
+
+.tool_text_1:hover::before{
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* 下半部分 */
+.main .best_choice .best_choice_outer .best_choice_inner .choice_region .under_block{
+    width: 100%;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+}
+
+.main .best_choice .best_choice_outer .best_choice_inner .choice_region .under_block .company_logo_list{
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    justify-content: center;
+}
+
+.main .best_choice .best_choice_outer .best_choice_inner .choice_region .under_block .company_logo_list .logo_image{
+    max-width: 330px;
+}
+
+.main .best_choice .best_choice_outer .best_choice_inner .choice_region .under_block .company_logo_list .logo_image img{
+    width: 100%;
+}
+
+/* RWD樣式 */
+@media(max-width:576px){
+
+    .main .best_choice{
+        width: 100%;
+    }
+    
+    .main .best_choice .best_choice_outer{
+        width: 100%;
+        background-color: #000;
+    }
+    
+    .main .best_choice .best_choice_outer .best_choice_inner{
+        width: 100%;
+        height: 100%;
+    }
+    
+    .main .best_choice .best_choice_outer .best_choice_inner .choice_region{
+        /* border: 1px solid red; */
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .main .best_choice .best_choice_outer .best_choice_inner .choice_region .top_block{
+        width: 100%;
+        margin-bottom: 60px;
+        margin-top: 60px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .main .best_choice .best_choice_outer .best_choice_inner .choice_region .top_block .desc_block {
+        width: 90%;
+        margin-bottom: 40px;
+        /* border: 1px solid red; */
+    }
+    
+    .main .best_choice .best_choice_outer .best_choice_inner .choice_region .top_block .desc_block .choice_title{
+        font-size: 38px;
+        font-weight: 600;
+        color: #ffffff;
+        margin-bottom: 22px;
+    }
+    
+    .main .best_choice .best_choice_outer .best_choice_inner .choice_region .top_block .desc_block .choice_sub{
+        font-size: 20px;
+        font-weight: 500;
+        color: #b8b8b8;
+    }
+    
+    .main .best_choice .best_choice_outer .best_choice_inner .choice_region .top_block .game_img_list{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        /* border: 1px solid red; */
+    }
+    
+    .main .best_choice .best_choice_outer .best_choice_inner .choice_region .top_block .game_img_list ul{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 90%;
+    }
+    
+    .main .best_choice .best_choice_outer .best_choice_inner .choice_region .top_block .game_img_list ul .game_icon{
+        margin: 5px 5px;
+    }
+    
+    .main .best_choice .best_choice_outer .best_choice_inner .choice_region .top_block .game_img_list ul .game_icon_inner{
+        max-width: 60px;
+    }
+    
+    .main .best_choice .best_choice_outer .best_choice_inner .choice_region .top_block .game_img_list ul .game_icon_inner img{
+        width: 100%;
+    }
+    
+    /* icon的hover效果 */
+    .tool_text_1{
+        position: relative;
+        transition: color 0.3s;
+    }
+    
+    .tool_text_1::after{
+        content: attr(data-tooltip);
+        position: absolute;
+        bottom: -55%;
+        left: 0%;
+        width: 100%;
+        height: 30px;
+        text-align: center;
+        align-content: center;
+        background-color: #7a7a7a;
+        color: #ffffff;
+        border-radius: 5px;
+        white-space: nowrap;
+        font-size: 14px;
+        z-index: 100;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s, visibility 0.3s, transform  0.3s;
+    }
+    
+    .tool_text_1:hover::after{
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .tool_text_1::before{
+        content: '';
+        position: absolute;
+        bottom: -8%;
+        left: 35%;
+        transform: translateX(0%);
+    
+        border-width: 10px;
+        border-style: solid;
+        border-color: transparent transparent #7a7a7a transparent;
+    
+        opacity: 1;
+        visibility: hidden;
+        transition: opacity 0.3s, visibility 0.1s, transform  0.3s;
+    }
+    
+    .tool_text_1:hover::before{
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    
+    /* 下半部分 */
+    .main .best_choice .best_choice_outer .best_choice_inner .choice_region .under_block{
+        width: 100%;
+        background-color: #ffffff;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .main .best_choice .best_choice_outer .best_choice_inner .choice_region .under_block .company_logo_list{
+        width: 90%;
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 60px;
+        margin-bottom: 60px;
+        justify-content: center;
+    }
+    
+    .main .best_choice .best_choice_outer .best_choice_inner .choice_region .under_block .company_logo_list .logo_image{
+        max-width: 330px;
+    }
+    
+    .main .best_choice .best_choice_outer .best_choice_inner .choice_region .under_block .company_logo_list .logo_image img{
+        width: 100%;
+    }
+
+}
+
+/* best_choice的css樣式設置 結束 */

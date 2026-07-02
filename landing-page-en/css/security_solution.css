@@ -1,0 +1,358 @@
+.main .security_solution{
+    width: 100%;
+}
+
+.main .security_solution .security_solution_outer{
+    width: 100%;
+    height: 860px;
+    background-color: #000;
+}
+
+.main .security_solution .security_solution_outer .security_solution_inner{
+    width: 100%;
+    height: 100%;
+}
+
+.main .security_solution .security_solution_outer .security_solution_inner .solution_region{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+.main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc{
+    width: 85%;
+    margin-left: 3%;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+
+.main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .solution_title{
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .solution_title .solut_image{
+    width: 80px;
+}
+
+.main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .solution_title .solut_image img{
+    width: 100%;
+}
+
+.main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .solution_title .solut_title_text{
+    font-size: 64px;
+    font-weight: 600;
+    color: #ffffff;
+    text-shadow: 0 0 5px #f9f9f9, 0 0 15px #e4e4e4;
+}
+
+.main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .sloution_service{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .sloution_service .service_one{
+    width: 45%;
+    border: 1px solid transparent;
+    border-radius: 13px;
+    background-image: linear-gradient(#000, #000),linear-gradient(to right, #B541F3, #1AEFE4);
+    background-clip: padding-box,border-box;
+    background-origin: border-box;
+    padding: 20px 10px;
+    height: 180px;
+}
+
+.main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .sloution_service .service_one .title{
+    font-size: 28px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 12px;
+}
+
+.main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .sloution_service .service_one .desc{
+    font-size: 18px;
+    font-weight: 400;
+    color: #b8b8b8;
+    line-height: 22px;
+}
+
+.main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .sloution_service .service_two{
+    width: 45%;
+    border: 1px solid transparent;
+    border-radius: 13px;
+    background-image: linear-gradient(#000, #000),linear-gradient(to right, #B541F3, #1AEFE4);
+    background-clip: padding-box,border-box;
+    background-origin: border-box;
+    padding: 20px 10px;
+    height: 180px;
+    margin-bottom: 20px;
+}
+
+.main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .sloution_service .service_two .title{
+    font-size: 28px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 12px;
+}
+
+.main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .sloution_service .service_two .desc{
+    font-size: 18px;
+    font-weight: 400;
+    color: #b8b8b8;
+    line-height: 22px;
+}
+
+.main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .sloution_service .service_three{
+    width: 45%;
+    border: 1px solid transparent;
+    border-radius: 13px;
+    background-image: linear-gradient(#000, #000),linear-gradient(to right, #B541F3, #1AEFE4);
+    background-clip: padding-box,border-box;
+    background-origin: border-box;
+    padding: 20px 10px;
+    height: 180px;
+}
+
+.main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .sloution_service .service_three .title{
+    font-size: 28px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 12px;
+}
+
+.main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .sloution_service .service_three .desc{
+    font-size: 18px;
+    font-weight: 400;
+    color: #b8b8b8;
+    line-height: 22px;
+}
+
+.main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .sloution_service .service_four{
+    width: 45%;
+    border: 1px solid transparent;
+    border-radius: 13px;
+    background-image: linear-gradient(#000, #000),linear-gradient(to right, #B541F3, #1AEFE4);
+    background-clip: padding-box,border-box;
+    background-origin: border-box;
+    padding: 20px 10px;
+    height: 180px;
+}
+
+.main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .sloution_service .service_four .title{
+    font-size: 28px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 12px;
+}
+
+.main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .sloution_service .service_four .desc{
+    font-size: 18px;
+    font-weight: 400;
+    color: #b8b8b8;
+    line-height: 22px;
+}
+
+
+/* 左側圖片 */
+.main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_image{
+    width: 60%;
+}
+
+.main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_image .region_image_inner{
+    width: 100%;
+}
+
+.main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_image .region_image_inner img{
+    width: 100%;
+    height: 860px;
+}
+/* RWD 樣式 */
+@media(max-width:576px){
+    .main .security_solution{
+    width: 100%;
+}
+
+.main .security_solution .security_solution_outer{
+    width: 100%;
+    height: auto;
+    background-color: #000;
+}
+
+.main .security_solution .security_solution_outer .security_solution_inner{
+    width: 100%;
+    height: 100%;
+}
+
+.main .security_solution .security_solution_outer .security_solution_inner .solution_region{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+.main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc{
+    width: 100%;
+    margin-left: 0%;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .solution_title{
+    display: flex;
+    align-items: center;
+    margin-bottom: 32px;
+    margin-top: 32px;
+}
+
+.main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .solution_title .solut_image{
+    width: 80px;
+}
+
+.main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .solution_title .solut_image img{
+    width: 100%;
+}
+
+.main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .solution_title .solut_title_text{
+    font-size: 38px;
+    font-weight: 600;
+    color: #ffffff;
+    text-shadow: 0 0 5px #f9f9f9, 0 0 15px #e4e4e4;
+    width: 100%;
+}
+
+.main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .sloution_service{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 95%;
+    justify-content: space-around;
+}
+
+.main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .sloution_service .service_one{
+    width: 100%;
+    border: 1px solid transparent;
+    border-radius: 13px;
+    background-image: linear-gradient(#000, #000),linear-gradient(to right, #B541F3, #1AEFE4);
+    background-clip: padding-box,border-box;
+    background-origin: border-box;
+    padding: 20px 10px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .sloution_service .service_one .title{
+    font-size: 28px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 12px;
+}
+
+.main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .sloution_service .service_one .desc{
+    font-size: 18px;
+    font-weight: 400;
+    color: #b8b8b8;
+    line-height: 22px;
+}
+
+.main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .sloution_service .service_two{
+    width: 100%;
+    border: 1px solid transparent;
+    border-radius: 13px;
+    background-image: linear-gradient(#000, #000),linear-gradient(to right, #B541F3, #1AEFE4);
+    background-clip: padding-box,border-box;
+    background-origin: border-box;
+    padding: 20px 10px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .sloution_service .service_two .title{
+    font-size: 28px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 12px;
+}
+
+.main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .sloution_service .service_two .desc{
+    font-size: 18px;
+    font-weight: 400;
+    color: #b8b8b8;
+    line-height: 22px;
+}
+
+.main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .sloution_service .service_three{
+    width: 100%;
+    border: 1px solid transparent;
+    border-radius: 13px;
+    background-image: linear-gradient(#000, #000),linear-gradient(to right, #B541F3, #1AEFE4);
+    background-clip: padding-box,border-box;
+    background-origin: border-box;
+    padding: 20px 10px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .sloution_service .service_three .title{
+    font-size: 28px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 12px;
+}
+
+.main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .sloution_service .service_three .desc{
+    font-size: 18px;
+    font-weight: 400;
+    color: #b8b8b8;
+    line-height: 22px;
+}
+
+.main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .sloution_service .service_four{
+    width: 100%;
+    border: 1px solid transparent;
+    border-radius: 13px;
+    background-image: linear-gradient(#000, #000),linear-gradient(to right, #B541F3, #1AEFE4);
+    background-clip: padding-box,border-box;
+    background-origin: border-box;
+    padding: 20px 10px;
+    height:auto;
+    margin-bottom: 10px;
+}
+
+.main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .sloution_service .service_four .title{
+    font-size: 28px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 12px;
+}
+
+.main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .sloution_service .service_four .desc{
+    font-size: 18px;
+    font-weight: 400;
+    color: #b8b8b8;
+    line-height: 22px;
+}
+
+
+/* 左側圖片 */
+.main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_image{
+    display: none;
+}
+
+/* .main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_image .region_image_inner{
+    width: 100%;
+}
+
+.main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_image .region_image_inner img{
+    width: 100%;
+    height: 860px;
+} */
+}

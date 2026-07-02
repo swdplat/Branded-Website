@@ -1,0 +1,1097 @@
+/* ============================================================
+   MyCard Map｜nation-map-style.css（整理註解版）
+   - 功能：地圖畫布、浮動資訊卡、金流顯示、提示與工具列、其他地區區塊、RWD
+   - 重點：Reset/主題變數只在 body.nation-map 生效；未掛該 class 時，var(--*) 可能為空而導致邊框/底色/字色不套用。
+   - 刪除影響：移除 Reset 會恢復瀏覽器預設 margin/padding/字級；跨瀏覽器版面差異會放大（特別是 mobile）。
+============================================================ */
+
+/* === 全域變數與重置（僅套用在含有 .nation-map 的頁面） === */
+/* === [01] Reset + 主題變數（作用域：body.nation-map） ===
+   - 功能：把瀏覽器預設樣式歸零，並提供本頁共用的色彩/陰影變數。
+   - 刪除影響：各元素會回到瀏覽器預設 margin/padding/字型；版面與間距可能跑掉。
+*/
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+body.nation-map,
+body.nation-map div,
+body.nation-map span,
+body.nation-map applet,
+body.nation-map object,
+body.nation-map iframe,
+body.nation-map h1,
+body.nation-map h2,
+body.nation-map h3,
+body.nation-map h4,
+body.nation-map h5,
+body.nation-map h6,
+body.nation-map p,
+body.nation-map blockquote,
+body.nation-map pre,
+body.nation-map a,
+body.nation-map abbr,
+body.nation-map acronym,
+body.nation-map address,
+body.nation-map big,
+body.nation-map cite,
+body.nation-map code,
+body.nation-map del,
+body.nation-map dfn,
+body.nation-map em,
+body.nation-map img,
+body.nation-map ins,
+body.nation-map kbd,
+body.nation-map q,
+body.nation-map s,
+body.nation-map samp,
+body.nation-map small,
+body.nation-map strike,
+body.nation-map strong,
+body.nation-map sub,
+body.nation-map sup,
+body.nation-map tt,
+body.nation-map var,
+body.nation-map b,
+body.nation-map u,
+body.nation-map i,
+body.nation-map center,
+body.nation-map dl,
+body.nation-map dt,
+body.nation-map dd,
+body.nation-map ol,
+body.nation-map ul,
+body.nation-map li,
+body.nation-map fieldset,
+body.nation-map form,
+body.nation-map label,
+body.nation-map legend,
+body.nation-map table,
+body.nation-map caption,
+body.nation-map tbody,
+body.nation-map tfoot,
+body.nation-map thead,
+body.nation-map tr,
+body.nation-map th,
+body.nation-map td,
+body.nation-map article,
+body.nation-map aside,
+body.nation-map canvas,
+body.nation-map details,
+body.nation-map embed,
+body.nation-map figure,
+body.nation-map figcaption,
+body.nation-map footer,
+body.nation-map header,
+body.nation-map hgroup,
+body.nation-map menu,
+body.nation-map nav,
+body.nation-map output,
+body.nation-map ruby,
+body.nation-map section,
+body.nation-map summary,
+body.nation-map time,
+body.nation-map mark,
+body.nation-map audio,
+body.nation-map video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+body.nation-map article,
+body.nation-map aside,
+body.nation-map details,
+body.nation-map figcaption,
+body.nation-map figure,
+body.nation-map footer,
+body.nation-map header,
+body.nation-map hgroup,
+body.nation-map menu,
+body.nation-map nav,
+body.nation-map section {
+  display: block;
+}
+body.nation-map { line-height: 1; }
+body.nation-map ol,
+body.nation-map ul { list-style: none; }
+body.nation-map blockquote,
+body.nation-map q { quotes: none; }
+body.nation-map blockquote:before,
+body.nation-map blockquote:after,
+body.nation-map q:before,
+body.nation-map q:after { content: ''; content: none; }
+body.nation-map table { border-collapse: collapse; border-spacing: 0; }
+
+body.nation-map {
+  /* 深色主題配色 */
+  --bg: #1f2937;          /* 背景改為深灰 */
+  --surface: #374151;     /* 地圖框背景改為更深的灰 */
+  --surface-2: #4b5563;
+  --text: #f9fafb;        /* 文字改為淺色 */
+  --muted: #9ca3af;       /* 次要文字改為灰白 */
+  --accent: #3b82f6;      /* 強調色維持藍色系 */
+  --accent-2: #60a5fa;
+  --border: #52525b;      /* 邊框改為較深灰 */
+  --shadow: 0 10px 30px rgba(0,0,0,0.5);
+
+  min-height: 100vh;
+  margin: 0;
+  color: var(--text);
+  background: var(--bg);
+  font: 14px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans TC", Arial, sans-serif;
+}
+
+
+/* === 手勢期間鎖住頁面捲動（A 方案） ===
+   - 功能：雙指操作地圖時，避免 Android 下拉重整 / 頁面跟著捲動
+   - 刪除影響：雙指平移容易被系統手勢打斷、操作卡住
+*/
+body.nm-scroll-lock {
+  overflow: hidden;
+  overscroll-behavior: none;
+  touch-action: none;
+}
+
+html.nm-scroll-lock {
+  overscroll-behavior: none;
+}
+body.nation-map *,
+body.nation-map *::before,
+body.nation-map *::after {
+  box-sizing: border-box;
+}
+
+/* === [02] App 版型（外層結構：header / main） ===
+   - 功能：定義頁面基本排版與按鈕樣式。
+   - 刪除影響：header/按鈕會失去統一間距與互動樣式。
+*/
+
+
+/* Header */
+.app-header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 12px 16px; border-bottom: 1px solid var(--border);
+  background: var(--surface);
+}
+.app-header h1 { font-size: 16px; margin: 0; }
+.controls { display: flex; gap: 8px; align-items: center; }
+.btn { border: 1px solid var(--border); background: var(--surface-2); color: var(--text); padding: 6px 10px; border-radius: 8px; cursor: pointer; }
+.btn:hover { border-color: var(--accent-2); }
+.btn-ghost { background: transparent; }
+
+.app-main { padding: 12px; }
+
+/* === [03] 地圖畫布（#mapFrame / #mapSvg） ===
+   - 功能：建立固定比例的視窗，SVG 在其中縮放；overflow 用來裁切超出邊界的內容。
+   - 刪除影響：地圖比例可能失控、工具列定位會飄、拖曳/縮放視覺會變得難判讀。
+*/
+
+
+/* 畫布外框：以容器寬度為主，維持 1920:800 比例 */
+.map-frame {
+  position: relative;
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;  /* 避免鎖捲動/手勢期間 viewport 寬度重算，導致外框視覺貼邊 */
+  aspect-ratio: 1920 / 800;   /* 高度依比例推算 */
+  overflow: hidden;
+
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+
+
+  /* iOS/Safari：提升合成層，減少 overlay/backdrop-filter 閃爍 */
+  transform: translateZ(0);
+  will-change: transform;
+  will-change: transform, opacity;
+  isolation: isolate;
+}
+
+/* SVG 跟著框縮放 */
+#mapSvg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  /* 預設只保留頁面垂直捲動；雙指縮放/平移由 nation-map-app.js 接管（雙指開始時鎖 touch-action:none） */
+  touch-action: pan-y;
+  /* 拖曳與點擊的基本體驗：避免文字選取/長按選單干擾 */
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* SVG 子節點預設也套用 pan-y（避免點到 path 時 touch-action 回到 auto，導致手勢判斷不一致） */
+#mapSvg, #mapSvg * {
+  touch-action: pan-y;
+}
+
+/* 雙指手勢鎖定：強制由程式接管（避免頁面跟著捲動/縮放） */
+.map-frame.gesture-lock #mapSvg,
+.map-frame.gesture-lock #mapSvg * {
+  touch-action: none !important;
+}
+
+
+#mapSvg * { vector-effect: non-scaling-stroke; }
+
+/* 讓 mapFrame 可以當 toolbar 的定位容器 */
+.map-frame {
+  position: relative;
+}
+
+/* === [04] 地圖浮層（工具列 / 提示文字） ===
+   - 功能：把縮放按鈕與操作提示固定在 mapFrame 之上；dock-right 狀態會左右交換位置避免擋住資訊卡。
+   - 刪除影響：工具列/提示會回到文流，無法固定在地圖上，UX 會變差。
+*/
+
+
+/* 右上角工具列：預設貼右邊 */
+.map-toolbar {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 20;
+
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* 工具按鈕外觀 */
+.map-tool-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 6px;
+  border: none;
+  padding: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+
+.map-tool-btn img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+/* 底部提示：預設貼右下角（資訊卡預設在左邊） */
+.map-hint {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  left: auto;
+  z-index: 15;
+
+  padding: 6px 12px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.9);
+  font-size: 12px;
+  color: #444;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.12);
+}
+
+/* 資訊卡被 dock 到右邊（map-frame 有 .dock-right）時 → 提示改到左下角 */
+.map-frame.dock-right .map-hint {
+  left: 16px;
+  right: auto;
+}
+
+
+/* 當 mapFrame 掛上 .dock-right 時，把 toolbar／hint 都切到左邊 */
+.map-frame.dock-right .map-toolbar {
+  right: auto;
+  left: 16px;
+}
+
+.map-frame.dock-right .map-hint {
+  left: 16px;
+  right: auto;
+}
+
+/* 手機版：toolbar 縮小一點、往內收 */
+
+
+/* 提示 */
+.hint {
+  position: absolute; left: 16px; bottom: 16px; padding: 6px 10px; font-size: 12px; color: var(--muted);
+  background: rgba(255,255,255,0.6); border: 1px solid var(--border); backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);border-radius: 8px; pointer-events: none;
+}
+
+/* === [05] 資訊卡（#infoPanel.info-float） ===
+   - 功能：顯示國家名稱/國旗/幣別與金流資訊；open/right/dock-right 由 JS 控制。
+   - 刪除影響：點擊地圖後會沒有承載資訊的容器，互動流程中斷。
+*/
+
+
+/* 浮動資訊窗 */
+.info-float{
+  position: absolute; left: 16px; top: 16px; bottom: 16px; width: 22%;
+  display: flex; flex-direction: column;
+  overflow: hidden;
+  visibility: hidden;
+  pointer-events: none;
+
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(12px) saturate(1.1);
+  -webkit-backdrop-filter: blur(12px) saturate(1.1);border: 1px solid transparent;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+
+  opacity: 0;
+  transform: translateX(-100%) translateZ(0);  /* 初始從容器左側移出螢幕 */
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+.info-float.right {
+  transform: translateX(100%) translateZ(0);   /* 若停靠右側，初始從右側移出 */
+  left: auto; 
+  right: 16px; 
+}
+.info-float.open{
+  visibility: visible;
+  pointer-events: auto;
+  opacity: 1;
+  transform: translateX(0) translateZ(0);
+  border-color: var(--border); 
+  transition: border-color 0.3s ease 0.1s; 
+}
+.info-header{
+  flex: 0 0 auto;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 10px 12px; border-bottom: 1px solid var(--border);
+}
+.icon-btn { background: transparent; color: var(--muted); border: none; font-size: 18px; cursor: pointer; line-height: 1; }
+.icon-btn:hover { color: var(--text); }
+
+
+.info-body{
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow: hidden;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  }
+/* 左 65% 名稱、右 35% 國旗+幣別 */
+.info-top {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+/* iOS Safari：grid 在某些合成層/overflow 組合下會出現 reflow/不顯示（旗幟/幣別消失）
+   這裡改用 flex，並保留原本左右比例。
+*/
+.info-top .name-card { flex: 1 1 0; min-width: 0; }
+.info-top .meta-card { flex: 0 0 48%; max-width: 48%; min-width: 0; }
+.meta-card > * { flex: 1 1 0; min-width: 0; }
+.card {
+  background: rgba(255,255,255,0.7);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 10px;
+  box-shadow: var(--shadow);
+}
+/* 國家、國旗、幣別 去邊框、去陰影、去底色 */
+.card--naked {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+.name-card .en { font-weight: 600; font-size: 16px; line-height: 1.2; }
+.name-card .zh { color: var(--muted); font-size: 13px; margin-top: 4px; }
+
+/* 國名：中文在上、英文在下；中文黑且放大 */
+.name-card .zh-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.2;
+}
+.name-card .en-sub {
+  margin-top: 4px;
+  font-size: 13px;       /* 與先前中文小字同級 */
+  color: var(--text);     /* 顏色與中文一致（黑） */
+}
+
+/* 右側把國旗與幣別合在一塊，並排 */
+.meta-card {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+/* 國旗盒 */
+.flag-box {
+  height: auto;
+  border-radius: 6px;
+  overflow: hidden;
+  background: #fff;       /* 旗幟常見有透明區，給白底 */
+}
+.flag-box img { width: 100%; height: 100%; object-fit: cover; display: block; transform: translateZ(0); -webkit-transform: translateZ(0); }
+
+.currency-box { transform: translateZ(0); -webkit-transform: translateZ(0); }
+
+/* 幣別：中文名稱在上，英文(代碼)在下 */
+.currency-box .zh-cur {
+  font-weight: 600;
+  color: var(--text);
+}
+.currency-box .en-cur {
+  margin-top: 4px;
+  font-size: 13px;
+  color: var(--text);
+}
+
+.flag-card .flag-box {
+  height: 64px; border-radius: 10px; overflow: hidden;
+  display: flex; align-items: center; justify-content: center;
+  background: #fff;
+}
+.flag-card img { width: 100%; height: 100%; object-fit: cover; border-radius: 10px; }
+
+.kv { font-size: 12px; color: var(--muted); }
+.kv strong { display: block; font-size: 14px; color: var(--text); }
+
+.slots {
+  margin-top: 12px;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 2 欄 × 3 列 */
+  gap: 12px;
+}
+.slot-card { height: 90px; }
+
+/* === [06] 地圖互動狀態（選取高亮） ===
+   - 功能：active-region 用於標記目前被選取的地區；視覺上加描邊/陰影/填色。
+   - 刪除影響：仍可點擊，但使用者不易分辨當前選取目標。
+*/
+
+
+/* 點擊高亮 */
+.active-region { filter: drop-shadow(0 0 0 rgb(185, 100, 255)); stroke: var(--accent); stroke-width: 1.2; fill: rgba(37,99,235,0.18) !important; }
+
+/* 區塊標題 */
+.sec-title { font-weight: 800; margin: 6px 5px 10px; }
+
+/* === [07] 金流區塊（payments-card / 類別列 / chip） ===
+   - 功能：把付款方式按「大類」分組呈現；icon-only 模式把文字交給 tooltip 以節省空間。
+   - 刪除影響：金流資訊仍可被渲染，但排版與可讀性大幅下降。
+*/
+
+
+/* 金流區塊 */
+.payments-card .cat-row {
+  display: grid;
+  grid-template-columns: 40px 1fr;  /* 左側 icon 欄 + 右側標題＋清單 */
+  gap: 10px;
+  align-items: flex-start;
+  padding: 10px 0;
+  border-top: 1px solid var(--border);
+}
+.payments-card .cat-row:first-child { border-top: none; }
+
+.payments-card .cat-head {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  align-items: flex-start;
+}
+
+.payments-card .cat-title { font-weight: 600; }
+.payments-card .cat-sub { font-size: 12px; color: var(--muted); }
+
+.method-list {
+  display: flex; flex-wrap: wrap; gap: 8px;
+  margin-top: 10px;
+}
+.method-chip {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 6px 8px; border: 1px solid var(--border); border-radius: 10px;
+  background: rgba(255,255,255,0.7);
+}
+.method-chip img { width: 18px; height: 18px; display: block; }
+.method-chip .m-zh { font-size: 12px; font-weight: 600; color: var(--text); }
+.method-chip .m-en { font-size: 11px; color: var(--muted); }
+/* 左側大類 icon 欄位 */
+.cat-icon-col {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 4px;
+}
+
+/* 大類 icon */
+.cat-icon-col .cat-icon {
+  width: 100%;
+  max-width: 32px;
+  height: auto;
+  object-fit: contain;
+}
+
+
+/* 支付方式模式切換工具列 */
+.payments-toolbar {
+  display: flex; gap: 8px; align-items: center;
+  margin-bottom: 10px;
+}
+.payments-toolbar .btn {
+  padding: 4px 8px; border-radius: 8px;
+  background: var(--surface-2);
+}
+.payments-toolbar .btn.is-active {
+  border-color: var(--accent); color: var(--accent);
+  background: rgba(37,99,235,0.08);
+}
+
+.payments-card{
+  /* info-body 改為 flex 後不需要 grid-row；保留區塊順序由 DOM 決定 */
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow: auto;
+  margin: 0;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  box-sizing: border-box;
+}
+
+/* 讓 chip 與 icon 跟字高同步縮放（em） */
+.payments-card { --chip-font: 15px; --icon-em: 1.5em; }
+.method-chip { font-size: var(--chip-font); transition: padding .18s ease, border-color .18s ease, background .18s ease; }
+.method-chip img { width: var(--icon-em); height: var(--icon-em); transition: width .18s ease, height .18s ease; }
+
+
+/* icon 模式下：chip 改成上下排列，icon 上、文字下 */
+.payments-card.icon-only .method-chip {
+  padding: 6px 8px;
+  gap: 4px;
+  flex-direction: column;        /* 垂直排列 */
+  align-items: center;
+  text-align: center;
+}
+
+/* Icon 模式時隱藏 chip 內的文字 */
+.payments-card.icon-only .method-chip .m-zh,
+.payments-card.icon-only .method-chip .m-en {
+  display: none;
+}
+
+/* WebKit 系列（Chromium/Safari） */
+.payments-card::-webkit-scrollbar { width: 6px; height: 6px; }
+.payments-card::-webkit-scrollbar-track { background: transparent; }
+.payments-card::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.6);
+  border-radius: 6px;
+  border: 0;                       /* 不要外框 */
+}
+
+/* Firefox */
+.payments-card { 
+  scrollbar-width: thin; 
+  scrollbar-color: rgba(255,255,255,0.6) transparent;
+}
+
+
+/* 支付類別列（保留你原本的樣式，補上細節 transition） */
+.payments-card .cat-row { transition: background .18s ease; }
+.payments-card .cat-row:hover { background: rgba(0,0,0,0.03); }
+
+/* 放在 .info-header 右側的模式滑桿（方形導圓角） */
+.mode-toggle {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  width: 110px; height: 28px;
+  border: 1px solid var(--border);
+  background: var(--surface-2);
+  border-radius: 6px;                 /* 方形導圓角 */
+  overflow: hidden;
+  margin-right: 8px;                  /* 與關閉鈕留距 */
+}
+.mode-toggle .knob {
+  position: absolute; top: 2px; bottom: 2px;
+  width: calc(50% - 4px);
+  left: 2px;                          /* full 模式在左 */
+  border-radius: 6px;
+  background: rgba(255,255,255,0.9);
+  transition: left .22s ease, width .22s ease, background .22s ease;
+  box-shadow: var(--shadow);
+}
+.mode-toggle.is-icon .knob {
+  left: calc(50% + 2px);              /* icon 模式在右 */
+}
+.mode-toggle .opt {
+  flex: 1; text-align: center; font-size: 12px; line-height: 1;
+  color: var(--muted);
+  user-select: none;
+  position: relative; z-index: 1;
+}
+.mode-toggle .opt.active { color: var(--text); font-weight: 700; }
+
+/* Icon-only 模式：只顯示大 icon，不顯示 chip 內文字，文字改交給 tooltip 負責 */
+.payments-card.icon-only {
+  --icon-em: 2.5em;
+}
+
+/* icon 模式下：chip 垂直置中，只有圖示 */
+.payments-card.icon-only .method-chip {
+  padding: 6px;
+  gap: 0;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.info-body > :last-child { margin-bottom: 0; }
+
+/* === [08] Tooltip（icon-only 模式：金流名稱提示） ===
+   - 功能：icon-only 時用 tooltip 補回「名稱」資訊，避免只看 icon 造成誤解。
+   - 刪除影響：icon-only 仍可用，但使用者需要靠記憶辨識各金流。
+*/
+
+
+/* 浮動金流名稱 tooltip（只在 Icon 模式下用） */
+.method-tooltip {
+  position: fixed;
+  z-index: 9999;
+  pointer-events: none;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  color: var(--text);
+  background: rgba(255,255,255,0.95);
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transform: translate(-50%, -120%);
+  opacity: 0;
+  transition: opacity .12s ease;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.method-tooltip img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+.method-tooltip.visible {
+  opacity: 1;
+}
+
+/* === [09] RWD：<= 899px（行動裝置主要版型） ===
+   - 功能：infoPanel 轉為底部卡片、金流改為橫向滑動卡片，並處理 safe-area。
+   - 刪除影響：手機畫面會擠成一坨，金流清單不易滑動，閱讀成本變高。
+*/
+
+
+/* === 手機／平板：金流體系改為橫向卡片滑動 ＋ 地圖 70% / 卡片 30% === */
+
+/* --- 行動裝置：工具列/提示（與主 RWD 同斷點，集中管理） --- */
+@media (max-width: 899px) {
+  .map-toolbar {
+    top: 12px;
+    right: 12px;
+  }
+
+  .map-tool-btn {
+    width: 30px;
+    height: 30px;
+  }
+
+  .map-tool-btn img {
+    width: 16px;
+    height: 16px;
+  }
+
+  .map-hint {
+    /* 手機提示：改成自適應寬高，避免文字被裁切 */
+    width: auto;
+    height: auto;
+    max-width: max-content;
+    /* iOS Safari：max-content 在 left/right 同時存在時容易算錯，改用可控的 max-width */
+    top: 12px;
+    bottom: auto;
+    left: 12px;
+    right: 12px;
+    line-height: 1.3;
+    word-break: break-word;
+  }
+
+  .map-frame.dock-right .map-hint {
+    left: 12px;
+    right: auto;
+  }
+}
+
+@media (max-width: 899px) {
+
+  .app-main {
+    padding: 8px;
+    height: calc(100dvh - 56px);
+    padding-bottom: calc(8px + env(safe-area-inset-bottom, 0px));
+  }
+
+  .map-frame {
+    height: 100%;
+    max-width: none;
+    aspect-ratio: auto;
+  }
+
+  /* 資訊卡：左右留一點空隙，稍微拉高一點 */
+  .info-float {
+    left: 8px;
+    right: 8px;
+    width: auto;
+    top: auto;
+    bottom: calc(env(safe-area-inset-bottom, 0px) + 10px);
+    height: 38%;              /* 再拉高些，避免被瀏覽器列遮住 */
+    max-height: 42%;
+    border-radius: 12px 12px 0 0;
+  }
+
+  /* 內部 padding 縮小一點，減少左側空間，整體留 8px */
+  .info-body {
+    grid-template-rows: auto 1fr;
+    gap: 8px;
+    padding: 8px;
+  }
+
+  /* 國名＋幣別＋國旗同一行（原本就有，保留） */
+  .info-top {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .name-card {
+    flex: 1 1 auto;
+  }
+
+  .meta-card {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: flex-end;
+    flex: 0 0 auto;
+  }
+
+  .currency-box {
+    order: 1;
+    text-align: right;
+  }
+
+  .flag-box {
+    order: 2;
+    flex: 0 0 72px;
+    height: auto;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .flag-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* 手機版：整個 header 隱藏，順便拿掉那條線 */
+  .info-header {
+    display: none;
+    border-bottom: none;
+    padding: 0;
+  }
+
+  /* 手機版：不需要模式切換＋關閉按鈕 */
+  .mode-toggle { display: none; }
+  #closeInfo { display: none; }
+
+  /* 支付卡片：橫向滑動，並跟外框之間多留空間 */
+  .payments-card {
+    /* 外框不滾動：避免圓點跟著卡片一起跑 */
+    display: flex;
+    flex: 1 1 auto; 
+    min-height: 0; 
+    flex-direction: column;
+    overflow: hidden;
+    padding: 8px;            /* 與外層卡片留距 */
+    margin-top: 0;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.0);
+    /* 內部才會滾動，避免外層把觸控事件吃掉 */
+    touch-action: auto;
+  }
+
+  .payments-scroll {
+    flex: 1 1 auto;
+    min-height: 0;
+
+    /* 手機版：以「整體上下滾動」為主，避免橫向滑動造成卡片被切邊/圓角失效 */
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    /* 內部滾動（不卡住外層頁面） */
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
+
+    /* 只允許上下滑動，避免手勢在 X 軸被誤判成橫滑 */
+    touch-action: pan-y;
+
+    padding: 0 0 8px;        /* 下面留空間，避免最後一列貼到底 */
+    scrollbar-width: none;   /* Firefox 隱藏 scrollbar */
+  }
+
+  .payments-scroll::-webkit-scrollbar { width: 0; height: 0; }
+
+  .payments-scroll > div {
+    /* renderPayments() 產生的是「一個 div 包多個 .cat-row」，手機版仍維持直向堆疊 */
+    display: block;
+    height: auto;
+  }
+
+
+
+  .payments-card 
+
+  .payments-scroll .cat-row:last-child { margin-bottom: 0; }
+
+  .cat-row {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    overflow: hidden;     /* 讓圓角/陰影裁切生效 */
+  }
+
+  /* 右側容器改為可撐滿高度，讓 method-list 只在內部滾動 */
+  .payments-card .cat-row > div:last-child {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+  }
+
+  .payments-card .method-list {
+    /* 由 .payments-scroll 統一處理捲動，避免巢狀 scroll 在手機上滑不到 */
+    overflow: visible;
+    max-height: none;
+  }
+
+  .method-list {
+    padding-bottom: 8px;  /* 你要下面留 8px 空間就改這裡 */
+  }
+
+  .payments-card .method-list::-webkit-scrollbar { width: 0; }
+
+  .payments-card .cat-head {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  /* icon 欄窄 */
+  .cat-icon-col {
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .cat-icon-col .cat-icon {
+    max-width: 28px;
+  }
+
+
+  /* 底部圓點 */
+  .pay-dots {
+    display: none; /* 手機版改為直向捲動後不需要分頁圓點 */
+  }
+  .pay-dots button {
+    width: 6px;
+    height: 6px;
+    border-radius: 999px;
+    border: none;
+    padding: 0;
+    background: rgba(0,0,0,0.18);
+    cursor: pointer;
+    transition: width .18s ease, background .18s ease;
+  }
+  .pay-dots button.is-active {
+    width: 14px;
+    background: var(--accent);
+  }
+    .info-header {
+    display: none;
+    border-bottom: none;
+    padding: 0;
+  }
+
+  /* Icon-only：以固定欄數呈現，避免一排五個擠到變形 */
+  .payments-card.icon-only .method-list{
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 8px;
+    align-items: center;
+  }
+
+  .payments-card.icon-only .method-chip{
+    width: 100%;
+    justify-content: center;
+    padding: 8px 0;
+    box-sizing: border-box;
+  }
+
+  .payments-card.icon-only .method-chip img{
+    width: clamp(22px, 6vw, 28px);
+    height: clamp(22px, 6vw, 28px);
+  }
+
+}
+
+/* === [09b] RWD：>= 900px（桌機補強） ===
+   - 功能：桌機版金流列表不需要圓點指示器，避免視覺干擾。
+   - 刪除影響：不影響功能，但桌機畫面會多一個冗餘提示。
+*/
+
+
+
+
+/* 桌機版不需要圓點 */
+@media (min-width: 900px) {
+  .pay-dots {
+    display: none;
+  }
+}
+
+/* === [10] 地圖下方：其他地區（#regionSection / #regionGrid） ===
+   - 功能：在地圖下方提供「國旗入口」，讓使用者不必在地圖上找小島或難點的區域。
+   - 刪除影響：地圖仍可操作，但入口會消失，導覽性下降。
+*/
+
+
+/* === 地圖下方：其他地區區塊 === */
+.region-section{
+  padding: 56px 0 72px;
+  background: #fff;
+}
+
+.region-wrap{
+  width: min(980px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+.region-title{
+  font-size: 34px;
+  font-weight: 800;
+  letter-spacing: .5px;
+  margin-bottom: 12px;
+}
+
+.region-desc{
+  font-size: 16px;
+  color: rgba(0,0,0,.55);
+  line-height: 1.7;
+  margin-bottom: 28px;
+}
+
+/* Grid：桌機 4 欄，平板 3 欄，手機 2 欄 */
+.region-grid{
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+@media (max-width: 980px){
+  .region-grid{ grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+@media (max-width: 640px){
+  .region-wrap{ width: calc(100% - 28px); }
+  .region-grid{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .region-title{ font-size: 28px; }
+}
+
+/* 按鈕卡片 */
+.region-btn{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  width: 100%;
+  padding: 14px 14px;
+  border: 1px solid rgba(0,0,0,.15);
+  border-radius: 12px;
+  background: #fff;
+
+  cursor: pointer;
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+
+.region-btn:active{
+  transform: scale(.98);
+}
+
+.region-flag{
+  width: 44px;
+  height: 30px;
+  border-radius: 8px;
+  overflow: hidden;
+  flex: 0 0 auto;
+  background: rgba(0,0,0,.05);
+}
+
+.region-flag img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.region-name{
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+  text-align: left;
+}
+
+.region-name .zh{
+  font-size: 16px;
+  font-weight: 800;
+  color: #000;
+}
+
+.region-name .en{
+  font-size: 12px;
+  margin-top: 6px;
+  color: rgba(0,0,0,.55);
+}
+
+@media (max-width: 360px){
+  .payments-card.icon-only .method-list{
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+/* === [99] 操作模式補強（PC/手機行為分離） ===
+   - 功能：配合 nation-map-app.js 的 PC/手機分流操作邏輯，讓預設手勢更符合 UX：
+     1) PC：左鍵按住拖曳，滾輪不縮放（Ctrl/⌘ + 滾輪才縮放）
+     2) Mobile：單指僅點擊，雙指縮放與平移
+   - 刪除影響：仍可運作，但手機可能被系統手勢干擾，PC 游標提示較不直覺。
+*/
+@media (pointer: fine) {
+  /* 桌機：提示可拖曳（不改 layout，只改游標） */
+  #mapSvg { cursor: grab; }
+  #mapSvg:active { cursor: grabbing; }
+}
