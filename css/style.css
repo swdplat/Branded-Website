@@ -5361,12 +5361,12 @@ body{
 }
 
 .main .best_choice .best_choice_outer .best_choice_inner .choice_region .under_block_slide .carousel_list .carousel_inner_1 .image_outer{
-    width: 300px;
+    width: 180px;
     display: flex;
     flex-wrap: nowrap;
     justify-content: center;
     align-self: center;
-    max-width: 300px;
+    max-width: 180px;
 }
 
 .main .best_choice .best_choice_outer .best_choice_inner .choice_region .under_block_slide .carousel_list .carousel_inner_1 .image_outer img{
@@ -5404,12 +5404,12 @@ body{
 }
 
 .main .best_choice .best_choice_outer .best_choice_inner .choice_region .under_block_slide .carousel_list .carousel_inner_2 .image_outer{
-    width: 300px;
+    width: 180px;
     display: flex;
     flex-wrap: nowrap;
     justify-content: center;
     align-self: center;
-    max-width: 300px;
+    max-width: 180px;
 }
 
 .main .best_choice .best_choice_outer .best_choice_inner .choice_region .under_block_slide .carousel_list .carousel_inner_2 .image_outer img{
