@@ -110,7 +110,7 @@ body{
      display: flex;
      justify-content: center;
      align-items: center;
-     height: 63px;
+     height: 55px;
      margin-right: 0px;
 }
 
@@ -130,7 +130,7 @@ body{
      display: flex;
      justify-content: right;
      align-items: center;
-     height: 63px;
+     height: 55px;
 }
 
 .main .header_outer .header_scroll .header_contact .header_innerblock{
