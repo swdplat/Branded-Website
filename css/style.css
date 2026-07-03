@@ -45,7 +45,7 @@ body{
      justify-content: center;
      align-items: center;
      margin-right: 1px;
-     height: 85px;
+     height: 60px;
 }
 
 .main .header_outer .header_inner .header_logo .logo_img{
@@ -64,7 +64,7 @@ body{
      display: flex;
      justify-content: right;
      align-items: center;
-     height: 85px;
+     height: 60px;
 }
 
 .main .header_outer .header_inner .header_contact .header_innerblock{
