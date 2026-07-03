@@ -287,7 +287,7 @@ body{
 
 .main .big_banner .bigbanner_outer .bigbanner_inner .banner_region .text_title h2{
     font-size: 64px;
-    font-weight: 600;
+    font-weight: bold;
     line-height: normal;
     font-family: "Microsoft YaHei", "微軟雅黑", "PingFang SC", "苹方", "SimSun", "宋體", sans-serif;
 }
