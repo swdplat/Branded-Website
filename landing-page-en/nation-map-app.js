@@ -1180,7 +1180,7 @@ MapViewer.prototype.showInfo = function ({ name, iso2, bbox }) {
     <section class="card meta-card card--naked">
       <div class="flag-box"><img id="flagImg" alt="${zh}${tr('ui.flagSuffix',' 國旗')}" /></div>
       <div class="currency-box">
-        <div class="zh-cur">${curZh}</div>
+        <div class="zh-cur">${curEn}</div>
       </div>
     </section>
   </div>
@@ -1319,7 +1319,7 @@ function hideMethodTooltip() {
 function attachMethodTooltip(chip, meta) {
   if (!methodTooltipEl) return;
 
-  const label = tr(`pay.method.${meta.id}`, meta.name_zh || '');
+  const label = tr(`pay.method.${meta.id}`, meta.name_en || '');
   if (!label) return;
 
   let hovering = false;
@@ -1450,7 +1450,7 @@ function renderPayments(iso2, mountEl){
     head.className = 'cat-head';
     const catTitle = document.createElement('div');
     catTitle.className = 'cat-title';
-    catTitle.textContent = tr(`pay.category.${cat.id}`, cat.name_zh || '');
+    catTitle.textContent = tr(`pay.category.${cat.id}`, cat.name_en || '');
     // head 只放標題，icon 留在左欄
     head.appendChild(catTitle);
 
@@ -1467,13 +1467,13 @@ function renderPayments(iso2, mountEl){
             chip.className = 'method-chip';
 
       const mImg     = document.createElement('img');
-            mImg.alt = m.name_en || m.name_zh;
+            mImg.alt = m.name_en || m.name_en;
       resolveIcon(mImg, m.icon || `./assest/payments/vendor/${m.id}`);
 
       const mText = document.createElement('div');
       mText.className = 'method-name';
       mText.innerHTML = `
-        <span class="m-zh">${tr(`pay.method.${m.id}`, m.name_zh || '')}</span>
+        <span class="m-zh">${tr(`pay.method.${m.id}`, m.name_en || '')}</span>
       `;
       chip.dataset.nameEn = m.name_en || '';
 
