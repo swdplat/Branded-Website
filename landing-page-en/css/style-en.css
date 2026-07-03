@@ -1261,7 +1261,7 @@ body{
 .main .payment_methods .payment_methods_outer .payment_methods_inner .payment_headline .payment_headline_inner{
     display: flex;
     justify-content: left;
-    align-items: flex-start;;
+    align-items: center;
     margin-bottom: 12px;
 }
 
@@ -1276,7 +1276,7 @@ body{
 }
 
 .main .payment_methods .payment_methods_outer .payment_methods_inner .payment_headline .payment_headline_inner .headline_title{
-    font-size: 38px;
+    font-size: 26px;
     font-weight: 600;
     color: #000000;
 }
