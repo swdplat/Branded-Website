@@ -398,7 +398,7 @@ body{
 
 .main .big_banner .bigbanner_outer .bigbanner_inner .banner_region .text_title h2{
     font-size: 38px;
-    font-weight: 600;
+    font-weight: bold;
     line-height: normal;
 }
 
@@ -1275,7 +1275,7 @@ body{
 
 .main .payment_methods .payment_methods_outer .payment_methods_inner .payment_headline .payment_headline_inner .headline_title{
     font-size: 38px;
-    font-weight: 600;
+    font-weight: bold;
     color: #000000;
 }
 
@@ -4639,7 +4639,7 @@ body{
 
 .main .security_solution .security_solution_outer .security_solution_inner .solution_region .region_desc .solution_title .solut_title_text{
     font-size: 38px;
-    font-weight: 600;
+    font-weight: bold;
     color: #ffffff;
     text-shadow: 0 0 5px #f9f9f9, 0 0 15px #1a69e1;
     width: 70%;
@@ -5035,7 +5035,7 @@ body{
 
 .main .customer_support .customer_support_outer .customer_support_inner .customer_headline .customer_headline_inner .customer_headline_title{
     font-size: 38px;
-    font-weight: 600;
+    font-weight: bold;
     color: #000000;
 }
 
@@ -5464,7 +5464,7 @@ body{
     
     .main .best_choice .best_choice_outer .best_choice_inner .choice_region .top_block .desc_block .choice_title{
         font-size: 38px;
-        font-weight: 700;
+        font-weight: bold;
         color: #ffffff;
         margin-bottom: 24px;
         line-height: normal;
@@ -6260,7 +6260,7 @@ body{
 
 .main .partnership_process .partnership_process_outer .partnership_process_inner .process_region .process_overview .overview_desc .desc_text .bold_title{
     font-size: 38px;
-    font-weight: 600;
+    font-weight: bold;
     color: #000;
     margin-bottom: 20px;
     line-height: normal;
@@ -6841,7 +6841,7 @@ body{
 .main .contact_outer .contact_inner .contact_form .form_title h2{
     font-size: 32px;
     line-height: 35px;
-    font-weight: 600;
+    font-weight: bold;
     color: #fff;
     width: 80%;
     text-align: justify;
