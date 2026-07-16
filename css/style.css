@@ -1343,7 +1343,7 @@ body{
 
 .main .payment_methods .payment_methods_outer .payment_methods_inner .payment_item .item_1 .item_desc{
     width: 100%;
-    padding: 30px 10px;
+    padding: 30px 24px 30px 10px;
 }
 
 .main .payment_methods .payment_methods_outer .payment_methods_inner .payment_item .item_1 .item_desc .desc_title{
@@ -1386,7 +1386,7 @@ body{
 
 .main .payment_methods .payment_methods_outer .payment_methods_inner .payment_item .item_2 .item_desc{
     width: 100%;
-    padding: 30px 10px;
+    padding: 30px 30px 30px 10px;
 }
 
 .main .payment_methods .payment_methods_outer .payment_methods_inner .payment_item .item_2 .item_desc .desc_title{
@@ -1429,7 +1429,7 @@ body{
 
 .main .payment_methods .payment_methods_outer .payment_methods_inner .payment_item .item_3 .item_desc{
     width: 100%;
-    padding: 30px 10px;
+    padding: 30px 30px 30px 10px;
 }
 
 .main .payment_methods .payment_methods_outer .payment_methods_inner .payment_item .item_3 .item_desc .desc_title{
